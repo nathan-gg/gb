@@ -6,7 +6,7 @@
 <nav>
 	<a href="/">home</a>
 	<a href="/about">about</a>
-	<a href="/menu">menu</a>
+	<a href="/menu">Menu</a>
 </nav>
 
 {@render children()}
