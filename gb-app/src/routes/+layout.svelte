@@ -1,12 +1,12 @@
 <script lang="ts">
 	import '../app.css';
+	import Nav from '../components/nav.svelte';
 	let { children } = $props();
 </script>
 
-<nav>
-	<a href="/">home</a>
-	<a href="/about">about</a>
-	<a href="/menu">Menu</a>
-</nav>
+<div>
+	<Nav />	
+</div>
+
 
 {@render children()}
