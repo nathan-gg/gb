@@ -7,7 +7,7 @@
 
 <section use:scrollRef={thisRef} class="inline-flex h-screen">
 
-    <div class="flex-auto">
+    <div class="flex-auto w-6/12">
         <img src="../wongchunhei_wallpaper.jpg" class="h-full object-cover" alt=""/>
     </div>
 

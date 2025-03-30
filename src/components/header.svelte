@@ -25,6 +25,7 @@
         <DropdownItem href="contact" class="hover:underline hover:transparent">Contact Us</DropdownItem>
         <DropdownItem href="menus" class="hover:underline hover:transparent">Menus</DropdownItem>
         <DropdownItem href="order" class="hover:underline hover:transparent">Order Online</DropdownItem>
+        <DropdownItem href="careers" class="hover:underline hover:transparent">Careers</DropdownItem>
 
         
       </Dropdown>
