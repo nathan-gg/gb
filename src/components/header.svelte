@@ -4,7 +4,7 @@
     let group3 = 2;
   </script>
 
-<Navbar let:hidden let:toggle class="z-20 flex h-fit w-full align-middle justify-between border-b-1 border-[#E0B87A] bg-gradient-to-b from-[#092417] to-[#0D2201] text-[#E0B87A] font-serif">
+<Navbar let:hidden let:toggle class="z-20 flex h-fit w-full align-middle justify-between border-b-0 border-[#E0B87A] bg-gradient-to-b from-[#092417] to-[#0D2201] text-[#E0B87A] font-serif">
     
     <NavBrand href="/">
       <img src="finalLogo.svg" class="justify-self-start h-6 sm:h-9" alt="Green Basil Logo" />
@@ -27,7 +27,6 @@
         <DropdownItem href="order" class="hover:underline hover:transparent">Order Online</DropdownItem>
         <DropdownItem href="careers" class="hover:underline hover:transparent">Careers</DropdownItem>
         <DropdownItem href="identity" class="hover:underline hover:transparent">The Basil Identity</DropdownItem>
-
         
       </Dropdown>
 
