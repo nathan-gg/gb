@@ -26,6 +26,7 @@
         <DropdownItem href="menus" class="hover:underline hover:transparent">Menus</DropdownItem>
         <DropdownItem href="order" class="hover:underline hover:transparent">Order Online</DropdownItem>
         <DropdownItem href="careers" class="hover:underline hover:transparent">Careers</DropdownItem>
+        <DropdownItem href="identity" class="hover:underline hover:transparent">The Basil Identity</DropdownItem>
 
         
       </Dropdown>
