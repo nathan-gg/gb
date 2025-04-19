@@ -1,5 +1,4 @@
 @import 'tailwindcss';
-
 /* @import 'tailwindcss/preflight'; */
 
 /* @tailwind base;
@@ -7,40 +6,23 @@
 @tailwind utilities; */
 
 body {
-    overscroll-behavior: none; /* Prevents bouncing on some browsers */
-    background-color: #092417; /* Replace with your desired color */
-  }
+  overscroll-behavior: none;
+  background-color: #092417;
+}
 
 /* width */
 ::-webkit-scrollbar {
-  width: 16px;
-  /* background: #0D2201; */
-  background-image: linear-gradient(to bottom, #092417 , #0D2201);
+  width: 8px;
 }
 
-/* Track */
-/* ::-webkit-scrollbar-track { */
-  /* box-shadow: inset 0 0 5px #0D2201;  */
-  /* border-radius: 5px; */
-/* } */
- 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  /* background: none; 
-  border-style: solid;
-  border-color: #E0B87A; */
-  /* border-radius: 10px; */
-  /* border-width:1px; */
-
-
-  background-image: url("/iconLogo.svg");
-  /* background-repeat: no-repeat; */
-
+  background: #E0B87A;
+  border-radius: 1rem;
   background-size: contain;
-
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #E0B87A; 
+  background: #E0B87A;
 }
