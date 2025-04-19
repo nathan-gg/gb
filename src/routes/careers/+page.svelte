@@ -7,7 +7,8 @@
         title: 'Careers',
         thaiTitle: 'อาชีพ',
         body: 'Green Basil Thai Restaurant (GBTR) promotes a fun, respectful and encouraging work environment. We acknowledge the importance of quality staff because this will become our primary success factor. Thus, we welcome energetic, responsible and positive team players to join us. Join the team and send your resume to <a href="mailto:textinfo@greenbasilthai.com" target="_blank" class="focus: font-bold focus:underline hover:underline">textinfogreenbasilthai.com</a>.',
-        arrowText: 'Servers'
+        arrowText: 'Servers',
+        image: '/webp/identityHead.webp'
 	};
 
     const server = {
@@ -18,7 +19,8 @@
         thaiTitle: 'เซิร์ฟเวอร์',
         body: "GA server at Green Basil plays a vital role in delivering an exceptional dining experience. This position involves warmly welcoming guests, guiding them through the menu with expertise, and ensuring their needs are met with attentiveness and care. Servers are responsible for taking accurate orders, coordinating with the kitchen staff, and maintaining a clean and inviting dining area. At Green Basil, the focus is on creating a friendly and professional atmosphere that reflects the restaurant's commitment to authentic Thai cuisine and outstanding customer service.",
         arrowText: 'Food Runner',
-        prevArrowText: 'Previous Section'
+        prevArrowText: 'Previous Section',
+        image: '/webp/careersServer.webp'
 	};
     const foodRunner = {
         thisRef: 'Food Runner',
@@ -28,7 +30,8 @@
         thaiTitle: 'นักวิ่งด้านอาหาร',
         body: 'Green Basil Thai Restaurant (GBTR) promotes a fun, respectful and encouraging work environment. We acknowledge the importance of quality staff because this will become our primary success factor. Thus, we welcome energetic, responsible and positive team players to join us. Join the team and send your resume to <a href="mailto:textinfo@greenbasilthai.com" target="_blank" class="focus: font-bold focus:underline hover:underline">textinfogreenbasilthai.com</a>.',
         arrowText: 'Driver',
-        prevArrowText: 'Previous Section'
+        prevArrowText: 'Previous Section',
+        image: '/webp/careersFoodRunner.webp'
 	};
     const driver = {
         thisRef: 'Driver',
@@ -38,7 +41,8 @@
         thaiTitle: 'คนขับ',
         body: 'Green Basil Thai Restaurant (GBTR) promotes a fun, respectful and encouraging work environment. We acknowledge the importance of quality staff because this will become our primary success factor. Thus, we welcome energetic, responsible and positive team players to join us. Join the team and send your resume to <a href="mailto:textinfo@greenbasilthai.com" target="_blank" class="focus: font-bold focus:underline hover:underline">textinfogreenbasilthai.com</a>.',
         arrowText: 'Kitchen Helper',
-        prevArrowText: 'Previous Section'
+        prevArrowText: 'Previous Section',
+        image: '/webp/identityHead.webp'
 	};
     const kitchenHelper = {
         thisRef: 'Kitchen Helper',
@@ -49,6 +53,7 @@
         body: 'Green Basil Thai Restaurant (GBTR) promotes a fun, respectful and encouraging work environment. We acknowledge the importance of quality staff because this will become our primary success factor. Thus, we welcome energetic, responsible and positive team players to join us. Join the team and send your resume to <a href="mailto:textinfo@greenbasilthai.com" target="_blank" class="focus: font-bold focus:underline hover:underline">textinfogreenbasilthai.com</a>.',
         prevArrowText: 'Previous Section',
         topArrowText: 'Back to Careers',
+        image: '/webp/careersKitchenHelper.webp'
 	};
 
 
@@ -61,6 +66,7 @@
     thaiTitle={careers.thaiTitle}
     body={careers.body}
     arrowText={careers.arrowText}
+    image={careers.image}
 />
 
 <Careers 
@@ -73,6 +79,7 @@
     arrowText={server.arrowText}
     prevArrow={true}
     prevArrowText={server.prevArrowText}
+    image={server.image}
 />
 
 <Careers 
@@ -85,6 +92,7 @@
     arrowText={foodRunner.arrowText}
     prevArrow={true}
     prevArrowText={foodRunner.prevArrowText}
+    image={foodRunner.image}
 />
 
 <Careers 
@@ -97,6 +105,7 @@
     arrowText={driver.arrowText}
     prevArrow={true}
     prevArrowText={driver.prevArrowText}
+    image={driver.image}
 />
 
 <Careers 
@@ -111,4 +120,5 @@
     prevArrowText={kitchenHelper.prevArrowText}
     topArrow={true}
     topArrowText={kitchenHelper.topArrowText}
+    image={kitchenHelper.image}
 />

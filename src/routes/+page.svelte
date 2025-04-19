@@ -14,7 +14,8 @@
     title: 'Welcome to Green Basil',
     pText: 'its good af trust',
     btnText: '',
-    link: '#'
+    link: '#',
+    image: '/webp/homeWelcome.webp'
 	};
 
   const menus = {
@@ -23,7 +24,8 @@
     title: 'Pad Thai',
     pText: 'its good af trust',
     btnText: 'Discover Our Menus',
-    link: 'menus'
+    link: 'menus',
+    image: '/webp/homeMenusFood.webp'
 	};
 
   const cocktails = {
@@ -32,7 +34,8 @@
     title: 'Green Basil Cocktail',
     pText: 'its good af trust',
     btnText: 'Explore Cocktails',
-    link: 'menus'
+    link: 'menus',
+    image: '/webp/homeMenusDrinks.webp'
 	};
 
   const order = {
@@ -41,7 +44,8 @@
     title: 'Order Online',
     pText: 'its good af trust',
     btnText: 'Order Online',
-    link: 'order'
+    link: 'order',
+    image: '/webp/homeOrderOnline.webp'
 	};
   
   const contact = {
@@ -50,7 +54,8 @@
     title: 'Connect With Us',
     pText: 'its good af trust',
     btnText: 'Contact Us',
-    link: 'contact'
+    link: 'contact',
+    image: '/webp/homeContact.webp'
 	};
 
   const partnerships = {
@@ -59,16 +64,18 @@
     title: 'Our Partnerships',
     pText: 'its good af trust',
     btnText: 'Discover Partnerships',
-    link: 'partnerships'
+    link: 'partnerships',
+    image: '/webp/homePartnerships.webp'
 	};
 
   const about = {
 		thisRef: 'About',
     goTo: 'Bookings',
-    title: 'Our Story',
+    title: 'The Basil Identity',
     pText: 'its good af trust',
     btnText: 'Learn About Us',
-    link: 'about'
+    link: 'identity',
+    image: '/webp/homeStory.webp'
 	};
 
   const bookings = {
@@ -77,7 +84,8 @@
     title: 'Reserve a Seat',
     pText: 'its good af trust',
     btnText: 'Book a Reservation',
-    link: 'bookings'
+    link: 'bookings',
+    image: '/webp/homeReserve.webp'
 	};
 
 </script>
@@ -91,6 +99,7 @@
   button={false}
   btnText={start.btnText}
   link={start.link}
+  image={start.image}
 />
 
 <Landing
@@ -100,6 +109,7 @@
   pText={menus.pText}
   btnText={menus.btnText}
   link={menus.link}
+  image={menus.image}
 />
 
 <Landing
@@ -109,6 +119,7 @@
   pText={cocktails.pText}
   btnText={cocktails.btnText}
   link={cocktails.link}
+  image={cocktails.image}
 />
 
 <Landing
@@ -118,6 +129,7 @@
   pText={order.pText}
   btnText={order.btnText}
   link={order.link}
+  image={order.image}
 />
 
 <Landing
@@ -127,6 +139,7 @@
   pText={contact.pText}
   btnText={contact.btnText}
   link={contact.link}
+  image={contact.image}
 />
 
 <Landing
@@ -135,6 +148,7 @@
   title={partnerships.title}
   pText={partnerships.pText}
   btnText={partnerships.btnText}
+  image={partnerships.image}
   link={partnerships.link}
 />
 
@@ -145,6 +159,7 @@
   pText={about.pText}
   btnText={about.btnText}
   link={about.link}
+  image={about.image}
 />
 
 <Landing
@@ -155,6 +170,7 @@
   btnText={bookings.btnText}
   arrow={false}
   link={bookings.link}
+  image={bookings.image}
 />
 
 

@@ -21,6 +21,7 @@
 		prevArrow = false,
 		topArrowText,
 		topArrow = false,
+		image
 	} = $props();
 
     let curTab = $state(0);
@@ -123,6 +124,6 @@
 	</div>
 
 	<div class="w-6/12 flex-auto">
-		<img src="../wongchunhei_wallpaper.jpg" class="h-full object-cover" alt="" />
+		<img src="{image}" class="h-full object-cover" alt="" />
 	</div>
 </section>
