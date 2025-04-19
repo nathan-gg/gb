@@ -10,7 +10,10 @@ module.exports = {
           accent: '#F59E0B',      // Custom accent color (orange)
           customGray: '#F3F4F6',  // Custom light gray color
         },
-        // You can also add other customizations like fonts, spacing, etc.
+        fontFamily: {
+          neueMontreal: ['PPNeueMontreal', 'sans-serif'],
+          editorialOld: ['PPEditorialOld', 'serif'],
+        },
       },
     },
     plugins: [],
