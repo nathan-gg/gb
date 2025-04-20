@@ -1,5 +1,15 @@
 @import 'tailwindcss';
 
+@theme{
+  --color-primary: #0A2310;
+  --color-secondary: #E0B87A;
+  --color-lightText: #355128;
+  --color-darkText: #768669;
+
+  --font-DMSans: "DMSans", "sans-serif";
+  --font-instrument: "instrument", "serif";
+}
+
 /* @import "tailwindcss/preflight";
 @import "tailwindcss/utilities"; */
 

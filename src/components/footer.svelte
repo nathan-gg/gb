@@ -29,7 +29,7 @@
 		</div>
 
 		<div class="m-8 flex-col ">
-			<div class="font-DMSans flex flex-col text-4xl">
+			<div class=" font-instrument flex flex-col text-4xl">
 				<a href="/" class="pr-4 hover:underline "> Home </a>
 				<a href="about" class="pr-4 text-nowrap hover:underline"> Our Story </a>
 				<a href="contact" class="pr-4 text-nowrap hover:underline"> Contact Us </a>
@@ -53,12 +53,12 @@
             alt="link to the Green Basil Thai Facebook Account"
           />
 
-          <a href="order" class="text-2xl text-darkText border-2 border-[#E0B87A] mt-2 rounded-2xl p-2 px-16 hover:font-bold">Make Reservation</a>
+          <a href="order" class="text-2xl border-2 border-[#E0B87A] mt-2 rounded-2xl p-2 px-16 hover:font-bold">Make Reservation</a>
 
           
 
         </div>
-        <div class="font-DMSans mb-8 ml-16 text-xs font-thin flex-col flex-nowrap">
+        <div class="font-DMSans mb-8 ml-16 text-xs text-darkText font-thin flex-col flex-nowrap">
           <a class="font-thin underline" href="https://www.google.com/maps/dir//4623+Kingsway,+Burnaby,+BC+V5H+2B3/@49.2291765,-123.0835327,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x54867658ed9537d5:0x9e538cb3bbfb2f7f!2m2!1d-123.0011323!2d49.2292058?entry=ttu&g_ep=EgoyMDI1MDIyNi4xIKXMDSoASAFQAw%3D%3D">4623 Kingsway, Burnaby, BC V5H 2B3</a>
 
           <p>5PM - 10PM WD/ 10:30PM WE</p>
