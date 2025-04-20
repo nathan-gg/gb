@@ -20,11 +20,11 @@
 
       <Dropdown class="border text-[#E0B87A] bg-gradient-to-b from-[#092417] to-[#0D2201]">
         <DropdownItem href="/" class="hover:underline hover:transparent">Home</DropdownItem>
-        <DropdownItem href="identity" class="hover:underline hover:transparent">The Basil Identity</DropdownItem>
-        <DropdownItem href="bookings" class="hover:underline hover:transparent">Bookings</DropdownItem>
-        <DropdownItem href="contact" class="hover:underline hover:transparent">Contact Us</DropdownItem>
         <DropdownItem href="menus" class="hover:underline hover:transparent">Menus</DropdownItem>
         <DropdownItem href="order" class="hover:underline hover:transparent">Order Online</DropdownItem>
+        <DropdownItem href="identity" class="hover:underline hover:transparent">The Basil Identity</DropdownItem>
+        <!-- <DropdownItem href="bookings" class="hover:underline hover:transparent">Bookings</DropdownItem> -->
+        <DropdownItem href="contact" class="hover:underline hover:transparent">Contact Us</DropdownItem>
         <DropdownItem href="careers" class="hover:underline hover:transparent">Careers</DropdownItem>
       </Dropdown>
 

@@ -1,30 +1,25 @@
 @import 'tailwindcss';
+
 /* @import "tailwindcss/preflight";
 @import "tailwindcss/utilities"; */
 
+/* @import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities"; */
+
 @font-face {
-  font-family: 'PPNeueMontreal';
-  src: url('/fonts/PPNeueMontreal-Thin.otf') format('opentype');
-  font-weight: 100;
+  font-family: 'DMSans';
+  src: url('/fonts/DMSans-VariableFont_opsz,wght.ttf') format('opentype');
+  font-weight: 400;
   font-style: normal;
-  font-display: swap;
 }
 
 @font-face {
-  font-family: 'PPNeueMontreal';
-  src: url('/fonts/PPNeueMontreal-Bold.otf') format('opentype');
-  font-weight: 700;
+  font-family: 'instrument';
+  src: url('/fonts/InstrumentSerif-Regular.ttf') format('opentype');
+  font-weight: 400;
   font-style: normal;
-  font-display: swap;
 }
-
-@font-face {
-  font-family: 'PPEditorialOld';
-  src: url('static/fonts/PPEditorialOld-Regular.otf') format('opentype');
-}
-
-
-
 
 body {
   overscroll-behavior: none;

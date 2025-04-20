@@ -53,14 +53,16 @@
 			<div
 				class="absolute bottom-32 left-1/4 flex -translate-x-1/2 transform flex-col items-center"
 			>
-				<div use:scrollTo={goTo}>
-					<ChevronDownOutline class="h-20 w-20 text-[#355128]" />
-				</div>
-				<div>
-					<p class="text-[#758668]">
+				<div use:scrollTo={goTo} class="text-[#758668] hover:text-[#355128]">
+					<p >
 						{arrowText}
 					</p>
 				</div>
+				<!-- <div>
+					<p class="text-[#758668]">
+						{arrowText}
+					</p>
+				</div> -->
 			</div>
 		{/if}
 
