@@ -70,7 +70,7 @@
 
   const about = {
 		thisRef: 'About',
-    goTo: 'Bookings',
+    goTo: 'Reservations',
     title: 'The Basil Identity',
     pText: 'its good af trust',
     btnText: 'Learn About Us',
@@ -78,13 +78,13 @@
     image: '/webp/homeStory.webp'
 	};
 
-  const bookings = {
-		thisRef: 'Bookings',
+  const reservations = {
+		thisRef: 'Reservations',
     goTo: 'Start',
     title: 'Reserve a Seat',
     pText: 'its good af trust',
     btnText: 'Book a Reservation',
-    link: 'bookings',
+    link: 'reservations',
     image: '/webp/homeReserve.webp'
 	};
 
@@ -163,14 +163,14 @@
 />
 
 <Landing
-  thisRef={bookings.thisRef}
-  goTo={bookings.goTo}
-  title={bookings.title}
-  pText={bookings.pText}
-  btnText={bookings.btnText}
+  thisRef={reservations.thisRef}
+  goTo={reservations.goTo}
+  title={reservations.title}
+  pText={reservations.pText}
+  btnText={reservations.btnText}
   arrow={false}
-  link={bookings.link}
-  image={bookings.image}
+  link={reservations.link}
+  image={reservations.image}
 />
 
 

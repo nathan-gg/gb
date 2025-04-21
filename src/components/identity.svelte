@@ -27,23 +27,28 @@
 	<div class="flex w-6/12 flex-auto flex-col bg-[#E8E3DA] font-serif text-[#000000]">
 		{#if prevArrow}
 			<div class="absolute top-32 left-1/4 flex -translate-x-1/2 transform flex-col items-center">
-				<div>
-					<p class="text-[#758668]">
+				<!-- <div>
+					<p class="text-lightText">
 						{prevArrowText}
 					</p>
 				</div>
 				<div use:scrollTo={goBack}>
-					<ChevronUpOutline class="h-20 w-20 text-[#355128]" />
+					<ChevronUpOutline class="h-20 w-20 text-darkText" />
+				</div> -->
+				<div use:scrollTo={goBack} class="text-lightText hover:text-darkText">
+					<p >
+						{prevArrowText}
+					</p>
 				</div>
 			</div>
 		{/if}
 
 		<div class="m-48 flex-grow">
-			<h1 class="mt-24 text-6xl text-[#355128]">{title}</h1>
-			<h1 class="mb-12 text-4xl text-[#758668]">{thaiTitle}</h1>
+			<h1 class="mt-24 text-6xl text-darkText">{title}</h1>
+			<h1 class="mb-12 text-4xl text-lightText">{thaiTitle}</h1>
 
 			<div class="">
-				<p class="font-sans text-[#355128]">
+				<p class="font-sans text-darkText">
 					{@html body}
 				</p>
 			</div>
@@ -53,13 +58,13 @@
 			<div
 				class="absolute bottom-32 left-1/4 flex -translate-x-1/2 transform flex-col items-center"
 			>
-				<div use:scrollTo={goTo} class="text-[#758668] hover:text-[#355128]">
+				<div use:scrollTo={goTo} class="text-lightText hover:text-darkText">
 					<p >
 						{arrowText}
 					</p>
 				</div>
 				<!-- <div>
-					<p class="text-[#758668]">
+					<p class="text-lightText">
 						{arrowText}
 					</p>
 				</div> -->
@@ -70,11 +75,16 @@
 			<div
 				class="absolute bottom-32 left-1/4 flex -translate-x-1/2 transform flex-col items-center"
 			>
-				<div>
-					<ChevronUpOutline class="h-20 w-20 text-[#355128]" onclick={() => scrollTop()} />
-				</div>
-				<div>
-					<p class="text-[#758668]">
+				<!-- <div>
+					<ChevronUpOutline class="h-20 w-20 text-darkText" onclick={() => scrollTop()} />
+				</div> -->
+				<!-- <div>
+					<p class="text-lightText">
+						{topArrowText}
+					</p>
+				</div> -->
+				<div use:scrollTo={goTo} class="text-lightText hover:text-darkText">
+					<p >
 						{topArrowText}
 					</p>
 				</div>

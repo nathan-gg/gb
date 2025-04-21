@@ -19,7 +19,7 @@
 		thaiTitle: 'ภารกิจของเรา',
 		body: 'At Green Basil Thai Restaurant, we dedicate ourselves to curating an exquisite dining experience, harmonizing the rich heritage of authentic Thai cuisine with contemporary flair. Our mission is to elevate the palate, promote a lifestyle of wellness through the artful use of fresh, locally sourced ingredients, highlighted by the revered Holy Basil.\nWe offer a culinary haven offers an inviting ambiance where guests can indulge in dishes nothing short of exceptional and inspired cocktails, all while basking in a sophisticated but welcoming atmosphere. We take pride on delivering impeccable service and fostering a workplace culture that is both fun and supportive for our team.\nThrough our unwavering commitment to quality, innovation, and sustainability, we aspire to be the premier destination for discerning diners seeking the finest Thai cuisine in the Greater Vancouver area.',
 		arrowText: 'Chef',
-		prevArrowText: 'Previous Section',
+		prevArrowText: 'Identity',
 		image: '/webp/identityMission.webp'
 	};
 	const chef = {
@@ -30,17 +30,17 @@
 		thaiTitle: 'ภารกิจของเรา',
 		body: "For over 16 years, Green Basil has been a beacon of authentic Thai flavors. Established in 2006 by the renowned Executive Chef Ming, the restaurant continues to thrive under his expert guidance. With over 30 years of culinary experience, Chef Ming's journey spans from the vibrant streets of Bangkok to Montreal and Vancouver.\nHis illustrious career includes celebrated stints at Maison Kirin and Chao Phraya in Montreal. Upon returning to Vancouver, Chef Ming has graced some of the city's top Thai dining establishments, including Chili Club, before ultimately becoming the Chef de Cuisine for all Thai House establishments across the lower mainland.\nWith each dish, Chef Ming brings a legacy of culinary excellence and a passion for Thai cuisine that elevates every dining experience at Green Basil.",
 		arrowText: 'Prizes',
-		prevArrowText: 'Previous Section',
+		prevArrowText: 'Mission',
 		image: '/webp/identityHead.webp'
 	};
 	const prizes = {
 		thisRef: 'Prizes',
-		goTo: 'Kitchen Helper',
+		goTo: 'Identity',
 		goBack: 'Chef',
 		title: 'Prizes & Accolades',
 		thaiTitle: 'ภารกิจของเรา',
 		body: "Driven by an unrelenting ambition, he opened his first restaurant, Chao Phraya, near Granville Island. It was acclaimed by both diners and critics, earning numerous accolades for its exquisite cuisine and captivating atmosphere.\nYears later, Green Basil emerged and swiftly garnered widespread acclaim, becoming a perennial winner of Burnaby Now’s 'Best Thai' award. Green Basil has also received rave reviews from esteemed publications such as The Province, The Vancouver Sun, and the Georgia Straight.",
-		prevArrowText: 'Previous Section',
+		prevArrowText: 'Chef',
 		topArrowText: 'Back to Identity',
 		image: '/webp/identityPrizes.webp'
 	};

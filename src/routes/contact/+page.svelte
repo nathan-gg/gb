@@ -9,43 +9,54 @@
 		rows: 4,
 		placeholder: 'Message:'
 	};
+
+	import Contact from '/src/components/contact.svelte';
+
+	const message = {
+		thisRef: 'Message',
+		goTo: 'Info',
+		title: 'Contact Us',
+		thaiTitle: 'ติดต่อเรา',
+		body: 'Fill out this contact form below to get in touch with us, or contact us through our email <a href="mailto:info@greenbasilthai.com" class="underline">info@greenbasilthai.com</a> or call our phone number at <a href="tel:+1 6045007542" class="underline" >+1 (604) 439-1919</a>.',
+		arrowText: 'Info',
+		image: '/webp/identityHead.webp'
+	};
+
+	const info = {
+		thisRef: 'Info',
+		goBack: 'Message',
+		title: 'Hours & Location',
+		thaiTitle: 'เวลาเปิดทำการเเละที่อยู่',
+		body: '',
+		prevArrowText: 'Contact Us',
+		image: '/webp/identityMission.webp'
+	};
 </script>
 
-<section class="inline-flex h-screen font-serif">
-	<div class="text-[#000000 flex w-6/12 flex-auto flex-col bg-[#E8E3DA] font-serif">
-		<div class="m-24">
-			<h1 class="mt-24 mb-4 text-4xl text-[#E0B87A]">Contact Us</h1>
 
-			<p class="mb-12 text-xl">
-				Have questions or need assistance?<br />Contact us, we're happy to help!
-			</p>
+<Contact
+	thisRef={message.thisRef}
+	goTo={message.goTo}
+	title={message.title}
+	thaiTitle={message.thaiTitle}
+	body={message.body}
+	arrowText={message.arrowText}
+	image={message.image}
+	ifPage1={true}
+	ifPage2={false}
+/>
 
-			<div class="grid grid-cols-2 grid-rows-2">
-				<div class="mr-2 mb-6">
-					<Input id="default-input" placeholder="First Name" />
-				</div>
-				<div class="mb-6 ml-2">
-					<Input id="default-input" placeholder="Last Name" />
-				</div>
-				<div class="mr-2 mb-6">
-					<Input id="default-input" placeholder="Email Address" />
-				</div>
-				<div class="mb-6 ml-2">
-					<Input id="default-input" placeholder="Phone Number" />
-				</div>
-			</div>
-
-			<div class="mb-2">
-				<Textarea {...textareaprops} />
-			</div>
-
-			<Button size="lg" class="bg-white px-12 py-2 text-black focus:border-[#E0B87A]" href=""
-				>Submit</Button
-			>
-		</div>
-	</div>
-
-	<div class="w-6/12 flex-auto">
-		<img src="/webp/contactDoor.webp" class="h-full object-cover" alt="" />
-	</div>
-</section>
+<Contact
+	thisRef={info.thisRef}
+	goBack={info.goBack}
+	title={info.title}
+	thaiTitle={info.thaiTitle}
+	body={info.body}
+	arrow={false}
+	prevArrow={true}
+	prevArrowText={info.prevArrowText}
+	image={info.image}
+	ifPage1={false}
+	ifPage2={true}
+	
+/>

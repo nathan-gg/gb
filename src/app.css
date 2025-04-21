@@ -3,11 +3,15 @@
 @theme{
   --color-primary: #0A2310;
   --color-secondary: #E0B87A;
-  --color-lightText: #355128;
-  --color-darkText: #768669;
+  --color-tertiary: #E8E3DA;
+
+  --color-lightText: #768669;
+  --color-darkText: #355128;
 
   --font-DMSans: "DMSans", "sans-serif";
   --font-instrument: "instrument", "serif";
+
+  
 }
 
 /* @import "tailwindcss/preflight";
@@ -36,6 +40,29 @@ body {
   background-color: #092417;
 }
 
+h1,h2 {
+  font-family: 'intrument';
+}
+
+p{
+  font-family: 'DMSans';
+}
+
+input, textarea{
+  color:#355128;
+  font-family: 'DMSans', 'sans-serif';
+}
+
+::placeholder {
+  color: #355128;
+  font-family: 'DMSans', 'sans-serif';
+  opacity: 1; /* Firefox */
+}
+
+::-ms-input-placeholder { /* Edge 12-18 */
+  color: #355128;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 8px;
@@ -51,4 +78,8 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #E0B87A;
+}
+
+.cursor-custom{
+  cursor: url('newCursorLeaf.svg') 4 4, auto;
 }

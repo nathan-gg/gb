@@ -1,6 +1,6 @@
 <script>
 	import '../app.css';
-	import Header from '../components/header.svelte';
+	import Header from '../components/head.svelte';
 	import Footer from '../components/footer.svelte';
 	let { children } = $props();
 </script>
@@ -11,12 +11,15 @@
 	<!-- <meta name="" content={''} /> This is for SEO -->
 </svelte:head>
 
-<div class="sticky top-0 z-10">
+<div class="cursor-custom">
+<div class="sticky top-0 z-50">
 	<Header />	
 </div>
 
 {@render children()}
 
-<div class="bottom-0 z-10">
+<div class="bottom-0 z-50">
 	<Footer />	
+</div>
+
 </div>
