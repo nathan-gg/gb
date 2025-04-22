@@ -1,147 +1,112 @@
 <script lang="ts">
-	import { ChevronDownOutline, ChevronUpOutline } from 'flowbite-svelte-icons';
-	import { scrollTo, scrollRef, scrollTop } from 'svelte-scrolling';
-	// import { Tabs } from 'flowbite-svelte';
-	import { Tabs, TabItem } from 'flowbite-svelte';
+	import { scrollRef } from 'svelte-scrolling';
 
-	let {
-		thisRef,
-		goTo,
-		goBack,
-		title,
-		thaiTitle,
-		tab1,
-		tab2,
-		tab3,
-		tab4,
-		body,
-		arrowText,
-		arrow = true,
-		prevArrowText,
-		prevArrow = false,
-		topArrowText,
-		topArrow = false,
-		image
-	} = $props();
+	let { thisRef, title, body, thaiTitle, image } = $props();
 
-    let curTab = $state(0);
 
-    function toggleTab(numTab){
-        curTab = numTab;
-    }
+	let curTab = $state(0);
+
 
 </script>
 
 <section use:scrollRef={thisRef} class="relative flex h-screen">
 	<div class="flex w-6/12 flex-auto flex-col bg-[#E8E3DA] font-serif text-[#000000]">
-		{#if prevArrow}
-			<div class="absolute top-32 left-1/4 flex -translate-x-1/2 transform flex-col items-center">
-				<!-- <div>
-					<p class="text-lightText">
-						{prevArrowText}
-					</p>
-				</div>
-				<div use:scrollTo={goBack}>
-					<ChevronUpOutline class="h-20 w-20 text-darkText" />
-				</div> -->
-
-				<div use:scrollTo={goBack} class="text-lightText hover:text-darkText">
-					<p >
-						{prevArrowText}
-					</p>
-				</div>
-			</div>
-		{/if}
-
-		<div class="m-48 flex-grow">
-			<h1 class="mt-24 text-6xl text-darkText">{title}</h1>
-			<h1 class="mb-12 text-4xl text-lightText">{thaiTitle}</h1>
+		<div class="m-24 flex-grow">
+			{#if curTab === 0}
+			<h1 class="text-darkText mt-24 text-6xl">Careers</h1>
+			<h1 class="text-lightText mb-12 text-4xl">อาชีพ</h1>
+			{:else if curTab === 1}
+			<h1 class="text-darkText mt-24 text-6xl">Server</h1>
+			<h1 class="text-lightText mb-12 text-4xl">เซิร์ฟเวอร์</h1>
+			{:else if curTab === 2}
+			<h1 class="text-darkText mt-24 text-6xl">Food Runner</h1>
+			<h1 class="text-lightText mb-12 text-4xl">นักวิ่งด้านอาหาร</h1>
+			{:else if curTab === 3}
+			<h1 class="text-darkText mt-24 text-6xl">Driver</h1>
+			<h1 class="text-lightText mb-12 text-4xl">คนขับ</h1>
+			{:else if curTab === 4}
+			<h1 class="text-darkText mt-24 text-6xl">Kitchen Helper</h1>
+			<h1 class="text-lightText mb-12 text-4xl">ผู้ช่วยครัว</h1>
+			{/if}
 
 			<div class="inline-flex">
-				<button use:scrollTo={'Server'} onclick={() => toggleTab(0)}>
-                    {console.log(curTab)}
-                    {#if curTab === 0}
-					    <p class="mb-8 mr-4 text-darkText underline">Server</p>
-                    {:else if curTab != 0}
-                        <p class="mb-8 mr-4 text-lightText">Server</p>
-                    {/if}
+				<button onclick={() => (curTab = 0)}>
+					{#if curTab === 0}
+						<p class="text-darkText mr-4 mb-8 underline">Careers</p>
+					{:else if curTab != 0}
+						<p class="text-lightText mr-4 mb-8">Careers</p>
+					{/if}
 				</button>
-                <button use:scrollTo={'Food Runner'} onclick={() => toggleTab(1)}>
-                    {console.log(curTab)}
-                    {#if curTab === 1}
-                        <p class="mb-8 mx-4 text-darkText underline">Food Runner</p>
-                    {:else if curTab != 1}
-                        <p class="mb-8 mx-4 text-lightText">Food Runner</p>
-                    {/if}
+				<button onclick={() => (curTab = 1)}>
+					{#if curTab === 1}
+						<p class="text-darkText mx-4 mb-8 underline">Server</p>
+					{:else if curTab != 1}
+						<p class="text-lightText mx-4 mb-8">Server</p>
+					{/if}
 				</button>
-                <button use:scrollTo={'Driver'} onclick={() => toggleTab(2)}>
-                    {console.log(curTab)}
-                    {#if curTab === 2}
-					    <p class="mb-8 mx-4 text-darkText underline">Driver</p>
-                    {:else if curTab != 2}
-                        <p class="mb-8 mx-4 text-lightText">Driver</p>
-                    {/if}
+				<button onclick={() => (curTab = 2)}>
+					{#if curTab === 2}
+						<p class="text-darkText mx-4 mb-8 underline">Food Runner</p>
+					{:else if curTab != 2}
+						<p class="text-lightText mx-4 mb-8">Food Runner</p>
+					{/if}
 				</button>
-                <button use:scrollTo={'Kitchen Helper'} onclick={() => toggleTab(3)}>
-                    {console.log(curTab)}
-                    {#if curTab === 3}
-					<p class="mb-8 mx-4 text-darkText underline">Kitchen Helper</p>
-                    {:else if curTab != 3}
-                        <p class="mb-8 mx-4 text-lightText">Kitchen Helper</p>
-                    {/if}
+				<button onclick={() => (curTab = 3)}>
+					{#if curTab === 3}
+						<p class="text-darkText mx-4 mb-8 underline">Driver</p>
+					{:else if curTab != 3}
+						<p class="text-lightText mx-4 mb-8">Driver</p>
+					{/if}
+				</button>
+				<button onclick={() => (curTab = 4)}>
+					{#if curTab === 4}
+						<p class="text-darkText mx-4 mb-8 underline">Kitchen Helper</p>
+					{:else if curTab != 4}
+						<p class="text-lightText mx-4 mb-8">Kitchen Helper</p>
+					{/if}
 				</button>
 			</div>
 			<div class="">
-				<p class="font-sans text-darkText">
-					{@html body}
+				{#if curTab === 0}
+				<p class="text-darkText font-sans">
+					Green Basil Thai Restaurant (GBTR) promotes a fun, respectful and encouraging work environment. We acknowledge the importance of quality staff because this will become our primary success factor. Thus, we welcome energetic, responsible and positive team players to join us.
 				</p>
+				<p class="text-darkText font-sans mt-4">
+					Join the team and send your resume to <a href="mailto:textinfo@greenbasilthai.com" target="_blank" class="focus: font-bold focus:underline underline">textinfogreenbasilthai.com</a>.
+				</p>
+			{:else if curTab === 1}
+			<p class="text-darkText font-sans">
+				GA server at Green Basil plays a vital role in delivering an exceptional dining experience. This position involves warmly welcoming guests, guiding them through the menu with expertise, and ensuring their needs are met with attentiveness and care. Servers are responsible for taking accurate orders, coordinating with the kitchen staff, and maintaining a clean and inviting dining area. At Green Basil, the focus is on creating a friendly and professional atmosphere that reflects the restaurant's commitment to authentic Thai cuisine and outstanding customer service.
+			</p>
+			{:else if curTab === 2}
+			<p class="text-darkText font-sans">
+				A food runner at Green Basil plays an essential role in ensuring seamless service and guest satisfaction. This position involves efficiently delivering dishes from the kitchen to the dining area while maintaining a keen attention to detail and presentation. Food runners collaborate closely with servers and kitchen staff to ensure orders are accurate and delivered promptly. They also assist in maintaining the cleanliness and organization of the dining space. As a representative of Green Basil, a food runner helps uphold the restaurant's commitment to outstanding service and authentic Thai dining.
+			</p>
+			{:else if curTab === 3}
+			<p class="text-darkText font-sans">
+				A driver at Green Basil ensures that the delicious, authentic Thai cuisine reaches customers in a timely and professional manner. This role involves carefully handling food orders, planning efficient delivery routes, and maintaining excellent communication with both the restaurant team and customers. Drivers are responsible for ensuring orders are accurate and delivered promptly while presenting a friendly and courteous demeanor. As ambassadors for Green Basil, they uphold the restaurant’s commitment to quality service and customer satisfaction, bringing the flavors of Green Basil directly to customers’ doors.
+			</p>
+			{:else if curTab === 4}
+			<p class="text-darkText font-sans">
+				A kitchen helper at Green Basil is a cornerstone of smooth kitchen operations and delicious meals. This role involves assisting chefs and kitchen staff with food preparation, organizing ingredients, and ensuring the kitchen remains clean and orderly. Kitchen helpers may also handle tasks like washing dishes, maintaining equipment, and adhering to health and safety standards. Their support helps the team deliver exceptional Thai cuisine efficiently and consistently. As part of Green Basil's dedicated staff, kitchen helpers contribute to the restaurant's warm, inviting atmosphere and commitment to excellence.
+			</p>
+			{/if}
 			</div>
 		</div>
-
-		{#if arrow}
-			<div
-				class="absolute bottom-32 left-1/4 flex -translate-x-1/2 transform flex-col items-center"
-			>
-				<!-- <div use:scrollTo={goTo}>
-					<ChevronDownOutline class="h-20 w-20 text-lightText" />
-				</div>
-				<div>
-					<p class="text-lightText">
-						{arrowText}
-					</p>
-				</div> -->
-
-				<div use:scrollTo={goTo} class="text-lightText hover:text-darkText">
-					<p >
-						{arrowText}
-					</p>
-				</div>
-			</div>
-		{/if}
-
-		{#if topArrow}
-			<div
-				class="absolute bottom-32 left-1/4 flex -translate-x-1/2 transform flex-col items-center"
-			>
-
-			<div use:scrollTo={goTo} class="text-lightText hover:text-darkText">
-				<p >
-					{topArrowText}
-				</p>
-			</div>
-				<!-- <div>
-					<ChevronUpOutline class="h-20 w-20 text-darkText" onclick={() => scrollTop()} />
-				</div>
-				<div>
-					<p class="text-lightText">
-						{topArrowText}
-					</p>
-				</div> -->
-			</div>
-		{/if}
 	</div>
 
 	<div class="w-6/12 flex-auto">
-		<img src="{image}" class="h-full object-cover" alt="" />
+		{#if curTab === 0}
+		<img src='/webp/identityHead.webp' class="h-full object-cover" alt="" />
+			{:else if curTab === 1}
+			<img src='/webp/careersServer.webp' class="h-full object-cover" alt="" />
+			{:else if curTab === 2}
+			<img src='/webp/careersFoodRunner.webp' class="h-full object-cover" alt="" />
+			{:else if curTab === 3}
+			<img src='/webp/identityHead.webp' class="h-full object-cover" alt="" />
+			{:else if curTab === 4}
+			<img src='/webp/careersKitchenHelper.webp' class="h-full object-cover" alt="" />
+			{/if}
+		
 	</div>
 </section>

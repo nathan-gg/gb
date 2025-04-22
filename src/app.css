@@ -80,6 +80,10 @@ input, textarea{
   background: #E0B87A;
 }
 
-.cursor-custom{
-  cursor: url('newCursorLeaf.svg') 4 4, auto;
+/* .cursor-custom{
+  cursor: url('/newCursorLeaf.svg') 4 4, auto;
 }
+
+.cursor-custom:hover{
+  cursor: url('/altCursorLeaf.svg') 4 4, auto;
+} */
