@@ -43,7 +43,7 @@
 
 <div class="bg-primary h-fit p-4">
 	<div class="z-30 flex justify-between">
-		<a href="/">
+		<a href="/home">
 			<img src="finalLogo.svg" class="h-6 justify-start sm:h-10" alt="Green Basil Logo" />
 		</a>
 		{#if showMenu}
@@ -70,6 +70,7 @@
 			class="bg-tertiary text-darkText fixed top-18 right-0 flex h-screen w-1/4 flex-col p-12"
 		>
 			<div class=" font-instrument flex flex-col justify-between text-right text-6xl">
+				<a href="/home" onclick={toggleMenu}>Home</a>
 				<a href="/menus" onclick={toggleMenu}>Menus</a>
 				<a href="/order" onclick={toggleMenu}>Order Online</a>
 				<a href="/identity" onclick={toggleMenu}>The Basil Identity</a>

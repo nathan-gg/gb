@@ -34,6 +34,9 @@
 		"vite": "^6.0.0"
 	},
 	"dependencies": {
+		"embla-carousel-autoplay": "^8.6.0",
+		"embla-carousel-fade": "^8.6.0",
+		"embla-carousel-svelte": "^8.6.0",
 		"svelte-scrolling": "^1.5.1",
 		"svelte-viewport-info": "^1.0.3"
 	}

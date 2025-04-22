@@ -23,8 +23,8 @@
 	let curTab = $state(0);
 </script>
 
-<section use:scrollRef={thisRef} class="relative flex h-screen">
-	<div class="flex w-6/12 flex-auto flex-col bg-[#E8E3DA] font-serif text-[#000000]">
+<section use:scrollRef={thisRef} class="relative flex h-screen ">
+	<div class="flex w-6/12 flex-auto flex-col bg-tertiary font-serif ">
 		{#if prevArrow}
 			<div class="absolute top-32 left-1/4 flex -translate-x-1/2 transform flex-col items-center">
 				<!-- <div>

@@ -1,19 +1,4 @@
 <script>
-	import {
-		Footer,
-		FooterCopyright,
-		FooterLinkGroup,
-		FooterLink,
-		FooterBrand,
-		FooterIcon
-	} from 'flowbite-svelte';
-	import {
-		FacebookSolid,
-		GithubSolid,
-		DiscordSolid,
-		TwitterSolid,
-		InstagramSolid
-	} from 'flowbite-svelte-icons';
 </script>
 
 <div>
@@ -28,12 +13,12 @@
 
 		<div class="m-8 flex-col">
 			<div class=" font-instrument flex flex-col text-4xl">
-				<a href="/" class="pr-4 hover:underline"> Home </a>
-				<a href="about" class="pr-4 text-nowrap hover:underline"> Our Story </a>
+				<a href="home" class="pr-4 hover:underline"> Home </a>
+				<a href="identity" class="pr-4 text-nowrap hover:underline"> Our Story </a>
 				<a href="contact" class="pr-4 text-nowrap hover:underline"> Contact Us </a>
 				<a href="menus" class="pr-4 text-nowrap hover:underline"> Menu </a>
 				<a href="order" class="pr-4 text-nowrap hover:underline"> Order Online </a>
-				<a href="bookings" class="pr-4 text-nowrap hover:underline"> Bookings </a>
+				<a href="reservations" class="pr-4 text-nowrap hover:underline"> Bookings </a>
 				<a href="partnerships" class="pr-4 text-nowrap hover:underline"> Partnerships </a>
 			</div>
 
@@ -60,7 +45,7 @@
 						>Make Reservation</a
 					>
 				</div>
-				<div class="font-DMSans text-darkText mb-8 ml-16 flex-col flex-nowrap text-xs font-thin">
+				<div class="font-DMSans text-lightText mb-8 ml-16 flex-col flex-nowrap text-xs font-thin">
 					<a
 						class="font-thin underline"
 						href="https://www.google.com/maps/dir//4623+Kingsway,+Burnaby,+BC+V5H+2B3/@49.2291765,-123.0835327,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x54867658ed9537d5:0x9e538cb3bbfb2f7f!2m2!1d-123.0011323!2d49.2292058?entry=ttu&g_ep=EgoyMDI1MDIyNi4xIKXMDSoASAFQAw%3D%3D"

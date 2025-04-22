@@ -37,7 +37,7 @@
 
 body {
   overscroll-behavior: none;
-  background-color: #092417;
+  background-color: #0A2310;
 }
 
 h1,h2 {
@@ -87,3 +87,16 @@ input, textarea{
 .cursor-custom:hover{
   cursor: url('/altCursorLeaf.svg') 4 4, auto;
 } */
+
+
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
