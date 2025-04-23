@@ -10,44 +10,35 @@
 		showMenu = !showMenu;
 	}
 
-	// function handleOutsideClick(event) {
-	// 	// If the menu is shown and the click is outside the menu
-	// 	if (showMenu && menuElement && !menuElement.contains(event.target)) {
-	// 		// Check if the click was on the menu toggle button
-	// 		const toggleButton = document.querySelector('button[onclick]');
-	// 		if (!toggleButton.contains(event.target)) {
+	// function handleClickOutside(event) {
+	// 	// Only check if the menu is currently shown
+	// 	if (showMenu == true) {
+	// 		// Check if the click is outside the menu and not on the toggle button
+	// 		if (!menuElement.contains(event.target)) {
 	// 			showMenu = false;
 	// 		}
 	// 	}
 	// }
-	
-	// // Set up and remove event listeners
-	// if (showMenu) {
-	// 	// Next tick to ensure the DOM is updated
-	// 	setTimeout(() => {
-	// 		window.addEventListener('click', handleOutsideClick);
-	// 	}, 0);
-	// } else {
-	// 	window.removeEventListener('click', handleOutsideClick);
-	// }
-	
-	// // Clean up on component unmount
+
 	// onMount(() => {
+	// 	// Add click event listener to the document when component mounts
+	// 	document.addEventListener('click', handleClickOutside);
+
+	// 	// Clean up the event listener when component is destroyed
 	// 	return () => {
-	// 		window.removeEventListener('click', handleOutsideClick);
+	// 		document.removeEventListener('click', handleClickOutside);
 	// 	};
 	// });
-
-
 </script>
 
-<div class="bg-primary h-fit p-4">
+<div class="bg-primary h-fit p-4" >
+	
 	<div class="z-30 flex justify-between">
 		<a href="/home">
 			<img src="finalLogo.svg" class="h-6 justify-start sm:h-10" alt="Green Basil Logo" />
 		</a>
 		{#if showMenu}
-			<button onclick={toggleMenu} class:active={showMenu}>
+			<button onclick={toggleMenu}  class:active={showMenu}>
 				<img src="closeMenu.svg" class="h-10 w-10" alt="Close Website Directory" />
 			</button>
 		{:else}
@@ -59,6 +50,7 @@
 
 	{#if showMenu}
 		<div
+			id="MENU"
 			
 			transition:fly={{
 				delay: 250,

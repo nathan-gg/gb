@@ -35,6 +35,14 @@
   font-style: normal;
 }
 
+.y-scroll {
+  scroll-snap-type: y mandatory;
+}
+
+.y-scroll-item{
+  scroll-snap-align: center;
+}
+
 body {
   overscroll-behavior: none;
   background-color: #0A2310;
@@ -64,21 +72,22 @@ input, textarea{
 }
 
 /* width */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 8px;
-}
+  background: rgb(50, 50, 50);
+} */
 
 /* Handle */
-::-webkit-scrollbar-thumb {
+/* ::-webkit-scrollbar-thumb {
   background: #E0B87A;
   border-radius: 1rem;
   background-size: contain;
-}
+} */
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+/* ::-webkit-scrollbar-thumb:hover {
   background: #E0B87A;
-}
+} */
 
 /* .cursor-custom{
   cursor: url('/newCursorLeaf.svg') 4 4, auto;

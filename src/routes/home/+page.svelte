@@ -85,8 +85,8 @@
   
   </script>
   
-  
-  <Home
+  <section class="y-scroll">
+  <Home class="y-scroll-item"
     thisRef={start.thisRef}
     goTo={start.goTo}
     title={start.title}
@@ -97,7 +97,7 @@
     image={start.image}
   />
   
-  <Home
+  <Home class="y-scroll-item"
     thisRef={menus.thisRef}
     goTo={menus.goTo}
     title={menus.title}
@@ -107,7 +107,7 @@
     image={menus.image}
   />
   
-  <Home
+  <Home class="y-scroll-item"
     thisRef={cocktails.thisRef}
     goTo={cocktails.goTo}
     title={cocktails.title}
@@ -117,7 +117,7 @@
     image={cocktails.image}
   />
   
-  <Home
+  <Home class="y-scroll-item"
     thisRef={order.thisRef}
     goTo={order.goTo}
     title={order.title}
@@ -127,7 +127,7 @@
     image={order.image}
   />
   
-  <Home
+  <Home class="y-scroll-item"
     thisRef={contact.thisRef}
     goTo={contact.goTo}
     title={contact.title}
@@ -137,7 +137,7 @@
     image={contact.image}
   />
   
-  <Home
+  <Home class="y-scroll-item"
     thisRef={partnerships.thisRef}
     goTo={partnerships.goTo}
     title={partnerships.title}
@@ -147,7 +147,7 @@
     link={partnerships.link}
   />
   
-  <Home
+  <Home class="y-scroll-item"
     thisRef={about.thisRef}
     goTo={about.goTo}
     title={about.title}
@@ -157,7 +157,7 @@
     image={about.image}
   />
   
-  <Home
+  <Home class="y-scroll-item"
     thisRef={reservations.thisRef}
     goTo={reservations.goTo}
     title={reservations.title}
@@ -167,6 +167,7 @@
     link={reservations.link}
     image={reservations.image}
   />
+</section>
   
   
   
