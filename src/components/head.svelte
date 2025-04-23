@@ -69,7 +69,7 @@
 			}}
 			class="bg-tertiary text-darkText fixed top-18 right-0 flex h-screen w-1/4 flex-col p-12"
 		>
-			<div class=" font-instrument flex flex-col justify-between text-right text-6xl">
+			<div class=" font-instrument flex flex-col justify-between text-right text-4xl">
 				<a href="/home" onclick={toggleMenu}>Home</a>
 				<a href="/menus" onclick={toggleMenu}>Menus</a>
 				<a href="/order" onclick={toggleMenu}>Order Online</a>
@@ -78,13 +78,13 @@
 				<a href="/reservations" onclick={toggleMenu}>Reservations</a>
 				<a href="/contact" onclick={toggleMenu}>Contact Us</a>
 			</div>
-			<div class="grid grid-cols-2 mt-12 font-DMSans font-thin ">
+			<div class="grid grid-cols-2 mt-12 font-DMSans text-xs font-thin ">
 				<div class="flex flex-col col-span-1">
 					<a href="https://www.instagram.com/greenbasilthai.yvr/" target="_blank">Instagram </a>
 
 					<a href="https://www.facebook.com/GreenBasil/" target="_blank">Facebook </a>
 				</div>
-				<div class="col-span-1  text-darkText mb-8 flex flex-col text-s">
+				<div class="col-span-1  text-darkText mb-8 flex flex-col ">
 					<a
 						class="font-thin underline mb-2"
 						href="https://www.google.com/maps/dir//4623+Kingsway,+Burnaby,+BC+V5H+2B3/@49.2291765,-123.0835327,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x54867658ed9537d5:0x9e538cb3bbfb2f7f!2m2!1d-123.0011323!2d49.2292058?entry=ttu&g_ep=EgoyMDI1MDIyNi4xIKXMDSoASAFQAw%3D%3D"
