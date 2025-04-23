@@ -16,12 +16,12 @@
 		}
 	}
 </script>
-
 <ViewTransition />
+
 <a href='/home'>
 	<div class="pointer-events-none absolute inset-0 z-[10] flex flex-col items-center justify-center">
 		<img src="landingLogo.svg" class="relative -left-6" alt="Green Basil Thai Logo" />
-		<p class="mt-24 text-white">Scroll to Enter</p>
+		<p class="mt-24 text-white">Click to Enter</p>
 	</div>
 
 	<div class="embla bg-black" use:emblaCarouselSvelte={{ options, plugins }}>
