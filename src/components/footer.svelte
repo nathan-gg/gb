@@ -14,12 +14,12 @@
 		<div class="m-8 flex-col">
 			<div class=" font-instrument flex flex-col text-4xl">
 				<a href="home" class="pr-4 hover:underline"> Home </a>
-				<a href="identity" class="pr-4 text-nowrap hover:underline"> Our Story </a>
-				<a href="contact" class="pr-4 text-nowrap hover:underline"> Contact Us </a>
-				<a href="menus" class="pr-4 text-nowrap hover:underline"> Menu </a>
-				<a href="order" class="pr-4 text-nowrap hover:underline"> Order Online </a>
-				<a href="reservations" class="pr-4 text-nowrap hover:underline"> Bookings </a>
-				<a href="partnerships" class="pr-4 text-nowrap hover:underline"> Partnerships </a>
+				<a href="identity" class="pr-4 text-nowrap hover:underline">Our Story</a>
+				<a href="contact" class="pr-4 text-nowrap hover:underline">Contact Us</a>
+				<a href="menus" class="pr-4 text-nowrap hover:underline">Menu</a>
+				<a href="order" class="pr-4 text-nowrap hover:underline">Order Online</a>
+				<a href="reservations" class="pr-4 text-nowrap hover:underline">Bookings</a>
+				<!-- <a href="partnerships" class="pr-4 text-nowrap hover:underline">Reservations</a> -->
 			</div>
 
 			<div class="mt-12 mb-6 grid grid-cols-2 border-b-2 pb-6">

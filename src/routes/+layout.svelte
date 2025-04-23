@@ -4,6 +4,7 @@
 	import Footer from '../components/footer.svelte';
 	let { children } = $props();
 	import { page } from '$app/stores';
+	import ViewTransition from "../components/navigation.svelte";
 </script>
 
 <svelte:head>
@@ -25,12 +26,13 @@
 </div> -->
 
 <div class="cursor-custom">
+	<ViewTransition />
 	{#if $page.url.pathname !== '/'}
 	  <div class="sticky top-0 z-50">
 		<Header />
 	  </div>
 	{/if}
-  
+	  
 	<!-- This is where your page content goes -->
 	{@render children()}
   
