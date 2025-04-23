@@ -97,6 +97,10 @@ input, textarea{
   cursor: url('/altCursorLeaf.svg') 4 4, auto;
 } */
 
+.landing{
+  view-transition-name: landing;
+}
+
 @keyframes fade-in {
   from { opacity: 0; }
 }
