@@ -12,25 +12,28 @@
 	}
 </script>
 
-<section class="relative flex h-screen">
-	<div class="bg-tertiary text-darkText flex w-6/12 flex-auto flex-col font-serif">
-		<div class="mx-48 mt-16 flex flex-col">
-			<h1 class="text-darkText mt-24 text-6xl">{title}</h1>
+<section class="relative flex flex-col sm:flex-row sm:h-screen">
+	<div class="flex sm:hidden">
+		<img src='/webp/orderOnlineMobile.webp' class="w-screen object-cover" alt="" />
+	</div>
+	<div class="bg-tertiary text-darkText flex sm:w-1/2 flex-col font-instrument">
+		<div class=" mx-8 sm:mx-24 xl:mx-50 mt-16 sm:mt-56 flex flex-col">
+			<h1 class="text-darkText text-6xl mb-4">{title}</h1>
 			<h1 class="text-lightText mb-12 text-4xl">{thaiTitle}</h1>
 
-			<p>
+			<p class="font-DMSans">
 				Order through our phone number <a href="tel:+1 6045007542" class="underline"
 					>+1 (604) 439-1919</a
 				> for exceptional and fast delivery service. We offer free in-house delivery for any order above
 				$25 within a 5 km radius.
 			</p>
-			<p class="mt-8">
+			<p class="mt-8 font-DMSans">
 				We also deliver through <span class="font-[1000]">Doordash</span> and
 				<span class="font-[1000]">Uber Eats</span>, which can be accessed with the affiliate links
 				below.
 			</p>
 
-			<div class="mt-8">
+			<div class="mt-8 mb-12 sm:mb-0">
 				<a
 					href="https://www.doordash.com/store/green-basil-thai-restaurant-burnaby-58614/?srsltid=AfmBOoou1HkBW-Q12dcFiteG44mF3P0Gls_6HFlLqFnofOfltMakDq-v"
 					class="border-darkText mb-4 flex place-content-center rounded-xl border-2 bg-transparent p-4 hover:border-[#C90202] hover:bg-[#C90202]"
@@ -62,7 +65,7 @@
 		</div>
 	</div>
 
-	<div class="w-6/12 flex-auto">
-		<img src={image} class="h-full object-cover" alt="" />
+	<div class="w-1/2 flex-auto sm:flex hidden">
+		<img src='/webp/orderOnline.webp' class="h-full object-cover" alt="" />
 	</div>
 </section>

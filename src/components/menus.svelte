@@ -53,16 +53,16 @@
                     easing: quintInOut,
                 }}
                 class="text-xl flex flex-col">
-                    <a href="/fullmenu#specialties" class="hover:text-darkText">Specialties</a>
-                    <a href="/fullmenu#soups" class="hover:text-darkText">Soups</a>
-                    <a href="/fullmenu#appetizers" class="hover:text-darkText">Appetizers</a>
-                    <a href="/fullmenu#salad" class="hover:text-darkText">Salad</a>
-                    <a href="/fullmenu#curry" class="hover:text-darkText">Curry</a>
-                    <a href="/fullmenu#noodles" class="hover:text-darkText">Noodles</a>
-                    <a href="/fullmenu#vegetables" class="hover:text-darkText">Vegetables</a>
-                    <a href="/fullmenu#stir-fried" class="hover:text-darkText">Stir Fried</a>
-                    <a href="/fullmenu#fried-rice" class="hover:text-darkText">Fried Rice</a>
-                    <a href="/fullmenu#desserts" class="hover:text-darkText">Desserts</a>
+                    <a href="/full-menu#specialties" class="hover:text-darkText">Specialties</a>
+                    <a href="/full-menu#soups" class="hover:text-darkText">Soups</a>
+                    <a href="/full-menu#appetizers" class="hover:text-darkText">Appetizers</a>
+                    <a href="/full-menu#salad" class="hover:text-darkText">Salad</a>
+                    <a href="/full-menu#curry" class="hover:text-darkText">Curry</a>
+                    <a href="/full-menu#noodles" class="hover:text-darkText">Noodles</a>
+                    <a href="/full-menu#vegetables" class="hover:text-darkText">Vegetables</a>
+                    <a href="/full-menu#stir-fried" class="hover:text-darkText">Stir Fried</a>
+                    <a href="/full-menu#fried-rice" class="hover:text-darkText">Fried Rice</a>
+                    <a href="/full-menu#desserts" class="hover:text-darkText">Desserts</a>
 
                 </div>
                 {/if}
@@ -74,26 +74,26 @@
                     easing: quintInOut,
                 }}
                 class="text-xl flex flex-col">
-                    <a href="/fullmenu#ctsd" class="hover:text-darkText">Coffee, Tea & Soft Drinks</a>
-                    <a href="/fullmenu#drinks" class="hover:text-darkText">Drinks</a>
-                    <a href="/fullmenu#non-spirited" class="hover:text-darkText">Non-Spirited</a>
-                    <a href="/fullmenu#cocktails" class="hover:text-darkText">Cocktails</a>
-                    <a href="/fullmenu#signature-cocktails" class="hover:text-darkText">Signature Cocktails</a>
-                    <a href="/fullmenu#classic-cocktails" class="hover:text-darkText">Classic Cocktails</a>
-                    <a href="/fullmenu#draught-beer" class="hover:text-darkText">Draught Beer</a>
-                    <a href="/fullmenu#domestic-beer" class="hover:text-darkText">Domestic Beer</a>
-                    <a href="/fullmenu#imported-beer" class="hover:text-darkText">Imported Beer</a>
-                    <a href="/fullmenu#cider" class="hover:text-darkText">Cider</a>
-                    <a href="/fullmenu#vodka" class="hover:text-darkText">Vodka</a>
-                    <a href="/fullmenu#gin" class="hover:text-darkText">Gin</a>
-                    <a href="/fullmenu#rum" class="hover:text-darkText">Rum</a>
-                    <a href="/fullmenu#tequila" class="hover:text-darkText">Tequila</a>
-                    <a href="/fullmenu#whiskey" class="hover:text-darkText">Whisk(e)y</a>
-                    <a href="/fullmenu#scotch" class="hover:text-darkText">Scotch</a>
-                    <a href="/fullmenu#brandy" class="hover:text-darkText">Brandy</a>
-                    <a href="/fullmenu#aperitif-digestif" class="hover:text-darkText">Aperitif & Digestif</a>
-                    <a href="/fullmenu#vermouth-liquers" class="hover:text-darkText">Vermouth & Liquers</a>
-                    <a href="/fullmenu#sct" class="hover:text-darkText">Specialty Coffee & Tea</a>
+                    <a href="/full-menu#ctsd" class="hover:text-darkText">Coffee, Tea & Soft Drinks</a>
+                    <a href="/full-menu#drinks" class="hover:text-darkText">Drinks</a>
+                    <a href="/full-menu#non-spirited" class="hover:text-darkText">Non-Spirited</a>
+                    <a href="/full-menu#cocktails" class="hover:text-darkText">Cocktails</a>
+                    <a href="/full-menu#signature-cocktails" class="hover:text-darkText">Signature Cocktails</a>
+                    <a href="/full-menu#classic-cocktails" class="hover:text-darkText">Classic Cocktails</a>
+                    <a href="/full-menu#draught-beer" class="hover:text-darkText">Draught Beer</a>
+                    <a href="/full-menu#domestic-beer" class="hover:text-darkText">Domestic Beer</a>
+                    <a href="/full-menu#imported-beer" class="hover:text-darkText">Imported Beer</a>
+                    <a href="/full-menu#cider" class="hover:text-darkText">Cider</a>
+                    <a href="/full-menu#vodka" class="hover:text-darkText">Vodka</a>
+                    <a href="/full-menu#gin" class="hover:text-darkText">Gin</a>
+                    <a href="/full-menu#rum" class="hover:text-darkText">Rum</a>
+                    <a href="/full-menu#tequila" class="hover:text-darkText">Tequila</a>
+                    <a href="/full-menu#whiskey" class="hover:text-darkText">Whisk(e)y</a>
+                    <a href="/full-menu#scotch" class="hover:text-darkText">Scotch</a>
+                    <a href="/full-menu#brandy" class="hover:text-darkText">Brandy</a>
+                    <a href="/full-menu#aperitif-digestif" class="hover:text-darkText">Aperitif & Digestif</a>
+                    <a href="/full-menu#vermouth-liquers" class="hover:text-darkText">Vermouth & Liquers</a>
+                    <a href="/full-menu#sct" class="hover:text-darkText">Specialty Coffee & Tea</a>
                 </div>
                 {/if}
                 <button class="hover:text-darkText text-left" onclick={toggleWine}>Wine</button>
@@ -104,10 +104,10 @@
                     easing: quintInOut,
                 }}
                 class="text-xl flex flex-col">
-                    <a href="/fullmenu#featured-wine" class="hover:text-darkText">Featured Wine</a>
-                    <a href="/fullmenu#white-wines" class="hover:text-darkText">White Wines</a>
-                    <a href="/fullmenu#rose" class="hover:text-darkText">Rosé</a>
-                    <a href="/fullmenu#red-wines" class="hover:text-darkText">Red Wines</a>
+                    <a href="/full-menu#featured-wine" class="hover:text-darkText">Featured Wine</a>
+                    <a href="/full-menu#white-wines" class="hover:text-darkText">White Wines</a>
+                    <a href="/full-menu#rose" class="hover:text-darkText">Rosé</a>
+                    <a href="/full-menu#red-wines" class="hover:text-darkText">Red Wines</a>
                 </div>
                 {/if}
                 <button class="hover:text-darkText text-left" onclick={toggleHH}>Happy Hour</button>
@@ -118,12 +118,12 @@
                     easing: quintInOut,
                 }}
                 class="text-xl flex flex-col">
-                    <a href="/fullmenu#food-hh" class="hover:text-darkText">Food</a>
-                    <a href="/fullmenu#draught-beer-hh" class="hover:text-darkText">Draught Beer</a>
-                    <a href="/fullmenu#highballs-hh" class="hover:text-darkText">High Balls</a>
-                    <a href="/fullmenu#specialties-hh" class="hover:text-darkText">Specialties</a>
-                    <a href="/fullmenu#featured-cocktails-hh" class="hover:text-darkText">Featured Cocktails</a>
-                    <a href="/fullmenu#wine-hh" class="hover:text-darkText">Wine</a>
+                    <a href="/full-menu#food-hh" class="hover:text-darkText">Food</a>
+                    <a href="/full-menu#draught-beer-hh" class="hover:text-darkText">Draught Beer</a>
+                    <a href="/full-menu#highballs-hh" class="hover:text-darkText">High Balls</a>
+                    <a href="/full-menu#specialties-hh" class="hover:text-darkText">Specialties</a>
+                    <a href="/full-menu#featured-cocktails-hh" class="hover:text-darkText">Featured Cocktails</a>
+                    <a href="/full-menu#wine-hh" class="hover:text-darkText">Wine</a>
                 </div>
                 {/if}
 			</div>

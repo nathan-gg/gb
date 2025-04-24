@@ -4,13 +4,16 @@
 	let curTab = $state(0);
 </script>
 
-<section class="relative flex h-screen">
-	<div class="flex w-6/12 flex-auto flex-col bg-[#E8E3DA] font-serif text-[#000000]">
-		<div class="m-48 flex-grow">
-			<h1 class="text-darkText mt-24 text-6xl">{title}</h1>
+<section class="relative flex flex-col sm:flex-row sm:h-screen">
+	<div class="flex sm:hidden">
+		<img src='/webp/orderOnlineMobile.webp' class="w-screen object-cover" alt="" />
+	</div>
+	<div class="bg-tertiary text-darkText flex sm:w-1/2 flex-col font-instrument">
+		<div class=" mx-8 sm:mx-16 md:mx-32 2xl:mx-48 mt-16 xl:mt-56 flex flex-col">
+			<h1 class="text-darkText text-6xl mb-4">{title}</h1>
 			<h1 class="text-lightText mb-12 text-4xl">{thaiTitle}</h1>
 
-			<div class="font-DMSans text-darkText">
+			<div class="font-DMSans text-darkText mb-12">
 				<p class="mb-4">
 					We understand that plans can change. If you need to cancel or modify your reservation,
 					please review our policy below:
@@ -40,7 +43,7 @@
 		</div>
 	</div>
 
-	<div class="w-6/12 flex-auto">
-		<img src={image} class="h-full object-cover" alt="" />
+	<div class="w-1/2 flex-auto sm:flex hidden">
+		<img src='/webp/orderOnline.webp' class="h-full object-cover" alt="" />
 	</div>
 </section>
