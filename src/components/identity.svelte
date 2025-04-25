@@ -27,14 +27,6 @@
 	<div class="flex w-6/12 flex-auto flex-col bg-tertiary font-serif ">
 		{#if prevArrow}
 			<div class="absolute top-32 left-1/4 flex -translate-x-1/2 transform flex-col items-center">
-				<!-- <div>
-					<p class="text-lightText">
-						{prevArrowText}
-					</p>
-				</div>
-				<div use:scrollTo={goBack}>
-					<ChevronUpOutline class="h-20 w-20 text-darkText" />
-				</div> -->
 				<div use:scrollTo={goBack} class="text-lightText hover:text-darkText">
 					<p >
 						{prevArrowText}
@@ -75,14 +67,6 @@
 			<div
 				class="absolute bottom-32 left-1/4 flex -translate-x-1/2 transform flex-col items-center"
 			>
-				<!-- <div>
-					<ChevronUpOutline class="h-20 w-20 text-darkText" onclick={() => scrollTop()} />
-				</div> -->
-				<!-- <div>
-					<p class="text-lightText">
-						{topArrowText}
-					</p>
-				</div> -->
 				<div use:scrollTo={goTo} class="text-lightText hover:text-darkText">
 					<p >
 						{topArrowText}

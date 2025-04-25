@@ -4,7 +4,7 @@
   
     
     const start = {
-          thisRef: 'Start',
+      thisRef: 'Start',
       goTo: 'Menus',
       title: 'Welcome to Green Basil',
       pText: 'its good af trust',
@@ -14,18 +14,20 @@
       };
   
     const menus = {
-          thisRef: 'Menus',
+      thisRef: 'Menus',
       goTo: 'Cocktails',
+      goBack: 'Start',
       title: 'Pad Thai',
       pText: 'its good af trust',
       btnText: 'Discover Our Menus',
       link: 'menus',
-      image: '/webp/homeMenusFood.webp'
+      image: '/webp/homeMenusFood.webp',
       };
   
     const cocktails = {
           thisRef: 'Cocktails',
       goTo: 'Order',
+      goBack: 'Menus',
       title: 'Green Basil Cocktail',
       pText: 'its good af trust',
       btnText: 'Explore Cocktails',
@@ -36,6 +38,7 @@
     const order = {
           thisRef: 'Order',
       goTo: 'Contact',
+      goBack: 'Cocktails',
       title: 'Order Online',
       pText: 'its good af trust',
       btnText: 'Order Online',
@@ -46,6 +49,7 @@
     const contact = {
           thisRef: 'Contact',
       goTo: 'Partnerships',
+      goBack: 'Order',
       title: 'Connect With Us',
       pText: 'its good af trust',
       btnText: 'Contact Us',
@@ -56,6 +60,7 @@
     const partnerships = {
           thisRef: 'Partnerships',
       goTo: 'About',
+      goBack: 'Contact',
       title: 'Our Partnerships',
       pText: 'its good af trust',
       btnText: 'Discover Partnerships',
@@ -66,6 +71,7 @@
     const about = {
           thisRef: 'About',
       goTo: 'Reservations',
+      goBack: 'Partnerships',
       title: 'The Basil Identity',
       pText: 'its good af trust',
       btnText: 'Learn About Us',
@@ -76,6 +82,7 @@
     const reservations = {
           thisRef: 'Reservations',
       goTo: 'Start',
+      goBack: 'About',
       title: 'Reserve a Seat',
       pText: 'its good af trust',
       btnText: 'Book a Reservation',
@@ -100,72 +107,86 @@
   <Home class="y-scroll-item"
     thisRef={menus.thisRef}
     goTo={menus.goTo}
+    goBack={menus.goBack}
     title={menus.title}
     pText={menus.pText}
     btnText={menus.btnText}
     link={menus.link}
     image={menus.image}
+    prevArrow={true}
   />
   
   <Home class="y-scroll-item"
     thisRef={cocktails.thisRef}
     goTo={cocktails.goTo}
+    goBack={cocktails.goBack}
     title={cocktails.title}
     pText={cocktails.pText}
     btnText={cocktails.btnText}
     link={cocktails.link}
     image={cocktails.image}
+    prevArrow={true}
   />
   
   <Home class="y-scroll-item"
     thisRef={order.thisRef}
     goTo={order.goTo}
+    goBack={order.goBack}
     title={order.title}
     pText={order.pText}
     btnText={order.btnText}
     link={order.link}
     image={order.image}
+    prevArrow={true}
   />
   
   <Home class="y-scroll-item"
     thisRef={contact.thisRef}
     goTo={contact.goTo}
+    goBack={contact.goBack}
     title={contact.title}
     pText={contact.pText}
     btnText={contact.btnText}
     link={contact.link}
     image={contact.image}
+    prevArrow={true}
   />
   
   <Home class="y-scroll-item"
     thisRef={partnerships.thisRef}
     goTo={partnerships.goTo}
+    goBack={partnerships.goBack}
     title={partnerships.title}
     pText={partnerships.pText}
     btnText={partnerships.btnText}
     image={partnerships.image}
     link={partnerships.link}
+    prevArrow={true}
   />
   
   <Home class="y-scroll-item"
     thisRef={about.thisRef}
     goTo={about.goTo}
+    goBack={about.goBack}
     title={about.title}
     pText={about.pText}
     btnText={about.btnText}
     link={about.link}
     image={about.image}
+    prevArrow={true}
   />
   
   <Home class="y-scroll-item"
     thisRef={reservations.thisRef}
     goTo={reservations.goTo}
+    goBack={reservations.goBack}
     title={reservations.title}
     pText={reservations.pText}
     btnText={reservations.btnText}
     arrow={false}
     link={reservations.link}
     image={reservations.image}
+    prevArrow={true}
   />
 </section>
   

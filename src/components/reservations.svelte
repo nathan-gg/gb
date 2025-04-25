@@ -4,12 +4,12 @@
 	let curTab = $state(0);
 </script>
 
-<section class="relative flex flex-col sm:flex-row sm:h-screen">
+<section class="flex flex-col sm:flex-row sm:h-screen w-screen">
 	<div class="flex sm:hidden">
-		<img src='/webp/orderOnlineMobile.webp' class="w-screen object-cover" alt="" />
+		<img src='/webp/orderOnlineMobile.webp' class="object-cover" alt="" />
 	</div>
 	<div class="bg-tertiary text-darkText flex sm:w-1/2 flex-col font-instrument">
-		<div class=" mx-8 sm:mx-16 md:mx-32 2xl:mx-48 mt-16 xl:mt-56 flex flex-col">
+		<div class=" mx-8 sm:mx-16 md:mx-32 2xl:mx-48 mt-16 lg:mt-24 flex flex-col">
 			<h1 class="text-darkText text-6xl mb-4">{title}</h1>
 			<h1 class="text-lightText mb-12 text-4xl">{thaiTitle}</h1>
 

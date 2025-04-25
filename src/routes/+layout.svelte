@@ -4,44 +4,32 @@
 	import Footer from '../components/footer.svelte';
 	let { children } = $props();
 	import { page } from '$app/stores';
-	import ViewTransition from "../components/navigation.svelte";
+	import ViewTransition from '../components/navigation.svelte';
 </script>
 
 <svelte:head>
-	<link rel="icon" href="iconLogo.svg" type="image/x-icon">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="icon" href="iconLogo.svg" type="image/x-icon" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
 	<title>Green Basil Thai</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<!-- <meta name="" content={''} /> This is for SEO -->
 </svelte:head>
 
-<!-- <div class="cursor-custom">
-<div class="sticky top-0 z-50">
-	<Header />	
-</div>
-
-{@render children()}
-<div class="bottom-0 z-50">
-	<Footer />	
-</div>
-
-</div> -->
-
 <div class="cursor-custom">
 	<ViewTransition />
-	{#if $page.url.pathname !== '/'}
-	  <div class="sticky top-0 z-50">
-		<Header />
-	  </div>
+
+	{#if $page.url.pathname !== '/' && $page.url.pathname !== '/full-menu'}
+		<div class="sticky top-0 z-50">
+			<Header />
+		</div>
 	{/if}
-	  
-	<!-- This is where your page content goes -->
+
 	{@render children()}
-  
-	{#if $page.url.pathname !== '/'}
-	  <div class="bottom-0 z-50">
-		<Footer />
-	  </div>
+
+	{#if $page.url.pathname !== '/' && $page.url.pathname !== '/full-menu'}
+		<div class="bottom-0 z-50">
+			<Footer />
+		</div>
 	{/if}
-  </div>
+</div>

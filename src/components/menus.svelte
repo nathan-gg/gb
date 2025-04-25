@@ -66,6 +66,22 @@
 
                 </div>
                 {/if}
+                <button class="hover:text-darkText text-left" onclick={toggleHH}>Happy Hour</button>
+                {#if showHH}
+                <div 
+                transition:slide={{
+                    duration: 500,
+                    easing: quintInOut,
+                }}
+                class="text-xl flex flex-col">
+                    <a href="/full-menu#food-hh" class="hover:text-darkText">Food</a>
+                    <a href="/full-menu#draught-beer-hh" class="hover:text-darkText">Draught Beer</a>
+                    <a href="/full-menu#highballs-hh" class="hover:text-darkText">High Balls</a>
+                    <a href="/full-menu#specialties-hh" class="hover:text-darkText">Specialties</a>
+                    <a href="/full-menu#featured-cocktails-hh" class="hover:text-darkText">Featured Cocktails</a>
+                    <a href="/full-menu#wine-hh" class="hover:text-darkText">Wine</a>
+                </div>
+                {/if}
                 <button class="hover:text-darkText text-left" onclick={toggleBar}>Bar</button>
                 {#if showBar}
                 <div 
@@ -110,22 +126,7 @@
                     <a href="/full-menu#red-wines" class="hover:text-darkText">Red Wines</a>
                 </div>
                 {/if}
-                <button class="hover:text-darkText text-left" onclick={toggleHH}>Happy Hour</button>
-                {#if showHH}
-                <div 
-                transition:slide={{
-                    duration: 500,
-                    easing: quintInOut,
-                }}
-                class="text-xl flex flex-col">
-                    <a href="/full-menu#food-hh" class="hover:text-darkText">Food</a>
-                    <a href="/full-menu#draught-beer-hh" class="hover:text-darkText">Draught Beer</a>
-                    <a href="/full-menu#highballs-hh" class="hover:text-darkText">High Balls</a>
-                    <a href="/full-menu#specialties-hh" class="hover:text-darkText">Specialties</a>
-                    <a href="/full-menu#featured-cocktails-hh" class="hover:text-darkText">Featured Cocktails</a>
-                    <a href="/full-menu#wine-hh" class="hover:text-darkText">Wine</a>
-                </div>
-                {/if}
+                
 			</div>
 
 		</div>
