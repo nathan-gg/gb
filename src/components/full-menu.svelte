@@ -3,6 +3,7 @@
 	import Footer from '../components/footer.svelte';
 
 	import { scrollTo, scrollRef, scrollTop } from 'svelte-scrolling';
+	import { build } from 'vite';
 
 	let {
 		thisRef,
@@ -20,20 +21,63 @@
 		ifPage2 = false
 	} = $props();
 
-	function changePage(pageID) {
-		const element = document.getElementById(pageID);
-		element.scrollIntoView(false);
-	}
+// 	function changePage(pageID) {
+// 		const element = document.getElementById(pageID);
+// 		element.scrollIntoView(false);
+// 	}
+
+
+// 	function disableSnapTemporarily() {
+// 		const wrapper = document.querySelector('.scroll-wrapper');
+// 		if (!wrapper) return;
+
+// 		wrapper.style.scrollSnapType = 'none';
+
+// 		// Re-enable after short delay (adjust as needed)
+// 		setTimeout(() => {
+// 		wrapper.style.scrollSnapType = 'y mandatory';
+// 		}, 500); // give the scroll enough time to finish
+// 	}
+
+// 	function smoothScroll(sectionName, off) {
+// 		disableSnapTemporarily();
+// 		use:scrollTo({ ref: sectionName, offset: off });
+// 	}
+
+
+// 	function scrollIntoView({ target }) {
+// 		const el = document.querySelector(target.getAttribute('href'));
+// 		if (!el) return;
+//     el.scrollIntoView({
+//       behavior: 'smooth',
+// 	  duration: 1000
+//     });
+//   }
+
+// IDs for each section—update to match your content
+let sections = ['salad1', 'salad2', 'curry'];
+  let currentIndex = 0;
+
+  // Scroll to a given section index, smoothly
+  const scrollTarget = (index) => {
+    if (index < 0 || index >= sections.length) return;
+    const target = document.getElementById(sections[index]);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      currentIndex = index;
+    }
+  };
 </script>
 
 <div class="sticky top-0 z-50">
 	<Header />
 </div>
 
-<div class="snap-y scroll-mb-16">
+<div class="snap-y snap-mandatory scroll-mb-16 top-16">
+	{#each sections as id, i}
 	<section
-		id="salad"
-		class="relative flex min-h-screen snap-start snap-normal"
+		id={id}
+		class="relative flex min-h-[calc(100vh-4rem)] snap-start snap-normal"
 	>
 		<div class="bg-tertiary font-instrument flex w-6/12 flex-auto flex-col text-[#000000]">
 				<div class="absolute top-32 left-1/4 flex -translate-x-1/2 transform flex-col items-center">
@@ -42,11 +86,15 @@
 							{'Appetizers'}
 						</p> -->
 
-					<a href="#curry" class="text-lightText hover:text-darkText">
+					<!-- <a use:scrollTo={{ ref: 'appetizers', offset:-64 }} class="text-lightText hover:text-darkText"> -->
+					<!-- <a  onclick={smoothScroll('curry', -64)} class="text-lightText hover:text-darkText"> -->
+					<!-- <a href='#curry' onclick={scrollIntoView} class="text-lightText hover:text-darkText"> -->
+					 <button onclick={() => scrollTarget(i - 1)} disabled={i === 0} class="text-lightText hover:text-darkText" aria-label="Appetizers">
 						<p>
 							{'Appetizers'}
 						</p>
-					</a>
+					</button>
+					
 				</div>
 
 			<div class="m-48 mt-8 flex-grow">
@@ -110,17 +158,23 @@
 				</div>
 			</div>
 
-			{#if arrow}
+			<!-- {#if arrow} -->
 				<div
-					class="absolute bottom-56 left-1/4 flex -translate-x-1/2 transform flex-col items-center"
+					 class="absolute bottom-56 left-1/4 flex -translate-x-1/2 transform flex-col items-center"
 				>
-					<div use:scrollTo={'salad2'} class="text-lightText hover:text-darkText">
+					<!-- <a use:scrollTo={{ ref: 'curry', offset:-64 }} class="text-lightText hover:text-darkText">
 						<p>
-							{arrowText}
+							More Salads
 						</p>
-					</div>
+					</a> -->
+
+					<button onclick={() => scrollTarget(i + 1)} disabled={i === sections.length - 1} class="text-lightText hover:text-darkText" aria-label="More Salads">
+						<p>
+							More Salads
+						</p>
+					</button>
 				</div>
-			{/if}
+			<!-- {/if} -->
 		</div>
 
 		<div class="w-1/2 flex-auto">
@@ -129,18 +183,18 @@
 	</section>
 
 	<section
-		use:scrollRef={'salad2'}
-		id="salad"
+		
+		id={id}
 		class="relative flex min-h-screen snap-start snap-normal"
 	>
 		<div class="bg-tertiary flex w-6/12 flex-auto flex-col font-serif text-[#000000]">
 			{#if prevArrow}
 				<div class="absolute top-32 left-1/4 flex -translate-x-1/2 transform flex-col items-center">
-					<div use:scrollTo={'salad1'} class="text-lightText hover:text-darkText">
+					<a use:scrollTo={{ ref: 'salad1', offset:-64 }} class="text-lightText hover:text-darkText">
 						<p>
-							{prevArrowText}
+							Salads
 						</p>
-					</div>
+					</a>
 				</div>
 			{/if}
 
@@ -193,11 +247,11 @@
 				<div
 					class="absolute bottom-56 left-1/4 flex -translate-x-1/2 transform flex-col items-center"
 				>
-					<div use:scrollTo={'curry'} class="text-lightText hover:text-darkText">
-						<p>
-							{arrowText}
-						</p>
-					</div>
+				<a use:scrollTo={{ ref: 'curry', offset:-64 }} class="text-lightText hover:text-darkText">
+					<p>
+						{arrowText}
+					</p>
+				</a>
 				</div>
 			{/if}
 		</div>
@@ -301,7 +355,7 @@
 		</div>
 	</section>
 
-	<section
+	<!-- <section
 		use:scrollRef={thisRef}
 		id="vegetables"
 		class="relative flex min-h-screen snap-start snap-normal"
@@ -484,10 +538,12 @@
 		<div class="w-1/2 flex-auto">
 			<img src={image} class="h-full object-cover" alt="" />
 		</div>
-	</section>
+	</section> -->
+	
 	<div class="bottom-0 snap-start snap-normal">
 		<Footer />
 	</div>
+	{/each}
 </div>
 
 

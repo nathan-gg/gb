@@ -12,7 +12,7 @@
 	}
 </script>
 
-<section class="relative flex flex-col sm:flex-row sm:h-screen">
+<section class="relative flex flex-col sm:flex-row h-fit">
 	<div class="flex sm:hidden">
 		<img src='/webp/orderOnlineMobile.webp' class="w-screen object-cover" alt="" />
 	</div>

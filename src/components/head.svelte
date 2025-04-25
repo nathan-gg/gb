@@ -32,19 +32,19 @@
 	// });
 </script>
 
-<div class="bg-primary h-fit p-4 sm:px-16 w-screen" >
+<div class="bg-primary p-4 px-8 h-16 sm:p-4 sm:px-16 w-screen" >
 	
 	<div class="z-30 flex justify-between">
 		<a href="/home">
-			<img src="finalLogo.svg" class="h-6 justify-start " alt="Green Basil Logo" />
+			<img src="finalLogo.svg" class="h-8 justify-start " alt="Green Basil Logo" />
 		</a>
 		{#if showMenu}
 			<button onclick={toggleMenu}  class:active={showMenu}>
-				<img src="closeMenu.svg" class="h-6 w-6 " alt="Close Website Directory" />
+				<img src="closeMenu.svg" class="h-8 " alt="Close Website Directory" />
 			</button>
 		{:else}
 			<button onclick={toggleMenu}>
-				<img src="menuBars.svg" class="h-6 w-6 " alt="Open Website Directory" />
+				<img src="menuBars.svg" class="h-8 " alt="Open Website Directory" />
 			</button>
 		{/if}
 	</div>
@@ -60,7 +60,7 @@
 				x: 500,
 				y: 0
 			}}
-			class="bg-tertiary text-darkText fixed top-14 right-0 flex h-screen w-full sm:w-1/2 md:w-1/4 flex-col p-12"
+			class="bg-tertiary text-darkText fixed top-16 right-0 flex h-screen w-full sm:w-1/2 md:w-1/4 flex-col p-12 z-20"
 		>
 			<div class=" font-instrument flex flex-col justify-between text-right text-4xl sm:text-2xl lg:text-4xl">
 				<a href="/home" onclick={toggleMenu}>Home</a>

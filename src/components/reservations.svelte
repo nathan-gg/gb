@@ -4,9 +4,9 @@
 	let curTab = $state(0);
 </script>
 
-<section class="flex flex-col sm:flex-row sm:h-screen w-screen">
+<section class="flex flex-col sm:flex-row h-fit w-screen">
 	<div class="flex sm:hidden">
-		<img src='/webp/orderOnlineMobile.webp' class="object-cover" alt="" />
+		<img src='/webp/orderOnlineMobile.webp' class="w-screen object-cover" alt="" />
 	</div>
 	<div class="bg-tertiary text-darkText flex sm:w-1/2 flex-col font-instrument">
 		<div class=" mx-8 sm:mx-16 md:mx-32 2xl:mx-48 mt-16 lg:mt-24 flex flex-col">

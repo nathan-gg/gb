@@ -20,11 +20,11 @@
 	let curTab = $state(0);
 </script>
 
-<section use:scrollRef={thisRef} class="relative flex h-screen">
+<section use:scrollRef={thisRef} class="relative flex min-h-[calc(100vh-4rem)]">
 	<div class="bg-tertiary flex w-6/12 flex-auto flex-col font-serif text-[#000000]">
 		{#if prevArrow}
 			<div class="absolute top-32 left-1/4 flex -translate-x-1/2 transform flex-col items-center">
-				<div use:scrollTo={goBack} class="text-lightText hover:text-darkText">
+				<div use:scrollTo={{ ref: (goBack), offset:-64 }} class="text-lightText hover:text-darkText">
 					<p>
 						{prevArrowText}
 					</p>
@@ -126,7 +126,7 @@
 			<div
 				class="absolute bottom-32 left-1/4 flex -translate-x-1/2 transform flex-col items-center"
 			>
-				<div use:scrollTo={goTo} class="text-lightText hover:text-darkText">
+				<div use:scrollTo={{ ref: (goTo), offset:-64 }} class="text-lightText hover:text-darkText">
 					<p>
 						{arrowText}
 					</p>

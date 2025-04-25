@@ -139,6 +139,10 @@ input, textarea{
   color: #355128;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* width */
 /* ::-webkit-scrollbar {
   width: 8px;
