@@ -1,6 +1,7 @@
 <script lang="ts">
   
     import Home from '/src/components/home.svelte';
+    // import Footer from '../components/footer.svelte';
   
     
     const start = {
@@ -102,6 +103,7 @@
     btnText={start.btnText}
     link={start.link}
     image={start.image}
+    firstSection={true}
   />
   
   <Home class="y-scroll-item"
@@ -188,7 +190,12 @@
     image={reservations.image}
     prevArrow={true}
   />
+  <!-- <div class="bottom-0 snap-start snap-normal">
+    <Footer />
+  </div> -->
 </section>
+
+
   
   
   

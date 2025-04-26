@@ -32,35 +32,35 @@
 			<div class="inline-flex">
 				<button onclick={() => (curTab = 0)}>
 					{#if curTab === 0}
-						<p class="text-darkText mr-4 mb-8 underline">Careers</p>
+						<p class="text-darkText mr-4 mb-8 ">Careers</p>
 					{:else if curTab != 0}
 						<p class="text-lightText mr-4 mb-8">Careers</p>
 					{/if}
 				</button>
 				<button onclick={() => (curTab = 1)}>
 					{#if curTab === 1}
-						<p class="text-darkText mx-4 mb-8 underline">Server</p>
+						<p class="text-darkText mx-4 mb-8 ">Server</p>
 					{:else if curTab != 1}
 						<p class="text-lightText mx-4 mb-8">Server</p>
 					{/if}
 				</button>
 				<button onclick={() => (curTab = 2)}>
 					{#if curTab === 2}
-						<p class="text-darkText mx-4 mb-8 underline">Food Runner</p>
+						<p class="text-darkText mx-4 mb-8">Food Runner</p>
 					{:else if curTab != 2}
 						<p class="text-lightText mx-4 mb-8">Food Runner</p>
 					{/if}
 				</button>
 				<button onclick={() => (curTab = 3)}>
 					{#if curTab === 3}
-						<p class="text-darkText mx-4 mb-8 underline">Driver</p>
+						<p class="text-darkText mx-4 mb-8">Driver</p>
 					{:else if curTab != 3}
 						<p class="text-lightText mx-4 mb-8">Driver</p>
 					{/if}
 				</button>
 				<button onclick={() => (curTab = 4)}>
 					{#if curTab === 4}
-						<p class="text-darkText mx-4 mb-8 underline">Kitchen Helper</p>
+						<p class="text-darkText mx-4 mb-8">Kitchen Helper</p>
 					{:else if curTab != 4}
 						<p class="text-lightText mx-4 mb-8">Kitchen Helper</p>
 					{/if}
@@ -107,6 +107,5 @@
 			{:else if curTab === 4}
 			<img src='/webp/careersKitchenHelper.webp' class="h-full object-cover" alt="" />
 			{/if}
-		
 	</div>
 </section>

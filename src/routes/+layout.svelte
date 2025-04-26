@@ -16,17 +16,17 @@
 	<!-- <meta name="" content={''} /> This is for SEO -->
 </svelte:head>
 
-<div class="cursor-custom">
+<div class="cursor-custom overflow-x-clip">
 	<ViewTransition />
 
-	{#if $page.url.pathname !== '/' && $page.url.pathname !== '/full-menu'}
+	{#if $page.url.pathname !== '/' && $page.url.pathname !== '/full-menu' }
 		<div class="sticky top-0 z-50">
 			<Header />
 		</div>
 	{/if}
 
 	{@render children()}
-
+	<!-- {#if $page.url.pathname !== '/' && $page.url.pathname !== '/full-menu' && $page.url.pathname !== '/home'} -->
 	{#if $page.url.pathname !== '/' && $page.url.pathname !== '/full-menu'}
 		<div class="bottom-0 z-50">
 			<Footer />

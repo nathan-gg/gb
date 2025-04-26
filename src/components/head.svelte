@@ -32,7 +32,8 @@
 	// });
 </script>
 
-<div class="bg-primary p-4 px-8 h-16 sm:p-4 sm:px-16 w-screen" >
+<section class="overflow-x-hidden">
+<div class="bg-primary p-4 px-8 h-16 sm:p-4 sm:px-16 w-full" >
 	
 	<div class="z-30 flex justify-between">
 		<a href="/home">
@@ -92,3 +93,4 @@
 		</div>
 	{/if}
 </div>
+</section>
