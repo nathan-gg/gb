@@ -3,7 +3,6 @@
 	import Footer from '../components/footer.svelte';
 
 	import { scrollTo, scrollRef, scrollTop } from 'svelte-scrolling';
-	import { build } from 'vite';
 
 	let {
 		thisRef,
@@ -21,86 +20,28 @@
 		ifPage2 = false
 	} = $props();
 
-// 	function changePage(pageID) {
-// 		const element = document.getElementById(pageID);
-// 		element.scrollIntoView(false);
-// 	}
-
-
-// 	function disableSnapTemporarily() {
-// 		const wrapper = document.querySelector('.scroll-wrapper');
-// 		if (!wrapper) return;
-
-// 		wrapper.style.scrollSnapType = 'none';
-
-// 		// Re-enable after short delay (adjust as needed)
-// 		setTimeout(() => {
-// 		wrapper.style.scrollSnapType = 'y mandatory';
-// 		}, 500); // give the scroll enough time to finish
-// 	}
-
-// 	function smoothScroll(sectionName, off) {
-// 		disableSnapTemporarily();
-// 		use:scrollTo({ ref: sectionName, offset: off });
-// 	}
-
-
-// 	function scrollIntoView({ target }) {
-// 		const el = document.querySelector(target.getAttribute('href'));
-// 		if (!el) return;
-//     el.scrollIntoView({
-//       behavior: 'smooth',
-// 	  duration: 1000
-//     });
-//   }
-
-// IDs for each section—update to match your content
-let sections = ['salad1', 'salad2', 'curry'];
-  let currentIndex = 0;
-
-  // Scroll to a given section index, smoothly
-  const scrollTarget = (index) => {
-    if (index < 0 || index >= sections.length) return;
-    const target = document.getElementById(sections[index]);
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      currentIndex = index;
-    }
-  };
 </script>
 
-<div class="sticky top-0 z-50">
-	<Header />
-</div>
 
-<div class="snap-y snap-mandatory scroll-mb-16 top-16">
-	{#each sections as id, i}
-	<section
-		id={id}
-		class="relative flex min-h-[calc(100vh-4rem)] snap-start snap-normal"
-	>
-		<div class="bg-tertiary font-instrument flex w-6/12 flex-auto flex-col text-[#000000]">
-				<div class="absolute top-32 left-1/4 flex -translate-x-1/2 transform flex-col items-center">
-					<!-- <button onclick={changePage('curry')} class="text-lightText hover:text-darkText">
-						<p>
-							{'Appetizers'}
-						</p> -->
-
-					<!-- <a use:scrollTo={{ ref: 'appetizers', offset:-64 }} class="text-lightText hover:text-darkText"> -->
-					<!-- <a  onclick={smoothScroll('curry', -64)} class="text-lightText hover:text-darkText"> -->
-					<!-- <a href='#curry' onclick={scrollIntoView} class="text-lightText hover:text-darkText"> -->
-					 <button onclick={() => scrollTarget(i - 1)} disabled={i === 0} class="text-lightText hover:text-darkText" aria-label="Appetizers">
-						<p>
-							{'Appetizers'}
+	<section id="salad" class=" bg-tertiary relative flex flex-col sm:flex-row h-fit">
+		<div class="flex sm:hidden">
+			<img src='/webp/careersKitchenHelperMobile.webp' class="w-screen object-cover" alt="" />
+		</div>
+		<div class="text-darkText flex sm:w-1/2 justify-center items-center flex-col font-instrument">
+			
+				<div
+					class="mt-6 md:mt-12"
+				>
+					<div use:scrollTo={{ ref: 'appetizers', offset:-64 }} class=" font-DMSans text-lightText hover:text-darkText">
+						<p >
+							Appetizers
 						</p>
-					</button>
-					
+					</div>
 				</div>
-
-			<div class="m-48 mt-8 flex-grow">
-				<h1 class="text-darkText mt-24 text-6xl">Salad</h1>
+			<div class="mx-8 sm:mx-16 xl:mx-50 mt-12 mb-12 sm:my-16 md:my-24  xl:my-36  flex flex-col">
+				<h1 class="text-darkText text-6xl mb-4">Salads</h1>
 				<h1 class="text-lightText mb-12 text-4xl">สลัด</h1>
-
+	
 				<div class="text-darkText font-DMSans mt-8 mb-4 flex">
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
@@ -157,51 +98,44 @@ let sections = ['salad1', 'salad2', 'curry'];
 					</div>
 				</div>
 			</div>
-
-			<!-- {#if arrow} -->
+				
+		
+		
 				<div
-					 class="absolute bottom-56 left-1/4 flex -translate-x-1/2 transform flex-col items-center"
+					class="mb-6 md:mb-12"
 				>
-					<!-- <a use:scrollTo={{ ref: 'curry', offset:-64 }} class="text-lightText hover:text-darkText">
-						<p>
+					<div use:scrollTo={{ ref: (goTo), offset:-64 }} class=" font-DMSans text-lightText hover:text-darkText">
+						<p >
 							More Salads
 						</p>
-					</a> -->
-
-					<button onclick={() => scrollTarget(i + 1)} disabled={i === sections.length - 1} class="text-lightText hover:text-darkText" aria-label="More Salads">
-						<p>
-							More Salads
-						</p>
-					</button>
+					</div>
 				</div>
-			<!-- {/if} -->
 		</div>
-
-		<div class="w-1/2 flex-auto">
-			<img src={image} class="h-full object-cover" alt="" />
+	
+		<div class="w-1/2 flex-auto sm:flex hidden">
+			<img src='/webp/careersKitchenHelper.webp' class="h-full object-cover w-full" alt="" />
 		</div>
 	</section>
 
-	<section
-		
-		id={id}
-		class="relative flex min-h-screen snap-start snap-normal"
-	>
-		<div class="bg-tertiary flex w-6/12 flex-auto flex-col font-serif text-[#000000]">
-			{#if prevArrow}
-				<div class="absolute top-32 left-1/4 flex -translate-x-1/2 transform flex-col items-center">
-					<a use:scrollTo={{ ref: 'salad1', offset:-64 }} class="text-lightText hover:text-darkText">
-						<p>
+	<section id="salad2" class=" bg-tertiary relative flex flex-col sm:flex-row h-fit">
+		<div class="flex sm:hidden">
+			<img src='/webp/careersKitchenHelperMobile.webp' class="w-screen object-cover" alt="" />
+		</div>
+		<div class="text-darkText flex sm:w-1/2 justify-center items-center flex-col font-instrument">
+			
+				<div
+					class="mt-6 md:mt-12"
+				>
+					<div use:scrollTo={{ ref: 'appetizers', offset:-64 }} class=" font-DMSans text-lightText hover:text-darkText">
+						<p >
 							Salads
 						</p>
-					</a>
+					</div>
 				</div>
-			{/if}
-
-			<div class="m-48 mt-8 flex-grow">
-				<h1 class="text-darkText mt-24 text-6xl">Salad</h1>
+			<div class="mx-8 sm:mx-16 xl:mx-50 mt-12 mb-12 sm:my-16 md:my-24  xl:my-36  flex flex-col">
+				<h1 class="text-darkText text-6xl mb-4">More Salads</h1>
 				<h1 class="text-lightText mb-12 text-4xl">สลัด</h1>
-
+	
 				<div class="text-darkText font-DMSans mt-8 mb-4 flex">
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
@@ -242,146 +176,324 @@ let sections = ['salad1', 'salad2', 'curry'];
 					</div>
 				</div>
 			</div>
-
-			{#if arrow}
+				
+		
+		
 				<div
-					class="absolute bottom-56 left-1/4 flex -translate-x-1/2 transform flex-col items-center"
+					class="mb-6 md:mb-12"
 				>
-				<a use:scrollTo={{ ref: 'curry', offset:-64 }} class="text-lightText hover:text-darkText">
-					<p>
-						{arrowText}
-					</p>
-				</a>
-				</div>
-			{/if}
-		</div>
-
-		<div class="w-1/2 flex-auto">
-			<img src={image} class="h-full object-cover" alt="" />
-		</div>
-	</section>
-
-	<section
-		id="curry"
-		class="relative flex min-h-screen snap-start snap-normal"
-	>
-		<div class="bg-tertiary flex w-6/12 flex-auto flex-col font-serif text-[#000000]">
-			{#if prevArrow}
-				<div class="absolute top-32 left-1/4 flex -translate-x-1/2 transform flex-col items-center">
-					<div use:scrollTo={goBack} class="text-lightText hover:text-darkText">
-						<p>
-							{prevArrowText}
+					<div use:scrollTo={{ ref: (goTo), offset:-64 }} class=" font-DMSans text-lightText hover:text-darkText">
+						<p >
+							Curry
 						</p>
 					</div>
 				</div>
-			{/if}
+		</div>
+	
+		<div class="w-1/2 flex-auto sm:flex hidden">
+			<img src='/webp/careersKitchenHelper.webp' class="h-full object-cover w-full" alt="" />
+		</div>
+	</section>
 
-			<div class="m-48 mt-8 flex-grow">
-				<h1 class="text-darkText mt-24 text-6xl">Curry</h1>
-				<h1 class="text-lightText mb-12 text-4xl">แกง</h1>
-
+	<section id="curry" class=" bg-tertiary relative flex flex-col sm:flex-row h-fit">
+		<div class="flex sm:hidden">
+			<img src='/webp/careersKitchenHelperMobile.webp' class="w-screen object-cover" alt="" />
+		</div>
+		<div class="text-darkText flex sm:w-1/2 justify-center items-center flex-col font-instrument">
+			
+				<div
+					class="mt-6 md:mt-12"
+				>
+					<div use:scrollTo={{ ref: 'appetizers', offset:-64 }} class=" font-DMSans text-lightText hover:text-darkText">
+						<p >
+							Salads
+						</p>
+					</div>
+				</div>
+			<div class="mx-8 sm:mx-16 xl:mx-50 mt-12 mb-12 sm:my-16 md:my-24  xl:my-36  flex flex-col">
+				<h1 class="text-darkText text-6xl mb-4">Curry</h1>
+				<h1 class="text-lightText mb-12 text-4xl">สลัด</h1>
+	
 				<div class="text-darkText font-DMSans mt-8 mb-4 flex">
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
-							<p class=" font-bold"></p>
-							<p class="font-light"></p>
+							<p class=" font-bold"> </p>
+							<p class="font-light">
+								 
+							</p>
 						</div>
 						<div>
-							<p></p>
+							<p> </p>
 						</div>
 					</div>
 				</div>
 				<div class="text-darkText font-DMSans mb-4 flex">
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
-							<p class=" font-bold"></p>
-							<p class="font-light"></p>
+							<p class=" font-bold"> </p>
+							<p class="font-light">
+								 
+							</p>
 						</div>
 						<div>
-							<p></p>
+							<p>  </p>
 						</div>
 					</div>
 				</div>
-				<div class="text-darkText font-DMSans mb-4 flex">
-					<div class="flex w-full flex-row justify-between">
-						<div class="pr-8">
-							<p class=" font-bold"></p>
-							<p class="font-light"></p>
-						</div>
-						<div>
-							<p></p>
-						</div>
+				
+			</div>
+				
+		
+		
+				<div
+					class="mb-6 md:mb-12"
+				>
+					<div use:scrollTo={{ ref: (goTo), offset:-64 }} class=" font-DMSans text-lightText hover:text-darkText">
+						<p >
+							Stir Fried
+						</p>
 					</div>
 				</div>
-				<div class="text-darkText font-DMSans mb-4 flex">
-					<div class="flex w-full flex-row justify-between">
-						<div class="pr-8">
-							<p class=" font-bold"></p>
-							<p class="font-light"></p>
-						</div>
-						<div>
-							<p></p>
-						</div>
+		</div>
+	
+		<div class="w-1/2 flex-auto sm:flex hidden">
+			<img src='/webp/careersKitchenHelper.webp' class="h-full object-cover w-full" alt="" />
+		</div>
+	</section>
+
+	<section id="stir-fried" class=" bg-tertiary relative flex flex-col sm:flex-row h-fit">
+		<div class="flex sm:hidden">
+			<img src='/webp/careersKitchenHelperMobile.webp' class="w-screen object-cover" alt="" />
+		</div>
+		<div class="text-darkText flex sm:w-1/2 justify-center items-center flex-col font-instrument">
+			
+				<div
+					class="mt-6 md:mt-12"
+				>
+					<div use:scrollTo={{ ref: 'appetizers', offset:-64 }} class=" font-DMSans text-lightText hover:text-darkText">
+						<p >
+							Curry
+						</p>
 					</div>
 				</div>
-				<div class="text-darkText font-DMSans mb-4 flex">
+			<div class="mx-8 sm:mx-16 xl:mx-50 mt-12 mb-12 sm:my-16 md:my-24  xl:my-36  flex flex-col">
+				<h1 class="text-darkText text-6xl mb-4">Stir-Fried</h1>
+				<h1 class="text-lightText mb-12 text-4xl">สลัด</h1>
+	
+				<div class="text-darkText font-DMSans mt-8 mb-4 flex">
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
-							<p class=" font-bold"></p>
-							<p class="font-light"></p>
+							<p class=" font-bold">20. Yum Pla Meuk</p>
+							<p class="font-light">
+								Squids with lime juice, shallots, fish sauce and bird’s eye chilli
+							</p>
 						</div>
 						<div>
-							<p></p>
+							<p>14.50</p>
 						</div>
 					</div>
 				</div>
 			</div>
 
-			{#if arrow}
 				<div
-					class="absolute bottom-56 left-1/4 flex -translate-x-1/2 transform flex-col items-center"
+					class="mb-6 md:mb-12"
 				>
-					<div use:scrollTo={goTo} class="text-lightText hover:text-darkText">
-						<p>
-							{arrowText}
+					<div use:scrollTo={{ ref: (goTo), offset:-64 }} class=" font-DMSans text-lightText hover:text-darkText">
+						<p >
+							More Stir-Fried
 						</p>
 					</div>
 				</div>
-			{/if}
 		</div>
 
-		<div class="w-1/2 flex-auto">
-			<img src={image} class="h-full object-cover" alt="" />
+		<div class="w-1/2 flex-auto sm:flex hidden">
+			<img src='/webp/careersKitchenHelper.webp' class="h-full object-cover w-full" alt="" />
 		</div>
 	</section>
 
-	<!-- <section
-		use:scrollRef={thisRef}
-		id="vegetables"
-		class="relative flex min-h-screen snap-start snap-normal"
-	>
-		<div class="bg-tertiary flex w-6/12 flex-auto flex-col font-serif text-[#000000]">
-			{#if prevArrow}
-				<div class="absolute top-32 left-1/4 flex -translate-x-1/2 transform flex-col items-center">
-					<div use:scrollTo={goBack} class="text-lightText hover:text-darkText">
-						<p>
-							{prevArrowText}
+	<section id="stir-fried2" class=" bg-tertiary relative flex flex-col sm:flex-row h-fit">
+		<div class="flex sm:hidden">
+			<img src='/webp/careersKitchenHelperMobile.webp' class="w-screen object-cover" alt="" />
+		</div>
+		<div class="text-darkText flex sm:w-1/2 justify-center items-center flex-col font-instrument">
+			
+				<div
+					class="mt-6 md:mt-12"
+				>
+					<div use:scrollTo={{ ref: 'appetizers', offset:-64 }} class=" font-DMSans text-lightText hover:text-darkText">
+						<p >
+							Stir-Fried
 						</p>
 					</div>
 				</div>
-			{/if}
-
-			<div class="m-48 mt-8 flex-grow">
-				<h1 class="text-darkText mt-24 text-6xl">Vegetables</h1>
-				<h1 class="text-lightText mb-12 text-4xl">ผัก</h1>
-
+			<div class="mx-8 sm:mx-16 xl:mx-50 mt-12 mb-12 sm:my-16 md:my-24  xl:my-36  flex flex-col">
+				<h1 class="text-darkText text-6xl mb-4">More Stir-Fried</h1>
+				<h1 class="text-lightText mb-12 text-4xl">สลัด</h1>
+	
 				<div class="text-darkText font-DMSans mt-8 mb-4 flex">
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
-							<p class=" font-bold">44. Tofu Phat Bai Ga-Phrao</p>
+							<p class=" font-bold">20. Yum Pla Meuk</p>
 							<p class="font-light">
-								Stir-fried soft tofu with seasonal vegetables, white button mushrooms, chilli paste
-								and holy basil
+								Squids with lime juice, shallots, fish sauce and bird’s eye chilli
+							</p>
+						</div>
+						<div>
+							<p>14.50</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+				<div
+					class="mb-6 md:mb-12"
+				>
+					<div use:scrollTo={{ ref: (goTo), offset:-64 }} class=" font-DMSans text-lightText hover:text-darkText">
+						<p >
+							Noodles
+						</p>
+					</div>
+				</div>
+		</div>
+
+		<div class="w-1/2 flex-auto sm:flex hidden">
+			<img src='/webp/careersKitchenHelper.webp' class="h-full object-cover w-full" alt="" />
+		</div>
+	</section>
+
+	<section id="noodles" class=" bg-tertiary relative flex flex-col sm:flex-row h-fit">
+		<div class="flex sm:hidden">
+			<img src='/webp/careersKitchenHelperMobile.webp' class="w-screen object-cover" alt="" />
+		</div>
+		<div class="text-darkText flex sm:w-1/2 justify-center items-center flex-col font-instrument">
+			
+				<div
+					class="mt-6 md:mt-12"
+				>
+					<div use:scrollTo={{ ref: 'appetizers', offset:-64 }} class=" font-DMSans text-lightText hover:text-darkText">
+						<p >
+							Stir-Fried
+						</p>
+					</div>
+				</div>
+			<div class="mx-8 sm:mx-16 xl:mx-50 mt-12 mb-12 sm:my-16 md:my-24  xl:my-36  flex flex-col">
+				<h1 class="text-darkText text-6xl mb-4">Noodles</h1>
+				<h1 class="text-lightText mb-12 text-4xl">สลัด</h1>
+	
+				<div class="text-darkText font-DMSans mt-8 mb-4 flex">
+					<div class="flex w-full flex-row justify-between">
+						<div class="pr-8">
+							<p class=" font-bold">39. Traditional Phat Thai </p>
+							<p class="font-light">
+								Rice noodles or egg noodles, with shrimps and bay scallops, roasted peanuts, egg, bean sprouts, scallions and lime, with a choice of tamarind sauce or tomato sauce
+							</p>
+						</div>
+						<div>
+							<p>16.50</p>
+						</div>
+					</div>
+				</div>
+				<div class="text-darkText font-DMSans mb-4 flex">
+					<div class="flex w-full flex-row justify-between">
+						<div class="pr-8">
+							<p class=" font-bold">40. Phat See-Iw</p>
+							<p class="font-light">
+								Strip loin beef, lime juice, onions, scallions and Thai chilli
+							</p>
+						</div>
+						<div>
+							<p>16.50</p>
+						</div>
+					</div>
+				</div>
+				<div class="text-darkText font-DMSans mb-4 flex">
+					<div class="flex w-full flex-row justify-between">
+						<div class="pr-8">
+							<p class=" font-bold">41. Mee-Krob Song Cuang</p>
+							<p class="font-light">
+								Stir-fried rice noodles with eggs, cabbage, seasonal vegetables, in aged dark Thai soy-sauce and white peppercorn, add seafood or prawns for $1.45
+							</p>
+						</div>
+						<div>
+							<p>16.50</p>
+						</div>
+					</div>
+				</div>
+				<div class="text-darkText font-DMSans mb-4 flex">
+					<div class="flex w-full flex-row justify-between">
+						<div class="pr-8">
+							<p class=" font-bold">42. Phat Kee-Meow</p>
+							<p class="font-light">
+								Stir-fried rice noodles with house basil, onions, in chilli paste, add seafood or prawns for $1.45
+							</p>
+						</div>
+						<div>
+							<p>16.50</p>
+						</div>
+					</div>
+				</div>
+				<div class="text-darkText font-DMSans mb-4 flex">
+					<div class="flex w-full flex-row justify-between">
+						<div class="pr-8">
+							<p class=" font-bold">43. Bamei Rommitr</p>
+							<p class="font-light">
+								Stir-fried egg noodles with cabbage, onions and seasonal vegetables, add seafood or prawns for $1.45
+							</p>
+						</div>
+						<div>
+							<p>16.50</p>
+						</div>
+					</div>
+				</div>
+			</div>
+				
+		
+		
+				<div
+					class="mb-6 md:mb-12"
+				>
+					<div use:scrollTo={{ ref: (goTo), offset:-64 }} class=" font-DMSans text-lightText hover:text-darkText">
+						<p >
+							Vegetables
+						</p>
+					</div>
+				</div>
+		</div>
+	
+		<div class="w-1/2 flex-auto sm:flex hidden">
+			<img src='/webp/careersKitchenHelper.webp' class="h-full object-cover w-full" alt="" />
+		</div>
+	</section>
+
+	<section id="vegetables" class=" bg-tertiary relative flex flex-col sm:flex-row h-fit">
+		<div class="flex sm:hidden">
+			<img src='/webp/careersKitchenHelperMobile.webp' class="w-screen object-cover" alt="" />
+		</div>
+		<div class="text-darkText flex sm:w-1/2 justify-center items-center flex-col font-instrument">
+			
+				<div
+					class="mt-6 md:mt-12"
+				>
+					<div use:scrollTo={{ ref: 'appetizers', offset:-64 }} class=" font-DMSans text-lightText hover:text-darkText">
+						<p >
+							Noodles
+						</p>
+					</div>
+				</div>
+			<div class="mx-8 sm:mx-16 xl:mx-50 mt-12 mb-12 sm:my-16 md:my-24  xl:my-36  flex flex-col">
+				<h1 class="text-darkText text-6xl mb-4">Vegetables</h1>
+				<h1 class="text-lightText mb-12 text-4xl">สลัด</h1>
+	
+				<div class="text-darkText font-DMSans mt-8 mb-4 flex">
+					<div class="flex w-full flex-row justify-between">
+						<div class="pr-8">
+							<div class="flex flex-nowrap">
+								<p class=" font-bold">44. Tofu Phat Bai Ga-Phrao
+								</p>
+								<img src='/gfIcon.svg' class="ml-2" alt="Gluten Free Sign">
+							</div>
+							<p class="font-light">
+								Stir-fried soft tofu with seasonal vegetables, white button mushrooms, chilli paste and holy basil
 							</p>
 						</div>
 						<div>
@@ -392,10 +504,9 @@ let sections = ['salad1', 'salad2', 'curry'];
 				<div class="text-darkText font-DMSans mb-4 flex">
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
-							<p class=" font-bold">45. Phat Phak Ruaam Mit</p>
+							<p class=" font-bold">45. Phat Phak Ruaam Mit </p>
 							<p class="font-light">
-								Stir-fried seasonal vegetables, white button mushrooms and tofu with your favourite
-								sauce (Black Bean, Thai Peanut Sauce, Garlic, Oyster or Wild Bangkok Delight)
+								Stir-fried seasonal vegetables, white button mushrooms and tofu with your favourite sauce (Black Bean, Thai Peanut Sauce, Garlic, Oyster or Wild Bangkok Delight)
 							</p>
 						</div>
 						<div>
@@ -406,10 +517,9 @@ let sections = ['salad1', 'salad2', 'curry'];
 				<div class="text-darkText font-DMSans mb-4 flex">
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
-							<p class=" font-bold">46. Ruaam Mit Phat Bai Horapa</p>
+							<p class=" font-bold">46. Ruaam Mit Phat Bai Horapa </p>
 							<p class="font-light">
-								Seasonal vegetables, mushrooms, pressed tofu, bean sprouts, with house basil and
-								garlic
+								Seasonal vegetables, mushrooms, pressed tofu, bean sprouts, with house basil and garlic
 							</p>
 						</div>
 						<div>
@@ -431,49 +541,157 @@ let sections = ['salad1', 'salad2', 'curry'];
 					</div>
 				</div>
 			</div>
-
-			{#if arrow}
+				
+		
+		
 				<div
-					class="absolute bottom-56 left-1/4 flex -translate-x-1/2 transform flex-col items-center"
+					class="mb-6 md:mb-12"
 				>
-					<div use:scrollTo={goTo} class="text-lightText hover:text-darkText">
-						<p>
-							{arrowText}
+					<div use:scrollTo={{ ref: (goTo), offset:-64 }} class=" font-DMSans text-lightText hover:text-darkText">
+						<p >
+							Fried Rice
 						</p>
 					</div>
 				</div>
-			{/if}
 		</div>
-
-		<div class="w-1/2 flex-auto">
-			<img src={image} class="h-full object-cover" alt="" />
+	
+		<div class="w-1/2 flex-auto sm:flex hidden">
+			<img src='/webp/careersKitchenHelper.webp' class="h-full object-cover w-full" alt="" />
 		</div>
 	</section>
 
-	<section
-		use:scrollRef={thisRef}
-		id="vegetables"
-		class="relative flex min-h-screen snap-start snap-normal"
-	>
-		<div class="bg-tertiary flex w-6/12 flex-auto flex-col font-serif text-[#000000]">
-			{#if prevArrow}
-				<div class="absolute top-32 left-1/4 flex -translate-x-1/2 transform flex-col items-center">
-					<div use:scrollTo={goBack} class="text-lightText hover:text-darkText">
-						<p>
-							{prevArrowText}
+	<section id="fried-rice" class=" bg-tertiary relative flex flex-col sm:flex-row h-fit">
+		<div class="flex sm:hidden">
+			<img src='/webp/careersKitchenHelperMobile.webp' class="w-screen object-cover" alt="" />
+		</div>
+		<div class="text-darkText flex sm:w-1/2 justify-center items-center flex-col font-instrument">
+			
+				<div
+					class="mt-6 md:mt-12"
+				>
+					<div use:scrollTo={{ ref: 'appetizers', offset:-64 }} class=" font-DMSans text-lightText hover:text-darkText">
+						<p >
+							Vegetables
 						</p>
 					</div>
 				</div>
-			{/if}
+			<div class="mx-8 sm:mx-16 xl:mx-50 mt-12 mb-12 sm:my-16 md:my-24  xl:my-36  flex flex-col">
+				<h1 class="text-darkText text-6xl mb-4">Fried Rice</h1>
+				<h1 class="text-lightText mb-12 text-4xl">สลัด</h1>
+	
+				<div class="text-darkText font-DMSans mt-8 mb-4 flex">
+					<div class="flex w-full flex-row justify-between">
+						<div class="pr-8">
+							<p class=" font-bold">44. Tofu Phat Bai Ga-Phrao</p>
+							<p class="font-light">
+								Stir-fried soft tofu with seasonal vegetables, white button mushrooms, chilli paste and holy basil
+							</p>
+						</div>
+						<div>
+							<p>17.95</p>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+				
+		
+		
+				<div
+					class="mb-6 md:mb-12"
+				>
+					<div use:scrollTo={{ ref: (goTo), offset:-64 }} class=" font-DMSans text-lightText hover:text-darkText">
+						<p >
+							More Fried Rice
+						</p>
+					</div>
+				</div>
+		</div>
+	
+		<div class="w-1/2 flex-auto sm:flex hidden">
+			<img src='/webp/careersKitchenHelper.webp' class="h-full object-cover w-full" alt="" />
+		</div>
+	</section>
 
-			<div class="m-48 mt-8 flex-grow">
-				<h1 class="text-darkText mt-24 text-6xl">Desserts</h1>
-				<h1 class="text-lightText mb-12 text-4xl">ขนม</h1>
+	<section id="fried-rice2" class=" bg-tertiary relative flex flex-col sm:flex-row h-fit">
+		<div class="flex sm:hidden">
+			<img src='/webp/careersKitchenHelperMobile.webp' class="w-screen object-cover" alt="" />
+		</div>
+		<div class="text-darkText flex sm:w-1/2 justify-center items-center flex-col font-instrument">
+			
+				<div
+					class="mt-6 md:mt-12"
+				>
+					<div use:scrollTo={{ ref: 'appetizers', offset:-64 }} class=" font-DMSans text-lightText hover:text-darkText">
+						<p >
+							Fried Rice
+						</p>
+					</div>
+				</div>
+			<div class="mx-8 sm:mx-16 xl:mx-50 mt-12 mb-12 sm:my-16 md:my-24  xl:my-36  flex flex-col">
+				<h1 class="text-darkText text-6xl mb-4">More Fried Rice</h1>
+				<h1 class="text-lightText mb-12 text-4xl">สลัด</h1>
+	
+				<div class="text-darkText font-DMSans mt-8 mb-4 flex">
+					<div class="flex w-full flex-row justify-between">
+						<div class="pr-8">
+							<p class=" font-bold">44. Tofu Phat Bai Ga-Phrao</p>
+							<p class="font-light">
+								Stir-fried soft tofu with seasonal vegetables, white button mushrooms, chilli paste and holy basil
+							</p>
+						</div>
+						<div>
+							<p>17.95</p>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+				
+		
+		
+				<div
+					class="mb-6 md:mb-12"
+				>
+					<div use:scrollTo={{ ref: (goTo), offset:-64 }} class=" font-DMSans text-lightText hover:text-darkText">
+						<p >
+							Desserts
+						</p>
+					</div>
+				</div>
+		</div>
+	
+		<div class="w-1/2 flex-auto sm:flex hidden">
+			<img src='/webp/careersKitchenHelper.webp' class="h-full object-cover w-full" alt="" />
+		</div>
+	</section>
 
+	<section id="desserts" class=" bg-tertiary relative flex flex-col sm:flex-row h-fit">
+		<div class="flex sm:hidden">
+			<img src='/webp/careersKitchenHelperMobile.webp' class="w-screen object-cover" alt="" />
+		</div>
+		<div class="text-darkText flex sm:w-1/2 justify-center items-center flex-col font-instrument">
+			
+				<div
+					class="mt-6 md:mt-12"
+				>
+					<div use:scrollTo={{ ref: 'appetizers', offset:-64 }} class=" font-DMSans text-lightText hover:text-darkText">
+						<p >
+							Fried-Rice
+						</p>
+					</div>
+				</div>
+			<div class="mx-8 sm:mx-16 xl:mx-50 mt-12 mb-12 sm:my-16 md:my-24  xl:my-36  flex flex-col">
+				<h1 class="text-darkText text-6xl mb-4">Desserts</h1>
+				<h1 class="text-lightText mb-12 text-4xl">สลัด</h1>
+	
 				<div class="text-darkText font-DMSans mt-8 mb-4 flex">
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
 							<p class=" font-bold">Fresh Mango Sticky Rice (Seasonal)</p>
+							<p class="font-light">
+								
+							</p>
 						</div>
 						<div>
 							<p>7</p>
@@ -484,6 +702,9 @@ let sections = ['salad1', 'salad2', 'curry'];
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
 							<p class=" font-bold">Brown Sticky Rice with Vanilla Ice-Cream</p>
+							<p class="font-light">
+								
+							</p>
 						</div>
 						<div>
 							<p>7</p>
@@ -494,8 +715,11 @@ let sections = ['salad1', 'salad2', 'curry'];
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
 							<p class=" font-bold">Deep-Fried Banana with Vanilla Ice-Cream</p>
+							<p class="font-light">
+								
+							</p>
 						</div>
-						<div class="">
+						<div>
 							<p>7</p>
 						</div>
 					</div>
@@ -504,6 +728,9 @@ let sections = ['salad1', 'salad2', 'curry'];
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
 							<p class=" font-bold">Green Tea Ice-Cream</p>
+							<p class="font-light">
+								
+							</p>
 						</div>
 						<div>
 							<p>6</p>
@@ -514,6 +741,9 @@ let sections = ['salad1', 'salad2', 'curry'];
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
 							<p class=" font-bold">Mango Ice-Cream</p>
+							<p class="font-light">
+								
+							</p>
 						</div>
 						<div>
 							<p>6</p>
@@ -521,29 +751,29 @@ let sections = ['salad1', 'salad2', 'curry'];
 					</div>
 				</div>
 			</div>
-
-			{#if arrow}
+				
+		
+		
 				<div
-					class="absolute bottom-56 left-1/4 flex -translate-x-1/2 transform flex-col items-center"
+					class="mb-6 md:mb-12"
 				>
-					<div use:scrollTo={goTo} class="text-lightText hover:text-darkText">
-						<p>
-							{arrowText}
+					<div use:scrollTo={{ ref: (goTo), offset:-64 }} class=" font-DMSans text-lightText hover:text-darkText">
+						<p >
+							Happy Hour
 						</p>
 					</div>
 				</div>
-			{/if}
 		</div>
-
-		<div class="w-1/2 flex-auto">
-			<img src={image} class="h-full object-cover" alt="" />
-		</div>
-	</section> -->
 	
-	<div class="bottom-0 snap-start snap-normal">
-		<Footer />
-	</div>
-	{/each}
-</div>
+		<div class="w-1/2 flex-auto sm:flex hidden">
+			<img src='/webp/careersKitchenHelper.webp' class="h-full object-cover w-full" alt="" />
+		</div>
+	</section>
+	
+
+
+
+
+
 
 
