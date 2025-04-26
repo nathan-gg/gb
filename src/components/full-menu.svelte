@@ -45,7 +45,7 @@
 				<div class="text-darkText font-DMSans mt-8 mb-4 flex">
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
-							<p class=" font-bold">16. Som Tum</p>
+							<p class=" font-normal">16. Som Tum</p>
 							<p class="font-light">
 								Seasonal green papaya, garlic, tomatoes, roasted peanuts, lime juice, bird’s eye
 								chilli
@@ -59,7 +59,7 @@
 				<div class="text-darkText font-DMSans mb-4 flex">
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
-							<p class=" font-bold">17. Yum Woon San (Salad Lettuce Wrap)</p>
+							<p class=" font-normal">17. Yum Woon San (Salad Lettuce Wrap)</p>
 							<p class="font-light">
 								Glass noodles, minced chicken, shrimps, shallots, mint, lime juice, bird’s eye
 								chilli
@@ -73,7 +73,7 @@
 				<div class="text-darkText font-DMSans mb-4 flex">
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
-							<p class=" font-bold">18. Yum Ta-Lay</p>
+							<p class=" font-normal">18. Yum Ta-Lay</p>
 							<p class="font-light">
 								Shrimp, bay scallops and squid tossed with fresh lime, fish sauce and bird’s eye
 								chilli
@@ -87,7 +87,7 @@
 				<div class="text-darkText font-DMSans mb-4 flex">
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
-							<p class=" font-bold">19. Pla Goong</p>
+							<p class=" font-normal">19. Pla Goong</p>
 							<p class="font-light">
 								Spicy tiger prawns, lemongrass, shallots, fish sauce, lime juice and Thai spices
 							</p>
@@ -139,7 +139,7 @@
 				<div class="text-darkText font-DMSans mt-8 mb-4 flex">
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
-							<p class=" font-bold">20. Yum Pla Meuk</p>
+							<p class=" font-normal">20. Yum Pla Meuk</p>
 							<p class="font-light">
 								Squids with lime juice, shallots, fish sauce and bird’s eye chilli
 							</p>
@@ -152,7 +152,7 @@
 				<div class="text-darkText font-DMSans mb-4 flex">
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
-							<p class=" font-bold">21. Yum Neuua</p>
+							<p class=" font-normal">21. Yum Neuua</p>
 							<p class="font-light">
 								Strip loin beef, lime juice, onions, scallions and Thai chilli
 							</p>
@@ -165,7 +165,7 @@
 				<div class="text-darkText font-DMSans mb-4 flex">
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
-							<p class=" font-bold">22. Larb</p>
+							<p class=" font-normal">22. Larb</p>
 							<p class="font-light">
 								Minced chicken or beef, with shallots, lime juice and roasted chilli
 							</p>
@@ -217,7 +217,7 @@
 				<div class="text-darkText font-DMSans mt-8 mb-4 flex">
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
-							<p class=" font-bold"> </p>
+							<p class=" font-normal"> </p>
 							<p class="font-light">
 								 
 							</p>
@@ -230,7 +230,7 @@
 				<div class="text-darkText font-DMSans mb-4 flex">
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
-							<p class=" font-bold"> </p>
+							<p class=" font-normal"> </p>
 							<p class="font-light">
 								 
 							</p>
@@ -283,7 +283,7 @@
 				<div class="text-darkText font-DMSans mt-8 mb-4 flex">
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
-							<p class=" font-bold">20. Yum Pla Meuk</p>
+							<p class=" font-normal">20. Yum Pla Meuk</p>
 							<p class="font-light">
 								Squids with lime juice, shallots, fish sauce and bird’s eye chilli
 							</p>
@@ -333,7 +333,7 @@
 				<div class="text-darkText font-DMSans mt-8 mb-4 flex">
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
-							<p class=" font-bold">20. Yum Pla Meuk</p>
+							<p class=" font-normal">20. Yum Pla Meuk</p>
 							<p class="font-light">
 								Squids with lime juice, shallots, fish sauce and bird’s eye chilli
 							</p>
@@ -383,7 +383,7 @@
 				<div class="text-darkText font-DMSans mt-8 mb-4 flex">
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
-							<p class=" font-bold">39. Traditional Phat Thai </p>
+							<p class=" font-normal">39. Traditional Phat Thai </p>
 							<p class="font-light">
 								Rice noodles or egg noodles, with shrimps and bay scallops, roasted peanuts, egg, bean sprouts, scallions and lime, with a choice of tamarind sauce or tomato sauce
 							</p>
@@ -396,7 +396,7 @@
 				<div class="text-darkText font-DMSans mb-4 flex">
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
-							<p class=" font-bold">40. Phat See-Iw</p>
+							<p class=" font-normal">40. Phat See-Iw</p>
 							<p class="font-light">
 								Strip loin beef, lime juice, onions, scallions and Thai chilli
 							</p>
@@ -409,7 +409,7 @@
 				<div class="text-darkText font-DMSans mb-4 flex">
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
-							<p class=" font-bold">41. Mee-Krob Song Cuang</p>
+							<p class=" font-normal">41. Mee-Krob Song Cuang</p>
 							<p class="font-light">
 								Stir-fried rice noodles with eggs, cabbage, seasonal vegetables, in aged dark Thai soy-sauce and white peppercorn, add seafood or prawns for $1.45
 							</p>
@@ -422,7 +422,7 @@
 				<div class="text-darkText font-DMSans mb-4 flex">
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
-							<p class=" font-bold">42. Phat Kee-Meow</p>
+							<p class=" font-normal">42. Phat Kee-Meow</p>
 							<p class="font-light">
 								Stir-fried rice noodles with house basil, onions, in chilli paste, add seafood or prawns for $1.45
 							</p>
@@ -435,7 +435,7 @@
 				<div class="text-darkText font-DMSans mb-4 flex">
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
-							<p class=" font-bold">43. Bamei Rommitr</p>
+							<p class=" font-normal">43. Bamei Rommitr</p>
 							<p class="font-light">
 								Stir-fried egg noodles with cabbage, onions and seasonal vegetables, add seafood or prawns for $1.45
 							</p>
@@ -488,23 +488,26 @@
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
 							<div class="flex flex-nowrap">
-								<p class=" font-bold">44. Tofu Phat Bai Ga-Phrao
+								<p class=" font-normal">44. Tofu Phat Bai Ga-Phrao <span class="text-[#D08111] font-semibold">GF</span>
 								</p>
-								<img src='/gfIcon.svg' class="ml-2" alt="Gluten Free Sign">
+								
+								
 							</div>
 							<p class="font-light">
 								Stir-fried soft tofu with seasonal vegetables, white button mushrooms, chilli paste and holy basil
 							</p>
+							
 						</div>
-						<div>
+						<div class="flex flex-col items-end">
 							<p>17.95</p>
+							
 						</div>
 					</div>
 				</div>
 				<div class="text-darkText font-DMSans mb-4 flex">
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
-							<p class=" font-bold">45. Phat Phak Ruaam Mit </p>
+							<p class=" font-normal">45. Phat Phak Ruaam Mit </p>
 							<p class="font-light">
 								Stir-fried seasonal vegetables, white button mushrooms and tofu with your favourite sauce (Black Bean, Thai Peanut Sauce, Garlic, Oyster or Wild Bangkok Delight)
 							</p>
@@ -517,7 +520,7 @@
 				<div class="text-darkText font-DMSans mb-4 flex">
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
-							<p class=" font-bold">46. Ruaam Mit Phat Bai Horapa </p>
+							<p class=" font-normal">46. Ruaam Mit Phat Bai Horapa </p>
 							<p class="font-light">
 								Seasonal vegetables, mushrooms, pressed tofu, bean sprouts, with house basil and garlic
 							</p>
@@ -530,7 +533,7 @@
 				<div class="text-darkText font-DMSans mb-4 flex">
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
-							<p class=" font-bold">47. Thuaa Phat Phrik Khing</p>
+							<p class=" font-normal">47. Thuaa Phat Phrik Khing</p>
 							<p class="font-light">
 								Stir-fried green beans, kaffir lime leaves, basil, in House Spicy Sauce
 							</p>
@@ -582,7 +585,7 @@
 				<div class="text-darkText font-DMSans mt-8 mb-4 flex">
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
-							<p class=" font-bold">44. Tofu Phat Bai Ga-Phrao</p>
+							<p class=" font-normal">44. Tofu Phat Bai Ga-Phrao</p>
 							<p class="font-light">
 								Stir-fried soft tofu with seasonal vegetables, white button mushrooms, chilli paste and holy basil
 							</p>
@@ -635,7 +638,7 @@
 				<div class="text-darkText font-DMSans mt-8 mb-4 flex">
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
-							<p class=" font-bold">44. Tofu Phat Bai Ga-Phrao</p>
+							<p class=" font-normal">44. Tofu Phat Bai Ga-Phrao</p>
 							<p class="font-light">
 								Stir-fried soft tofu with seasonal vegetables, white button mushrooms, chilli paste and holy basil
 							</p>
@@ -688,7 +691,7 @@
 				<div class="text-darkText font-DMSans mt-8 mb-4 flex">
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
-							<p class=" font-bold">Fresh Mango Sticky Rice (Seasonal)</p>
+							<p class=" font-normal">Fresh Mango Sticky Rice (Seasonal)</p>
 							<p class="font-light">
 								
 							</p>
@@ -701,7 +704,7 @@
 				<div class="text-darkText font-DMSans mb-4 flex">
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
-							<p class=" font-bold">Brown Sticky Rice with Vanilla Ice-Cream</p>
+							<p class=" font-normal">Brown Sticky Rice with Vanilla Ice-Cream</p>
 							<p class="font-light">
 								
 							</p>
@@ -714,7 +717,7 @@
 				<div class="text-darkText font-DMSans mb-4 flex">
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
-							<p class=" font-bold">Deep-Fried Banana with Vanilla Ice-Cream</p>
+							<p class=" font-normal">Deep-Fried Banana with Vanilla Ice-Cream</p>
 							<p class="font-light">
 								
 							</p>
@@ -727,7 +730,7 @@
 				<div class="text-darkText font-DMSans mb-4 flex">
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
-							<p class=" font-bold">Green Tea Ice-Cream</p>
+							<p class=" font-normal">Green Tea Ice-Cream</p>
 							<p class="font-light">
 								
 							</p>
@@ -740,7 +743,7 @@
 				<div class="text-darkText font-DMSans mb-4 flex">
 					<div class="flex w-full flex-row justify-between">
 						<div class="pr-8">
-							<p class=" font-bold">Mango Ice-Cream</p>
+							<p class=" font-normal">Mango Ice-Cream</p>
 							<p class="font-light">
 								
 							</p>
