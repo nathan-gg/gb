@@ -22,9 +22,10 @@
 </script>
 
 
-<section use:scrollRef={thisRef} class=" bg-tertiary relative flex flex-col sm:flex-row h-fit  ">
+
+<section use:scrollRef={thisRef} class=" bg-tertiary relative flex flex-col sm:flex-row h-[calc(100vh-16px)]  ">
 	<div class="flex sm:hidden">
-		<img src={imageMobile} class="w-screen object-cover" alt="" />
+		<img src={imageMobile} class="w-screen object-cover h-screen" alt="" />
 	</div>
 	<div class=" text-darkText flex sm:w-1/2 justify-center items-center flex-col font-instrument">
 		{#if prevArrow}
@@ -38,7 +39,7 @@
 				</div>
 			</div>
 		{/if}
-		<div class="mx-8 sm:mx-16 xl:mx-50 mt-12 mb-12 sm:my-16 md:my-24  xl:my-36  flex flex-col">
+		<div class="mx-8 sm:mx-16 xl:mx-36 mt-12 mb-12 sm:my-16 md:my-24 xl:my-12 flex flex-col">
 			<h1 class="text-darkText text-6xl mb-4">{title}</h1>
 			<h1 class="text-lightText mb-12 text-4xl">{thaiTitle}</h1>
 
