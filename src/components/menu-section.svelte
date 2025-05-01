@@ -2,6 +2,9 @@
     export let id = "";
     export let title = "";
     export let thaiTitle = "";
+    export let pCol1 = "";
+    // export let pCol2 = "";
+    // export let pCol3 = "";
     export let previousSection = "";
     export let nextSection = "";
     export let prevTitle = ""; // Added this variable for previous section title
@@ -13,7 +16,7 @@
     import { scrollTo } from 'svelte-scrolling';
   </script>
   
-  <section {id} class="bg-tertiary relative flex flex-col sm:flex-row h-fit">
+  <section {id} class="bg-tertiary relative flex flex-col sm:flex-row min-h-screen snap-start snap-normal">
     <div class="flex sm:hidden">
       <img src={mobilePath} class="w-screen object-cover" alt="" />
     </div>
@@ -34,13 +37,18 @@
           <div class="text-darkText font-DMSans {item === menuItems[0] ? 'mt-8' : ''} mb-4 flex">
             <div class="flex w-full flex-row justify-between">
               <div class="pr-8">
-                <p class="font-normal">{item.name} {#if item.tag}<span class="text-[#D08111] font-semibold">{item.tag}</span>{/if}</p>
+                <p class="font-DMSans">{item.name} 
+                {#if item.mild}<img src="/spiceMild.svg" alt="Mild Spice" class="h-4 w-4 inline-block" />{/if}
+                {#if item.medium}<img src="/spiceMedium.svg" alt="Medium Spice" class=" h-4 w-4 inline-block" />{/if}
+                {#if item.hot}<img src="/spiceHot.svg" alt="Hot Spice" class=" h-4 w-4 inline-block" />{/if}
+                {#if item.tag}<span class="text-[#D08111] font-semibold">{item.tag}</span>{/if}</p>
                 {#if item.description}
-                  <p class="font-light">{item.description}</p>
+                  <p class="font-DMSans font-light whitespace-pre-line">{item.description}</p>
                 {/if}
               </div>
-              <div>
-                <p>{item.price}</p>
+              <div class="">
+
+                {#if pCol1}<p>{item.p1}</p>{:else}<p>{item.price}</p>{/if}
               </div>
             </div>
           </div>

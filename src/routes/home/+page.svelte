@@ -1,7 +1,9 @@
 <script lang="ts">
   
     import Home from '/src/components/home.svelte';
-    // import Footer from '../components/footer.svelte';
+    import Header from '/src/components/head.svelte';
+    import Footer from '/src/components/footer.svelte';
+
   
     
     const start = {
@@ -93,8 +95,13 @@
   
   </script>
   
-  <section class="y-scroll">
-  <Home class="y-scroll-item"
+  <section id="container" class=" overflow-clip">
+<!-- 
+    <div class="top-0 z-50 snap-start snap-normal">
+			<Header />
+		</div> -->
+
+  <Home 
     thisRef={start.thisRef}
     goTo={start.goTo}
     title={start.title}
@@ -106,7 +113,7 @@
     firstSection={true}
   />
   
-  <Home class="y-scroll-item"
+  <Home
     thisRef={menus.thisRef}
     goTo={menus.goTo}
     goBack={menus.goBack}
@@ -118,7 +125,7 @@
     prevArrow={true}
   />
   
-  <Home class="y-scroll-item"
+  <Home class="snap-start snap-normal"
     thisRef={cocktails.thisRef}
     goTo={cocktails.goTo}
     goBack={cocktails.goBack}
@@ -130,7 +137,7 @@
     prevArrow={true}
   />
   
-  <Home class="y-scroll-item"
+  <Home class="snap-start snap-normal"
     thisRef={order.thisRef}
     goTo={order.goTo}
     goBack={order.goBack}
@@ -142,7 +149,7 @@
     prevArrow={true}
   />
   
-  <Home class="y-scroll-item"
+  <Home class="snap-start snap-normal"
     thisRef={contact.thisRef}
     goTo={contact.goTo}
     goBack={contact.goBack}
@@ -154,7 +161,7 @@
     prevArrow={true}
   />
   
-  <Home class="y-scroll-item"
+  <Home class="snap-start snap-normal"
     thisRef={partnerships.thisRef}
     goTo={partnerships.goTo}
     goBack={partnerships.goBack}
@@ -166,7 +173,7 @@
     prevArrow={true}
   />
   
-  <Home class="y-scroll-item"
+  <Home class="snap-start snap-normal"
     thisRef={about.thisRef}
     goTo={about.goTo}
     goBack={about.goBack}
@@ -178,7 +185,7 @@
     prevArrow={true}
   />
   
-  <Home class="y-scroll-item"
+  <Home class="snap-start snap-normal"
     thisRef={reservations.thisRef}
     goTo={reservations.goTo}
     goBack={reservations.goBack}

@@ -15,20 +15,62 @@
 		prevArrow = false,
 		firstSection = false
 	} = $props();
+
+// let carouselPositions = $state([]);
+// let halfContainer = $state(0);
+// let currentItem = $state(0);
+
+// function getCarouselPositions() {
+//   carouselPositions = [];
+//   document.querySelectorAll('#container div').forEach(function(div) {
+//     carouselPositions.push([div.offsetTop, div.offsetTop + div.offsetHeight]); // add to array the positions information
+//   })
+//   halfContainer = document.querySelector('#container').offsetHeight/2;
+// }
+
+// getCarouselPositions(); // call it once
+
+// function goCarousel(direction) {
+  
+//   let currentScrollTop = document.querySelector('#container').scrollTop;
+//   let currentScrollBottom = currentScrollTop + document.querySelector('#container').offsetHeight;
+  
+//   if (currentScrollTop === 0 && direction === 'next') {
+//       currentItem = 1;
+//   } else if (currentScrollBottom === document.querySelector('#container').scrollHeight && direction === 'previous') {
+//       console.log('here')
+//       currentItem = carouselPositions.length - 2;
+//   } else {
+//       var currentMiddlePosition = currentScrollTop + halfContainer;
+//       for (var i = 0; i < carouselPositions.length; i++) {
+//         if (currentMiddlePosition > carouselPositions[i][0] && currentMiddlePosition < carouselPositions[i][1]) {
+//           currentItem = i;
+//           if (direction === 'next') {
+//               currentItem++;
+//           } else if (direction === 'previous') {
+//               currentItem--    
+//           }
+//         }
+//       }
+//   } 
+  
+//   document.getElementById('container').scrollTo({
+//     top: carouselPositions[currentItem][0],
+//     behavior: 'smooth' 
+//   });
+  
+// }
+// window.addEventListener('resize', getCarouselPositions);
+
 </script>
-
-<!-- <section use:scrollRef={thisRef} class=" relative box-content justify-items-center font-instrument">
-
-    <img src="{image}" class="brightness-30 object-cover" alt=""/> -->
 
 <section
 	use:scrollRef={thisRef}
-	class="font-instrument relative flex min-h-[calc(100vh-4rem)] w-full items-center text-secondary"
+	class="font-instrument relative flex min-h-[calc(100vh-4rem)] w-full items-center text-secondary snap-start snap-normal"
 >
 	<img src={image} class="absolute inset-0 h-full w-screen object-cover brightness-30" alt="" />
 
 	{#if firstSection}
-		<!-- <div class="text-secondary absolute flex w-screen flex-col text-center"> -->
 			{#if prevArrow}
 				<div class="absolute top-1/8" use:scrollTo={{ ref: goBack, offset: -64, duration: 50 }}>
 					<span
@@ -59,9 +101,7 @@
 					>
 				</div>
 			{/if}
-		<!-- </div> -->
 	{:else}
-		<!-- <div class="text-secondary absolute top-1/6 lg:top-1/8 flex w-screen flex-col text-center"> -->
 			{#if prevArrow}
 				<div class="absolute top-1/8 text-center w-screen" use:scrollTo={{ ref: goBack, offset: -64 }}>
 					<span

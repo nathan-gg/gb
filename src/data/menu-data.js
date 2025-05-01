@@ -1,182 +1,1653 @@
 export const menuData = {
-    "salad": {
-      title: "Salads",
-      thaiTitle: "สลัด",
-      items: [
-        {
-          name: "16. Som Tum",
-          description: "Seasonal green papaya, garlic, tomatoes, roasted peanuts, lime juice, bird's eye chilli",
-          price: "12.95"
-        },
-        {
-          name: "17. Yum Woon San (Salad Lettuce Wrap)",
-          description: "Glass noodles, minced chicken, shrimps, shallots, mint, lime juice, bird's eye chilli",
-          price: "13.95"
-        },
-        {
-          name: "18. Yum Ta-Lay",
-          description: "Shrimp, bay scallops and squid tossed with fresh lime, fish sauce and bird's eye chilli",
-          price: "14.95"
-        },
-        {
-          name: "19. Pla Goong",
-          description: "Spicy tiger prawns, lemongrass, shallots, fish sauce, lime juice and Thai spices",
-          price: "14.95"
-        }
-      ]
+  "salad": {
+    title: "Salads",
+    thaiTitle: "สลัด",
+    items: [
+      {
+        name: "16. Som Tum",
+        description: "Seasonal green papaya, garlic, tomatoes, roasted peanuts, lime juice, bird's eye chilli",
+        price: "12.95",
+        tag: "GF"
+      },
+      {
+        name: "17. Yum Woon San (Salad Lettuce Wrap)",
+        description: "Glass noodles, minced chicken, shrimps, shallots, mint, lime juice, bird's eye chilli",
+        price: "13.95",
+        tag: "GF"
+      },
+      {
+        name: "18. Yum Ta-Lay",
+        description: "Shrimp, bay scallops and squid tossed with fresh lime, fish sauce and bird's eye chilli",
+        price: "14.95",
+        tag: "GF"
+      },
+      {
+        name: "19. Pla Goong",
+        description: "Spicy tiger prawns, lemongrass, shallots, fish sauce, lime juice and Thai spices",
+        price: "14.95",
+        tag: "GF"
+      },
+      {
+        name: "20. Yum Pla Meuk",
+        description: "Squids with lime juice, shallots, fish sauce and bird's eye chilli",
+        price: "14.50",
+        tag: "GF"
+      },
+      {
+        name: "21. Yum Neuua",
+        description: "Strip loin beef, lime juice, onions, scallions and Thai chilli",
+        price: "14.50",
+        tag: "GF"
+      },
+      {
+        name: "22. Larb",
+        description: "Minced chicken or beef, with shallots, lime juice and roasted chilli",
+        price: "13.50",
+        tag: "GF"
+      },
+      {
+        name: "23. Veggie Salad",
+        description: "Soft tofu, lettuce, cucumbers and homemade peanut sauce",
+        price: "12.95",
+        tag: "GF"
+      }
+    ]
+  },
+  "curry": {
+    title: "Curry",
+    thaiTitle: "สลัด",
+    items: [{
+      name: "24. Gaaeng Dang",
+      description: "Red curry paste, bamboo shoots, basil and coconut milk",
+      tag: "GF"
     },
-    "salad2": {
-      title: "More Salads",
-      thaiTitle: "สลัด",
-      items: [
-        {
-          name: "20. Yum Pla Meuk",
-          description: "Squids with lime juice, shallots, fish sauce and bird's eye chilli",
-          price: "14.50"
-        },
-        {
-          name: "21. Yum Neuua",
-          description: "Strip loin beef, lime juice, onions, scallions and Thai chilli",
-          price: "14.50"
-        },
-        {
-          name: "22. Larb",
-          description: "Minced chicken or beef, with shallots, lime juice and roasted chilli",
-          price: "13.50"
-        }
-      ]
+    {
+      name: "25. Gaaeng Ka-Ri",
+      description: "Yellow curry paste, carrots, potatoes, pineapples and coconut milk",
+      tag: "GF"
     },
-    "curry": {
-      title: "Curry",
-      thaiTitle: "สลัด",
-      items: []  // You can fill this in with your curry menu items
+    {
+      name: "26. Gaaeng Kiew Waan",
+      description: "Green curry paste, aubergine, green beans, basil and coconut milk",
+      tag: "GF"
     },
-    "stir-fried": {
-      title: "Stir-Fried",
-      thaiTitle: "สลัด",
-      items: [
-        {
-          name: "20. Yum Pla Meuk",
-          description: "Squids with lime juice, shallots, fish sauce and bird's eye chilli",
-          price: "14.50"
-        }
-      ]
+    {
+      name: "27. Gaaeng Pha Naeng",
+      description: "Pha Naeng thick curry paste, kaffir lime leaves, onions, basil and coconut milk",
+      tag: "GF"
     },
-    "stir-fried2": {
-      title: "More Stir-Fried",
-      thaiTitle: "สลัด",
-      items: [
-        {
-          name: "20. Yum Pla Meuk",
-          description: "Squids with lime juice, shallots, fish sauce and bird's eye chilli",
-          price: "14.50"
-        }
-      ]
-    },
-    "noodles": {
-      title: "Noodles",
-      thaiTitle: "สลัด",
-      items: [
-        {
-          name: "39. Traditional Phat Thai",
-          description: "Rice noodles or egg noodles, with shrimps and bay scallops, roasted peanuts, egg, bean sprouts, scallions and lime, with a choice of tamarind sauce or tomato sauce",
-          price: "16.50"
-        },
-        {
-          name: "40. Phat See-Iw",
-          description: "Strip loin beef, lime juice, onions, scallions and Thai chilli",
-          price: "16.50"
-        },
-        {
-          name: "41. Mee-Krob Song Cuang",
-          description: "Stir-fried rice noodles with eggs, cabbage, seasonal vegetables, in aged dark Thai soy-sauce and white peppercorn, add seafood or prawns for $1.45",
-          price: "16.50"
-        },
-        {
-          name: "42. Phat Kee-Meow",
-          description: "Stir-fried rice noodles with house basil, onions, in chilli paste, add seafood or prawns for $1.45",
-          price: "16.50"
-        },
-        {
-          name: "43. Bamei Rommitr",
-          description: "Stir-fried egg noodles with cabbage, onions and seasonal vegetables, add seafood or prawns for $1.45",
-          price: "16.50"
-        }
-      ]
-    },
-    "vegetables": {
-      title: "Vegetables",
-      thaiTitle: "สลัด",
-      items: [
-        {
-          name: "44. Tofu Phat Bai Ga-Phrao",
-          description: "Stir-fried soft tofu with seasonal vegetables, white button mushrooms, chilli paste and holy basil",
-          price: "17.95"
-        },
-        {
-          name: "45. Phat Phak Ruaam Mit",
-          description: "Stir-fried seasonal vegetables, white button mushrooms and tofu with your favourite sauce (Black Bean, Thai Peanut Sauce, Garlic, Oyster or Wild Bangkok Delight)",
-          price: "17.95",
-          tag: "GF"
-        },
-        {
-          name: "46. Ruaam Mit Phat Bai Horapa",
-          description: "Seasonal vegetables, mushrooms, pressed tofu, bean sprouts, with house basil and garlic",
-          price: "17.95"
-        },
-        {
-          name: "47. Thuaa Phat Phrik Khing",
-          description: "Stir-fried green beans, kaffir lime leaves, basil, in House Spicy Sauce",
-          price: "17.95"
-        }
-      ]
-    },
-    "fried-rice": {
-      title: "Fried Rice",
-      thaiTitle: "สลัด",
-      items: [
-        {
-          name: "44. Tofu Phat Bai Ga-Phrao",
-          description: "Stir-fried soft tofu with seasonal vegetables, white button mushrooms, chilli paste and holy basil",
-          price: "17.95"
-        }
-      ]
-    },
-    "fried-rice2": {
-      title: "More Fried Rice",
-      thaiTitle: "สลัด",
-      items: [
-        {
-          name: "44. Tofu Phat Bai Ga-Phrao",
-          description: "Stir-fried soft tofu with seasonal vegetables, white button mushrooms, chilli paste and holy basil",
-          price: "17.95"
-        }
-      ]
-    },
-    "desserts": {
-      title: "Desserts",
-      thaiTitle: "สลัด",
-      items: [
-        {
-          name: "Fresh Mango Sticky Rice (Seasonal)",
-          price: "7"
-        },
-        {
-          name: "Brown Sticky Rice with Vanilla Ice-Cream",
-          price: "7"
-        },
-        {
-          name: "Deep-Fried Banana with Vanilla Ice-Cream",
-          price: "7"
-        },
-        {
-          name: "Green Tea Ice-Cream",
-          price: "6"
-        },
-        {
-          name: "Mango Ice-Cream",
-          price: "6"
-        }
-      ]
+    {
+      name: "28. Gaaeng Massaman",
+      description: "Sweet curry with roasted ground peanuts, potatoes, onions and coconut milk",
+      tag: "GF"
     }
-  };
+    ]
+  },
+  "stir-fried": {
+    title: "Stir-Fried",
+    thaiTitle: "สลัด",
+    items: [
+      {
+        name: "29. Phat Phrik Groong Thaehp",
+        description: "Squids with lime juice, shallots, fish sauce and bird's eye chilli",
+        price: "14.50"
+      },
+      {
+        name: "30. Phat Bai Horapa",
+        description: "Squids with lime juice, shallots, fish sauce and bird's eye chilli",
+        price: "14.50"
+      },
+      {
+        name: "31. Phat Bai Ga-Phrao",
+        description: "Squids with lime juice, shallots, fish sauce and bird's eye chilli",
+        price: "14.50"
+      },
+      {
+        name: "32. Phat Nahm Phrik Phao",
+        description: "Squids with lime juice, shallots, fish sauce and bird's eye chilli",
+        price: "14.50",
+        tag: "GF"
+      },
+      {
+        name: "33. Phat Ma Kheuua Muaang",
+        description: "Squids with lime juice, shallots, fish sauce and bird's eye chilli",
+        price: "14.50"
+      },
+      {
+        name: "34. Phat Khing",
+        description: "Squids with lime juice, shallots, fish sauce and bird's eye chilli",
+        price: "14.50"
+      },
+      {
+        name: "35. Phat Namman Haawy",
+        description: "Squids with lime juice, shallots, fish sauce and bird's eye chilli",
+        price: "14.50"
+      },
+      {
+        name: "36. Phat Bpriaao Waan",
+        description: "Squids with lime juice, shallots, fish sauce and bird's eye chilli",
+        price: "14.50"
+      },
+      {
+        name: "37. Phat Gra Thiiam",
+        description: "Squids with lime juice, shallots, fish sauce and bird's eye chilli",
+        price: "14.50"
+      },
+      {
+        name: "38. Phat Ruaam Mit",
+        description: "Squids with lime juice, shallots, fish sauce and bird's eye chilli",
+        price: "14.50",
+        tag: "GF"
+      }
+    ]
+  },
+  "noodles": {
+    title: "Noodles",
+    thaiTitle: "สลัด",
+    items: [
+      {
+        name: "39. Traditional Phat Thai",
+        description: "Rice noodles or egg noodles, with shrimps and bay scallops, roasted peanuts, egg, bean sprouts, scallions and lime, with a choice of tamarind sauce or tomato sauce",
+        price: "16.50"
+      },
+      {
+        name: "40. Phat See-Iw",
+        description: "Strip loin beef, lime juice, onions, scallions and Thai chilli",
+        price: "16.50"
+      },
+      {
+        name: "41. Mee-Krob Song Cuang",
+        description: "Stir-fried rice noodles with eggs, cabbage, seasonal vegetables, in aged dark Thai soy-sauce and white peppercorn, add seafood or prawns for $1.45",
+        price: "16.50"
+      },
+      {
+        name: "42. Phat Kee-Meow",
+        description: "Stir-fried rice noodles with house basil, onions, in chilli paste, add seafood or prawns for $1.45",
+        price: "16.50"
+      },
+      {
+        name: "43. Bamei Rommitr",
+        description: "Stir-fried egg noodles with cabbage, onions and seasonal vegetables, add seafood or prawns for $1.45",
+        price: "16.50"
+      }
+    ]
+  },
+  "vegetables": {
+    title: "Vegetables",
+    thaiTitle: "สลัด",
+    items: [
+      {
+        name: "44. Tofu Phat Bai Ga-Phrao",
+        description: "Stir-fried soft tofu with seasonal vegetables, white button mushrooms, chilli paste and holy basil",
+        price: "17.95",
+        hot: "Hot"
+      },
+      {
+        name: "45. Phat Phak Ruaam Mit",
+        description: "Stir-fried seasonal vegetables, white button mushrooms and tofu with your favourite sauce (Black Bean, Thai Peanut Sauce, Garlic, Oyster or Wild Bangkok Delight)",
+        price: "17.95",
+        tag: "GF"
+      },
+      {
+        name: "46. Ruaam Mit Phat Bai Horapa",
+        description: "Seasonal vegetables, mushrooms, pressed tofu, bean sprouts, with house basil and garlic",
+        price: "17.95"
+      },
+      {
+        name: "47. Thuaa Phat Phrik Khing",
+        description: "Stir-fried green beans, kaffir lime leaves, basil, in House Spicy Sauce",
+        price: "17.95"
+      }
+    ]
+  },
+  "fruit-fried-rice": {
+    title: "Fresh Fruit Fried Rice",
+    thaiTitle: "สลัด",
+    items: [
+      {
+        name: "48. Khao Phat Ma Phraao Soht",
+        description: "Traditional fresh young coconut fried rice",
+        tag: "GF"
+      },
+      {
+        name: "49. Khao Phat Sap-Bpa-Roht",
+        description: "Traditional fresh pineapple fried rice topped with roasted peanuts, organic raisins and pork floss",
+        tag: "GF"
+      }
+    ]
+  },
+  "fried-rice": {
+    title: "Fried Rice",
+    thaiTitle: "สลัด",
+    items: [
+      {
+        name: "50. Khao Phat Phong Ka-Ri",
+        description: "Yellow curry powder fried rice with turmeric",
+        tag: "GF"
+      },
+      {
+        name: "51. Khao Phat Bai Ga-Phrao",
+        description: "Fried rice with wild garlic, fresh Thai chilli, onions and Thai holy basil",
+        tag: "GF"
+      },
+      {
+        name: "52. Khao Phat Nahm Phrik Phao",
+        description: "Thai chilli paste fried rice with onions and basil",
+        tag: "GF"
+      },
+      {
+        name: "53. Khao Phat Prik Gra-Thiiam",
+        description: "Chilli pepper fried rice with garlic",
+        tag: "GF"
+      },
+    ]
+  },
+  "steamed-rice": {
+    title: "Steamed Rice",
+    thaiTitle: "สลัด",
+    items: [
+      {
+        name: "54. Khao Suay Ga-Thi",
+        description: "Steamed Thai Jasmine rice with coconut milk (per person)",
+        price: "2.50",
+        tag: "GF"
+      },
+    ]
+  },
+  "dinner-specialties": {
+    title: "Green Basil Specialties",
+    thaiTitle: "สลัด",
+    items: [
+      {
+        name: "G1. Haawy Maaeng Phuu Ob Maaw Din",
+        description: "Mussels, white wine, butter, lemongrass and basil",
+        price: "2.50",
+        tag: "GF"
+      },
+      {
+        name: "G2. Haawy Lai Phat Phrik Phao",
+        description: "Stir-fried manila clams, hot chilli paste, onions and basil",
+        price: "2.50",
+        tag: "GF"
+      },
+      {
+        name: "G3. Goong Ob Woon San",
+        description: "Tiger prawns, glass noodles, garlic butter braised celery and basil",
+        price: "2.50",
+        tag: "GF"
+      },
+      {
+        name: "G4. Bpuu",
+        description: "Live Dungeness crab with your favourite sauce (Yellow Curry, Hot Chilli Paste, Creamy Garlic Butter, Green Basil’s Chef Sauce or Wild Bangkok Delight)",
+        price: "2.50",
+        tag: "GF"
+      },
+      {
+        name: "G5. Bpuu Ob Woon San",
+        description: "Live Dungeness crab, glass noodles, garlic butter braised celery and basil",
+        price: "2.50",
+        tag: "GF"
+      },
+      {
+        name: "G6. Bplaa Laad Phrik (Fish) ", //CHANGE
+        description: "Steamed Thai Jasmine rice with coconut milk (per person)",
+        price: "2.50",
+        tag: "GF"
+      },
+      {
+        name: "G7. Ta-Lay Sa Meat", //CHANGE
+        description: "Stir-Fried Seafood Combination",
+        price: "2.50",
+        tag: "GF"
+      },
+      {
+        name: "G8. Phat Ped Ta-Lay",
+        description: "Sizzling seafood combination with house spicy sauce served on cast iron hot plate",
+        price: "2.50",
+        tag: "GF"
+      },
+      {
+        name: "G9. Phat Met Ma-Muang Him Ma-Phan",
+        description: "Stir-fried cashew nuts with onions, peppers and celery in house chilli paste",
+        price: "2.50",
+        tag: "GF"
+      },
+      {
+        name: "G10. Gaaeng Goong Sap-Bpa-Roht",
+        description: "Tiger prawns with red curry paste, fresh pineapples and coconut milk",
+        price: "2.50",
+        tag: "GF"
+      },
+      {
+        name: "G11. Ma Kheuua Yaao",
+        description: "Aubergine stuffed with minced shrimp in chilli black bean sauce",
+        price: "2.50",
+        tag: "GF"
+      },
+      {
+        name: "G12. Thuaa Phat Phrik Khing",
+        description: "Green beans with kaffir lime leaves, holy basil and house spicy sauce",
+        price: "2.50",
+        tag: "GF"
+      },
+      {
+        name: "G13. Neuua Gae Gaaeng Pha Naeng",
+        description: "Pha Naeng thick curry braised New Zealand lamb shoulder, kaffir lime leaves, star anise, lychee, onions and basil",
+        price: "2.50",
+        tag: "GF"
+      },
+      {
+        name: "G14. Gaaeng Bpet Yaang",
+        description: "Roast duck with red curry paste, pineapples, tomatoes and coconut milk",
+        price: "2.50",
+        tag: "GF"
+      },
+      {
+        name: "G15. Bpet Phat Bai Ga-Phrao",
+        description: "Stir-fried roasted duck with chilli paste, white button mushrooms, onions, peppers and holy basil",
+        price: "2.50",
+        tag: "GF"
+      },
+      {
+        name: "G16. Gai Yaang",
+        description: "Boneless BBQ chicken marinated in lemongrass, garlic and Thai spices",
+        price: "2.50",
+        tag: "GF"
+      },
+      {
+        name: "G17. Haw Mok Ma Phraao",
+        description: "Traditional slow-cooked red curry paste in coconut milk and tender young coconut meat",
+        price: "2.50",
+        tag: "GF"
+      },
+      {
+        name: "G18. Para Ram Gai",
+        description: "Chicken with homemade peanut sauce served on a bed of lettuce and spinach",
+        price: "2.50",
+        tag: "GF"
+      },
+      {
+        name: "G19. Goong Katiem Phrik Tai",
+        description: "Tiger prawns marinated with garlic and white peppercorns with snow peas and celery",
+        price: "2.50",
+        tag: "GF"
+      },
+      {
+        name: "G20. Goong Phat Lhao Nam",
+        description: "Red wine drunken tiger prawns with ginger and Thai chillies",
+        price: "2.50",
+        tag: "GF"
+      },
+    ]
+  },
+  "desserts": {
+    title: "Desserts",
+    thaiTitle: "สลัด",
+    items: [
+      {
+        name: "Fresh Mango Sticky Rice (Seasonal)",
+        price: "7"
+      },
+      {
+        name: "Brown Sticky Rice with Vanilla Ice-Cream",
+        price: "7"
+      },
+      {
+        name: "Deep-Fried Banana with Vanilla Ice-Cream",
+        price: "7"
+      },
+      {
+        name: "Green Tea Ice-Cream",
+        price: "6"
+      },
+      {
+        name: "Mango Ice-Cream",
+        price: "6"
+      }
+    ]
+  },
+  "combinations": {
+    title: "Combinations",
+    thaiTitle: "สลัด",
+    items: [
+      {
+        name: "Combo for Two",
+        description: "-Grilled garlic prawn satay\n-Thai pork spring rolls\n-Stir-fried chicken with snow peas, pineapples and celery in Thai Black Bean sauce\n-Tiger prawns in red curry paste, fresh pineapples, basil and coconut milk\n-Steamed Thai Milagrosa jasmine rice with coconut milk\n-Daily desserts",
+        price: "56"
+      },
+      {
+        name: "Combo for Two Deluxe",
+        description: "Tom Kah Gai Soup\n-Grilled garlic prawn satay\n-Thai pork spring rolls\n-Traditional slow-cooked chicken in aromatic red curry and tender coconut flesh\n-Tiger prawns marinated in garlic and ground white pepper with snow peas\n-Steamed Thai Milagrosa jasmine rice with coconut milk\n-Deep-fried banana with vanilla ice-cream",
+        price: "65"
+      },
+      {
+        name: "Combo for Four",
+        description: "Tom Yum Ta-Lay Soup\n-Thai pork spring rolls\n-Grilled chicken satay with homemade peanut sauce\n-Traditional slow-cooked chicken in aromatic red curry and tender coconut flesh\n-Sweet and sour fresh cod\n-Tiger prawns stir-fried with green beans, kaffir lime leaves, holy basil in house spicy sauce\n-Steamed Thai Milagrosa jasmine rice with coconut milk\n-Daily desserts",
+        price: "108"
+      },
+      {
+        name: "Combo for Six",
+        description: "Beef lettuce wrap with chilli and basilSeafood combo appetizer\n-Stir-fried chicken with cashew nuts, peppers, onions and celery in house chilli paste\n-Stir-fried pork with white button mushrooms, onions, chopped ginger and ground white peppercorns\n-Tiger prawns in green curry paste, aubergines, green beans, basil and coconut milk\n-Phat Thai rice noodles with shrimps and bay scallops, roasted ground peanuts, scallions, bean sprouts in tamarind sauce\n-Steamed Thai Milagrosa jasmine rice with coconut milk\n-Daily desserts",
+        price: "156"
+      },
+      {
+        name: "Combo for Eight",
+        description: "Deep-fried calamari\n-Grilled chicken satay with Thai peanut sauce\n-Thai pork spring rolls\n-Tiger prawns in traditional slow-cooked aromatic red curry paste with tender coconut flesh\n-Chicken with homemade peanut sauce served on a bed of lettuce and spinach\n-Stir-fried beef with spinach and onions in marinated garlic and white pepper\n-Phat Thai rice noodles with shrimps and bay scallops, roasted ground peanuts, scallions, bean sprouts in tamarind sauce\n-Roast duck stir-fried with chilli paste, white button mushrooms, onions and holy basil\n-Deep-fried Tilapia with signature Three Flavoured Sauce\n-Tiger prawns stir-fried with green beans, kaffir lime leaves, holy basil in house spicy sauce\n-Steamed Thai Milagrosa jasmine rice with coconut milk\n-Daily desserts",
+        price: "208"
+      }
+    ]
+  },
+  "food-hh": {
+    title: "Food",
+    thaiTitle: "สลัด",
+    items: [
+      {
+        name: "Thai Fish Cakes",
+        price: "6"
+      },
+      {
+        name: "Deep-Fried Vegetarian Spring Rolls",
+        price: "8"
+      },
+      {
+        name: "Grilled Thai Chicken Satay",
+        price: "10"
+      },
+      {
+        name: "Grilled Beef Salad",
+        price: "11"
+      },
+      {
+        name: "Deep-Fried Tofu",
+        price: "6"
+      },
+      {
+        name: "Crispy Chicken Wings",
+        price: "10"
+      },
+      {
+        name: "Tom Yum Gai Soup",
+        price: "10"
+      },
+      
+    ]
+  },
+  "draught-beer-hh": {
+    title: "Draught Beer - 16oz",
+    thaiTitle: "สลัด",
+    items: [
+      {
+        name: "Granville Island Northwest Pale Ale",
+        description:"Pale ale, big citrus, floral aroma, crisp",
+        price: "5"
+      },
+      {
+        name: "Deep-Fried Vegetarian Spring Rolls",
+        description:"Crisp, dry Karakuchi taste, clean finish",
+        price: "6"
+      },
+    ]
+  },
+  "highballs-hh": {
+    title: "Highballs - 1oz",
+    thaiTitle: "สลัด",
+    items: [
+      {
+        name: "Absolut",
+        description:"Vodka",
+        price: "3.50"
+      },
+      {
+        name: "Tanqueray",
+        description:"Gin",
+        price: "3.50"
+      },
+      {
+        name: "Jim Beam",
+        description:"Bourbon",
+        price: "3.50"
+      },
+      {
+        name: "Havana Club 3 year",
+        description:"Rum",
+        price: "3.50"
+      },
+    ]
+  },
+  "featured-cocktails-hh": {
+    title: "Featured Cocktails - 1½oz",
+    thaiTitle: "สลัด",
+    items: [
+      {
+        name: "Americano",
+        description:"Campari, cinzanno rosso, club soda",
+        price: "7"
+      },
+      {
+        name: "Party Crasher",
+        description:"Alizé red passion, Absolut Vodka, fresh lime",
+        price: "7"
+      },
+      {
+        name: "Moscow Mule",
+        description:"Absolut Vodka, fever tree ginger beer, fresh lime",
+        price: "7"
+      },
+      
+    ]
+  },
+  "wine-hh": {
+    title: "Wine - 6oz",
+    thaiTitle: "สลัด",
+    items: [
+      {
+        name: "Sur Andino 1969",
+        description:"Merlot | Buin, Chile",
+        price: "7"
+      },
+      {
+        name: "Mt. Dawson",
+        description:"Cabernet Sauvignon | Okanagan Valley, BC",
+        price: "7"
+      },
+      {
+        name: "Copper Moon",
+        description:"Shiraz | Okanagan Valley, BC",
+        price: "7"
+      },
+      {
+        name: "Viña Maipo",
+        description:"Sauvignon blanc | Central Valley, Chile",
+        price: "7"
+      },
+      {
+        name: "Spring Rock",
+        description:"Chardonnay | South Australia",
+        price: "7"
+      },
+      
+    ]
+  },
+  "featured-wine": {
+    title: "Featured Wines - BC VQA",
+    thaiTitle: "สลัด",
+    pCol1: "6oz",
+    pCol2: "500mL",
+    pCol3: "Bottle",
+    items: [
+      {
+        name: "Quails' Gate | Chardonnay",
+        description:"West Kelowna, BC",
+        p1: "11",
+        p2: "30",
+        p3: "43",
+      },
+      {
+        name: "Quails' Gate | Chasselas Pinot Blanc-Gris",
+        description:"West Kelowna, BC",
+        p1: "",
+        p2: "",
+        p3: "42",
+      },
+      {
+        name: "Wild Goose | Gewürztraminer",
+        description:"Okanagan Falls, BC",
+        p1: "",
+        p2: "",
+        p3: "43",
+      },
+      {
+        name: "Burrowing Owl | Chardonnay",
+        description:"Oliver, BC",
+        p1: "",
+        p2: "",
+        p3: "66",
+      },
+      {
+        name: "Gray Monk | Merlot",
+        description:"Lake Country, BC",
+        p1: "11",
+        p2: "30",
+        p3: "42",
+      },
+      {
+        name: "Quails' Gate | Pinot Noir",
+        description:"West Kelowna, BC",
+        p1: "13",
+        p2: "36",
+        p3: "48",
+      },
+      {
+        name: "Burrowing owl | Merlot",
+        description:"Oliver, BC",
+        p1: "18",
+        p2: "35",
+        p3: "65",
+      },
+    ]
+  },
+  "featured-white-wines": {
+    title: "Featured Wines - White",
+    thaiTitle: "สลัด",
+    pCol1: "6oz",
+    pCol2: "500mL",
+    pCol3: "1 Litre",
+    items: [
+      {
+        name: "Spring Rock | Chardonnay",
+        description:"South Australia",
+        p1: "9½",
+        p2: "22",
+        p3: "36",
+      },
+      {
+        name: "Yellow Tail | Chardonnay",
+        description:"South East Australia",
+        p1: "10",
+        p2: "24",
+        p3: "38",
+      },
+      {
+        name: "Viña Maipo | Sauvignon Blanc",
+        description:"Central Valley, Chile",
+        p1: "10¼",
+        p2: "25",
+        p3: "40",
+      },
+      {
+        name: "Pasqua Colori D’italia | Pinot Grigio",
+        description:"Veneto, Italy",
+        p1: "10¾",
+        p2: "27",
+        p3: "45",
+      },
+    ]
+  },
+  "featured-red-wines": {
+    title: "Featured Wines - Red",
+    thaiTitle: "สลัด",
+    pCol1: "6oz",
+    pCol2: "500mL",
+    pCol3: "1 Litre",
+    items: [
+      {
+        name: "Copper Moon | Shiraz",
+        description:"Okanagan Valley, BC",
+        p1: "9",
+        p2: "19",
+        p3: "35",
+      },
+      {
+        name: "Mt. Dawson | Cabernet Sauvignon",
+        description:"Okanagan Valley, BC",
+        p1: "9½",
+        p2: "23",
+        p3: "41",
+      },
+      {
+        name: "Yellow Tail | Shiraz",
+        description:"South East Australia",
+        p1: "10",
+        p2: "25",
+        p3: "43",
+      },
+      {
+        name: "Sur Andino 1969 | Merlot",
+        description:"Buin, Chile",
+        p1: "10½",
+        p2: "28",
+        p3: "47",
+      },
+      {
+        name: "Cameleon Domaine Bousquet Organic | Malbec",
+        description:"Tupungato, Argentina",
+        p1: "12",
+        p2: "28½",
+        p3: "49",
+      },
+    ]
+  },
+  "white-wines": {
+    title: "White Wine",
+    thaiTitle: "สลัด",
+    pCol1: "6oz",
+    pCol2: "500mL",
+    pCol3: "Bottle",
+    items: [
+      {
+        name: "Echeverria Cool Climate | Sauvignon Blanc",
+        description:"Leyda Valley, Chile",
+        p1: "10",
+        p2: "24",
+        p3: "35",
+      },
+      {
+        name: "Seven Terraces | Sauvignon Blanc",
+        description:"Marlborough, New Zealand",
+        p1: "11",
+        p2: "32",
+        p3: "46",
+      },
+      {
+        name: "Oxford Landing | Chardonnay",
+        description:"South Australia",
+        p1: "11½",
+        p2: "33",
+        p3: "47",
+      },
+      {
+        name: "Whitehaven | Sauvignon Blanc",
+        description:"Marlborough, New Zealand",
+        p1: "12",
+        p2: "34",
+        p3: "47",
+      },
+      {
+        name: "Quails’ Gate | Chasselas Pinot Blanc-Gris",
+        description:"West Kelowna, BC VQA",
+        p1: "",
+        p2: "",
+        p3: "42",
+      },
+      {
+        name: "Wild Goose | Gewürztraminer",
+        description:"Okanagan Falls, BC VQA",
+        p1: "",
+        p2: "",
+        p3: "43",
+      },
+      {
+        name: "Oyster Bay | Chardonnay",
+        description:"Marlborough, New Zealand",
+        p1: "",
+        p2: "",
+        p3: "49",
+      },
+      {
+        name: "Selbach Mosel | Riesling",
+        description:"Moselle River Valley, Germany",
+        p1: "",
+        p2: "",
+        p3: "52",
+      },
+    ]
+  },
+  "rose": {
+    title: "Rosé",
+    thaiTitle: "สลัด",
+    pCol1: "6oz",
+    pCol2: "500mL",
+    pCol3: "Bottle",
+    items: [
+      {
+        name: "Domaine de Pellehaut",
+        description:"Côtes de Gascogne, France",
+        p1: "10",
+        p2: "24½",
+        p3: "35",
+      },
+    ]
+  },
+  "red-wines": {
+    title: "Red Wine",
+    thaiTitle: "สลัด",
+    pCol1: "6oz",
+    pCol2: "500mL",
+    pCol3: "Bottle",
+    items: [
+      {
+        name: "Gray Monk | Merlot",
+        description:"Lake Country, BC VQA",
+        p1: "11",
+        p2: "30",
+        p3: "42",
+      },
+      {
+        name: "George Wyndham BIN 444 | Cabernet Sauvignon",
+        description:"South East Australia",
+        p1: "11½",
+        p2: "32",
+        p3: "43",
+      },
+      {
+        name: "Santa Julia Reserva | Malbec",
+        description:"Uco Valley, Argentina",
+        p1: "12",
+        p2: "32",
+        p3: "43",
+      },
+      {
+        name: "Thorne Clarke Terra Barossa | Shiraz",
+        description:"South Australia",
+        p1: "13",
+        p2: "36",
+        p3: "48",
+      },
+      {
+        name: "Trapiche Reserve | Malbec",
+        description:"Mendoza, Argentina",
+        p1: "",
+        p2: "",
+        p3: "42",
+      },
+      {
+        name: "Robert Mondavi Private Selection | Cabernet Sauvignon",
+        description:"California, USA",
+        p1: "",
+        p2: "",
+        p3: "46",
+      },
+      {
+        name: "Escorihuela 1884 | Syrah",
+        description:"Mendoza, Argentina",
+        p1: "",
+        p2: "",
+        p3: "52",
+      },
+      {
+        name: "Tom Gore | Cabernet Sauvignon",
+        description:"Geyserville, USA",
+        p1: "",
+        p2: "",
+        p3: "54",
+      },
+      {
+        name: "Château Ste Michelle | Cabernet Sauvignon",
+        description:"Columbia Valley, USA",
+        p1: "",
+        p2: "",
+        p3: "70",
+      },
+      {
+        name: "Meiomi | Pinot Noir",
+        description:"California, USA",
+        p1: "",
+        p2: "",
+        p3: "77",
+      },
+    ]
+  },
+  "ctsd": {
+    title: "Coffee, Tea & Soft Drinks",
+    thaiTitle: "สลัด",
+    items: [
+      {
+        name: "Java Club Arabica Coffee – Regular or Decaf",
+        description:"",
+        price: "3",
+        extras: "Add Bailey's Irish Cream | 3"
+      },
+      {
+        name: "Jasmine Green Tea, English Breakfast, Earl Grey, Orange Pekoe",
+        description:"",
+        price: "3"
+      },
+      {
+        name: "Iced Tea",
+        description:"",
+        price: "4"
+      },
+      {
+        name: "Orange, Apple, Pineapple, Cranberry, Mango, Lychee",
+        description:"",
+        price: "4"
+      },
+      {
+        name: "Fresh Young Coconut Juice",
+        description:"",
+        price: "7"
+      },
+      {
+        name: "Coke, Diet Coke, Coke Zero",
+        description:"",
+        price: "4"
+      },
+      {
+        name: "Sprite, Ginger Ale, Tonic Water, Club Soda",
+        description:"",
+        price: "4"
+      },
+      {
+        name: "A&W® Root Beer",
+        description:"",
+        price: "4"
+      },
+      {
+        name: "Red Bull",
+        description:"5",
+        price: ""
+      },
+      {
+        name: "Fever Tree Ginger Beer",
+        description:"– London, UK",
+        price: "5"
+      },
+      {
+        name: "San Pellegrino Carbonated Natural Mineral Water",
+        description:"– Bergamo, Italy",
+        price: "4¾"
+      },
+      {
+        name: "Fiji Spring Water",
+        description:"– Yaqara, Fiji",
+        price: "3¼"
+      },
+    ]
+  },
+  "non-spirited": {
+    title: "Non-Spirited",
+    thaiTitle: "สลัด",
+    items: [
+      {
+        name: "Shirley Temple",
+        description:"Ginger ale, lemon, lime, cherry grenadine, maraschino cherry",
+        price: "5"
+      },
+      {
+        name: "Roy Rogers",
+        description:"Coca-Cola®, cherry syrup, grenadine",
+        price: "5"
+      },
+      {
+        name: "Stumbling Jade",
+        description:"Fresh lime, lime cordial, lemon, melon syrup, club soda",
+        price: "6"
+      },
+      {
+        name: "Here Comes the Sun",
+        description:"Mango, lime, wild strawberry confiture, club soda",
+        price: "6"
+      },
+      {
+        name: "Pineapple Cobbler",
+        description:"Strawberry, pineapple, lime, lemon-lime soda",
+        price: "6"
+      },
+      {
+        name: "Virgin Mary",
+        description:"Tomato juice, lime, worcestershire, tabasco, celery, black pepper",
+        price: "6"
+      },
+      {
+        name: "Virgin Strawberry Margarita",
+        description:"Strawberries, pineapple, fresh lime, lime cordial",
+        price: "6"
+      },
+      {
+        name: "Virgin Mango Colada",
+        description:"Mango, crème de coco, half & half, coconut milk",
+        price: "6"
+      },
+      {
+        name: "Royal Thai",
+        description:"Lychee, coconut milk, half & half, crème de coco",
+        price: "6",
+        extras:  "Add Soho lychee liqueur | 3"
+      },
+      {
+        name: "กาแฟเย็น (kafæ yen) aka Thai Iced – Coffee",
+        description:"espresso, condensed milk, half & half",
+        price: "6",
+        extras:  "Add Bailey’s Irish Cream | 3"
+      },
+      {
+        name: "ชาไทย (cha yen) aka Thai Iced – Tea",
+        description:"Black tea, star anise, cloves, palm sugar syrup, half & half",
+        price: "6",
+        extras:  "Add Bailey’s Irish Cream | 3"
+      },
+    ]
+  },
+  "signature-cocktails": {
+    title: "Signature Cocktails",
+    thaiTitle: "สลัด",
+    items: [
+      {
+        name: "The Long Thailand Iced Tea (3 oz)",
+        description:"Marquis de villard vsop, Havana Club Añejo Reserva, Crown Royal, honey, black tea, condensed milk, palm sugar syrup, club soda, lemon",
+        price: "14"
+      },
+      {
+        name: "Pattaya Delight (3 oz)",
+        description:"Havana Club Añejo Reserva, Havana Club 3 year, Malibu coconut rum, blue Curaçao, mango, crème de coco",
+        price: "12¾"
+      },
+      {
+        name: "Broken Skull Margarita (5 oz)",
+        description:"Jose Cuervo Tradicional Resposado, Cointreau, Grand Marnier Cordon Rouge, lime juice, celery salt",
+        price: "22"
+      },
+      {
+        name: "Mai Tai (3 oz)",
+        description:"Havana Club Añejo Reserva, Malibu coconut rum, Cointreau, Disaronno Amaretto, orange, pineapple, lime juice, grenadine, palm sugar",
+        price: "14"
+      },
+      {
+        name: "Cloud Nine (2¼oz)",
+        description:"Grey Goose l’orange, Stolichnaya crushed mango, Alizé gold passion, mango, grenadine",
+        price: "14"
+      },
+      {
+        name: "Green Basil (2¼oz)",
+        description:"Belvedere vodka, St-Germain elderflower, melon liqueur, lime cordial, lime juice, holy basil",
+        price: "13¾"
+      },
+      {
+        name: "Marina Bay Street Circuit (2 oz)",
+        description:"Grey Goose cherry noir, Alizé red passion, cranberry, mango, lime juice, grenadine",
+        price: "13½"
+      },
+      {
+        name: "Cosmopolitan de l’Orange (2 oz)",
+        description:"Grey Goose l’orange, Cointreau, cranberry, fresh lime",
+        price: "14"
+      },
+      {
+        name: "Bolan (3 oz)",
+        description:"Jim Beam bourbon, palm sugar, angostura bitters, orange, lychee",
+        price: "14"
+      },
+      {
+        name: "In the Night (3 oz)",
+        description:"Cîroc pineapple, Stolichnaya crushed mango, Malibu coconut rum, Blue Curaçao, pineapple, mango, crème de coco",
+        price: "14½"
+      },
+      {
+        name: "Blue Hawaii (3 oz)",
+        description:"Malibu coconut rum, Havana Club 3 year, Alizé blue passion, Blue Curaçao, pineapple, crème de coco",
+        price: "13½"
+      },
+      {
+        name: "Lychee Paradise (2¼oz)",
+        description:"Grey Goose, St.Germain elderflower, Soho lychee, lychee juice",
+        price: "13¾"
+      },
+      {
+        name: "el Clássico (2 oz)",
+        description:"Jose Cuervo Tradicional Resposado, Cointreau, lime juice, celery salt",
+        price: "11"
+      },
+      {
+        name: "Chao Phraya Daiquiri (2 oz)",
+        description:"Alizé gold passion, Havana Club Añejo Reserva, lime juice, honey",
+        price: "12½"
+      },
+      {
+        name: "Pattaya Long Island (3½ oz)",
+        description:"Havana Club 3 year, Malibu coconut rum, Absolut Vodka, Tanqueray dry gin, Jose Cuervo Tradicional Resposado, Cointreau, lime juice, Coca Cola™",
+        price: "14¾"
+      },
+      {
+        name: "Singapore Sling (2½ oz)",
+        description:"Tanqueray dry gin, cherry brandy, Benedictine – D.O.M., Cointreau, fresh pineapple, lime, grenadine, cherry syrup, maraschino cherry, angostura bitters",
+        price: ""
+      },
+      {
+        name: "Piña Colada (3 oz)",
+        description:"Havana Club 3 year, Havana Club Añejo Reserva, Malibu coconut rum, fresh pineapple, coconut milk, crème de coco, half & half",
+        price: "14"
+      },
+      {
+        name: "House Signature Caesar (2 oz)",
+        description:"Absolut Vodka, bird’s eye chilli (พรกขหนูแดง), clamato",
+        price: "11"
+      },
+    ]
+  },
+  "classic-cocktails": {
+    title: "Classic cocktails",
+    thaiTitle: "สลัด",
+    items: [
+      {
+        name: "Old Fashioned (2 oz)",
+        description:"Jim Bean bourbon, demerara sugar, angostura bitters",
+        price: "12"
+      },
+      {
+        name: "Negroni (2 oz)",
+        description:"Tanqueray dry gin, Campari, Cinzano Rosso",
+        price: "11"
+      },
+      {
+        name: "Manhattan, NY (2½ oz)",
+        description:"Crown Royal rye, Cinzano Rosso, angostura bitters",
+        price: "11½"
+      },
+      {
+        name: "Bronx, NY (2½ oz)",
+        description:"Tanqueray dry gin, Cinzano Rosso, Noilly Prat dry,",
+        price: "12½"
+      },
+      {
+        name: "Boulevardier (3 oz)",
+        description:"Jim Beam bourbon, Campari, Cinzano Rosso,",
+        price: "14"
+      },
+      {
+        name: "Godfather (2½ oz)",
+        description:"Johnnie Walker Black Label, Disaronno Amaretto,",
+        price: "14"
+      },
+      {
+        name: "Old Pal (2¼oz)",
+        description:"Crown Royal Rye, Noilly Prat dry, Campari",
+        price: "12½"
+      },
+      {
+        name: "Jungle Bird (2 oz)",
+        description:"Havana Club Añejo Reserva, Campari, pineapple, demerara sugar",
+        price: "12"
+      },
+      {
+        name: "Blood & Sand (2 oz)",
+        description:"John Barr reserve blended scotch, cherry brandy, Cinzano Rosso, orange juice",
+        price: "12¾"
+      },
+      {
+        name: "Bobby Burns (2½ oz)",
+        description:"Glenlivet 12 yrs, Cinzano Rosso, french brandy, Benedictine – D.O.M.",
+        price: "14"
+      },
+      {
+        name: "Moscow Mule (1 oz)",
+        description:"Absolut Vodka, fever tree ginger beer, fresh lemon",
+        price: "9½"
+      },
+      {
+        name: "Whiskey Sour (2 oz)",
+        description:"Jack Daniel’s Old no°7, fresh lemon, Chilliwack River Valley honey, angostura bitters",
+        price: "11¾"
+      },
+      {
+        name: "Amaretto Sour (2½ oz)",
+        description:"Disaronno Amaretto, Jim Beam bourbon, fresh lemon, demerara sugar",
+        price: "12½"
+      },
+      {
+        name: "New York Sour (2½ oz)",
+        description:"Crown Royal Rye, Yellow Tail Shiraz, fresh lemon, demerara sugar",
+        price: "13¼"
+      },
+      {
+        name: "Black/White Russian (1½ oz)",
+        description:"Absolut Vodka, Kahlua, half & half",
+        price: "9½"
+      },
+      {
+        name: "Espresso Martini (2½ oz)",
+        description:"Grey goose, Kahlua, Bailey’s Irish Cream, Espresso",
+        price: "14"
+      },
+      {
+        name: "Tom Collins (1½ oz)",
+        description:"Tanqueray dry gin, fresh lemon juice, simple syrup, club soda",
+        price: "9½"
+      },
+      {
+        name: "Sangria (5 oz)",
+        description:"Yellow Tail Shiraz, cherry brandy, fresh lychee, citrus, pineapple, cherry",
+        price: "10"
+      },
+
+    ]
+  },
+  "draught-beer": {
+    title: "Draught Beer",
+    thaiTitle: "สลัด",
+    pCol1: "16 oz",
+    pCol2: "60 oz",
+    items: [
+      {
+        name: "Asahi Super Dry Pilsner",
+        description:"crisp, dry Karakuchi taste, clean finish",
+        p1: "7",
+        p2: "22"
+      },
+      {
+        name: "Granville Island Northwest Pale Ale",
+        description:"pale ale, big citrus, floral aroma, crisp",
+        p1: "6½",
+        p2: "20"
+      },
+
+    ]
+  },
+  "domestic-beer": {
+    title: "Domestic Beer",
+    thaiTitle: "สลัด",
+    items: [
+      {
+        name: "Coors Original (355 ml)",
+        description:"Vancouver, bc / lager / 5.0% ABV",
+        price: "6¼"
+      },
+      {
+        name: "Kokanee (341 ml)",
+        description:"Creston, bc / lager / 5.0% ABV",
+        price: "6¼"
+      },
+      {
+        name: "33 Acres of Darkness (330 ml)",
+        description:"Vancouver, bc / schwarzbier / 5.0% ABV",
+        price: "7"
+      },
+      {
+        name: "Four Winds (330 ml)",
+        description:"Delta, bc / ipa / 7.0% ABV",
+        price: "7¼"
+      },
+
+    ]
+  },
+  "imported-beer": {
+    title: "Imported Beer",
+    thaiTitle: "สลัด",
+    items: [
+      {
+        name: "Singha (330 mL)",
+        description:"Thailand / lager / 5.0% ABV",
+        price: "7¼"
+      },
+      {
+        name: "Singha – Large Format (630 mL)",
+        description:"Thailand / lager / 5.0% ABV",
+        price: "13"
+      },
+      {
+        name: "Chang (320 mL)",
+        description:"Thailand / lager / 5.0% ABV",
+        price: "7¼"
+      },
+      {
+        name: "Tiger (330 mL)",
+        description:"Singapore / lager / 5.0% ABV",
+        price: "7¼"
+      },
+      {
+        name: "Tsingtao (330 mL)",
+        description:"China / lager / 4.5% ABV",
+        price: "7¼"
+      },
+      {
+        name: "Stella Artois (330 mL)",
+        description:"Belgium / lager / 5.2% ABV",
+        price: "7¼"
+      },
+      {
+        name: "Heineken (330 ml)",
+        description:"Holland / lager / 5.0% ABV",
+        price: "7¼"
+      },
+      {
+        name: "Peroni Nastro Azzurro (330 ml)",
+        description:"Italy / lager / 5.2% ABV",
+        price: "8"
+      },
+      {
+        name: "Sapporo (355 mL)",
+        description:"Japan / pilsner / 5.0% ABV",
+        price: "7½"
+      },
+      {
+        name: "Pilsner Urquell (330 mL)",
+        description:"Czech Republic / pilsner / 4.4% ABV",
+        price: "8"
+      },
+      {
+        name: "Guinness Pub Draught (330 mL)",
+        description:"Ireland / stout / 4.2% ABV",
+        price: "8"
+      },
+      {
+        name: "Warsteiner Fresh Non-Alcoholic",
+        description:"Germany / 0.0% ABV",
+        price: "7"
+      },
+      {
+        name: "Corona (330 mL)",
+        description:"Mexico / lager / 4.6% ABV",
+        price: "7¼"
+      },
+    ]
+  },
+  "cider": {
+    title: "Cider",
+    thaiTitle: "สลัด",
+    items: [
+      {
+        name: "Lonetree Old Growth Orchard (355 mL)",
+        description:"Okanagan Valley, BC / dry apple cider / 5.5% ABV",
+        price: "7"
+      },
+    ]
+  },
+  "vodka": {
+    title: "Vodka",
+    thaiTitle: "สลัด",
+    pCol1: "1oz",
+    pCol2: "2oz",
+    pCol3: "Martini",
+    items: [
+      {
+        name: "Absolut",
+        description:"Åhus, Sweden",
+        p1: "7",
+        p2: "11",
+        p3: "14",
+      },
+      {
+        name: "Stolichnaya Crushed Mango",
+        description:"Latvia",
+        p1: "9",
+        p2: "14",
+        p3: "17",
+      },
+      {
+        name: "Belvedere",
+        description:"Zyrardów, Poland",
+        p1: "10",
+        p2: "15",
+        p3: "20",
+      },
+      {
+        name: "Cîroc",
+        description:"Bordeaux, France",
+        p1: "11",
+        p2: "16",
+        p3: "22",
+      },
+      {
+        name: "Cîroc Green Apple",
+        description:"Bordeaux, France",
+        p1: "11",
+        p2: "16",
+        p3: "22",
+      },
+      {
+        name: "Cîroc Pineapple",
+        description:"Bordeaux, France",
+        p1: "11",
+        p2: "16",
+        p3: "22",
+      },
+      {
+        name: "Grey Goose",
+        description:"Picardy, France",
+        p1: "11",
+        p2: "16",
+        p3: "22",
+      },
+      {
+        name: "Grey Goose Cherry Noir",
+        description:"Picardy, France",
+        p1: "11",
+        p2: "16",
+        p3: "22",
+      },
+      {
+        name: "Grey Goose l’Orange",
+        description:"Picardy, France",
+        p1: "11",
+        p2: "16",
+        p3: "22",
+      },
+    ]
+  },
+  "gin": {
+    title: "Gin",
+    thaiTitle: "สลัด",
+    pCol1: "1oz",
+    pCol2: "2oz",
+    pCol3: "Martini",
+    items: [
+      {
+        name: "Tanqueray",
+        description:"England",
+        p1: "7",
+        p2: "11",
+        p3: "14",
+      },
+    ]
+  },
+  "rum": {
+    title: "Rum",
+    thaiTitle: "สลัด",
+    pCol1: "1oz",
+    pCol2: "2oz",
+    items: [
+      {
+        name: "Malibu Coconut Rum",
+        description:"Canada",
+        p1: "7",
+        p2: "11",
+      },
+      {
+        name: "Havana Club 3 year",
+        description:"Cárdenas, Cuba",
+        p1: "7",
+        p2: "11",
+      },
+      {
+        name: "Havana Club Añejo Reserva",
+        description:"Cárdenas, Cuba",
+        p1: "8",
+        p2: "12",
+      },
+    ]
+  },
+  "tequila": {
+    title: "Tequila",
+    thaiTitle: "สลัด",
+    pCol1: "1oz",
+    pCol2: "2oz",
+    items: [
+      {
+        name: "Jose Cuervo Tradicional Resposado",
+        description:"Jalisco, Mexico",
+        p1: "8",
+        p2: "12",
+      },
+    ]
+  },
+  "whiskey": {
+    title: "Whisk(e)y",
+    thaiTitle: "สลัด",
+    pCol1: "1oz",
+    pCol2: "2oz",
+    pCol3: "Manhattan",
+    items: [
+      {
+        name: "Crown Royal Rye",
+        description:"Canada",
+        p1: "8",
+        p2: "12",
+        p3: "16"
+      },
+      {
+        name: "Jack Daniel’s Old No°7",
+        description:"Tennessee, USA",
+        p1: "7",
+        p2: "11",
+        p3: "14"
+      },
+      {
+        name: "Jim Beam Bourbon",
+        description:"Kentucky, USA",
+        p1: "7",
+        p2: "11",
+        p3: "14"
+      },
+    ]
+  },
+  "scotch": {
+    title: "Scotch",
+    thaiTitle: "สลัด",
+    pCol1: "1oz",
+    pCol2: "2oz",
+    items: [
+      {
+        name: "Highland Park 12",
+        description:"Orkney Islands",
+        p1: "15",
+        p2: "23",
+      },
+      {
+        name: "John Barr Reserve – Whyte & Mackay",
+        description:"Lowlands",
+        p1: "10",
+        p2: "16",
+      },
+      {
+        name: "Johnnie Walker 12 Black Label",
+        description:"Speyside",
+        p1: "12",
+        p2: "18",
+      },
+      {
+        name: "Macallan Double Cask 12",
+        description:"Speyside",
+        p1: "22",
+        p2: "39",
+      },
+      
+    ]
+  },
+  "brandy": {
+    title: "Brandy",
+    thaiTitle: "สลัด",
+    pCol1: "1oz",
+    pCol2: "2oz",
+    items: [
+      {
+        name: "Marquis de Villard VSOP",
+        description:"France",
+        p1: "8",
+        p2: "12",
+      },
+    ]
+  },
+  "aperitif-digestif": {
+    title: "Aperitif & Digestif",
+    thaiTitle: "สลัด",
+    pCol1: "1oz",
+    pCol2: "2oz",
+    items: [
+      {
+        name: "Benedictine D.O.M.",
+        p1: "10",
+        p2: "15",
+      },
+      {
+        name: "Campari",
+        p1: "8",
+        p2: "12",
+      },
+      {
+        name: "Cointreau",
+        p1: "9",
+        p2: "14",
+      },
+      {
+        name: "Disaronno Amaretto",
+        p1: "8",
+        p2: "12",
+      },
+      {
+        name: "Grand Marnier Cordon Rouge",
+        p1: "11",
+        p2: "16",
+      },
+      {
+        name: "Jägermeister",
+        p1: "9",
+        p2: "14",
+      },
+
+      
+    ]
+  },
+  "vermouth-liqueurs": {
+    title: "Vermouth & Liqueurs",
+    thaiTitle: "สลัด",
+    pCol1: "1oz",
+    pCol2: "2oz",
+    items: [
+      {
+        name: "Alizé – Bleu Passion",
+        p1: "",
+        p2: "10",
+      },
+      {
+        name: "Alizé – Gold Passion",
+        p1: "",
+        p2: "10",
+      },
+      {
+        name: "Alizé – Red Passion",
+        p1: "",
+        p2: "10",
+      },
+      {
+        name: "Cinzanno – Rosso",
+        p1: "",
+        p2: "8",
+      },
+      {
+        name: "Noilly Prat – Sec",
+        p1: "",
+        p2: "9",
+      },
+      {
+        name: "Bailey’s Irish Cream",
+        p1: "8",
+        p2: "12",
+      },
+      {
+        name: "Kahlua",
+        p1: "8",
+        p2: "12",
+      },
+      {
+        name: "Saint Germain Elderflower",
+        p1: "11",
+        p2: "16",
+      },
+      {
+        name: "Soho Lychee",
+        p1: "8",
+        p2: "12",
+      },
+    ]
+  },
+  "sct": {
+    title: "Specialty Coffee & Tea",
+    thaiTitle: "สลัด",
+    items: [
+      {
+        name: "B52 Bomber (1½ oz)",
+        description:"Grand Marnier Cordon Rouge, Kahlua, Bailey’s Irish Cream, whipped cream",
+        price: "9"
+      },
+      {
+        name: "Café du Montecristo (1½ oz)",
+        description:"Kahlua, Bailey’s Irish Cream, Grand Marnier Cordon Rouge, fresh coffee, whipped cream",
+        price: "10"
+      },
+      {
+        name: "Café Español (1½ oz)",
+        description:"Marquis de Villard V.S.O.P., Grand Marnier Cordon Rouge, Kahlua, fresh coffee, whipped cream",
+        price: "10"
+      },
+      {
+        name: "Café l’Orange (1½ oz)",
+        description:"Marquis de Villard V.S.O.P., Cointreau, Grand Marnier Cordon Rouge, fresh coffee",
+        price: "10"
+      },
+      {
+        name: "Blueberry Tea (1½ oz)",
+        description:"Disaronno Amaretto, Grand Marnier Cordon Rouge, orange pekoe",
+        price: "10"
+      },
+    ]
+  },
+};
