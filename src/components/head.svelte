@@ -74,9 +74,9 @@
 			</div>
 			<div class="grid grid-cols-2 md:grid-cols-1 lg:grid-cols-2 mt-6 sm:mt-12 font-DMSans text-xs ">
 				<div class="flex flex-col col-span-1 md:mb-4">
-					<a href="https://www.instagram.com/greenbasilthai.yvr/" target="_blank">Instagram </a>
+					<a class="hover:underline" href="https://www.instagram.com/greenbasilthai.yvr/" target="_blank">Instagram </a>
 
-					<a href="https://www.facebook.com/GreenBasil/" target="_blank">Facebook </a>
+					<a class="hover:underline" href="https://www.facebook.com/GreenBasil/" target="_blank">Facebook </a>
 				</div>
 				<div class="col-span-1  text-darkText mb-8 flex flex-col ">
 					<a

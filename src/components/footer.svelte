@@ -51,7 +51,7 @@
 				</div>
 				<div class="font-DMSans text-secondary mb-8 sm:mb-0 mx-4 sm:ml-4 md:ml-8 flex-col flex-nowrap text-xs font-thin">
 					<a
-						class="font-thin underline"
+						class=" underline"
 						href="https://www.google.com/maps/dir//4623+Kingsway,+Burnaby,+BC+V5H+2B3/@49.2291765,-123.0835327,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x54867658ed9537d5:0x9e538cb3bbfb2f7f!2m2!1d-123.0011323!2d49.2292058?entry=ttu&g_ep=EgoyMDI1MDIyNi4xIKXMDSoASAFQAw%3D%3D"
 						>4623 Kingsway, Burnaby, BC V5H 2B3</a
 					>

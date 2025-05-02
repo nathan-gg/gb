@@ -39,6 +39,9 @@
 					</li>
 				</ul>
 				<p>We appreciate your understanding and look forward to welcoming you soon!</p>
+				<div>
+					<button class="bg-darkText text-tertiary rounded border-0 p-2 mt-4">Make Reservation</button>
+				</div>
 			</div>
 		</div>
 	</div>

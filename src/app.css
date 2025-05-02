@@ -130,7 +130,7 @@ input, textarea{
 }
 
 ::placeholder {
-  color: #355128;
+  color: #768669;
   /* font-family: 'DMSans', 'sans-serif'; */
   opacity: 1; /* Firefox */
 }
@@ -141,6 +141,10 @@ input, textarea{
 
 html {
   scroll-behavior: smooth;
+}
+
+ul {
+  list-style-image: url('newCursorLeaf.svg');
 }
 
 /* width */

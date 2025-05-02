@@ -41,70 +41,26 @@
 		showDinner = false;
 	}
 
-	let showTOC = $state(true);
+	let showTOC = $state(false);
 
 	function toggleTOC() {
 		showTOC = !showTOC;
 	}
-
-	// let carouselPositions;
-	// let halfContainer;
-	// let currentItem;
-
-	// function getCarouselPositions() {
-	//   carouselPositions = [];
-	//   document.querySelectorAll('#container div').forEach(function(div) {
-	//     carouselPositions.push([div.offsetTop, div.offsetTop + div.offsetHeight]); // add to array the positions information
-	//   })
-	//   halfContainer = document.querySelector('#container').offsetHeight/2;
-	// }
-
-	// getCarouselPositions(); // call it once
-
-	// function goCarousel(direction) {
-
-	//   var currentScrollTop = document.querySelector('#container').scrollTop;
-	//   var currentScrollBottom = currentScrollTop + document.querySelector('#container').offsetHeight;
-
-	//   if (currentScrollTop === 0 && direction === 'next') {
-	//       currentItem = 1;
-	//   } else if (currentScrollBottom === document.querySelector('#container').scrollHeight && direction === 'previous') {
-	//       console.log('here')
-	//       currentItem = carouselPositions.length - 2;
-	//   } else {
-	//       var currentMiddlePosition = currentScrollTop + halfContainer;
-	//       for (var i = 0; i < carouselPositions.length; i++) {
-	//         if (currentMiddlePosition > carouselPositions[i][0] && currentMiddlePosition < carouselPositions[i][1]) {
-	//           currentItem = i;
-	//           if (direction === 'next') {
-	//               currentItem++;
-	//           } else if (direction === 'previous') {
-	//               currentItem--
-	//           }
-	//         }
-	//       }
-	//   }
-
-	//   document.getElementById('container').scrollTo({
-	//     top: carouselPositions[currentItem][0],
-	//     behavior: 'smooth'
-	//   });
-
-	// }
-	// window.addEventListener('resize', getCarouselPositions);
 </script>
 
 <section class="bg-tertiary flex">
-	<div class="w-fitjustify-between fixed z-30 flex">
+	<div class="w-fit justify-between fixed z-30 flex">
 		{#if showTOC}
-			<button onclick={toggleTOC} class:active={showTOC} class="text-darkText">
-				<!-- <img src="closeMenu.svg" class="h-8" alt="Close Website Directory" /> -->
-				Close Table of Contents
+			<button onclick={toggleTOC} class:active={showTOC} class="text-lightText hover:text-darkText">
+				<span class="material-icons md-36"
+						>keyboard_arrow_left</span
+					>
 			</button>
 		{:else}
-			<button onclick={toggleTOC} class="text-lightText">
-				<!-- <img src="menuBars.svg" class="h-8" alt="Open Website Directory" /> -->
-				Open Table of Contents
+			<button onclick={toggleTOC} class="text-lightText hover:text-darkText">
+				<span class="material-icons md-36"
+						>keyboard_arrow_right</span
+					>
 			</button>
 		{/if}
 	</div>
@@ -274,6 +230,7 @@
 				pCol1={data.pCol1}
 				pCol2={data.pCol2}
 				pCol3={data.pCol3}
+				sHead={data.sHead}
 				previousSection={index > 0 ? menuSections[index - 1][0] : ''}
 				nextSection={index < menuSections.length - 1 ? menuSections[index + 1][0] : ''}
 				prevTitle={index > 0 ? menuSections[index - 1][1].title : ''}

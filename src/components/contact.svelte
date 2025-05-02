@@ -142,7 +142,7 @@
 
 
 
-<section use:scrollRef={thisRef} class=" bg-tertiary relative flex flex-col sm:flex-row h-fit  ">
+<section use:scrollRef={thisRef} class=" bg-tertiary relative flex flex-col sm:flex-row min-h-screen  ">
 	<div class="flex sm:hidden">
 		<img src='/webp/careersKitchenHelperMobile.webp' class="w-screen object-cover" alt="" />
 	</div>
@@ -167,7 +167,7 @@
 			</p>
 
 			{#if ifPage1}
-				<div class="font-DMSans flex flex-col font-thin">
+				<form class="font-DMSans flex flex-col font-lightText">
 					<div class="mt-8 grid grid-cols-2 grid-rows-2">
 						<input
 							type="text"
@@ -197,9 +197,9 @@
 						></textarea>
 					</div>
 					<div>
-						<button class="bg-darkText text-tertiary rounded border-0 p-2">Submit</button>
+						<button type="submit" class="bg-darkText text-tertiary rounded border-0 p-2">Submit</button>
 					</div>
-				</div>
+				</form>
 			{/if}
 			{#if ifPage2}
 				<div class="font-DMSans flex flex-col font-black">

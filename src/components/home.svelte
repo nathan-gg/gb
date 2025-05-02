@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { scrollTo, scrollRef, scrollTop } from 'svelte-scrolling';
 
 	let {
@@ -15,52 +15,14 @@
 		prevArrow = false,
 		firstSection = false
 	} = $props();
+	
+	function scrollPrev() {
+		scrollTo({ ref: goBack, offset: -64, duration: 50 })
+	}
 
-// let carouselPositions = $state([]);
-// let halfContainer = $state(0);
-// let currentItem = $state(0);
-
-// function getCarouselPositions() {
-//   carouselPositions = [];
-//   document.querySelectorAll('#container div').forEach(function(div) {
-//     carouselPositions.push([div.offsetTop, div.offsetTop + div.offsetHeight]); // add to array the positions information
-//   })
-//   halfContainer = document.querySelector('#container').offsetHeight/2;
-// }
-
-// getCarouselPositions(); // call it once
-
-// function goCarousel(direction) {
-  
-//   let currentScrollTop = document.querySelector('#container').scrollTop;
-//   let currentScrollBottom = currentScrollTop + document.querySelector('#container').offsetHeight;
-  
-//   if (currentScrollTop === 0 && direction === 'next') {
-//       currentItem = 1;
-//   } else if (currentScrollBottom === document.querySelector('#container').scrollHeight && direction === 'previous') {
-//       console.log('here')
-//       currentItem = carouselPositions.length - 2;
-//   } else {
-//       var currentMiddlePosition = currentScrollTop + halfContainer;
-//       for (var i = 0; i < carouselPositions.length; i++) {
-//         if (currentMiddlePosition > carouselPositions[i][0] && currentMiddlePosition < carouselPositions[i][1]) {
-//           currentItem = i;
-//           if (direction === 'next') {
-//               currentItem++;
-//           } else if (direction === 'previous') {
-//               currentItem--    
-//           }
-//         }
-//       }
-//   } 
-  
-//   document.getElementById('container').scrollTo({
-//     top: carouselPositions[currentItem][0],
-//     behavior: 'smooth' 
-//   });
-  
-// }
-// window.addEventListener('resize', getCarouselPositions);
+	function scrollNext() {
+		scrollTo({ ref: goTo, offset: -64 })
+	}
 
 </script>
 
@@ -72,7 +34,7 @@
 
 	{#if firstSection}
 			{#if prevArrow}
-				<div class="absolute top-1/8" use:scrollTo={{ ref: goBack, offset: -64, duration: 50 }}>
+				<div class="absolute top-1/8" onclick={() => scrollPrev()} >
 					<span
 						class="material-icons md-48 mt-0 mb-12 sm:mt-16 md:mt-8 md:mb-24 lg:mt-0 lg:mb-36 xl:mb-48 top-1/4 sm:top-1/3"
 						>keyboard_arrow_up</span
@@ -95,7 +57,7 @@
 		</div>
 
 			{#if arrow}
-				<div class="absolute bottom-1/8 text-center w-screen" use:scrollTo={{ ref: goTo, offset: -64 }}>
+				<div class="absolute bottom-1/8 text-center w-screen" onclick={() => scrollNext()}>
 					<span class="material-icons md-48 mt-12 md:mt-24 lg:mt-36 xl:mt-48 bottom-1/4 sm:bottom-1/3"
 						>keyboard_arrow_down</span
 					>
@@ -103,7 +65,7 @@
 			{/if}
 	{:else}
 			{#if prevArrow}
-				<div class="absolute top-1/8 text-center w-screen" use:scrollTo={{ ref: goBack, offset: -64 }}>
+				<div class="absolute top-1/8 text-center w-screen" onclick={() => scrollPrev()}>
 					<span
 						class="material-icons md-48 mt-0 mb-12 sm:mt-16 md:mt-8 md:mb-24 lg:mt-0 lg:mb-36 xl:mb-48"
 						>keyboard_arrow_up</span
@@ -125,7 +87,7 @@
 		</div>
 
 			{#if arrow}
-				<div class="absolute bottom-1/8 text-center w-screen" use:scrollTo={{ ref: goTo, offset: -64 }}>
+				<div class="absolute bottom-1/8 text-center w-screen" onclick={() => scrollNext()}>
 					<span class="material-icons md-48 mt-12 md:mt-24 lg:mt-36 xl:mt-48"
 						>keyboard_arrow_down</span
 					>

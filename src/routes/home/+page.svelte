@@ -95,13 +95,13 @@
   
   </script>
   
-  <section id="container" class=" overflow-clip">
+  <section id="container" class=" overflow-clip snap-mandatory snap-y">
 <!-- 
     <div class="top-0 z-50 snap-start snap-normal">
 			<Header />
 		</div> -->
 
-  <Home 
+  <Home class="snap-start snap-normal"
     thisRef={start.thisRef}
     goTo={start.goTo}
     title={start.title}
