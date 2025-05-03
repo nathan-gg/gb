@@ -27,7 +27,7 @@
 
 	{@render children()}
 	<!-- {#if $page.url.pathname !== '/' && $page.url.pathname !== '/full-menu' && $page.url.pathname !== '/home'} -->
-	{#if $page.url.pathname !== '/'}
+	{#if $page.url.pathname !== '/' && $page.url.pathname !== '/full-menu' && $page.url.pathname !== '/home' && $page.url.pathname !== '/identity' && $page.url.pathname !== '/contact' }
 		<div class="bottom-0 z-50">
 			<Footer />
 		</div>

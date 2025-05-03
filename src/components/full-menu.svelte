@@ -1,6 +1,49 @@
 <script>
 	import MenuSection from './menu-section.svelte';
 	import { menuData } from '../data/menu-data.js';
+	import Footer from '/src/components/footer.svelte';
+	import { setGlobalOptions } from 'svelte-scrolling';
+
+	// Shared state for tracking scrolling across components
+	let isScrolling = $state(false);
+  
+  // Configure the container element
+  let container = $state();
+  
+  // Configure global scroll options with a custom scrollIntoView function
+  setGlobalOptions({
+    duration: 800,
+    offset: -64,
+    onStart: () => {
+      isScrolling = true;
+      // Temporarily disable scroll snapping during programmatic scrolling
+      if (container) {
+        container.style.scrollSnapType = 'none';
+      }
+      console.log('Scrolling started, isScrolling =', isScrolling);
+    },
+    onDone: () => {
+      isScrolling = false;
+      // Re-enable scroll snapping after programmatic scrolling
+      if (container) {
+        container.style.scrollSnapType = 'y mandatory';
+      }
+      console.log('Scrolling complete, isScrolling =', isScrolling);
+    },
+    // Custom scrollIntoView function that ensures scrolling happens within the container
+    scrollIntoViewFn: (element, options) => {
+      if (element && container) {
+        // Use the container as the scrolling context instead of window
+        const elementTop = element.offsetTop;
+        container.scrollTo({
+          top: elementTop + (options?.offset || 0),
+          behavior: options?.behavior || 'smooth'
+        });
+        return true; // Return true to indicate we handled the scroll
+      }
+      return false; // Let the default handler take over
+    }
+  });
 
 	const menuSections = Object.entries(menuData);
 
@@ -84,26 +127,26 @@
 						}}
 						class="flex flex-col text-lg"
 					>
-						<a href="/full-menu#specialties" class="hover:text-darkText mb-2 inline-block"
-							>Specialties</a
-						>
+						
 						<a href="/full-menu#soups" class="hover:text-darkText mb-2 inline-block">Soups</a>
 						<a href="/full-menu#appetizers" class="hover:text-darkText mb-2 inline-block"
 							>Appetizers</a
 						>
 						<a href="/full-menu#salad" class="hover:text-darkText mb-2 inline-block">Salad</a>
 						<a href="/full-menu#curry" class="hover:text-darkText mb-2 inline-block">Curry</a>
+						<a href="/full-menu#stir-fried" class="hover:text-darkText mb-2 inline-block"
+							>Stir Fried</a
+						>
 						<a href="/full-menu#noodles" class="hover:text-darkText mb-2 inline-block">Noodles</a>
 						<a href="/full-menu#vegetables" class="hover:text-darkText mb-2 inline-block"
 							>Vegetables</a
 						>
-						<a href="/full-menu#stir-fried" class="hover:text-darkText mb-2 inline-block"
-							>Stir Fried</a
-						>
-						<a href="/full-menu#fried-rice" class="hover:text-darkText mb-2 inline-block"
-							>Fried Rice</a
+						
+						<a href="/full-menu#rice" class="hover:text-darkText mb-2 inline-block"
+							>Rice</a
 						>
 						<a href="/full-menu#desserts" class="hover:text-darkText mb-2 inline-block">Desserts</a>
+						<a href="/full-menu#specialties" class="hover:text-darkText mb-2 inline-block">Specialties</a>
 					</div>
 				{:else}
 					<button class="hover:text-darkText text-left" onclick={toggleDinner}>Dinner</button>
@@ -118,20 +161,7 @@
 						}}
 						class="flex flex-col text-xl"
 					>
-						<a href="/full-menu#food-hh" class="hover:text-darkText mb-2 inline-block">Food</a>
-						<a href="/full-menu#draught-beer-hh" class="hover:text-darkText mb-2 inline-block"
-							>Draught Beer</a
-						>
-						<a href="/full-menu#highballs-hh" class="hover:text-darkText mb-2 inline-block"
-							>High Balls</a
-						>
-						<a href="/full-menu#specialties-hh" class="hover:text-darkText mb-2 inline-block"
-							>Specialties</a
-						>
-						<a href="/full-menu#featured-cocktails-hh" class="hover:text-darkText mb-2 inline-block"
-							>Featured Cocktails</a
-						>
-						<a href="/full-menu#wine-hh" class="hover:text-darkText mb-2 inline-block">Wine</a>
+						<a href="/full-menu#happy-hour" class="hover:text-darkText mb-2 inline-block">Happy Hour Menu</a>
 					</div>
 				{:else}
 					<button class="hover:text-darkText mt-4 text-left" onclick={toggleHH}>Happy Hour</button>
@@ -149,12 +179,9 @@
 						<a href="/full-menu#ctsd" class="hover:text-darkText mb-2 inline-block"
 							>Coffee, Tea & Soft Drinks</a
 						>
-						<a href="/full-menu#drinks" class="hover:text-darkText mb-2 inline-block">Drinks</a>
+						
 						<a href="/full-menu#non-spirited" class="hover:text-darkText mb-2 inline-block"
 							>Non-Spirited</a
-						>
-						<a href="/full-menu#cocktails" class="hover:text-darkText mb-2 inline-block"
-							>Cocktails</a
 						>
 						<a href="/full-menu#signature-cocktails" class="hover:text-darkText mb-2 inline-block"
 							>Signature Cocktails</a
@@ -163,21 +190,16 @@
 							>Classic Cocktails</a
 						>
 						
-						<a href="/full-menu#draught-beer" class="hover:text-darkText mb-2 inline-block"
-							>Draught Beer</a
+						<a href="/full-menu#beer" class="hover:text-darkText mb-2 inline-block"
+							>Beer</a
 						>
-						<a href="/full-menu#domestic-beer" class="hover:text-darkText mb-2 inline-block"
-							>Domestic Beer</a
-						>
-						<a href="/full-menu#imported-beer" class="hover:text-darkText mb-2 inline-block"
-							>Imported Beer</a
-						>
+						
 						<a href="/full-menu#cider" class="hover:text-darkText mb-2 inline-block">Cider</a>
 						<a href="/full-menu#vodka" class="hover:text-darkText mb-2 inline-block">Vodka</a>
 						<a href="/full-menu#gin" class="hover:text-darkText mb-2 inline-block">Gin</a>
 						<a href="/full-menu#rum" class="hover:text-darkText mb-2 inline-block">Rum</a>
 						<a href="/full-menu#tequila" class="hover:text-darkText mb-2 inline-block">Tequila</a>
-						<a href="/full-menu#whiskey" class="hover:text-darkText mb-2 inline-block">Whisk(e)y</a>
+						<a href="/full-menu#whisky" class="hover:text-darkText mb-2 inline-block">Whisky</a>
 						<a href="/full-menu#scotch" class="hover:text-darkText mb-2 inline-block">Scotch</a>
 						<a href="/full-menu#brandy" class="hover:text-darkText mb-2 inline-block">Brandy</a>
 						<a href="/full-menu#aperitif-digestif" class="hover:text-darkText mb-2 inline-block"
@@ -221,7 +243,10 @@
 		</div>
 	{/if}
 
-	<div>
+	<div 
+	id="container" 
+  bind:this={container} 
+  class="h-screen overflow-y-auto overflow-x-hidden scroll-container">
 		{#each menuSections as [section, data], index}
 			<MenuSection
 				id={section}
@@ -231,6 +256,7 @@
 				pCol2={data.pCol2}
 				pCol3={data.pCol3}
 				sHead={data.sHead}
+				isFooter={data.isFooter}
 				previousSection={index > 0 ? menuSections[index - 1][0] : ''}
 				nextSection={index < menuSections.length - 1 ? menuSections[index + 1][0] : ''}
 				prevTitle={index > 0 ? menuSections[index - 1][1].title : ''}
@@ -238,7 +264,14 @@
 				menuItems={data.items}
 				imagePath={data.imagePath || '/webp/careersKitchenHelper.webp'}
 				mobilePath={data.mobilePath || '/webp/careersKitchenHelperMobile.webp'}
+				isScrolling={isScrolling}
+				container={container}
+				class="snap-start snap-normal"
 			/>
 		{/each}
 	</div>
+	<!-- <div class="hidden w-1/2 right-0 flex-auto h-full sm:flex z-30 fixed">
+		<img src={'/webp/careersKitchenHelperMobile.webp'} class="w-full object-cover" alt="" />
+	</div> -->
+	
 </section>

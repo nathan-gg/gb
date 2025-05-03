@@ -1,4 +1,52 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+  import { setGlobalOptions } from 'svelte-scrolling';
+  import Header from '/src/components/head.svelte';
+  import Footer from '/src/components/footer.svelte';
+  
+  // Shared state for tracking scrolling across components
+  let isScrolling = $state(false);
+  
+  // Configure the container element
+  let container = $state();
+  
+  // Configure global scroll options with a custom scrollIntoView function
+  setGlobalOptions({
+    duration: 800,
+    offset: -64,
+    onStart: () => {
+      isScrolling = true;
+      // Temporarily disable scroll snapping during programmatic scrolling
+      if (container) {
+        container.style.scrollSnapType = 'none';
+      }
+      console.log('Scrolling started, isScrolling =', isScrolling);
+    },
+    onDone: () => {
+      isScrolling = false;
+      // Re-enable scroll snapping after programmatic scrolling
+      if (container) {
+        container.style.scrollSnapType = 'y mandatory';
+      }
+      console.log('Scrolling complete, isScrolling =', isScrolling);
+    },
+    // Custom scrollIntoView function that ensures scrolling happens within the container
+    scrollIntoViewFn: (element, options) => {
+      if (element && container) {
+        // Use the container as the scrolling context instead of window
+        const elementTop = element.offsetTop;
+        container.scrollTo({
+          top: elementTop + (options?.offset || 0),
+          behavior: options?.behavior || 'smooth'
+        });
+        return true; // Return true to indicate we handled the scroll
+      }
+      return false; // Let the default handler take over
+    }
+  });
+
+  
+
 	import Identity from '/src/components/identity.svelte';
 
 	const identity = {
@@ -50,7 +98,12 @@
 	};
 </script>
 
-<Identity
+<section
+id="container" 
+  bind:this={container} 
+  class="h-screen overflow-y-auto overflow-x-hidden scroll-container">
+
+<Identity class="snap-start snap-normal"
 	thisRef={identity.thisRef}
 	goTo={identity.goTo}
 	title={identity.title}
@@ -59,9 +112,11 @@
 	arrowText={identity.arrowText}
 	image={identity.image}
 	imageMobile={identity.imageMobile}
+	isScrolling={isScrolling}
+    container={container}
 />
 
-<Identity
+<Identity class="snap-start snap-normal"
 	thisRef={mission.thisRef}
 	goTo={mission.goTo}
 	goBack={mission.goBack}
@@ -73,9 +128,11 @@
 	prevArrowText={mission.prevArrowText}
 	image={mission.image}
 	imageMobile={mission.imageMobile}
+	isScrolling={isScrolling}
+    container={container}
 />
 
-<Identity
+<Identity class="snap-start snap-normal"
 	thisRef={chef.thisRef}
 	goTo={chef.goTo}
 	goBack={chef.goBack}
@@ -87,9 +144,11 @@
 	prevArrowText={chef.prevArrowText}
 	image={chef.image}
 	imageMobile={chef.imageMobile}
+	isScrolling={isScrolling}
+    container={container}
 />
 
-<Identity
+<Identity class="snap-start snap-normal"
 	thisRef={prizes.thisRef}
 	goTo={prizes.goTo}
 	goBack={prizes.goBack}
@@ -103,4 +162,12 @@
 	topArrowText={prizes.topArrowText}
 	image={prizes.image}
 	imageMobile={prizes.imageMobile}
+	isScrolling={isScrolling}
+    container={container}
 />
+
+<div class="bottom-0 z-50 snap-end snap-normal">
+    <Footer />
+  </div>
+
+</section>

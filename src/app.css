@@ -67,6 +67,16 @@
   /* Firefox */
 }
 
+.scroll-container {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+/* Hide the scrollbar for better UX */
+.scroll-container::-webkit-scrollbar {
+display: none;
+}
+
 /* Rules for sizing the icon. */
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }
