@@ -46,6 +46,6 @@
 		</div>
 	</div>
 	<div class="w-1/2 flex-auto sm:flex hidden">
-		<img src='/webp/orderOnline.webp' class="h-full object-cover w-full" alt="" />
+		<img src='/webp/reservations.webp' class="h-full object-cover w-full" alt="" />
 	</div>
 </section>

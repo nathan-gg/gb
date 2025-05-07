@@ -145,8 +145,9 @@
 						<a href="/full-menu#rice" class="hover:text-darkText mb-2 inline-block"
 							>Rice</a
 						>
-						<a href="/full-menu#desserts" class="hover:text-darkText mb-2 inline-block">Desserts</a>
 						<a href="/full-menu#specialties" class="hover:text-darkText mb-2 inline-block">Specialties</a>
+						<a href="/full-menu#desserts" class="hover:text-darkText mb-2 inline-block">Desserts</a>
+						<a href="/full-menu#combinations" class="hover:text-darkText mb-2 inline-block">Combinations</a>
 					</div>
 				{:else}
 					<button class="hover:text-darkText text-left" onclick={toggleDinner}>Dinner</button>
@@ -270,8 +271,5 @@
 			/>
 		{/each}
 	</div>
-	<!-- <div class="hidden w-1/2 right-0 flex-auto h-full sm:flex z-30 fixed">
-		<img src={'/webp/careersKitchenHelperMobile.webp'} class="w-full object-cover" alt="" />
-	</div> -->
 	
 </section>

@@ -67,12 +67,6 @@
 		return numCols > 0 ? `w-${numCols * 10}` : '';
 	}
 
-	// let {
-	// 	isScrolling = $state(false), // Accept the shared scrolling state
-	// 	container = $state(null), // Accept container reference from parent
-	// 	class: className = '' // Accept additional classes from parent
-	// } = $props();
-
 	// Helper functions for programmatic scrolling that use the parent container
 	function scrollPrev() {
 		if (previousSection) {
@@ -121,21 +115,147 @@
 			<Footer />
 		</div>
 	{:else}
-		<div class="flex sm:hidden">
+		<!-- Mobile View -->
+		<div class="sm:hidden flex">
 			<img src={mobilePath} class="w-screen object-cover" alt="" />
 		</div>
-		<div class="text-darkText font-instrument flex flex-col items-center justify-center sm:w-1/2">
+		<div class="sm:hidden w-full bg-tertiary text-darkText text-xs">
+			<div class="flex flex-col items-center py-4">
+				{#if previousSection}
+					<button onclick={scrollPrev} class="text-lightText hover:text-darkText mb-2">
+						{prevTitle}
+					</button>
+				{/if}
+			
+			</div>
+			<!-- Header for mobile view -->
+			<div class="w-full pt-8 pb-2 px-8">
+				<h1 class="text-darkText text-3xl mb-0 font-instrument">{title}</h1>
+				<h2 class="text-lightText text-xl  font-instrument">{thaiTitle}</h2>
+			</div>
+			
+			<!-- Menu Content for Mobile -->
+			<div class="px-8 py-4 font-DMSans text-sm">
+				{#each groupedMenuItems as group, groupIndex}
+					<!-- Category Header -->
+					{#if group.subheader}
+						<!-- <div class="mt-6 mb-2 text-xl font-bold text-darkText pb-1">
+							{group.subheader}
+						</div> -->
+						
+						<div class="font-DMSans mt-8 mb-4 flex {groupIndex === 0 ? 'mt-4' : ''}">
+							<div class="text-darkText flex-grow font-semibold">{group.subheader}</div>
+
+							{#if pCol1 || pCol2 || pCol3}
+								<!-- Price column headers -->
+								<div class="flex ">
+									<div class="flex space-x-6">
+										{#if pCol1}<div class="w-10 text-right ">{pCol1}</div>{/if}
+										{#if pCol2}<div class="w-10 text-right">{pCol2}</div>{/if}
+										{#if pCol3}<div class="w-10 text-right">{pCol3}</div>{/if}
+									</div>
+								</div>
+							{:else if group.groupPrice1 || group.groupPrice2 || group.groupPrice3}
+								<!-- Price column headers -->
+								<div class="flex font-extrabold">
+									<div class="flex space-x-2">
+										{#if group.groupPrice1}<div class="w-10 text-right">
+												{group.groupPrice1}
+											</div>{/if}
+										{#if group.groupPrice2}<div class="w-10 text-right">
+												{group.groupPrice2}
+											</div>{/if}
+										{#if group.groupPrice3}<div class="w-10 text-right">
+												{group.groupPrice3}
+											</div>{/if}
+									</div>
+								</div>
+							{/if}
+						</div>
+					
+					{/if}
+					
+					<!-- Menu Items -->
+					{#each group.items as item, i}
+						<div class="mb-4 text-xs">
+							<div class="flex justify-between">
+								<div class="font-medium text-darkText">
+									{item.name}
+									{#if item.mild}<img
+										src="/spiceMild.svg"
+										alt="Mild Spice"
+										class="inline-block h-4 w-4"
+									/>{/if}
+									{#if item.medium}<img
+										src="/spiceMedium.svg"
+										alt="Medium Spice"
+										class="inline-block h-4 w-4"
+									/>{/if}
+									{#if item.hot}<img
+										src="/spiceHot.svg"
+										alt="Hot Spice"
+										class="inline-block h-4 w-4"
+									/>{/if}
+									{#if item.veryHot}<img
+										src="/spiceVeryHot.svg"
+										alt="Very Hot Spice"
+										class="inline-block h-4 w-4"
+									/>{/if}
+									{#if item.tag}<span class="font-semibold text-[#D08111]"> {item.tag}</span>{/if}
+								</div>
+								
+								<!-- Item prices -->
+								{#if hasMultiplePrices(item)}
+									<div class="flex space-x-2 ">
+										{#if pCol1 && item.p1 !== undefined}<div class="text-right text-darkText">{item.p1}</div>{/if}
+										{#if pCol2 && item.p2 !== undefined}<div class="text-right text-darkText">{item.p2}</div>{/if}
+										{#if pCol3 && item.p3 !== undefined}<div class="text-right text-darkText">{item.p3}</div>{/if}
+										{#if group.groupPrice1 !== undefined}<div class="text-right text-darkText">{item.p1}</div>{/if}
+										{#if group.groupPrice2 !== undefined}<div class="text-right text-darkText">{item.p2}</div>{/if}
+										{#if group.groupPrice3 !== undefined}<div class="text-right text-darkText">{item.p3}</div>{/if}
+									</div>
+								{:else}
+									<div class="text-right text-darkText">{item.price}</div>
+								{/if}
+							</div>
+							
+							<!-- Item description and details -->
+							{#if item.description}
+								<p class="text-lightText">{item.description}</p>
+							{/if}
+							{#if item.region}
+								<p class="text-lightText ">{item.region}</p>
+							{/if}
+							{#if item.extras}
+								<p class="text-lightText italic">{item.extras}</p>
+							{/if}
+						</div>
+					{/each}
+					
+					<!-- Add additional spacing between groups -->
+					{#if groupIndex < groupedMenuItems.length - 1}
+						<div class="mb-4"></div>
+					{/if}
+				{/each}
+			</div>
+			
+			<!-- Navigation for mobile -->
+			<div class="flex flex-col items-center py-4">
+				{#if nextSection}
+					<button onclick={scrollNext} class="text-lightText hover:text-darkText">
+						{nextTitle}
+					</button>
+				{/if}
+			</div>
+		</div>
+		
+		<!-- Desktop View (unchanged) -->
+		<div class="text-darkText font-instrument hidden sm:flex sm:flex-col sm:items-center sm:justify-center sm:w-1/2">
 			{#if previousSection}
 				<div class="mt-6 md:mt-12">
-					<!-- <div
-					use:scrollTo={{ ref: previousSection, offset: -64 }}
-					class="font-DMSans text-lightText hover:text-darkText"
-				>
-					<p>{prevTitle}</p>
-				</div> -->
 					<button
 						onclick={scrollPrev}
-						class=" font-DMSans text-lightText hover:text-darkText hover:cursor-pointer"
+						class="font-DMSans text-lightText hover:text-darkText hover:cursor-pointer"
 					>
 						<p>
 							{prevTitle}
@@ -188,8 +308,8 @@
 						<div class="font-DMSans mb-6 flex">
 							<div class="flex w-full flex-col sm:flex-row sm:justify-between">
 								<!-- Left side: Item name, description, extras -->
-								<div class="pr-4 sm:flex-grow sm:pr-8">
-									<p class="font-medium">
+								<div class="pr-4 sm:flex-grow sm:pr-8 ">
+									<p class="font-medium ">
 										{item.name}
 										{#if item.mild}<img
 												src="/spiceMild.svg"
@@ -259,15 +379,9 @@
 
 			{#if nextSection}
 				<div class="mb-6 md:mb-12">
-					<!-- <div
-					use:scrollTo={{ ref: nextSection, offset: -64 }}
-					class="font-DMSans text-lightText hover:text-darkText"
-				>
-					<p>{nextTitle}</p>
-				</div> -->
 					<button
 						onclick={scrollNext}
-						class=" font-DMSans text-lightText hover:text-darkText hover:cursor-pointer"
+						class="font-DMSans text-lightText hover:text-darkText hover:cursor-pointer"
 					>
 						<p>
 							{nextTitle}

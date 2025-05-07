@@ -153,9 +153,9 @@ html {
   scroll-behavior: smooth;
 }
 
-ul {
+/* ul {
   list-style-image: url('newCursorLeaf.svg');
-}
+} */
 
 /* width */
 /* ::-webkit-scrollbar {

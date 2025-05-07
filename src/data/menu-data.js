@@ -507,7 +507,7 @@ export const menuData = {
       },
     ]
   },
-  "dinner-specialties": {
+  "specialties": {
     title: "Green Basil Specialties",
     thaiTitle: "สลัด",
     items: [
