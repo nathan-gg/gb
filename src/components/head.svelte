@@ -28,7 +28,6 @@
 		};
 	}
 
-	let name = 'world';
 
 	function handleClickOutside(event) {
 		alert('Click outside!');

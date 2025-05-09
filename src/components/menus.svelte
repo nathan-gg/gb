@@ -38,13 +38,19 @@
 	}
 </script>
 
-<section class="relative flex h-fit">
-	<div class="flex w-6/12 flex-auto flex-col bg-tertiary font-serif">
-		<div class="m-48 mt-12 flex flex-col font-instrument">
-			<h1 class="text-darkText mt-24 text-6xl">{title}</h1>
+
+
+<section class="flex flex-col sm:flex-row min-h-screen w-screen">
+	<div class="flex sm:hidden">
+		<img src='/webp/orderOnlineMobile.webp' class="w-screen object-cover" alt="" />
+	</div>
+
+	<div class="bg-tertiary text-darkText flex sm:w-1/2 flex-col items-center font-instrument">
+		<div class=" mx-8 my-24 flex flex-col  w-2/3 sm:w-1/4">
+			<h1 class="text-darkText text-6xl mb-4">{title}</h1>
 			<h1 class="text-lightText mb-12 text-4xl">{thaiTitle}</h1>
 
-            <div class="font-DMSans text-3xl flex flex-col text-lightText">
+			<div class="font-DMSans text-3xl flex flex-col text-lightText">
                 {#if showDinner}
 					<button class="text-darkText text-left" onclick={toggleDinner}>Dinner</button>
 					<div
@@ -168,11 +174,10 @@
 				{/if}
                 
 			</div>
-
 		</div>
 	</div>
-
-	<div class="w-6/12 flex-auto">
-        <img src='/webp/menuMain.webp' class="h-full object-cover" alt="" />
+	<div class="w-1/2 flex-auto sm:flex hidden">
+		<img src='/webp/menuMain.webp' class="h-full object-cover w-full" alt="" />
 	</div>
 </section>
+

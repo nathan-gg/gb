@@ -6,13 +6,13 @@
 	import { page } from '$app/stores';
 	import ViewTransition from '../components/navigation.svelte';
 
-	import { Spring } from 'svelte/motion';
+// 	import { Spring } from 'svelte/motion';
 
-	let coords = new Spring({ x: 50, y: 50 }, {
-	stiffness: 0.1,
-	damping: 0.25
-});
-	let size = new Spring(10);
+// 	let coords = new Spring({ x: 50, y: 50 }, {
+// 	stiffness: 0.1,
+// 	damping: 0.25
+// });
+// 	let size = new Spring(10);
 </script>
 
 <svelte:head>
@@ -43,7 +43,7 @@
 </div>
 
 
-<svg
+<!-- <svg
 	onmousemove={(e) => {
 		coords.target = { x: e.clientX, y: e.clientY };
 	}}
@@ -110,5 +110,5 @@
 	.controls input {
 		width: 100%;
 	}
-</style>
+</style> -->
 

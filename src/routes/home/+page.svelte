@@ -50,7 +50,7 @@
     thisRef: 'Start',
     goTo: 'Menus',
     title: 'Welcome to Green Basil',
-    pText: 'its good af trust',
+    pText: '[SUBTITLE TEXT HERE]',
     btnText: '',
     link: '#',
     image: '/webp/homeWelcome.webp'
@@ -61,7 +61,7 @@
     goTo: 'Cocktails',
     goBack: 'Start',
     title: 'Pad Thai',
-    pText: 'its good af trust',
+    pText: '[SUBTITLE TEXT HERE]',
     btnText: 'Discover Our Menus',
     link: 'menus',
     image: '/webp/homeMenusFood.webp',
@@ -72,7 +72,7 @@
     goTo: 'Order',
     goBack: 'Menus',
     title: 'Green Basil Cocktail',
-    pText: 'its good af trust',
+    pText: '[SUBTITLE TEXT HERE]',
     btnText: 'Explore Cocktails',
     link: 'menus',
     image: '/webp/homeMenusDrinks.webp'
@@ -83,7 +83,7 @@
     goTo: 'Contact',
     goBack: 'Cocktails',
     title: 'Order Online',
-    pText: 'its good af trust',
+    pText: '[SUBTITLE TEXT HERE]',
     btnText: 'Order Online',
     link: 'order',
     image: '/webp/homeOrderOnline.webp'
@@ -94,7 +94,7 @@
     goTo: 'Partnerships',
     goBack: 'Order',
     title: 'Connect With Us',
-    pText: 'its good af trust',
+    pText: '[SUBTITLE TEXT HERE]',
     btnText: 'Contact Us',
     link: 'contact',
     image: '/webp/homeContact.webp'
@@ -105,7 +105,7 @@
     goTo: 'About',
     goBack: 'Contact',
     title: 'Our Partnerships',
-    pText: 'its good af trust',
+    pText: '[SUBTITLE TEXT HERE]',
     btnText: 'Discover Partnerships',
     link: 'partnerships',
     image: '/webp/homePartnerships.webp'
@@ -116,7 +116,7 @@
     goTo: 'Reservations',
     goBack: 'Partnerships',
     title: 'The Basil Identity',
-    pText: 'its good af trust',
+    pText: '[SUBTITLE TEXT HERE]',
     btnText: 'Learn About Us',
     link: 'identity',
     image: '/webp/homeStory.webp'
@@ -127,7 +127,7 @@
     goTo: 'Start',
     goBack: 'About',
     title: 'Reserve a Seat',
-    pText: 'its good af trust',
+    pText: '[SUBTITLE TEXT HERE]',
     btnText: 'Book a Reservation',
     link: 'reservations',
     image: '/webp/homeReserve.webp'

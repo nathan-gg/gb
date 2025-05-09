@@ -1,18 +1,23 @@
 <script>
-	export let id = '';
-	export let title = '';
-	export let thaiTitle = '';
-	export let pCol1 = '';
-	export let pCol2 = '';
-	export let pCol3 = '';
-	export let isFooter = '';
-	export let previousSection = '';
-	export let nextSection = '';
-	export let prevTitle = '';
-	export let nextTitle = '';
-	export let menuItems = [];
-	export let imagePath = '/webp/menuBg.webp';
-	export let mobilePath = '/webp/menuBgMobile.webp';
+	let {
+		id = '',
+		title = '',
+		thaiTitle = '',
+		pCol1 = '',
+		pCol2 = '',
+		pCol3 = '',
+		isFooter = '',
+		previousSection = '',
+		nextSection = '',
+		prevTitle = '',
+		nextTitle = '',
+		menuItems = [],
+		imagePath = '/webp/menuBg.webp',
+		mobilePath = '/webp/menuBgMobile.webp',
+		isScrolling,
+		container,
+		sHead = ''
+	} = $props();
 
 	import { scrollTo, scrollElement } from 'svelte-scrolling';
 	import Footer from '../components/footer.svelte';
@@ -107,9 +112,13 @@
 			}
 		}
 	}
+
+	
 </script>
 
 <section {id} class="bg-tertiary relative flex h-fit snap-start snap-normal flex-col sm:flex-row">
+
+
 	{#if isFooter}
 		<div class="bottom-0 z-50 snap-end snap-normal">
 			<Footer />
@@ -129,13 +138,13 @@
 			
 			</div>
 			<!-- Header for mobile view -->
-			<div class="w-full pt-8 pb-2 px-8">
+			<div class="w-full pt-8 pb-2 px-12">
 				<h1 class="text-darkText text-3xl mb-0 font-instrument">{title}</h1>
 				<h2 class="text-lightText text-xl  font-instrument">{thaiTitle}</h2>
 			</div>
 			
 			<!-- Menu Content for Mobile -->
-			<div class="px-8 py-4 font-DMSans text-sm">
+			<div class="px-12 py-4 font-DMSans text-sm">
 				{#each groupedMenuItems as group, groupIndex}
 					<!-- Category Header -->
 					{#if group.subheader}
@@ -180,7 +189,12 @@
 						<div class="mb-4 text-xs">
 							<div class="flex justify-between">
 								<div class="font-medium text-darkText">
-									{item.name}
+									
+									{#if item.name}
+										{item.name}
+									{:else if !item.name && item.extras}
+										<span class="text-lightText italic  w-3/4">{item.extras}</span>
+									{/if}
 									{#if item.mild}<img
 										src="/spiceMild.svg"
 										alt="Mild Spice"
@@ -201,7 +215,7 @@
 										alt="Very Hot Spice"
 										class="inline-block h-4 w-4"
 									/>{/if}
-									{#if item.tag}<span class="font-semibold text-[#D08111]"> {item.tag}</span>{/if}
+									{#if item.tag}<span class="font-semibold text-[#D08111]">{item.tag}</span>{/if}
 								</div>
 								
 								<!-- Item prices -->
@@ -221,13 +235,13 @@
 							
 							<!-- Item description and details -->
 							{#if item.description}
-								<p class="text-lightText">{item.description}</p>
+								<p class="text-lightText w-3/4">{item.description}</p>
 							{/if}
 							{#if item.region}
 								<p class="text-lightText ">{item.region}</p>
 							{/if}
-							{#if item.extras}
-								<p class="text-lightText italic">{item.extras}</p>
+							{#if item.name && item.extras}
+								<p class="text-lightText italic  w-3/4">{item.extras}</p>
 							{/if}
 						</div>
 					{/each}
@@ -264,7 +278,7 @@
 				</div>
 			{/if}
 
-			<div class="mx-8 mt-12 mb-12 flex flex-col sm:mx-16 sm:my-16 md:my-24 xl:my-36">
+			<div class="mx-8 mt-12 mb-12 flex flex-col sm:mx-36 sm:my-16 md:my-24 xl:my-36">
 				<h1 class="text-darkText mb-4 text-6xl">{title}</h1>
 				<h1 class="text-lightText mb-12 text-4xl">{thaiTitle}</h1>
 
