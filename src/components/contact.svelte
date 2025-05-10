@@ -29,9 +29,9 @@
 				document.getElementById(goBack) || document.querySelector(`[data-scroll-ref="${goBack}"]`);
 
 			if (targetElement && container) {
-				// Manual scroll within container
+				// Manual scroll within container with 64px offset
 				container.scrollTo({
-					top: targetElement.offsetTop,
+					top: targetElement.offsetTop, // Add 64px offset
 					behavior: 'smooth'
 				});
 			} else {
@@ -48,9 +48,9 @@
 				document.getElementById(goTo) || document.querySelector(`[data-scroll-ref="${goTo}"]`);
 
 			if (targetElement && container) {
-				// Manual scroll within container
+				// Manual scroll within container with 64px offset
 				container.scrollTo({
-					top: targetElement.offsetTop,
+					top: targetElement.offsetTop - 64, // Add 64px offset
 					behavior: 'smooth'
 				});
 			} else {
@@ -65,7 +65,7 @@
 	use:scrollRef={thisRef}
 	id={thisRef}
 	data-scroll-ref={thisRef}
-	class=" bg-tertiary snap-align-start relative flex h-screen flex-col sm:flex-row {className}"
+	class=" bg-tertiary snap-align-start relative flex min-h-screen flex-col sm:flex-row {className}"
 >
 	<div class="flex sm:hidden">
 		<img src="/webp/careersKitchenHelperMobile.webp" class="w-screen object-cover" alt="" />
@@ -83,7 +83,7 @@
 				</button>
 			</div>
 		{/if}
-		<div class="mx-8 mt-12 mb-12 flex flex-col sm:mx-16 sm:my-16 md:my-24 xl:my-36">
+		<div class="mx-8 mt-12 mb-12 flex flex-col sm:mx-16 2xl:mx-54 sm:my-16 md:my-24 xl:my-36">
 			<h1 class="text-darkText mb-4 text-6xl">{title}</h1>
 			<h1 class="text-lightText mb-12 text-4xl">{thaiTitle}</h1>
 
@@ -129,27 +129,39 @@
 				</form>
 			{/if}
 			{#if ifPage2}
-				<div class="font-DMSans flex flex-col font-black">
+				<div class="font-DMSans flex flex-col font-black w-full">
 					<h3 class="text-2xl">Hours</h3>
-					<div class="grid grid-cols-4">
-						<div class="text-darkText flex flex-col font-medium">
+					<div class="flex justify-between text-sm">
+						<div class="text-darkText hidden sm:flex flex-col font-medium">
 							<p>Monday</p>
 							<p>Tuesday</p>
 							<p>Wednesday</p>
 							<p>Thursday</p>
 						</div>
-						<div class="text-darkText flex flex-col font-thin">
+						<div class="text-darkText sm:hidden flex flex-col font-medium">
+							<p>Mon</p>
+							<p>Tues</p>
+							<p>Weds</p>
+							<p>Thurs</p>
+						</div>
+						<div class="text-darkText flex flex-col font-normal">
 							<p>Closed</p>
 							<p>5-10PM</p>
 							<p>5-10PM</p>
 							<p>5-10PM</p>
 						</div>
-						<div class="text-darkText flex flex-col font-medium">
+						<div class="text-darkText hidden sm:flex flex-col font-medium">
 							<p>Friday</p>
 							<p>Saturday</p>
 							<p>Sunday</p>
 						</div>
-						<div class="text-darkText flex flex-col font-thin">
+						<div class="text-darkText sm:hidden flex flex-col font-medium">
+							<p>Fri</p>
+							<p>Sat</p>
+							<p>Sun</p>
+						
+						</div>
+						<div class="text-darkText flex flex-col font-normal">
 							<p>5-10:30PM</p>
 							<p>5-10:30PM</p>
 							<p>5-10PM</p>
@@ -157,18 +169,20 @@
 					</div>
 					<h3 class="mt-8 text-2xl">Location</h3>
 					<a
-						class="text-lightText font-thin hover:underline"
+						class="text-lightText font-normal hover:underline"
 						href="https://www.google.com/maps/dir//4623+Kingsway,+Burnaby,+BC+V5H+2B3/@49.2291765,-123.0835327,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x54867658ed9537d5:0x9e538cb3bbfb2f7f!2m2!1d-123.0011323!2d49.2292058?entry=ttu&g_ep=EgoyMDI1MDIyNi4xIKXMDSoASAFQAw%3D%3D"
 					>
 						4623 Kingsway, Burnaby, BC V5H 2B3
 					</a>
-					<iframe
-						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2605.489428938644!2d-123.00370722343598!3d49.229209274539144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54867658ed9537d5%3A0x9e538cb3bbfb2f7f!2sGreen%20Basil!5e0!3m2!1sen!2sca!4v1745227762274!5m2!1sen!2sca"
-						title="The location of Green Basil Thai Restaurant is 4623 Kingsway, Burnaby, BC V5H 2B3"
-						class="h-[300px] rounded border-0"
-						loading="lazy"
-						referrerpolicy="no-referrer-when-downgrade"
-					></iframe>
+					<div class="w-full">
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2605.489428938644!2d-123.00370722343598!3d49.229209274539144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54867658ed9537d5%3A0x9e538cb3bbfb2f7f!2sGreen%20Basil!5e0!3m2!1sen!2sca!4v1745227762274!5m2!1sen!2sca"
+							title="The location of Green Basil Thai Restaurant is 4623 Kingsway, Burnaby, BC V5H 2B3"
+							class="h-[300px] w-full rounded border-0 mt-2"
+							loading="lazy"
+							referrerpolicy="no-referrer-when-downgrade"
+						></iframe>
+					</div>
 				</div>
 			{/if}
 		</div>

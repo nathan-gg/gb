@@ -17,7 +17,7 @@
 		<img src='/webp/orderOnlineMobile.webp' class="w-screen object-cover" alt="" />
 	</div>
 	<div class="bg-tertiary text-darkText flex sm:w-1/2 justify-center flex-col font-instrument">
-		<div class=" mx-8 sm:mx-16 md:mx-24 xl:mx-50 mt-16 mb-16 flex flex-col">
+		<div class=" mx-8 sm:mx-16 md:mx-24 xl:mx-54 mt-16 mb-16 flex flex-col">
 			<h1 class="text-darkText text-6xl mb-4">{title}</h1>
 			<h1 class="text-lightText mb-12 text-4xl">{thaiTitle}</h1>
 
@@ -28,7 +28,7 @@
 				$25 within a 5 km radius.
 			</p>
 			<p class="mt-8 font-DMSans">
-				We also deliver through <span class="font-[1000]">Doordash</span> and
+				We also deliver through <span class=" font-[1000]">Doordash</span> and
 				<span class="font-[1000]">Uber Eats</span>, which can be accessed with the affiliate links
 				below.
 			</p>

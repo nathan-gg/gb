@@ -9,7 +9,7 @@
 		<img src='/webp/orderOnlineMobile.webp' class="w-screen object-cover" alt="" />
 	</div>
 	<div class="bg-tertiary text-darkText flex sm:w-1/2 flex-col items-center font-instrument">
-		<div class=" mx-8 sm:mx-16 md:mx-24 xl:mx-50 mt-16 mb-16 flex flex-col">
+		<div class=" mx-8 sm:mx-16 md:mx-24  xl:mx-54 mt-16 mb-16 flex flex-col">
 			<h1 class="text-darkText text-6xl mb-4">{title}</h1>
 			<h1 class="text-lightText mb-12 text-4xl">{thaiTitle}</h1>
 

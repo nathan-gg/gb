@@ -68,15 +68,15 @@
 					class=" font-instrument flex flex-col justify-between text-right text-4xl sm:text-2xl lg:text-4xl"
 				>
 					<a href="/home" onclick={toggleMenu}>Home</a>
-					<a href="/menus" onclick={toggleMenu}>Menus</a>
-					<a href="/order" onclick={toggleMenu}>Order Online</a>
-					<a href="/identity" onclick={toggleMenu}>The Basil Identity</a>
-					<a href="/careers" onclick={toggleMenu}>Careers</a>
-					<a href="/reservations" onclick={toggleMenu}>Reservations</a>
-					<a href="/contact" onclick={toggleMenu}>Contact Us</a>
+					<a href="/menus" class="mt-2" onclick={toggleMenu}>Menus</a>
+					<a href="/order" class="mt-2" onclick={toggleMenu}>Order Online</a>
+					<a href="/identity" class="mt-2" onclick={toggleMenu}>The Basil Identity</a>
+					<a href="/careers" class="mt-2" onclick={toggleMenu}>Careers</a>
+					<a href="/reservations" class="mt-2" onclick={toggleMenu}>Reservations</a>
+					<a href="/contact" class="mt-2" onclick={toggleMenu}>Contact Us</a>
 				</div>
 				<div
-					class="font-DMSans mt-6 grid grid-cols-2 text-xs sm:mt-12 md:grid-cols-1 lg:grid-cols-2"
+					class="font-DMSans mt-4 grid grid-cols-2 text-xs sm:mt-12 md:grid-cols-1 lg:grid-cols-2"
 				>
 					<div class="col-span-1 flex flex-col md:mb-4">
 						<a

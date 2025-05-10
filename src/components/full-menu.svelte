@@ -85,7 +85,7 @@
 		showDinner = false;
 	}
 
-	let showTOC = $state(false);
+	let showTOC = $state(true);
 
 	function toggleTOC() {
 		showTOC = !showTOC;
@@ -199,33 +199,33 @@
 		x: 500,
 		y: 0
 	}}
-	class="z-50 fixed w-1/2 h-[calc(100vh-64px)] right-0 flex-col hidden md:flex items-center justify-center bg-black/50 overscroll-contain">
-		<div class="bg-tertiary border-2 w-2/5 h-fit border-primary flex flex-col p-8 items-start">
+	class="z-50 fixed {showTOC ? 'w-53/128' : 'w-1/2'} h-[calc(100vh-64px)] right-0 flex-col hidden md:flex items-center justify-center overscroll-contain">
+		<div class="bg-tertiary border-2 min-w-fit w-2/5 h-fit border-primary flex flex-col p-8 items-start">
 			<button onclick={toggleSpice} class="text-lightText hover:text-darkText self-end">
 				<span class="material-icons md-24">close</span>
 			</button>
 		
 			<div class="inline-flex items-center my-4">
 				<span class="font-semibold text-[#D08111] text-3xl xl:text-5xl ml-1 mr-2">GF</span>
-				<p class="font-DMSans text-darkText text-xl xl:text-2xl">
+				<p class="font-DMSans text-darkText lg:text-xl xl:text-2xl whitespace-nowrap">
 					- Gluten Free</p>
 			</div>
 			<div class="inline-flex items-center my-4">
 				<img src="/spiceMild.svg" alt="Mild Spice" class="inline-block h-12 w-12 xl:h-16 xl:w-16"/>
-				<p class="font-DMSans text-darkText text-xl xl:text-2xl">- Very Mild</p>
+				<p class="font-DMSans text-darkText lg:text-xl xl:text-2xl whitespace-nowrap">- Very Mild</p>
 			</div>
 			
 			<div class="inline-flex items-center my-4">
 				<img src="/spiceMedium.svg" alt="Mild Spice" class="inline-block h-12 w-12 xl:h-16 xl:w-16"/>
-				<p class="font-DMSans text-darkText text-xl xl:text-2xl">- Mild</p>
+				<p class="font-DMSans text-darkText lg:text-xl xl:text-2xl">- Mild</p>
 			</div>
 			<div class="inline-flex items-center my-4">
 				<img src="/spiceHot.svg" alt="Mild Spice" class="inline-block h-12 w-12 xl:h-16 xl:w-16"/>
-				<p class="font-DMSans text-darkText text-xl xl:text-2xl">- Hot</p>
+				<p class="font-DMSans text-darkText lg:text-xl xl:text-2xl">- Hot</p>
 			</div>
 			<div class="inline-flex items-center my-4">
 				<img src="/spiceVeryHot.svg" alt="Mild Spice" class="inline-block h-12 w-12 xl:h-16 xl:w-16"/>
-				<p class="font-DMSans text-darkText text-xl xl:text-2xl">- Very Hot</p>
+				<p class="font-DMSans text-darkText lg:text-xl xl:text-2xl whitespace-nowrap">- Very Hot</p>
 			</div>
 		</div>
 
@@ -238,7 +238,7 @@
 	{/if}
 
 
-	<div class="absolute z-30 hidden sm:flex w-fit justify-between ml-2  ">
+	<div class="absolute z-30 hidden lg:flex w-fit justify-between ml-2  ">
 		{#if showTOC}
 			<!-- <button onclick={toggleTOC} class:active={showTOC} class="text-lightText hover:text-darkText">
 				<span class="material-icons md-36">keyboard_arrow_left</span>
@@ -255,13 +255,13 @@
 	{#if showTOC}
 		<div
 			id="TOC"
-			transition:slide|global={{
+			transition:slide={{
 				duration: 250,
 				axis: 'x'
 			}}
-			class="font-DMSans text-lightText left-0 hidden sm:flex h-[calc(100vh-16px)] w-1/4 items-center pl-6 text-3xl  "
+			class="font-DMSans text-lightText left-0 hidden lg:flex h-[calc(100vh-16px)]  w-1/4 items-center pl-6 text-3xl  "
 		>
-			<div class="fixed flex flex-col border-r border-r-[#9B9893] pr-4">
+			<div class=" flex flex-col border-r border-r-[#9B9893] pr-4 min-w-fit">
 				{#if showDinner}
 					<button class="text-darkText text-left" onclick={toggleDinner}>Dinner</button>
 					<div
@@ -387,13 +387,13 @@
 				{/if}
 			</div>
 
-			<button onclick={toggleTOC} class:active={showTOC} class="text-lightText hover:text-darkText fixed w-fit m-[12.5vw] z-10  ">
+			<button onclick={toggleTOC} class:active={showTOC} class="text-lightText hover:text-darkText w-fit mt-[-2vh] z-10  ">
 				<span class="material-icons md-36">keyboard_arrow_left</span>
 			</button>
 		</div>
 	{/if}
 
-	<div class="fixed z-30 sm:hidden w-fit justify-between mt-[46vh]">
+	<div class="fixed z-30 lg:hidden w-fit justify-between mt-[46vh]">
 		{#if showTOC}
 			<button onclick={toggleTOC} class:active={showTOC} class="text-lightText hover:text-darkText fixed">
 				<span class="material-icons md-24">keyboard_arrow_left</span>
@@ -412,7 +412,7 @@
 				duration: 250,
 				axis: 'x'
 			}}
-			class="font-DMSans text-lightText bg-tertiary sm:hidden flex flex-auto flex-col text-3xl 
+			class="font-DMSans text-lightText bg-tertiary lg:hidden flex flex-auto flex-col text-3xl 
 			fixed z-20 w-full h-[calc(100vh-16px)] items-center justify-center"
 		>
 			<!-- Back to top button

@@ -5,6 +5,10 @@
 	let { children } = $props();
 	import { page } from '$app/stores';
 	import ViewTransition from '../components/navigation.svelte';
+	import { setGlobalOptions } from 'svelte-scrolling';
+
+// Set global offset for all svelte-scrolling actions
+setGlobalOptions({ offset: -64 });
 
 // 	import { Spring } from 'svelte/motion';
 

@@ -157,7 +157,7 @@
 	</div>
 
 	<div class=" text-darkText font-instrument flex flex-col items-center justify-center sm:w-1/2">
-		<div class="mx-8 mt-12 mb-12 flex flex-col sm:mx-16 sm:my-16 md:my-24 xl:mx-50 xl:my-36">
+		<div class="mx-8 mt-12 mb-12 flex flex-col sm:mx-16 sm:my-16 md:my-24  xl:mx-54 xl:my-36">
 			<!-- <h1 class="text-darkText mb-4 text-6xl">{title}</h1>
 			<h1 class="text-lightText mb-12 text-4xl">{thaiTitle}</h1> -->
 			
