@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-auto';
+
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
@@ -13,12 +13,12 @@ const config = {
 		  // Output directory for your static build
 		  pages: 'build',
 		  assets: 'build',
-		  fallback: '+page.svelte',
+		  fallback: 'index.html',
 		  precompress: false
 		}),
 		// If your site is going to be hosted at a subdirectory, specify it here
 		paths: {
-		  base: '/gb-app'
+		  base: '/gb'
 		}
 	  }
 };
