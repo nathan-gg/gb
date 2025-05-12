@@ -11,7 +11,8 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"format": "prettier --write .",
-		"lint": "prettier --check ."
+		"lint": "prettier --check .",
+		"gh-pages": "sudo npm run build && npx gh-pages -d build"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^4.0.0",
@@ -24,6 +25,7 @@
 		"flowbite": "^3.1.2",
 		"flowbite-svelte": "^0.48.4",
 		"flowbite-svelte-icons": "^2.0.2",
+		"gh-pages": "^6.3.0",
 		"postcss": "^8.5.3",
 		"prettier": "^3.4.2",
 		"prettier-plugin-svelte": "^3.3.3",

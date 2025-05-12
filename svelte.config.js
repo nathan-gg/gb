@@ -10,15 +10,16 @@ const config = {
 
 	kit: {
 		adapter: adapter({
-		  // Output directory for your static build
-		  pages: 'build',
-		  assets: 'build',
-		  fallback: 'index.html',
-		  precompress: false
+		//   // Output directory for your static build
+		//   pages: 'build',
+		//   assets: 'build',
+		//   fallback: 'index.html',
+		//   precompress: false
 		}),
 		// If your site is going to be hosted at a subdirectory, specify it here
 		paths: {
-		  base: '/gb'
+		// base: '/gb'
+		  base: process.env.NODE_ENV === 'production' ? '/gb' : '',
 		}
 	  }
 };
