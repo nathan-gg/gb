@@ -18,7 +18,7 @@ const config = {
 		}),
 		// If your site is going to be hosted at a subdirectory, specify it here
 		paths: {
-		  base: '/gb'
+		  base: '/gb/'
 		}
 	  }
 };
