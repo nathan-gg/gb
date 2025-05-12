@@ -1,7 +1,7 @@
 export const menuData = {
   "soups": {
     title: "Soups",
-    thaiTitle: "สลัด",
+    thaiTitle: "ซุป",
     imagePath: "soups",
     mobilePath: "m-soups",
     items: [
@@ -79,7 +79,7 @@ export const menuData = {
   },
   "appetizers": {
     title: "Appetizers",
-    thaiTitle: "สลัด",
+    thaiTitle: "อาหารเรียกน้ำย่อย",
     imagePath: "appetizers",
     mobilePath: "m-appetizers",
     items: [
@@ -230,7 +230,7 @@ export const menuData = {
   },
   "curry": {
     title: "Curry",
-    thaiTitle: "สลัด",
+    thaiTitle: "แกง",
     imagePath: "curry",
     mobilePath: "m-curry",
     items: [
@@ -280,7 +280,7 @@ export const menuData = {
   },
   "stir-fried": {
     title: "Stir-Fried",
-    thaiTitle: "สลัด",
+    thaiTitle: "ผัด",
     imagePath: "stir-fried",
     mobilePath: "m-stir-fried",
     items: [
@@ -352,7 +352,7 @@ export const menuData = {
   },
   "noodles": {
     title: "Noodles",
-    thaiTitle: "สลัด",
+    thaiTitle: "ก๋วยเตี๋ยว",
     imagePath: "noodles",
     mobilePath: "m-noodles",
     items: [
@@ -425,7 +425,7 @@ export const menuData = {
   },
   "vegetables": {
     title: "Vegetables",
-    thaiTitle: "สลัด",
+    thaiTitle: "ผัก",
     imagePath: "vegetables",
     mobilePath: "m-vegetables",
     items: [
@@ -457,7 +457,7 @@ export const menuData = {
   },
   "rice": {
     title: "Rice",
-    thaiTitle: "สลัด",
+    thaiTitle: "ข้าว",
     imagePath: "rice",
     mobilePath: "m-rice",
     items: [
@@ -524,7 +524,7 @@ export const menuData = {
   },
   "specialties": {
     title: "Green Basil Specialties",
-    thaiTitle: "สลัด",
+    thaiTitle: "พิเศษ",
     imagePath: "specialties",
     mobilePath: "m-specialties",
     items: [
@@ -708,7 +708,7 @@ export const menuData = {
   },
   "desserts": {
     title: "Desserts",
-    thaiTitle: "สลัด",
+    thaiTitle: "ขนม",
     imagePath: "desserts",
     mobilePath: "m-desserts",
     items: [
@@ -747,7 +747,7 @@ export const menuData = {
   },
   "combinations": {
     title: "Combinations",
-    thaiTitle: "สลัด",
+    thaiTitle: "_____",
     imagePath: "combinations",
     mobilePath: "m-combinations",
     items: [
@@ -850,7 +850,7 @@ export const menuData = {
         price: "3.50"
       },
       {
-        name: "Havana Club 3 year",
+        name: "Havana Club Year",
         description: "Rum",
         price: "3.50"
       },
@@ -906,7 +906,7 @@ export const menuData = {
   },
   "ctsd": {
     title: "Coffee, Tea & Soft Drinks",
-    thaiTitle: "สลัด",
+    thaiTitle: "กาแฟและชาและน้ำอัดลม",
     sHead: "Coffee & Tea",
     imagePath: "ctsd",
     mobilePath: "m-ctsd",
@@ -987,7 +987,7 @@ export const menuData = {
   },
   "non-spirited": {
     title: "Non-Spirited",
-    thaiTitle: "สลัด",
+    thaiTitle: "ไม่มีจิตวิญญาณ",
     imagePath: "non-spirited",
     mobilePath: "m-non-spirited",
     items: [
@@ -1053,13 +1053,13 @@ export const menuData = {
   },
   "signature-cocktails": {
     title: "Signature Cocktails",
-    thaiTitle: "สลัด",
+    thaiTitle: "ซิกเนเจอร์ค็อกเทล",
     imagePath: "signature-cocktails",
     mobilePath: "m-signature-cocktails",
     items: [
       {
         name: "The Long Thailand Iced Tea (3 oz)",
-        description: "Marquis de villard vsop, Havana Club Añejo Reserva, Crown Royal, honey, black tea, condensed milk, palm sugar syrup, club soda, lemon",
+        description: "Marquis de Villard V.S.O.P., Havana Club Añejo Reserva, Crown Royal, honey, black tea, condensed milk, palm sugar syrup, club soda, lemon",
         price: "14"
       },
       {
@@ -1109,7 +1109,7 @@ export const menuData = {
       },
       {
         name: "Blue Hawaii (3 oz)",
-        description: "Malibu coconut rum, Havana Club 3 year, Alizé blue passion, Blue Curaçao, pineapple, crème de coco",
+        description: "Malibu coconut rum, Havana Club 3 Year, Alizé blue passion, Blue Curaçao, pineapple, crème de coco",
         price: "13½"
       },
       {
@@ -1118,7 +1118,7 @@ export const menuData = {
         price: "13¾"
       },
       {
-        name: "el Clássico (2 oz)",
+        name: "El Clássico (2 oz)",
         description: "Jose Cuervo Tradicional Resposado, Cointreau, lime juice, celery salt",
         price: "11"
       },
@@ -1151,7 +1151,7 @@ export const menuData = {
   },
   "classic-cocktails": {
     title: "Classic Cocktails",
-    thaiTitle: "สลัด",
+    thaiTitle: "ค็อกเทลคลาสสิก",
     imagePath: "classic-cocktails",
     mobilePath: "m-classic-cocktails",
     items: [
@@ -1250,7 +1250,7 @@ export const menuData = {
   },
   "beer": {
     title: "Beer",
-    thaiTitle: "สลัด",
+    thaiTitle: "เบียร์",
     imagePath: "beer",
     mobilePath: "m-beer",
     items: [
@@ -1628,7 +1628,7 @@ export const menuData = {
 
       },
       {
-        name: "Marquis de Villard VSOP",
+        name: "Marquis de Villard V.S.O.P.",
         description: "France",
         p1: "8",
         p2: "12",
@@ -1918,7 +1918,7 @@ export const menuData = {
   },
   "white-wines": {
     title: "White Wine",
-    thaiTitle: "สลัด",
+    thaiTitle: "ไวน์ขาว",
     imagePath: "white-wines",
     mobilePath: "m-white-wines",
     items: [
@@ -1989,7 +1989,7 @@ export const menuData = {
   },
   "rose": {
     title: "Rosé",
-    thaiTitle: "สลัด",
+    thaiTitle: "โรเซ่",
     imagePath: "rose",
     mobilePath: "m-rose",
     items: [
@@ -2011,7 +2011,7 @@ export const menuData = {
   },
   "red-wines": {
     title: "Red Wine",
-    thaiTitle: "สลัด",
+    thaiTitle: "ไวน์แดง",
     imagePath: "red-wines",
     mobilePath: "m-red-wines",
     items: [

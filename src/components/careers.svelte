@@ -166,10 +166,10 @@
 				<h1 class="text-lightText mb-12 text-4xl">อาชีพ</h1>
 			{:else if curTab === 1}
 				<h1 class=" text-darkText mb-4 text-6xl">Server</h1>
-				<h1 class="text-lightText mb-12 text-4xl">เซิร์ฟเวอร์</h1>
+				<h1 class="text-lightText mb-12 text-4xl">บริกร</h1>
 			{:else if curTab === 2}
 				<h1 class=" text-darkText mb-4 text-6xl">Food Runner</h1>
-				<h1 class="text-lightText mb-12 text-4xl">นักวิ่งด้านอาหาร</h1>
+				<h1 class="text-lightText mb-12 text-4xl">พนักงานเดินอาหาร</h1>
 			{:else if curTab === 3}
 				<h1 class=" text-darkText mb-4 text-6xl">Driver</h1>
 				<h1 class="text-lightText mb-12 text-4xl">คนขับ</h1>

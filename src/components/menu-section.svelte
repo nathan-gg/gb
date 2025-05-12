@@ -112,147 +112,168 @@
 			}
 		}
 	}
-
-	
 </script>
 
-<section {id} class="bg-tertiary relative flex h-fit snap-start snap-normal flex-col sm:flex-row">
-
-
+<section {id} class="bg-tertiary relative flex h-fit snap-start snap-normal flex-col lg:flex-row">
 	{#if isFooter}
 		<div class="bottom-0 z-50 snap-end snap-normal">
 			<Footer />
 		</div>
 	{:else}
 		<!-- Mobile View -->
-		<div class="sm:hidden flex">
-			<img src='/webp/{mobilePath}.webp' class="w-screen object-cover" alt="The {title} Section." />
+		<div class="flex lg:hidden">
+			<img src="/webp/{mobilePath}.webp" class="w-screen object-cover" alt="The {title} Section." />
 		</div>
-		<div class="sm:hidden w-full bg-tertiary text-darkText text-xs">
+		<div class="bg-tertiary text-darkText w-full text-xs lg:hidden">
 			<div class="flex flex-col items-center py-4">
 				{#if previousSection}
 					<button onclick={scrollPrev} class="text-lightText hover:text-darkText mb-2">
 						{prevTitle}
 					</button>
 				{/if}
-			
 			</div>
 			<!-- Header for mobile view -->
-			<div class="w-full pt-8 pb-2 px-12">
-				<h1 class="text-darkText text-3xl mb-0 font-instrument">{title}</h1>
-				<h2 class="text-lightText text-xl  font-instrument">{thaiTitle}</h2>
+			<div class="w-full px-12 pt-8 pb-2">
+				<h1 class="text-darkText font-instrument mb-0 text-3xl sm:text-5xl md:text-7xl">{title}</h1>
+				<h2 class="text-lightText font-instrument text-xl sm:text-3xl md:text-5xl">{thaiTitle}</h2>
 			</div>
-			
+
 			<!-- Menu Content for Mobile -->
-			<div class="px-12 py-4 font-DMSans text-sm">
+			<div class="font-DMSans px-12 py-4 text-sm sm:text-xl md:text-3xl">
 				{#each groupedMenuItems as group, groupIndex}
 					<!-- Category Header -->
 					{#if group.subheader}
 						<!-- <div class="mt-6 mb-2 text-xl font-bold text-darkText pb-1">
 							{group.subheader}
 						</div> -->
-						
+
 						<div class="font-DMSans mt-8 mb-4 flex {groupIndex === 0 ? 'mt-4' : ''}">
-							<div class="text-darkText flex-grow font-semibold">{group.subheader}</div>
+							<!-- {#if group.subheader !== title} -->
+								<p class="text-darkText w-4/5 flex-grow  text-xl md:text-3xl font-semibold whitespace-pre-line">
+									{group.subheader}
+								</p>
+							<!-- {/if} -->
 
 							{#if pCol1 || pCol2 || pCol3}
 								<!-- Price column headers -->
-								<div class="flex ">
+								<div class="flex">
 									<div class="flex space-x-6">
-										{#if pCol1}<div class="w-10 text-right ">{pCol1}</div>{/if}
-										{#if pCol2}<div class="w-10 text-right">{pCol2}</div>{/if}
-										{#if pCol3}<div class="w-10 text-right">{pCol3}</div>{/if}
+										{#if pCol1}<div class="w-fit text-center">{pCol1}</div>{/if}
+										{#if pCol2}<div class="w-fit text-center">{pCol2}</div>{/if}
+										{#if pCol3}<div class="w-fit text-center">{pCol3}</div>{/if}
 									</div>
 								</div>
 							{:else if group.groupPrice1 || group.groupPrice2 || group.groupPrice3}
 								<!-- Price column headers -->
-								<div class="flex font-extrabold">
-									<div class="flex space-x-2">
-										{#if group.groupPrice1}<div class="w-10 text-right">
+								<!-- <div class="flex text-xs font-extrabold">
+									<div class="flex">
+										{#if group.groupPrice1}<div class="w-fit text-center">
 												{group.groupPrice1}
 											</div>{/if}
-										{#if group.groupPrice2}<div class="w-10 text-right">
+										{#if group.groupPrice2}<div class="mx-1 w-fit text-center">
 												{group.groupPrice2}
 											</div>{/if}
-										{#if group.groupPrice3}<div class="w-10 text-right">
+										{#if group.groupPrice3}<div class="w-fit text-center">
 												{group.groupPrice3}
 											</div>{/if}
 									</div>
-								</div>
+								</div> -->
 							{/if}
 						</div>
-					
 					{/if}
-					
+
 					<!-- Menu Items -->
 					{#each group.items as item, i}
-						<div class="mb-4 text-xs">
+						<div class="mb-4 text-md md:text-xl sm:text-xl ">
 							<div class="flex justify-between">
-								<div class="font-medium text-darkText">
-									
+								<div class="text-darkText font-medium">
 									{#if item.name}
 										{item.name}
 									{:else if !item.name && item.extras}
-										<span class="text-lightText italic  w-3/4">{item.extras}</span>
+										<p class="text-lightText whitespace-pre-line italic">{item.extras}</p>
 									{/if}
 									{#if item.mild}<img
-										src="/spiceMild.svg"
-										alt="Mild Spice"
-										class="inline-block h-4 w-4"
-									/>{/if}
+											src="/spiceMild.svg"
+											alt="Mild Spice"
+											class="inline-block h-4 w-4"
+										/>{/if}
 									{#if item.medium}<img
-										src="/spiceMedium.svg"
-										alt="Medium Spice"
-										class="inline-block h-4 w-4"
-									/>{/if}
+											src="/spiceMedium.svg"
+											alt="Medium Spice"
+											class="inline-block h-4 w-4"
+										/>{/if}
 									{#if item.hot}<img
-										src="/spiceHot.svg"
-										alt="Hot Spice"
-										class="inline-block h-4 w-4"
-									/>{/if}
+											src="/spiceHot.svg"
+											alt="Hot Spice"
+											class="inline-block h-4 w-4"
+										/>{/if}
 									{#if item.veryHot}<img
-										src="/spiceVeryHot.svg"
-										alt="Very Hot Spice"
-										class="inline-block h-4 w-4"
-									/>{/if}
+											src="/spiceVeryHot.svg"
+											alt="Very Hot Spice"
+											class="inline-block h-4 w-4"
+										/>{/if}
 									{#if item.tag}<span class="font-semibold text-[#D08111]">{item.tag}</span>{/if}
 								</div>
-								
+
 								<!-- Item prices -->
-								{#if hasMultiplePrices(item)}
+								<!-- {#if hasMultiplePrices(item)}
 									<div class="flex space-x-2 ">
-										{#if pCol1 && item.p1 !== undefined}<div class="text-right text-darkText">{item.p1}</div>{/if}
-										{#if pCol2 && item.p2 !== undefined}<div class="text-right text-darkText">{item.p2}</div>{/if}
-										{#if pCol3 && item.p3 !== undefined}<div class="text-right text-darkText">{item.p3}</div>{/if}
-										{#if group.groupPrice1 !== undefined}<div class="text-right text-darkText">{item.p1}</div>{/if}
-										{#if group.groupPrice2 !== undefined}<div class="text-right text-darkText">{item.p2}</div>{/if}
-										{#if group.groupPrice3 !== undefined}<div class="text-right text-darkText">{item.p3}</div>{/if}
+										{#if pCol1 && item.p1 !== undefined}<div class="text-center text-darkText">{item.p1}</div>{/if}
+										{#if pCol2 && item.p2 !== undefined}<div class="text-center text-darkText">{item.p2}</div>{/if}
+										{#if pCol3 && item.p3 !== undefined}<div class="text-center text-darkText">{item.p3}</div>{/if}
+										{#if group.groupPrice1 !== undefined}<div class="text-center text-darkText">{item.p1}</div>{/if}
+										{#if group.groupPrice2 !== undefined}<div class="text-center text-darkText">{item.p2}</div>{/if}
+										{#if group.groupPrice3 !== undefined}<div class="text-center text-darkText">{item.p3}</div>{/if}
 									</div>
 								{:else}
 									<div class="text-right text-darkText">{item.price}</div>
-								{/if}
+								{/if} -->
 							</div>
-							
+
 							<!-- Item description and details -->
 							{#if item.description}
-								<p class="text-lightText w-3/4">{item.description}</p>
+								<p class="text-lightText whitespace-pre-line">{item.description}</p>
 							{/if}
 							{#if item.region}
-								<p class="text-lightText ">{item.region}</p>
+								<p class="text-lightText whitespace-pre-line">{item.region}</p>
 							{/if}
 							{#if item.name && item.extras}
-								<p class="text-lightText italic  w-3/4">{item.extras}</p>
+								<p class="text-lightText whitespace-pre-line italic">{item.extras}</p>
+							{/if}
+							{#if hasMultiplePrices(item)}
+								<div class="flex space-x-2">
+									{#if (group.groupPrice1 !== undefined) && item.p1 !== ""}
+										<div class="text-darkText text-center">
+											<span class="font-bold">{group.groupPrice1}</span>
+											 - <span class="">{item.p1}</span>
+										</div>
+									{/if}
+									{#if (group.groupPrice2 !== undefined) && item.p2 !== ""}
+										<div class="text-darkText text-center">
+											<span class="font-bold">{group.groupPrice2}</span>
+											 - <span class="">{item.p2}</span>
+										</div>
+									{/if}
+									{#if (group.groupPrice3 !== undefined) && item.p3 !== ""}
+										<div class="text-darkText text-center">
+											<span class="font-bold">{group.groupPrice3}</span>
+											 - <span class="y">{item.p3}</span>
+										</div>
+									{/if}
+								</div>
+							{:else}
+								<div class=" text-darkText font-bold">{item.price}</div>
 							{/if}
 						</div>
 					{/each}
-					
+
 					<!-- Add additional spacing between groups -->
 					{#if groupIndex < groupedMenuItems.length - 1}
 						<div class="mb-4"></div>
 					{/if}
 				{/each}
 			</div>
-			
+
 			<!-- Navigation for mobile -->
 			<div class="flex flex-col items-center py-4">
 				{#if nextSection}
@@ -262,11 +283,13 @@
 				{/if}
 			</div>
 		</div>
-		
+
 		<!-- Desktop View (unchanged) -->
-		<div class="text-darkText font-instrument hidden sm:flex sm:flex-col sm:items-center sm:justify-center sm:w-1/2">
+		<div
+			class="text-darkText font-instrument hidden lg:flex lg:w-1/2 lg:flex-col lg:items-center lg:justify-center"
+		>
 			{#if previousSection}
-				<div class="mt-6 md:mt-12">
+				<div class="mt-6 lg:mt-12">
 					<button
 						onclick={scrollPrev}
 						class="font-DMSans text-lightText hover:text-darkText hover:cursor-pointer"
@@ -278,7 +301,7 @@
 				</div>
 			{/if}
 
-			<div class="mx-8 mt-12 mb-12 flex flex-col sm:mx-36 sm:my-16 md:my-24 xl:my-36">
+			<div class="mx-8 mt-12 mb-12 flex flex-col sm:mx-36 sm:my-16 lg:my-24 xl:my-36">
 				<h1 class="text-darkText mb-4 text-6xl">{title}</h1>
 				<h1 class="text-lightText mb-12 text-4xl">{thaiTitle}</h1>
 
@@ -322,8 +345,8 @@
 						<div class="font-DMSans mb-6 flex">
 							<div class="flex w-full flex-col sm:flex-row sm:justify-between">
 								<!-- Left side: Item name, description, extras -->
-								<div class="pr-4 sm:flex-grow sm:pr-8 ">
-									<p class="font-medium ">
+								<div class="pr-4 sm:flex-grow sm:pr-8">
+									<p class="font-medium">
 										{item.name}
 										{#if item.mild}<img
 												src="/spiceMild.svg"
@@ -348,7 +371,7 @@
 										{#if item.tag}<span class="font-semibold text-[#D08111]">{item.tag}</span>{/if}
 									</p>
 									{#if item.description}
-										<p class="text-lightText text-sm whitespace-pre-line">{item.description}</p>
+										<p class="text-lightText text-sm whitespace-pre-line w-4/5">{item.description}</p>
 									{/if}
 									{#if item.region}
 										<p class="text-lightText text-sm whitespace-pre-line">{item.region}</p>
@@ -392,7 +415,7 @@
 			</div>
 
 			{#if nextSection}
-				<div class="mb-6 md:mb-12">
+				<div class="mb-6 lg:mb-12">
 					<button
 						onclick={scrollNext}
 						class="font-DMSans text-lightText hover:text-darkText hover:cursor-pointer"
@@ -404,8 +427,12 @@
 				</div>
 			{/if}
 		</div>
-		<div class="hidden w-1/2 flex-auto sm:flex">
-			<img src='/webp/{imagePath}.webp' class="h-full w-full object-cover" alt="The {title} Section." />
+		<div class="hidden w-1/2 flex-auto lg:flex">
+			<img
+				src="/webp/{imagePath}.webp"
+				class="h-full w-full object-cover"
+				alt="The {title} Section."
+			/>
 		</div>
 	{/if}
 </section>

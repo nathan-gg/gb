@@ -4,7 +4,7 @@
 
 	const reservations = {
 		title: 'Confirm Your Reservation',
-		thaiTitle: 'ภารกิจของเรา',
+		thaiTitle: 'ยืนยันการจอง',
 		image: '/webp/reservations.webp'
 	};
 </script>
