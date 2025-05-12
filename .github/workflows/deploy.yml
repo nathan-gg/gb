@@ -61,7 +61,7 @@ jobs:
 
       - name: build
         env:
- BASE_PATH: '/${{ github.event.repository.name }}'
+ BASE_PATH: '/gb'
         run: |
  npm run build
 
