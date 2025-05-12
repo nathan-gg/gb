@@ -2,6 +2,8 @@
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
+const dev = process.argv.includes('dev')
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// Consult https://svelte.dev/docs/kit/integrations
@@ -10,18 +12,12 @@ const config = {
 
 	kit: {
 		adapter: adapter({
-		//   // Output directory for your static build
-		//   pages: 'build',
-		//   assets: 'build',
-		//   fallback: 'index.html',
-		//   precompress: false
+			fallback: '404.html'
 		}),
-		// If your site is going to be hosted at a subdirectory, specify it here
 		paths: {
-		// base: '/gb'
-		  base: process.env.NODE_ENV === 'production' ? '/gb' : '',
+			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
 		}
-	  }
+	}
 };
 
 export default config;
