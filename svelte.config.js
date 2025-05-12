@@ -26,8 +26,8 @@ import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 const dev = process.argv.includes('dev');
-// Get the repository name for GitHub Pages
-const repo = process.env.GITHUB_REPOSITORY ? process.env.GITHUB_REPOSITORY.split('/')[1] : '';
+// More explicit base path handling
+const basePath = dev ? '' : process.env.BASE_PATH || '';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -36,13 +36,23 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
+		// Output to 'build' directory - make sure this aligns with the path in deploy.yml
 		adapter: adapter({
-			fallback: '404.html'
+			pages: 'build',
+			assets: 'build',
+			fallback: '404.html',
+			precompress: false
 		}),
 		paths: {
-			base: dev ? '' : `/${repo}`
-		}
+			base: basePath
+		},
+		// Ensure no conflict with GitHub's default handling
+		appDir: 'app',
+		// Provide clearer traceability
+		trailingSlash: 'always'
 	}
 };
+
+console.log(`Using base path: "${basePath}"`);
 
 export default config;
