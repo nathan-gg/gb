@@ -126,7 +126,7 @@
 	{:else}
 		<!-- Mobile View -->
 		<div class="sm:hidden flex">
-			<img src={mobilePath} class="w-screen object-cover" alt="" />
+			<img src='/webp/{mobilePath}.webp' class="w-screen object-cover" alt="The {title} Section." />
 		</div>
 		<div class="sm:hidden w-full bg-tertiary text-darkText text-xs">
 			<div class="flex flex-col items-center py-4">
@@ -404,8 +404,8 @@
 				</div>
 			{/if}
 		</div>
-		<div class="hidden w-1/2 flex-auto sm:flex ">
-			<img src={imagePath} class="h-full w-full object-cover" alt="" />
+		<div class="hidden w-1/2 flex-auto sm:flex">
+			<img src='/webp/{imagePath}.webp' class="h-full w-full object-cover" alt="The {title} Section." />
 		</div>
 	{/if}
 </section>

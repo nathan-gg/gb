@@ -85,7 +85,7 @@
 		showDinner = false;
 	}
 
-	let showTOC = $state(true);
+	let showTOC = $state(false);
 
 	function toggleTOC() {
 		showTOC = !showTOC;
@@ -110,7 +110,7 @@
 	// 	}
 	// }
 
-	let showSpice = $state(true);
+	let showSpice = $state(false);
 	let menuElement = $state();
 
 	function toggleSpice() {

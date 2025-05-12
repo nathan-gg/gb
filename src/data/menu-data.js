@@ -2,7 +2,8 @@ export const menuData = {
   "soups": {
     title: "Soups",
     thaiTitle: "สลัด",
-    imagePath: "/webp/careersFoodRunner.webp",
+    imagePath: "soups",
+    mobilePath: "m-soups",
     items: [
       {
         name: 'Single or Regular Sized Soups',
@@ -79,6 +80,8 @@ export const menuData = {
   "appetizers": {
     title: "Appetizers",
     thaiTitle: "สลัด",
+    imagePath: "appetizers",
+    mobilePath: "m-appetizers",
     items: [
       {
         name: "4. Combo Appetizer",
@@ -164,6 +167,8 @@ export const menuData = {
   "salad": {
     title: "Salads",
     thaiTitle: "สลัด",
+    imagePath: "salads",
+    mobilePath: "m-salads",
     items: [
       {
         name: "16. Som Tum",
@@ -226,6 +231,8 @@ export const menuData = {
   "curry": {
     title: "Curry",
     thaiTitle: "สลัด",
+    imagePath: "curry",
+    mobilePath: "m-curry",
     items: [
       {
         name: "Curry Options",
@@ -274,6 +281,8 @@ export const menuData = {
   "stir-fried": {
     title: "Stir-Fried",
     thaiTitle: "สลัด",
+    imagePath: "stir-fried",
+    mobilePath: "m-stir-fried",
     items: [
       {
         name: "Stir-Fried Options",
@@ -344,6 +353,8 @@ export const menuData = {
   "noodles": {
     title: "Noodles",
     thaiTitle: "สลัด",
+    imagePath: "noodles",
+    mobilePath: "m-noodles",
     items: [
       {
         name: "39. Traditional Phat Thai",
@@ -415,6 +426,8 @@ export const menuData = {
   "vegetables": {
     title: "Vegetables",
     thaiTitle: "สลัด",
+    imagePath: "vegetables",
+    mobilePath: "m-vegetables",
     items: [
       {
         name: "44. Tofu Phat Bai Ga-Phrao",
@@ -445,6 +458,8 @@ export const menuData = {
   "rice": {
     title: "Rice",
     thaiTitle: "สลัด",
+    imagePath: "rice",
+    mobilePath: "m-rice",
     items: [
       {
         name: "Fresh Fruit Fried Rice Options",
@@ -510,6 +525,8 @@ export const menuData = {
   "specialties": {
     title: "Green Basil Specialties",
     thaiTitle: "สลัด",
+    imagePath: "specialties",
+    mobilePath: "m-specialties",
     items: [
       {
         name: "G1. Haawy Maaeng Phuu Ob Maaw Din",
@@ -692,6 +709,8 @@ export const menuData = {
   "desserts": {
     title: "Desserts",
     thaiTitle: "สลัด",
+    imagePath: "desserts",
+    mobilePath: "m-desserts",
     items: [
       {
         name: "Single Scoop",
@@ -729,6 +748,8 @@ export const menuData = {
   "combinations": {
     title: "Combinations",
     thaiTitle: "สลัด",
+    imagePath: "combinations",
+    mobilePath: "m-combinations",
     items: [
       {
         name: "Combo for Two",
@@ -760,6 +781,8 @@ export const menuData = {
   "happy-hour": {
     title: "Happy Hour",
     thaiTitle: "สลัด",
+    imagePath: "happy-hour",
+    mobilePath: "m-happy-hour",
     items: [
       {
         name: "Food",
@@ -885,6 +908,8 @@ export const menuData = {
     title: "Coffee, Tea & Soft Drinks",
     thaiTitle: "สลัด",
     sHead: "Coffee & Tea",
+    imagePath: "ctsd",
+    mobilePath: "m-ctsd",
     items: [
       {
         name: "Coffee & Tea",
@@ -963,6 +988,8 @@ export const menuData = {
   "non-spirited": {
     title: "Non-Spirited",
     thaiTitle: "สลัด",
+    imagePath: "non-spirited",
+    mobilePath: "m-non-spirited",
     items: [
       {
         name: "Shirley Temple",
@@ -1027,6 +1054,8 @@ export const menuData = {
   "signature-cocktails": {
     title: "Signature Cocktails",
     thaiTitle: "สลัด",
+    imagePath: "signature-cocktails",
+    mobilePath: "m-signature-cocktails",
     items: [
       {
         name: "The Long Thailand Iced Tea (3 oz)",
@@ -1123,6 +1152,8 @@ export const menuData = {
   "classic-cocktails": {
     title: "Classic Cocktails",
     thaiTitle: "สลัด",
+    imagePath: "classic-cocktails",
+    mobilePath: "m-classic-cocktails",
     items: [
       {
         name: "Old Fashioned (2 oz)",
@@ -1220,6 +1251,8 @@ export const menuData = {
   "beer": {
     title: "Beer",
     thaiTitle: "สลัด",
+    imagePath: "beer",
+    mobilePath: "m-beer",
     items: [
       {
         name: 'Draught Beer',
@@ -1342,6 +1375,8 @@ export const menuData = {
   "cider": {
     title: "Cider",
     thaiTitle: "สลัด",
+    imagePath: "cider",
+    mobilePath: "m-cider",
     items: [
       {
         name: "Lonetree Old Growth Orchard (355 mL)",
@@ -1353,6 +1388,8 @@ export const menuData = {
   "vodka": {
     title: "Vodka",
     thaiTitle: "สลัด",
+    imagePath: "vodka",
+    mobilePath: "m-vodka",
 
     items: [
       {
@@ -1430,6 +1467,8 @@ export const menuData = {
   "gin": {
     title: "Gin",
     thaiTitle: "สลัด",
+    imagePath: "gin",
+    mobilePath: "m-gin",
     items: [
       {
         name: "Gin",
@@ -1450,6 +1489,8 @@ export const menuData = {
   "rum": {
     title: "Rum",
     thaiTitle: "สลัด",
+    imagePath: "rum",
+    mobilePath: "m-rum",
     items: [
       {
         name: "Rum",
@@ -1480,6 +1521,8 @@ export const menuData = {
   "tequila": {
     title: "Tequila",
     thaiTitle: "สลัด",
+    imagePath: "tequila",
+    mobilePath: "m-tequila",
     items: [
       {
         name: "Tequila",
@@ -1498,6 +1541,8 @@ export const menuData = {
   "whisky": {
     title: "Whisky",
     thaiTitle: "สลัด",
+    imagePath: "whisky",
+    mobilePath: "m-whisky",
     items: [
       {
         name: "Whisky",
@@ -1532,6 +1577,8 @@ export const menuData = {
   "scotch": {
     title: "Scotch",
     thaiTitle: "สลัด",
+    imagePath: "scotch",
+    mobilePath: "m-scotch",
     items: [
       {
         name: "Scotch",
@@ -1570,6 +1617,8 @@ export const menuData = {
   "brandy": {
     title: "Brandy",
     thaiTitle: "สลัด",
+    imagePath: "brandy",
+    mobilePath: "m-brandy",
     items: [
       {
         name: "Brandy",
@@ -1589,7 +1638,8 @@ export const menuData = {
   "aperitif-digestif": {
     title: "Aperitif & Digestif",
     thaiTitle: "สลัด",
-
+    imagePath: "aperitif-digestif",
+    mobilePath: "m-aperitif-digestif",
     items: [
       {
         name: "Aperitif & Digestif",
@@ -1635,6 +1685,8 @@ export const menuData = {
   "vermouth-liqueurs": {
     title: "Vermouth & Liqueurs",
     thaiTitle: "สลัด",
+    imagePath: "vermouth-liqueurs",
+    mobilePath: "m-vermouth-liqueurs",
     items: [
       {
         name: "Vermouth & Liqueurs",
@@ -1693,6 +1745,8 @@ export const menuData = {
   "sct": {
     title: "Specialty Coffee & Tea",
     thaiTitle: "สลัด",
+    imagePath: "sct",
+    mobilePath: "m-sct",
     items: [
       {
         name: "B52 Bomber (1½ oz)",
@@ -1724,6 +1778,8 @@ export const menuData = {
   "featured-wine": {
     title: "Featured Wines - BC VQA",
     thaiTitle: "สลัด",
+    imagePath: "featured-wine",
+    mobilePath: "m-featured-wine",
     items: [
       {
         name: 'BC VQA',
@@ -1863,6 +1919,8 @@ export const menuData = {
   "white-wines": {
     title: "White Wine",
     thaiTitle: "สลัด",
+    imagePath: "white-wines",
+    mobilePath: "m-white-wines",
     items: [
       {
         name: "White Wine",
@@ -1932,6 +1990,8 @@ export const menuData = {
   "rose": {
     title: "Rosé",
     thaiTitle: "สลัด",
+    imagePath: "rose",
+    mobilePath: "m-rose",
     items: [
       {
         name: "Rosé",
@@ -1952,6 +2012,8 @@ export const menuData = {
   "red-wines": {
     title: "Red Wine",
     thaiTitle: "สลัด",
+    imagePath: "red-wines",
+    mobilePath: "m-red-wines",
     items: [
       {
         name: "Red Wine",
