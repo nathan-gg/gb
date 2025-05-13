@@ -66,6 +66,6 @@
 	</div>
 
 	<div class="w-1/2 flex-auto sm:flex hidden">
-		<img src='/webp/orderOnline.webp' class="h-full object-cover w-full" alt="" />
+		<img src='/webp/orderOnline1.webp' class="h-full object-cover w-full" alt="" />
 	</div>
 </section>
