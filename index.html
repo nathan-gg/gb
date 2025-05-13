@@ -1,0 +1,26 @@
+<!-- <html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting to app</title>
+    <meta http-equiv="refresh" content="0; URL=./app/index.html">
+    <link rel="canonical" href="./app/index.html">
+  </head>
+  <body>
+    <p>If you are not redirected automatically, follow this <a href="./app/home">link to the app</a>.</p>
+  </body>
+</html> -->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting to app</title>
+    <script>
+      // This script redirects to the actual app location
+      window.location.href = window.location.pathname.replace(/\/[^\/]*$/, '') + '/';
+    </script>
+    <!-- Fallback if script doesn't run -->
+    <meta http-equiv="refresh" content="0; URL=./"> 
+  </head>
+  <body>
+    <p>If you are not redirected automatically, follow this <a href="./">link to the app</a>.</p>
+  </body>
+</html>
