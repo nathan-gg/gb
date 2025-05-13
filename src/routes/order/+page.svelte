@@ -5,7 +5,7 @@
 	const reservations = {
 		title: 'Order Online',
 		thaiTitle: 'สั่งซื้อออนไลน์',
-		image: '/webp/orderOnline.webp'
+		image: '/webp/orderOnline1.webp'
 	};
 </script>
 
