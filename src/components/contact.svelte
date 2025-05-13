@@ -97,28 +97,28 @@
 						<input
 							type="text"
 							placeholder="First Name"
-							class="border-darkText mt-1 mr-1 mb-1 rounded-md border-2 p-1"
+							class="border-darkText mt-1 mr-1 mb-1 rounded-md border-1 p-1"
 						/>
 						<input
 							type="text"
 							placeholder="Last Name"
-							class="border-darkText mt-1 mb-1 ml-1 rounded-md border-2 p-1"
+							class="border-darkText mt-1 mb-1 ml-1 rounded-md border-1 p-1"
 						/>
 						<input
 							type="text"
 							placeholder="Email"
-							class="border-darkText mt-1 mr-1 mb-1 rounded-md border-2 p-1"
+							class="border-darkText mt-1 mr-1 mb-1 rounded-md border-1 p-1"
 						/>
 						<input
 							type="text"
 							placeholder="Phone Number"
-							class="border-darkText mt-1 mb-1 ml-1 rounded-md border-2 p-1"
+							class="border-darkText mt-1 mb-1 ml-1 rounded-md border-1 p-1"
 						/>
 					</div>
 					<div class="">
 						<textarea
 							placeholder="Message"
-							class=" border-darkText my-1 h-48 w-full rounded-md border-2 p-1"
+							class=" border-darkText my-1 h-48 w-full rounded-md border-1 p-1"
 						></textarea>
 					</div>
 					<div>

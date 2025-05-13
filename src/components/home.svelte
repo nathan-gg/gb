@@ -113,7 +113,7 @@
 		  class="absolute top-1/8 text-center w-screen hover:cursor-pointer" 
 		  onclick={scrollPrev}
 		>
-		  <span class="material-icons md-48 mt-0 mb-12 sm:mt-16 md:mt-8 md:mb-24 lg:mt-0 lg:mb-36 xl:mb-48">
+		  <span class="material-icons md-48">
 			keyboard_arrow_up
 		  </span>
 		</button>
@@ -135,10 +135,10 @@
   
 	  {#if arrow}
 		<button 
-		  class="absolute bottom-1/8 text-center w-screen hover:cursor-pointer" 
+		  class="absolute bottom-1/8 text-center w-screen h-fit hover:cursor-pointer" 
 		  onclick={scrollNext}
 		>
-		  <span class="material-icons md-48 mt-12 md:mt-24 lg:mt-36 xl:mt-48">
+		  <span class="material-icons md-48">
 			keyboard_arrow_down
 		  </span>
 		</button>

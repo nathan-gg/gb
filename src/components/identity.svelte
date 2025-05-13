@@ -107,7 +107,7 @@
 		{/if}
 
 		{#if topArrow}
-			<div class="mb-6 md:mb-12">
+			<!-- <div class="mb-6 md:mb-12">
 				<div
 					use:scrollTo={{ ref: goTo, offset: -64 }}
 					class=" font-DMSans text-lightText hover:text-darkText hover:cursor-pointer"
@@ -116,6 +116,16 @@
 						{topArrowText}
 					</p>
 				</div>
+			</div> -->
+			<div class="mb-6 md:mb-12">
+				<button
+					onclick={scrollNext}
+					class=" font-DMSans text-lightText hover:text-darkText hover:cursor-pointer"
+				>
+					<p>
+						{topArrowText}
+					</p>
+				</button>
 			</div>
 		{/if}
 	</div>

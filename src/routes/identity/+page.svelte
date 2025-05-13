@@ -81,8 +81,8 @@
 		body: "For over 16 years, Green Basil has been a beacon of authentic Thai flavours.  With over 30 years of culinary experience, Chef Ming's career spans from Bangkok to Montreal and Vancouver!\nHis illustrious career includes celebrated time at Maison Kirin and Chao Phraya in Montreal. Upon returning to Vancouver, Chef Ming has graced some of the city's top Thai dining establishments, including Chili Club, before ultimately becoming the Chef de Cuisine for many Thai House establishments across the lower mainland.\nWith each dish, Chef Ming brings a generations of passed down culinary excellence and a passion for Thai cuisine that elevates the dining experience here at Green Basil.",
 		arrowText: 'Prizes',
 		prevArrowText: 'Mission',
-		image: '/webp/identityHead.webp',
-		imageMobile:'/webp/identityMobile1.webp'
+		image: '/webp/chefMing.webp',
+		imageMobile:'/webp/m-chefMing.webp'
 	};
 	const prizes = {
 		thisRef: 'Prizes',
@@ -90,7 +90,7 @@
 		goBack: 'Chef',
 		title: 'Prizes & Accolades',
 		thaiTitle: 'รางวัลเเละชื่อเสียง',
-		body: "Since inception, Green Basil has quickly built a reputation as one of the premier Thai restaurants in the lower mainland. Established in 2006, the restaurant continues to thrive to this day.\nHaving earned Burnaby Now’s “Best Thai” award multiple times, Green Basil has garnered glowing reviews from respected publications like The Province, The Vancouver Sun, and the Georgia Straight, emphasizing our status as a leader in the local dining scene.",
+		body: "Since inception, Green Basil has quickly built a reputation as one of the premier Thai restaurants in the lower mainland. Established in 2006, the restaurant continues to thrive to this day.\nHaving earned Burnaby Now’s “Best Thai Restaurant” award multiple times, Green Basil has garnered glowing reviews from respected publications like The Province, The Vancouver Sun, and the Georgia Straight, emphasizing our status as a leader in the local dining scene.",
 		prevArrowText: 'Chef',
 		topArrowText: 'Back to Identity',
 		image: '/webp/identityPrizes.webp',

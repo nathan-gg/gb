@@ -42,11 +42,12 @@
 			</a>
 			{#if showMenu}
 				<button onclick={toggleMenu} class:active={showMenu}>
-					<img src="closeMenu.svg" class="h-8" alt="Close Website Directory" />
+					<img src="closeMenu.svg" class="h-8 hover:cursor-pointer" alt="Close Website Directory" />
 				</button>
+				
 			{:else}
 				<button onclick={toggleMenu}>
-					<img src="menuBars.svg" class="h-8" alt="Open Website Directory" />
+					<img src="menuBars.svg" class="h-8 hover:cursor-pointer" alt="Open Website Directory" />
 				</button>
 			{/if}
 		</div>
