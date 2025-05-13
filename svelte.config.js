@@ -27,7 +27,7 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 const dev = process.argv.includes('dev');
 // More explicit base path handling
-const basePath = dev ? '' : process.env.BASE_PATH || '';
+const basePath = '/gb';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -37,19 +37,11 @@ const config = {
 
 	kit: {
 		// Output to 'build' directory - make sure this aligns with the path in deploy.yml
-		adapter: adapter({
-			pages: 'build',
-			assets: 'build',
-			fallback: '404.html',
-			precompress: false
-		}),
+		adapter: adapter(),
 		paths: {
-			base: basePath
+			base: process.env.NODE_ENV === 'production' ? '/gb' : '',
 		},
-		// Ensure no conflict with GitHub's default handling
-		appDir: 'app',
-		// Provide clearer traceability
-		trailingSlash: 'always'
+		
 	}
 };
 
