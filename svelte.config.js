@@ -22,7 +22,7 @@
 
 // export default config;
 
-import adapter from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-vercel';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 const dev = process.argv.includes('dev');
@@ -36,18 +36,11 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
-		// Output to 'build' directory - make sure this aligns with the path in deploy.yml
-		adapter: adapter(),
-		paths: {
-			base: process.env.NODE_ENV === 'production' ? '/gb' : '',
-		},
-		prerender: {
-			handleHttpError: 'warn' // optional, helps ignore missing pages during prerender
-		},
-		
-	}
-};
-
-console.log(`Using base path: "${basePath}"`);
-
-export default config;
+		adapter: adapter({
+		  runtime: 'nodejs18.x',
+		}),
+	  },
+	};
+	 
+	export default config;
+	
