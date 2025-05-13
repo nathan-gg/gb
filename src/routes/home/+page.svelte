@@ -91,7 +91,7 @@
   
   const contact = {
     thisRef: 'Contact',
-    goTo: 'Partnerships',
+    goTo: 'About',
     goBack: 'Order',
     title: 'Connect With Us',
     pText: 'Your feedback fuels our passion! Get in touch and share your experience.',
@@ -114,7 +114,7 @@
   const about = {
     thisRef: 'About',
     goTo: 'Reservations',
-    goBack: 'Partnerships',
+    goBack: 'Contact',
     title: 'The Basil Identity',
     pText: 'Authentic Thai flavors with a modern twist — our journey is rooted in tradition and driven by passion.',
     btnText: 'Learn About Us',

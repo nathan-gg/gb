@@ -23,8 +23,7 @@
 						Cancellations must be made at least 24 hours in advance to avoid any cancellation fees.
 					</li>
 					<li class="mb-4">
-						Same-day cancellations or no-shows may be subject to a charge of $X per person to
-						compensate for lost seating.
+						Same-day cancellations or no-shows may result in a per-person charge to compensate for lost seating.
 					</li>
 					<li class="mb-4">
 						For larger parties (6 or more), we require at least 48 hours' notice for cancellations.
