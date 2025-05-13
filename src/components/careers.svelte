@@ -157,10 +157,10 @@
 	</div>
 
 	<div class=" text-darkText font-instrument flex flex-col items-center justify-center sm:w-1/2">
-		<div class="mx-8 mt-12 mb-12 flex flex-col sm:mx-16 sm:my-16 md:my-24  xl:mx-54 xl:my-36">
+		<div class="mx-8 mt-12 mb-12 flex flex-col sm:mx-16 sm:my-16 md:my-24 xl:mx-54 xl:my-36">
 			<!-- <h1 class="text-darkText mb-4 text-6xl">{title}</h1>
 			<h1 class="text-lightText mb-12 text-4xl">{thaiTitle}</h1> -->
-			
+
 			{#if curTab === 0}
 				<h1 class=" text-darkText mb-4 text-6xl">Our Careers</h1>
 				<h1 class="text-lightText mb-12 text-4xl">อาชีพ</h1>
@@ -177,7 +177,9 @@
 				<h1 class=" text-darkText mb-4 text-6xl">Kitchen Helper</h1>
 				<h1 class="text-lightText mb-12 text-4xl">ผู้ช่วยครัว</h1>
 			{/if}
-			<div class="flex flex-wrap justify-center lg:justify-start sm:inline-flex lg:flex-nowrap font-DMSans">
+			<div
+				class="font-DMSans flex flex-wrap justify-center sm:inline-flex lg:flex-nowrap lg:justify-start"
+			>
 				<button onclick={() => (curTab = 0)}>
 					{#if curTab === 0}
 						<p class="text-darkText mr-4 mb-8">Our Careers</p>
@@ -232,46 +234,42 @@
 					</p>
 				{:else if curTab === 1}
 					<p class="text-darkText font-sans">
-						GA server at Green Basil plays a vital role in delivering an exceptional dining
+						A server at Green Basil plays a vital role in delivering an exceptional dining
 						experience. This position involves warmly welcoming guests, guiding them through the
-						menu with expertise, and ensuring their needs are met with attentiveness and care.
-						Servers are responsible for taking accurate orders, coordinating with the kitchen staff,
-						and maintaining a clean and inviting dining area. At Green Basil, the focus is on
-						creating a friendly and professional atmosphere that reflects the restaurant's
-						commitment to authentic Thai cuisine and outstanding customer service.
+						menu, and ensuring their needs are met with attentiveness and care. Servers are
+						responsible for taking accurate orders, coordinating with the kitchen staff, and
+						maintaining a clean and inviting dining area. The focus is on creating a friendly and
+						professional atmosphere that reflects the restaurant's commitment to authentic Thai
+						cuisine and outstanding customer service.
 					</p>
 				{:else if curTab === 2}
 					<p class="text-darkText font-sans">
-						A food runner at Green Basil plays an essential role in ensuring seamless service and
-						guest satisfaction. This position involves efficiently delivering dishes from the
-						kitchen to the dining area while maintaining a keen attention to detail and
-						presentation. Food runners collaborate closely with servers and kitchen staff to ensure
-						orders are accurate and delivered promptly. They also assist in maintaining the
-						cleanliness and organization of the dining space. As a representative of Green Basil, a
-						food runner helps uphold the restaurant's commitment to outstanding service and
-						authentic Thai dining.
+						A food runner at Green Basil plays ensures seamless service and guest satisfaction. This
+						position involves efficiently delivering dishes from the kitchen to the dining area
+						while maintaining attention to detail and presentation. Food runners collaborate closely
+						with servers and kitchen staff to ensure orders are accurate and delivered promptly.
+						They also assist in maintaining the cleanliness and organization of the dining space. As
+						a representative of Green Basil, this position helps uphold the restaurant's commitment
+						to outstanding service.
 					</p>
 				{:else if curTab === 3}
 					<p class="text-darkText font-sans">
-						A driver at Green Basil ensures that the delicious, authentic Thai cuisine reaches
-						customers in a timely and professional manner. This role involves carefully handling
-						food orders, planning efficient delivery routes, and maintaining excellent communication
-						with both the restaurant team and customers. Drivers are responsible for ensuring orders
-						are accurate and delivered promptly while presenting a friendly and courteous demeanor.
-						As ambassadors for Green Basil, they uphold the restaurant’s commitment to quality
-						service and customer satisfaction, bringing the flavors of Green Basil directly to
-						customers’ doors.
+						A driver at Green Basil ensures that orders reach our customers in a timely and
+						professional manner. This role involves carefully handling food orders, planning
+						efficient delivery routes, and maintaining excellent communication with both the
+						restaurant team and customers. Drivers are responsible for ensuring orders are accurate
+						and delivered promptly while presenting a friendly demeanor. They are a testament to the
+						restaurant’s commitment to quality service and customer satisfaction, bringing the
+						flavours of Green Basil directly to customers’ doors.
 					</p>
 				{:else if curTab === 4}
 					<p class="text-darkText font-sans">
 						A kitchen helper at Green Basil is a cornerstone of smooth kitchen operations and
-						delicious meals. This role involves assisting chefs and kitchen staff with food
-						preparation, organizing ingredients, and ensuring the kitchen remains clean and orderly.
-						Kitchen helpers may also handle tasks like washing dishes, maintaining equipment, and
-						adhering to health and safety standards. Their support helps the team deliver
-						exceptional Thai cuisine efficiently and consistently. As part of Green Basil's
-						dedicated staff, kitchen helpers contribute to the restaurant's warm, inviting
-						atmosphere and commitment to excellence.
+						delicious meals. Assisting our kitchen staff with food preparation, organizing
+						ingredients, ensuring the kitchen remains clean and orderly are the main
+						responsibilities involved. Kitchen helpers will also handle tasks like washing dishes,
+						maintaining equipment, and ensuring to adhere to health and safety standards. Kitchen
+						helpers contribute to the restaurant's elegant, inviting atmosphere.
 					</p>
 				{/if}
 			</div>

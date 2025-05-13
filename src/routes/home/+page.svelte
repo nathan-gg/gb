@@ -50,7 +50,7 @@
     thisRef: 'Start',
     goTo: 'Menus',
     title: 'Welcome to Green Basil',
-    pText: '[SUBTITLE TEXT HERE]',
+    pText: 'Authentic Thai cuisine with a modern twist — crafted with fresh, local ingredients and bold flavours.',
     btnText: '',
     link: '#',
     image: '/webp/homeWelcome.webp'
@@ -61,7 +61,7 @@
     goTo: 'Cocktails',
     goBack: 'Start',
     title: 'Pad Thai',
-    pText: '[SUBTITLE TEXT HERE]',
+    pText: 'Dive into the rich flavors of Thailand with our expertly crafted Pad Thai.',
     btnText: 'Discover Our Menus',
     link: 'menus',
     image: '/webp/homeMenusFood.webp',
@@ -72,7 +72,7 @@
     goTo: 'Order',
     goBack: 'Menus',
     title: 'Green Basil Cocktail',
-    pText: '[SUBTITLE TEXT HERE]',
+    pText: 'Thai-inspired cocktails blend tradition with a twist.',
     btnText: 'Explore Cocktails',
     link: 'menus',
     image: '/webp/homeMenusDrinks.webp'
@@ -83,7 +83,7 @@
     goTo: 'Contact',
     goBack: 'Cocktails',
     title: 'Order Online',
-    pText: '[SUBTITLE TEXT HERE]',
+    pText: 'Your favourite dishes, just a click away. Start your order now.',
     btnText: 'Order Online',
     link: 'order',
     image: '/webp/homeOrderOnline.webp'
@@ -94,7 +94,7 @@
     goTo: 'Partnerships',
     goBack: 'Order',
     title: 'Connect With Us',
-    pText: '[SUBTITLE TEXT HERE]',
+    pText: 'Your feedback fuels our passion! Get in touch and share your experience.',
     btnText: 'Contact Us',
     link: 'contact',
     image: '/webp/homeContact.webp'
@@ -116,7 +116,7 @@
     goTo: 'Reservations',
     goBack: 'Partnerships',
     title: 'The Basil Identity',
-    pText: '[SUBTITLE TEXT HERE]',
+    pText: 'Authentic Thai flavors with a modern twist — our journey is rooted in tradition and driven by passion.',
     btnText: 'Learn About Us',
     link: 'identity',
     image: '/webp/homeStory.webp'
@@ -127,7 +127,7 @@
     goTo: 'Start',
     goBack: 'About',
     title: 'Reserve a Seat',
-    pText: '[SUBTITLE TEXT HERE]',
+    pText: 'Secure your spot for an unforgettable Thai dining experience.',
     btnText: 'Book a Reservation',
     link: 'reservations',
     image: '/webp/homeReserve.webp'
