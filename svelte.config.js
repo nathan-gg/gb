@@ -54,9 +54,16 @@ const config = {
 
   kit: {
     adapter: adapter({
-      runtime: 'nodejs18.x',
-    })
+      pages: 'build',
+      assets: 'build',
+      fallback: null
+    }),
+    prerender: {
+      handleHttpError: 'warn' // optional: ignore missing assets during build
+    }
   }
 };
 
 export default config;
+
+
