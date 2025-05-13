@@ -100,16 +100,16 @@
     image: '/webp/homeContact.webp'
   };
 
-  const partnerships = {
-    thisRef: 'Partnerships',
-    goTo: 'About',
-    goBack: 'Contact',
-    title: 'Our Partnerships',
-    pText: '[SUBTITLE TEXT HERE]',
-    btnText: 'Discover Partnerships',
-    link: 'partnerships',
-    image: '/webp/homePartnerships.webp'
-  };
+  // const partnerships = {
+  //   thisRef: 'Partnerships',
+  //   goTo: 'About',
+  //   goBack: 'Contact',
+  //   title: 'Our Partnerships',
+  //   pText: '[SUBTITLE TEXT HERE]',
+  //   btnText: 'Discover Partnerships',
+  //   link: 'partnerships',
+  //   image: '/webp/homePartnerships.webp'
+  // };
 
   const about = {
     thisRef: 'About',
@@ -214,7 +214,7 @@
     class="snap-start snap-normal"
   />
   
-  <Home
+  <!-- <Home
     thisRef={partnerships.thisRef}
     goTo={partnerships.goTo}
     goBack={partnerships.goBack}
@@ -227,7 +227,7 @@
     isScrolling={isScrolling}
     container={container}
     class="snap-start snap-normal"
-  />
+  /> -->
   
   <Home
     thisRef={about.thisRef}
