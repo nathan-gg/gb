@@ -3,7 +3,7 @@
 	import { menuData } from '../data/menu-data.js';
 	import Footer from '/src/components/footer.svelte';
 	import { setGlobalOptions } from 'svelte-scrolling';
-
+	import IntersectionObserver from 'svelte-intersection-observer';
 
 	// Shared state for tracking scrolling across components
 	let isScrolling = $state(false);
@@ -85,11 +85,11 @@
 		showDinner = false;
 	}
 
-	let showTOC = $state(false);
+	let showTOC = $state(true);
 
 	function toggleTOC() {
 		showTOC = !showTOC;
-		if (showTOC === false){
+		if (showTOC === false) {
 			showBar = false;
 			showWine = false;
 			showHH = false;
@@ -133,124 +133,144 @@
 		};
 	}
 
-
 	function handleClickOutside(event) {
 		alert('Click outside!');
 	}
 </script>
 
 <section class="bg-tertiary flex">
-
 	<!-- mobile spice index -->
 	{#if showSpice}
-	<div 
-	transition:fade={{
-		delay: 0,
-		duration: 250,
-		easing: sineInOut,
-		x: 500,
-		y: 0
-	}}
-	class="z-50 fixed w-screen h-[calc(100vh-64px)] flex flex-col md:hidden items-center justify-center bg-black/50">
-		<div class="bg-tertiary border-2 w-4/5 h-fit border-primary flex flex-col p-8 items-start">
-			<button onclick={toggleSpice} class="text-lightText hover:text-darkText self-end">
-				<span class="material-icons md-24">close</span>
-			</button>
-		
-			<div class="inline-flex items-center my-4">
-				<span class="font-semibold text-[#D08111] text-3xl ml-1 mr-2">GF</span>
-				<p class="font-DMSans text-darkText text-xl">
-					- Gluten Free</p>
-			</div>
-			<div class="inline-flex items-center my-4">
-				<img src="/spiceMild.svg" alt="Mild Spice" class="inline-block h-12 w-12"/>
-				<p class="font-DMSans text-darkText text-xl">- Very Mild</p>
-			</div>
-			
-			<div class="inline-flex items-center my-4">
-				<img src="/spiceMedium.svg" alt="Mild Spice" class="inline-block h-12 w-12"/>
-				<p class="font-DMSans text-darkText text-xl">- Mild</p>
-			</div>
-			<div class="inline-flex items-center my-4">
-				<img src="/spiceHot.svg" alt="Mild Spice" class="inline-block h-12 w-12"/>
-				<p class="font-DMSans text-darkText text-xl">- Hot</p>
-			</div>
-			<div class="inline-flex items-center my-4">
-				<img src="/spiceVeryHot.svg" alt="Mild Spice" class="inline-block h-12 w-12"/>
-				<p class="font-DMSans text-darkText text-xl">- Very Hot</p>
+		<div
+			transition:fade={{
+				delay: 0,
+				duration: 250,
+				easing: sineInOut,
+				x: 500,
+				y: 0
+			}}
+			class="fixed z-50 flex h-[calc(100vh-64px)] w-screen flex-col items-center justify-center bg-black/50 md:hidden"
+		>
+			<div class="bg-tertiary border-primary flex h-fit w-4/5 flex-col items-start border-2 p-8">
+				<button onclick={toggleSpice} class="text-lightText hover:text-darkText self-end">
+					<span class="material-icons md-24">close</span>
+				</button>
+
+				<div class="my-4 inline-flex items-center">
+					<span class="mr-2 ml-1 text-3xl font-semibold text-[#D08111]">GF</span>
+					<p class="font-DMSans text-darkText text-xl">- Gluten Free</p>
+				</div>
+				<div class="my-4 inline-flex items-center">
+					<img src="/spiceMild.svg" alt="Mild Spice" class="inline-block h-12 w-12" />
+					<p class="font-DMSans text-darkText text-xl">- Very Mild</p>
+				</div>
+
+				<div class="my-4 inline-flex items-center">
+					<img src="/spiceMedium.svg" alt="Mild Spice" class="inline-block h-12 w-12" />
+					<p class="font-DMSans text-darkText text-xl">- Mild</p>
+				</div>
+				<div class="my-4 inline-flex items-center">
+					<img src="/spiceHot.svg" alt="Mild Spice" class="inline-block h-12 w-12" />
+					<p class="font-DMSans text-darkText text-xl">- Hot</p>
+				</div>
+				<div class="my-4 inline-flex items-center">
+					<img src="/spiceVeryHot.svg" alt="Mild Spice" class="inline-block h-12 w-12" />
+					<p class="font-DMSans text-darkText text-xl">- Very Hot</p>
+				</div>
 			</div>
 		</div>
-
-
-	</div>
 	{:else}
-	<button class="z-20 fixed bottom-2 left-2 md:hidden" onclick={toggleSpice}>
-		<img src="spiceShow.svg" class="w-8 h-8" alt="Open Spice Index" />
-	</button>
+		<button class="fixed bottom-2 left-2 z-20 md:hidden" onclick={toggleSpice}>
+			<img src="spiceShow.svg" class="h-8 w-8" alt="Open Spice Index" />
+		</button>
 	{/if}
 
 	<!-- desktop spice index -->
 	{#if showSpice}
-	<div 
-	transition:fade={{
-		delay: 0,
-		duration: 250,
-		easing: sineInOut,
-		x: 500,
-		y: 0
-	}}
-	class="z-50 fixed {showTOC ? 'w-53/128' : 'w-1/2'} h-[calc(100vh-64px)] right-0 flex-col hidden md:flex items-center justify-center overscroll-contain">
-		<div class="bg-tertiary border-2 min-w-fit w-2/5 h-fit border-primary flex flex-col p-8 items-start">
-			<button onclick={toggleSpice} class="text-lightText hover:text-darkText self-end">
-				<span class="material-icons md-24">close</span>
-			</button>
-		
-			<div class="inline-flex items-center my-4">
-				<span class="font-semibold text-[#D08111] text-3xl xl:text-5xl ml-1 mr-2">GF</span>
-				<p class="font-DMSans text-darkText lg:text-xl xl:text-2xl whitespace-nowrap">
-					- Gluten Free</p>
-			</div>
-			<div class="inline-flex items-center my-4">
-				<img src="/spiceMild.svg" alt="Mild Spice" class="inline-block h-12 w-12 xl:h-16 xl:w-16"/>
-				<p class="font-DMSans text-darkText lg:text-xl xl:text-2xl whitespace-nowrap">- Very Mild</p>
-			</div>
-			
-			<div class="inline-flex items-center my-4">
-				<img src="/spiceMedium.svg" alt="Mild Spice" class="inline-block h-12 w-12 xl:h-16 xl:w-16"/>
-				<p class="font-DMSans text-darkText lg:text-xl xl:text-2xl">- Mild</p>
-			</div>
-			<div class="inline-flex items-center my-4">
-				<img src="/spiceHot.svg" alt="Mild Spice" class="inline-block h-12 w-12 xl:h-16 xl:w-16"/>
-				<p class="font-DMSans text-darkText lg:text-xl xl:text-2xl">- Hot</p>
-			</div>
-			<div class="inline-flex items-center my-4">
-				<img src="/spiceVeryHot.svg" alt="Mild Spice" class="inline-block h-12 w-12 xl:h-16 xl:w-16"/>
-				<p class="font-DMSans text-darkText lg:text-xl xl:text-2xl whitespace-nowrap">- Very Hot</p>
+		<div
+			transition:fade={{
+				delay: 0,
+				duration: 250,
+				easing: sineInOut,
+				x: 500,
+				y: 0
+			}}
+			class="fixed z-50 {showTOC
+				? 'w-53/128'
+				: 'w-1/2'} right-0 hidden h-[calc(100vh-64px)] flex-col items-center justify-center overscroll-contain md:flex"
+		>
+			<div
+				class="bg-tertiary border-primary flex h-fit w-2/5 min-w-fit flex-col items-start border-2 p-8"
+			>
+				<button onclick={toggleSpice} class="text-lightText hover:text-darkText self-end">
+					<span class="material-icons md-24">close</span>
+				</button>
+
+				<div class="my-4 inline-flex items-center">
+					<span class="mr-2 ml-1 text-3xl font-semibold text-[#D08111] xl:text-5xl">GF</span>
+					<p class="font-DMSans text-darkText whitespace-nowrap lg:text-xl xl:text-2xl">
+						- Gluten Free
+					</p>
+				</div>
+				<div class="my-4 inline-flex items-center">
+					<img
+						src="/spiceMild.svg"
+						alt="Mild Spice"
+						class="inline-block h-12 w-12 xl:h-16 xl:w-16"
+					/>
+					<p class="font-DMSans text-darkText whitespace-nowrap lg:text-xl xl:text-2xl">
+						- Very Mild
+					</p>
+				</div>
+
+				<div class="my-4 inline-flex items-center">
+					<img
+						src="/spiceMedium.svg"
+						alt="Mild Spice"
+						class="inline-block h-12 w-12 xl:h-16 xl:w-16"
+					/>
+					<p class="font-DMSans text-darkText lg:text-xl xl:text-2xl">- Mild</p>
+				</div>
+				<div class="my-4 inline-flex items-center">
+					<img
+						src="/spiceHot.svg"
+						alt="Mild Spice"
+						class="inline-block h-12 w-12 xl:h-16 xl:w-16"
+					/>
+					<p class="font-DMSans text-darkText lg:text-xl xl:text-2xl">- Hot</p>
+				</div>
+				<div class="my-4 inline-flex items-center">
+					<img
+						src="/spiceVeryHot.svg"
+						alt="Mild Spice"
+						class="inline-block h-12 w-12 xl:h-16 xl:w-16"
+					/>
+					<p class="font-DMSans text-darkText whitespace-nowrap lg:text-xl xl:text-2xl">
+						- Very Hot
+					</p>
+				</div>
 			</div>
 		</div>
-
-
-	</div>
 	{:else}
-	<button class="z-20 fixed bottom-2 left-2 xl:bottom-4 xl:left-4 md:flex hidden" onclick={toggleSpice}>
-		<img src="spiceShow.svg" class="w-8 h-8 xl:h-16 xl:w-16" alt="Open Spice Index" />
-	</button>
+		<button
+			class="fixed bottom-2 left-2 z-20 hidden md:flex xl:bottom-4 xl:left-4"
+			onclick={toggleSpice}
+		>
+			<img src="spiceShow.svg" class="h-8 w-8 xl:h-16 xl:w-16" alt="Open Spice Index" />
+		</button>
 	{/if}
 
-
-	<div class="absolute z-30 hidden lg:flex w-fit justify-between ml-2  ">
+	<div class=" absolute z-20 ml-2 hidden w-fit justify-between lg:flex">
 		{#if showTOC}
 			<!-- <button onclick={toggleTOC} class:active={showTOC} class="text-lightText hover:text-darkText">
 				<span class="material-icons md-36">keyboard_arrow_left</span>
 			</button> -->
 		{:else}
-			<button onclick={toggleTOC} class="text-lightText hover:text-darkText mt-[46vh]">
-				<span class="material-icons md-36">keyboard_arrow_right</span>
+			<button onclick={toggleTOC} class="text-darkText mt-[46vh]">
+				<span class="material-icons md-60">keyboard_arrow_right</span>
 			</button>
 		{/if}
 	</div>
-
-	
 
 	{#if showTOC}
 		<div
@@ -259,143 +279,281 @@
 				duration: 250,
 				axis: 'x'
 			}}
-			class="font-DMSans text-lightText left-0 hidden lg:flex h-[calc(100vh-16px)]  w-1/4 items-center pl-6 text-3xl  "
+			class="font-DMSans text-darkText left-0 hidden h-[calc(100vh-16px)] w-1/4 items-center pl-6 text-3xl lg:flex"
 		>
-			<div class=" flex flex-col border-r border-r-[#9B9893] pr-4 min-w-fit">
+			<div
+				class="group text-darkText flex h-fit min-w-fit flex-col border-r border-r-[#9B9893] pr-4"
+			>
 				{#if showDinner}
-					<button class="text-darkText text-left" onclick={toggleDinner}>Dinner</button>
+					<button
+						class=" group text-left {showDinner === true
+							? 'opacity-100'
+							: 'group-hover:opacity-50 hover:!opacity-100'}"
+						onclick={toggleDinner}>Dinner</button
+					>
 					<div
 						transition:slide={{
 							duration: 250,
 							easing: quintInOut
 						}}
-						class="flex flex-col text-lg"
+						class="group flex flex-col text-lg"
 					>
-						<a href="/full-menu#soups" class="hover:text-darkText mb-2 inline-block">Soups</a>
-						<a href="/full-menu#appetizers" class="hover:text-darkText mb-2 inline-block"
+						<a
+							href="/full-menu#soups"
+							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+							>Soups</a
+						>
+						<a
+							href="/full-menu#appetizers"
+							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
 							>Appetizers</a
 						>
-						<a href="/full-menu#salad" class="hover:text-darkText mb-2 inline-block">Salad</a>
-						<a href="/full-menu#curry" class="hover:text-darkText mb-2 inline-block">Curry</a>
-						<a href="/full-menu#stir-fried" class="hover:text-darkText mb-2 inline-block"
+						<a
+							href="/full-menu#salad"
+							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+							>Salad</a
+						>
+						<a
+							href="/full-menu#curry"
+							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+							>Curry</a
+						>
+						<a
+							href="/full-menu#stir-fried"
+							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
 							>Stir Fried</a
 						>
-						<a href="/full-menu#noodles" class="hover:text-darkText mb-2 inline-block">Noodles</a>
-						<a href="/full-menu#vegetables" class="hover:text-darkText mb-2 inline-block"
+						<a
+							href="/full-menu#noodles"
+							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+							>Noodles</a
+						>
+						<a
+							href="/full-menu#vegetables"
+							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
 							>Vegetables</a
 						>
 
-						<a href="/full-menu#rice" class="hover:text-darkText mb-2 inline-block">Rice</a>
-						<a href="/full-menu#specialties" class="hover:text-darkText mb-2 inline-block"
+						<a
+							href="/full-menu#rice"
+							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+							>Rice</a
+						>
+						<a
+							href="/full-menu#specialties"
+							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
 							>Specialties</a
 						>
-						<a href="/full-menu#desserts" class="hover:text-darkText mb-2 inline-block">Desserts</a>
-						<a href="/full-menu#combinations" class="hover:text-darkText mb-2 inline-block"
+						<a
+							href="/full-menu#desserts"
+							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+							>Desserts</a
+						>
+						<a
+							href="/full-menu#combinations"
+							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
 							>Combinations</a
 						>
 					</div>
 				{:else}
-					<button class="hover:text-darkText text-left" onclick={toggleDinner}>Dinner</button>
+					<button
+						class="text-darkText text-left group-hover:opacity-50 hover:!opacity-100"
+						onclick={toggleDinner}>Dinner</button
+					>
 				{/if}
 
 				{#if showHH}
-					<button class="text-darkText mt-4 text-left" onclick={toggleHH}>Happy Hour</button>
+					<button
+						class="text-darkText group mt-4 text-left {showHH === true
+							? 'opacity-100'
+							: 'group-hover:opacity-50 hover:!opacity-100'}"
+						onclick={toggleHH}>Happy Hour</button
+					>
 					<div
 						transition:slide={{
 							duration: 250,
 							easing: quintInOut
 						}}
-						class="flex flex-col text-xl"
+						class="group flex flex-col text-xl"
 					>
-						<a href="/full-menu#happy-hour" class="hover:text-darkText mb-2 inline-block"
+						<a
+							href="/full-menu#happy-hour"
+							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
 							>Happy Hour Menu</a
 						>
 					</div>
 				{:else}
-					<button class="hover:text-darkText mt-4 text-left" onclick={toggleHH}>Happy Hour</button>
+					<button
+						class="text-darkText mt-4 text-left group-hover:opacity-50 hover:!opacity-100"
+						onclick={toggleHH}>Happy Hour</button
+					>
 				{/if}
 
 				{#if showBar}
-					<button class="text-darkText mt-4 text-left" onclick={toggleBar}>Bar</button>
+					<button
+						class="text-darkText group mt-4 text-left {showBar === true
+							? 'opacity-100'
+							: 'group-hover:opacity-50 hover:!opacity-100'}"
+						onclick={toggleBar}>Bar</button
+					>
 					<div
 						transition:slide={{
 							duration: 250,
 							easing: quintInOut
 						}}
-						class="flex flex-col text-xl"
+						class="group flex flex-col text-xl"
 					>
-						<a href="/full-menu#ctsd" class="hover:text-darkText mb-2 inline-block"
+						<a
+							href="/full-menu#ctsd"
+							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
 							>Coffee, Tea & Soft Drinks</a
 						>
 
-						<a href="/full-menu#non-spirited" class="hover:text-darkText mb-2 inline-block"
+						<a
+							href="/full-menu#non-spirited"
+							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
 							>Non-Spirited</a
 						>
-						<a href="/full-menu#signature-cocktails" class="hover:text-darkText mb-2 inline-block"
+						<a
+							href="/full-menu#signature-cocktails"
+							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
 							>Signature Cocktails</a
 						>
-						<a href="/full-menu#classic-cocktails" class="hover:text-darkText mb-2 inline-block"
+						<a
+							href="/full-menu#classic-cocktails"
+							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
 							>Classic Cocktails</a
 						>
 
-						<a href="/full-menu#beer" class="hover:text-darkText mb-2 inline-block">Beer</a>
+						<a
+							href="/full-menu#beer"
+							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+							>Beer</a
+						>
 
-						<a href="/full-menu#cider" class="hover:text-darkText mb-2 inline-block">Cider</a>
-						<a href="/full-menu#vodka" class="hover:text-darkText mb-2 inline-block">Vodka</a>
-						<a href="/full-menu#gin" class="hover:text-darkText mb-2 inline-block">Gin</a>
-						<a href="/full-menu#rum" class="hover:text-darkText mb-2 inline-block">Rum</a>
-						<a href="/full-menu#tequila" class="hover:text-darkText mb-2 inline-block">Tequila</a>
-						<a href="/full-menu#whisky" class="hover:text-darkText mb-2 inline-block">Whisky</a>
-						<a href="/full-menu#scotch" class="hover:text-darkText mb-2 inline-block">Scotch</a>
-						<a href="/full-menu#brandy" class="hover:text-darkText mb-2 inline-block">Brandy</a>
-						<a href="/full-menu#aperitif-digestif" class="hover:text-darkText mb-2 inline-block"
+						<a
+							href="/full-menu#cider"
+							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+							>Cider</a
+						>
+						<a
+							href="/full-menu#vodka"
+							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+							>Vodka</a
+						>
+						<a
+							href="/full-menu#gin"
+							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+							>Gin</a
+						>
+						<a
+							href="/full-menu#rum"
+							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+							>Rum</a
+						>
+						<a
+							href="/full-menu#tequila"
+							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+							>Tequila</a
+						>
+						<a
+							href="/full-menu#whisky"
+							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+							>Whisky</a
+						>
+						<a
+							href="/full-menu#scotch"
+							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+							>Scotch</a
+						>
+						<a
+							href="/full-menu#brandy"
+							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+							>Brandy</a
+						>
+						<a
+							href="/full-menu#aperitif-digestif"
+							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
 							>Aperitif & Digestif</a
 						>
-						<a href="/full-menu#vermouth-liqueurs" class="hover:text-darkText mb-2 inline-block"
+						<a
+							href="/full-menu#vermouth-liqueurs"
+							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
 							>Vermouth & Liquers</a
 						>
-						<a href="/full-menu#sct" class="hover:text-darkText mb-2 inline-block"
+						<a
+							href="/full-menu#sct"
+							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
 							>Specialty Coffee & Tea</a
 						>
 					</div>
 				{:else}
-					<button class="hover:text-darkText mt-4 text-left" onclick={toggleBar}>Bar</button>
+					<button
+						class="text-darkText mt-4 text-left group-hover:opacity-50 hover:!opacity-100"
+						onclick={toggleBar}>Bar</button
+					>
 				{/if}
 
 				{#if showWine}
-					<button class="text-darkText mt-4 text-left" onclick={toggleWine}>Wine</button>
+					<button
+						class="text-darkText group mt-4 text-left {showWine === true
+							? 'opacity-100'
+							: 'group-hover:opacity-50 hover:!opacity-100'}"
+						onclick={toggleWine}>Wine</button
+					>
 					<div
 						transition:slide={{
 							duration: 250,
 							easing: quintInOut
 						}}
-						class="flex flex-col text-xl"
+						class="group flex flex-col text-xl"
 					>
-						<a href="/full-menu#featured-wine" class="hover:text-darkText mb-2 inline-block"
+						<a
+							href="/full-menu#featured-wine"
+							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
 							>Featured Wine</a
 						>
-						<a href="/full-menu#white-wines" class="hover:text-darkText mb-2 inline-block"
+						<a
+							href="/full-menu#white-wines"
+							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
 							>White Wines</a
 						>
-						<a href="/full-menu#rose" class="hover:text-darkText mb-2 inline-block">Rosé</a>
-						<a href="/full-menu#red-wines" class="hover:text-darkText mb-2 inline-block"
+						<a
+							href="/full-menu#rose"
+							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+							>Rosé</a
+						>
+						<a
+							href="/full-menu#red-wines"
+							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
 							>Red Wines</a
 						>
 					</div>
 				{:else}
-					<button class="hover:text-darkText mt-4 text-left" onclick={toggleWine}>Wine</button>
+					<button
+						class=" text-darkText mt-4 text-left group-hover:opacity-50 hover:!opacity-100"
+						onclick={toggleWine}>Wine</button
+					>
 				{/if}
 			</div>
 
-			<button onclick={toggleTOC} class:active={showTOC} class="text-lightText hover:text-darkText w-fit mt-[-2vh] z-10  ">
-				<span class="material-icons md-36">keyboard_arrow_left</span>
+			<button
+				onclick={toggleTOC}
+				class:active={showTOC}
+				class="text-lightText hover:text-darkText z-10 mt-[-2vh] w-fit"
+			>
+				<span class="material-icons md-60">keyboard_arrow_left</span>
 			</button>
 		</div>
 	{/if}
 
-	<div class="fixed z-30 lg:hidden w-fit justify-between mt-[46vh]">
+	<div class="fixed z-30 mt-[46vh] w-fit justify-between lg:hidden">
 		{#if showTOC}
-			<button onclick={toggleTOC} class:active={showTOC} class="text-lightText hover:text-darkText fixed">
+			<button
+				onclick={toggleTOC}
+				class:active={showTOC}
+				class="text-lightText hover:text-darkText fixed"
+			>
 				<span class="material-icons md-24">keyboard_arrow_left</span>
 			</button>
 		{:else}
@@ -412,8 +570,8 @@
 				duration: 250,
 				axis: 'x'
 			}}
-			class="font-DMSans text-lightText bg-tertiary lg:hidden flex flex-auto flex-col text-3xl 
-			fixed z-20 w-full h-[calc(100vh-16px)] items-center justify-center"
+			class="font-DMSans text-lightText bg-tertiary fixed z-20 flex h-[calc(100vh-16px)] w-full
+			flex-auto flex-col items-center justify-center text-3xl lg:hidden"
 		>
 			<!-- Back to top button
 			{#if showBar || showWine || showHH}
@@ -424,19 +582,19 @@
 					<span class="material-icons">arrow_upward</span>
 				</button>
 			{/if} -->
-			
-			<div class="flex flex-col w-full h-full items-center justify-center">
-				<div 
-					
-					class="scroll-toc flex flex-col w-3/4 max-h-[100vh] overflow-y-auto "
-				>
+
+			<div class="flex h-full w-full flex-col items-center justify-center">
+				<div class="scroll-toc flex max-h-[100vh] w-3/4 flex-col overflow-y-auto">
 					<!-- "Back to top" anchor for scrolling to top -->
 					<!-- <div id="toc-top"></div> -->
-					
-					<button class={showDinner ? "text-darkText text-left" : "hover:text-darkText text-left"} onclick={toggleDinner}>
+
+					<button
+						class={showDinner ? 'text-darkText text-left' : 'hover:text-darkText text-left'}
+						onclick={toggleDinner}
+					>
 						Dinner
 					</button>
-					
+
 					{#if showDinner}
 						<div
 							transition:slide={{
@@ -445,35 +603,72 @@
 							}}
 							class="flex flex-col text-lg"
 						>
-							<a href="/full-menu#soups" class="hover:text-darkText mb-2 inline-block" onclick={toggleTOC}>Soups</a>
-							<a href="/full-menu#appetizers" class="hover:text-darkText mb-2 inline-block" onclick={toggleTOC}
-								>Appetizers</a
+							<a
+								href="/full-menu#soups"
+								class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+								onclick={toggleTOC}>Soups</a
 							>
-							<a href="/full-menu#salad" class="hover:text-darkText mb-2 inline-block" onclick={toggleTOC}>Salad</a>
-							<a href="/full-menu#curry" class="hover:text-darkText mb-2 inline-block" onclick={toggleTOC}>Curry</a>
-							<a href="/full-menu#stir-fried" class="hover:text-darkText mb-2 inline-block" onclick={toggleTOC}
-								>Stir Fried</a
+							<a
+								href="/full-menu#appetizers"
+								class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+								onclick={toggleTOC}>Appetizers</a
 							>
-							<a href="/full-menu#noodles" class="hover:text-darkText mb-2 inline-block" onclick={toggleTOC}>Noodles</a>
-							<a href="/full-menu#vegetables" class="hover:text-darkText mb-2 inline-block" onclick={toggleTOC}
-								>Vegetables</a
+							<a
+								href="/full-menu#salad"
+								class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+								onclick={toggleTOC}>Salad</a
+							>
+							<a
+								href="/full-menu#curry"
+								class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+								onclick={toggleTOC}>Curry</a
+							>
+							<a
+								href="/full-menu#stir-fried"
+								class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+								onclick={toggleTOC}>Stir Fried</a
+							>
+							<a
+								href="/full-menu#noodles"
+								class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+								onclick={toggleTOC}>Noodles</a
+							>
+							<a
+								href="/full-menu#vegetables"
+								class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+								onclick={toggleTOC}>Vegetables</a
 							>
 
-							<a href="/full-menu#rice" class="hover:text-darkText mb-2 inline-block" onclick={toggleTOC}>Rice</a>
-							<a href="/full-menu#specialties" class="hover:text-darkText mb-2 inline-block" onclick={toggleTOC}
-								>Specialties</a
+							<a
+								href="/full-menu#rice"
+								class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+								onclick={toggleTOC}>Rice</a
 							>
-							<a href="/full-menu#desserts" class="hover:text-darkText mb-2 inline-block" onclick={toggleTOC}>Desserts</a>
-							<a href="/full-menu#combinations" class="hover:text-darkText mb-2 inline-block" onclick={toggleTOC}
-								>Combinations</a
+							<a
+								href="/full-menu#specialties"
+								class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+								onclick={toggleTOC}>Specialties</a
+							>
+							<a
+								href="/full-menu#desserts"
+								class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+								onclick={toggleTOC}>Desserts</a
+							>
+							<a
+								href="/full-menu#combinations"
+								class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+								onclick={toggleTOC}>Combinations</a
 							>
 						</div>
 					{/if}
 
-					<button class={showHH ? "text-darkText mt-4 text-left" : "hover:text-darkText mt-4 text-left"} onclick={toggleHH}>
+					<button
+						class={showHH ? 'text-darkText mt-4 text-left' : 'hover:text-darkText mt-4 text-left'}
+						onclick={toggleHH}
+					>
 						Happy Hour
 					</button>
-					
+
 					{#if showHH}
 						<div
 							transition:slide={{
@@ -482,16 +677,21 @@
 							}}
 							class="flex flex-col text-xl"
 						>
-							<a href="/full-menu#happy-hour" class="hover:text-darkText mb-2 inline-block" onclick={toggleTOC}
-								>Happy Hour Menu</a
+							<a
+								href="/full-menu#happy-hour"
+								class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+								onclick={toggleTOC}>Happy Hour Menu</a
 							>
 						</div>
 					{/if}
 
-					<button class={showBar ? "text-darkText mt-4 text-left" : "hover:text-darkText mt-4 text-left"} onclick={toggleBar}>
+					<button
+						class={showBar ? 'text-darkText mt-4 text-left' : 'hover:text-darkText mt-4 text-left'}
+						onclick={toggleBar}
+					>
 						Bar
 					</button>
-					
+
 					{#if showBar}
 						<div
 							transition:slide={{
@@ -500,46 +700,99 @@
 							}}
 							class="flex flex-col text-xl"
 						>
-							<a href="/full-menu#ctsd" class="hover:text-darkText mb-2 inline-block" onclick={toggleTOC}
-								>Coffee, Tea & Soft Drinks</a
+							<a
+								href="/full-menu#ctsd"
+								class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+								onclick={toggleTOC}>Coffee, Tea & Soft Drinks</a
 							>
 
-							<a href="/full-menu#non-spirited" class="hover:text-darkText mb-2 inline-block" onclick={toggleTOC}
-								>Non-Spirited</a
+							<a
+								href="/full-menu#non-spirited"
+								class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+								onclick={toggleTOC}>Non-Spirited</a
 							>
-							<a href="/full-menu#signature-cocktails" class="hover:text-darkText mb-2 inline-block" onclick={toggleTOC}
-								>Signature Cocktails</a
+							<a
+								href="/full-menu#signature-cocktails"
+								class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+								onclick={toggleTOC}>Signature Cocktails</a
 							>
-							<a href="/full-menu#classic-cocktails" class="hover:text-darkText mb-2 inline-block" onclick={toggleTOC}
-								>Classic Cocktails</a
+							<a
+								href="/full-menu#classic-cocktails"
+								class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+								onclick={toggleTOC}>Classic Cocktails</a
 							>
 
-							<a href="/full-menu#beer" class="hover:text-darkText mb-2 inline-block" onclick={toggleTOC}>Beer</a>
+							<a
+								href="/full-menu#beer"
+								class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+								onclick={toggleTOC}>Beer</a
+							>
 
-							<a href="/full-menu#cider" class="hover:text-darkText mb-2 inline-block" onclick={toggleTOC}>Cider</a>
-							<a href="/full-menu#vodka" class="hover:text-darkText mb-2 inline-block" onclick={toggleTOC}>Vodka</a>
-							<a href="/full-menu#gin" class="hover:text-darkText mb-2 inline-block" onclick={toggleTOC}>Gin</a>
-							<a href="/full-menu#rum" class="hover:text-darkText mb-2 inline-block" onclick={toggleTOC}>Rum</a>
-							<a href="/full-menu#tequila" class="hover:text-darkText mb-2 inline-block" onclick={toggleTOC}>Tequila</a>
-							<a href="/full-menu#whisky" class="hover:text-darkText mb-2 inline-block" onclick={toggleTOC}>Whisky</a>
-							<a href="/full-menu#scotch" class="hover:text-darkText mb-2 inline-block" onclick={toggleTOC}>Scotch</a>
-							<a href="/full-menu#brandy" class="hover:text-darkText mb-2 inline-block" onclick={toggleTOC}>Brandy</a>
-							<a href="/full-menu#aperitif-digestif" class="hover:text-darkText mb-2 inline-block" onclick={toggleTOC}
-								>Aperitif & Digestif</a
+							<a
+								href="/full-menu#cider"
+								class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+								onclick={toggleTOC}>Cider</a
 							>
-							<a href="/full-menu#vermouth-liqueurs" class="hover:text-darkText mb-2 inline-block" onclick={toggleTOC}
-								>Vermouth & Liquers</a
+							<a
+								href="/full-menu#vodka"
+								class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+								onclick={toggleTOC}>Vodka</a
 							>
-							<a href="/full-menu#sct" class="hover:text-darkText mb-2 inline-block" onclick={toggleTOC}
-								>Specialty Coffee & Tea</a
+							<a
+								href="/full-menu#gin"
+								class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+								onclick={toggleTOC}>Gin</a
+							>
+							<a
+								href="/full-menu#rum"
+								class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+								onclick={toggleTOC}>Rum</a
+							>
+							<a
+								href="/full-menu#tequila"
+								class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+								onclick={toggleTOC}>Tequila</a
+							>
+							<a
+								href="/full-menu#whisky"
+								class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+								onclick={toggleTOC}>Whisky</a
+							>
+							<a
+								href="/full-menu#scotch"
+								class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+								onclick={toggleTOC}>Scotch</a
+							>
+							<a
+								href="/full-menu#brandy"
+								class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+								onclick={toggleTOC}>Brandy</a
+							>
+							<a
+								href="/full-menu#aperitif-digestif"
+								class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+								onclick={toggleTOC}>Aperitif & Digestif</a
+							>
+							<a
+								href="/full-menu#vermouth-liqueurs"
+								class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+								onclick={toggleTOC}>Vermouth & Liquers</a
+							>
+							<a
+								href="/full-menu#sct"
+								class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+								onclick={toggleTOC}>Specialty Coffee & Tea</a
 							>
 						</div>
 					{/if}
 
-					<button class={showWine ? "text-darkText mt-4 text-left" : "hover:text-darkText mt-4 text-left"} onclick={toggleWine}>
+					<button
+						class={showWine ? 'text-darkText mt-4 text-left' : 'hover:text-darkText mt-4 text-left'}
+						onclick={toggleWine}
+					>
 						Wine
 					</button>
-					
+
 					{#if showWine}
 						<div
 							transition:slide={{
@@ -548,15 +801,25 @@
 							}}
 							class="flex flex-col text-xl"
 						>
-							<a href="/full-menu#featured-wine" class="hover:text-darkText mb-2 inline-block" onclick={toggleTOC}
-								>Featured Wine</a
+							<a
+								href="/full-menu#featured-wine"
+								class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+								onclick={toggleTOC}>Featured Wine</a
 							>
-							<a href="/full-menu#white-wines" class="hover:text-darkText mb-2 inline-block" onclick={toggleTOC}
-								>White Wines</a
+							<a
+								href="/full-menu#white-wines"
+								class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+								onclick={toggleTOC}>White Wines</a
 							>
-							<a href="/full-menu#rose" class="hover:text-darkText mb-2 inline-block" onclick={toggleTOC}>Rosé</a>
-							<a href="/full-menu#red-wines" class="hover:text-darkText mb-2 inline-block" onclick={toggleTOC}
-								>Red Wines</a
+							<a
+								href="/full-menu#rose"
+								class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+								onclick={toggleTOC}>Rosé</a
+							>
+							<a
+								href="/full-menu#red-wines"
+								class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
+								onclick={toggleTOC}>Red Wines</a
 							>
 						</div>
 					{/if}

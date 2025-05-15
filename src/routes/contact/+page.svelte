@@ -1,50 +1,50 @@
 <script>
 	import { onMount } from 'svelte';
-  import { setGlobalOptions } from 'svelte-scrolling';
-  import Home from '/src/components/home.svelte';
-  import Header from '/src/components/head.svelte';
-  import Footer from '/src/components/footer.svelte';
-  
-  // Shared state for tracking scrolling across components
-  let isScrolling = $state(false);
-  
-  // Configure the container element
-  let container = $state();
-  
-  // Configure global scroll options with a custom scrollIntoView function
-  setGlobalOptions({
-    duration: 800,
-    offset: -64,
-    onStart: () => {
-      isScrolling = true;
-      // Temporarily disable scroll snapping during programmatic scrolling
-      if (container) {
-        container.style.scrollSnapType = 'none';
-      }
-      console.log('Scrolling started, isScrolling =', isScrolling);
-    },
-    onDone: () => {
-      isScrolling = false;
-      // Re-enable scroll snapping after programmatic scrolling
-      if (container) {
-        container.style.scrollSnapType = 'y mandatory';
-      }
-      console.log('Scrolling complete, isScrolling =', isScrolling);
-    },
-    // Custom scrollIntoView function that ensures scrolling happens within the container
-    scrollIntoViewFn: (element, options) => {
-      if (element && container) {
-        // Use the container as the scrolling context instead of window
-        const elementTop = element.offsetTop;
-        container.scrollTo({
-          top: elementTop + (options?.offset || 0),
-          behavior: options?.behavior || 'smooth'
-        });
-        return true; // Return true to indicate we handled the scroll
-      }
-      return false; // Let the default handler take over
-    }
-  });
+	import { setGlobalOptions } from 'svelte-scrolling';
+	import Home from '/src/components/home.svelte';
+	import Header from '/src/components/head.svelte';
+	import Footer from '/src/components/footer.svelte';
+
+	// Shared state for tracking scrolling across components
+	let isScrolling = $state(false);
+
+	// Configure the container element
+	let container = $state();
+
+	// Configure global scroll options with a custom scrollIntoView function
+	setGlobalOptions({
+		duration: 800,
+		offset: -64,
+		onStart: () => {
+			isScrolling = true;
+			// Temporarily disable scroll snapping during programmatic scrolling
+			if (container) {
+				container.style.scrollSnapType = 'none';
+			}
+			console.log('Scrolling started, isScrolling =', isScrolling);
+		},
+		onDone: () => {
+			isScrolling = false;
+			// Re-enable scroll snapping after programmatic scrolling
+			if (container) {
+				container.style.scrollSnapType = 'y mandatory';
+			}
+			console.log('Scrolling complete, isScrolling =', isScrolling);
+		},
+		// Custom scrollIntoView function that ensures scrolling happens within the container
+		scrollIntoViewFn: (element, options) => {
+			if (element && container) {
+				// Use the container as the scrolling context instead of window
+				const elementTop = element.offsetTop;
+				container.scrollTo({
+					top: elementTop + (options?.offset || 64),
+					behavior: options?.behavior || 'smooth'
+				});
+				return true; // Return true to indicate we handled the scroll
+			}
+			return false; // Let the default handler take over
+		}
+	});
 
 	import Contact from '/src/components/contact.svelte';
 
@@ -70,44 +70,43 @@
 </script>
 
 <section
-id="container" 
-  bind:this={container} 
-  class="h-screen overflow-y-auto overflow-x-hidden scroll-container">
-<Contact
-	thisRef={message.thisRef}
-	goTo={message.goTo}
-	title={message.title}
-	thaiTitle={message.thaiTitle}
-	body={message.body}
-	arrowText={message.arrowText}
-	image={message.image}
-	ifPage1={true}
-	ifPage2={false}
-	isScrolling={isScrolling}
-    container={container}
-    class="snap-start snap-normal"
-/>
+	id="container"
+	bind:this={container}
+	class="scroll-container h-screen overflow-x-hidden overflow-y-auto"
+>
+	<Contact
+		thisRef={message.thisRef}
+		goTo={message.goTo}
+		title={message.title}
+		thaiTitle={message.thaiTitle}
+		body={message.body}
+		arrowText={message.arrowText}
+		image={message.image}
+		ifPage1={true}
+		ifPage2={false}
+		{isScrolling}
+		{container}
+		class="snap-start snap-normal"
+	/>
 
-<Contact
-	thisRef={info.thisRef}
-	goBack={info.goBack}
-	title={info.title}
-	thaiTitle={info.thaiTitle}
-	body={info.body}
-	arrow={false}
-	prevArrow={true}
-	prevArrowText={info.prevArrowText}
-	image={info.image}
-	ifPage1={false}
-	ifPage2={true}
-	isScrolling={isScrolling}
-    container={container}
-    class="snap-start snap-normal"
-	
-/>
+	<Contact
+		thisRef={info.thisRef}
+		goBack={info.goBack}
+		title={info.title}
+		thaiTitle={info.thaiTitle}
+		body={info.body}
+		arrow={false}
+		prevArrow={true}
+		prevArrowText={info.prevArrowText}
+		image={info.image}
+		ifPage1={false}
+		ifPage2={true}
+		{isScrolling}
+		{container}
+		class="snap-start snap-normal"
+	/>
 
-<div class="bottom-0 z-50 snap-end snap-normal">
-    <Footer />
-  </div>
-
+	<div class="bottom-0 z-50 snap-end snap-normal">
+		<Footer />
+	</div>
 </section>

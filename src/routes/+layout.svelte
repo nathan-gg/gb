@@ -7,16 +7,16 @@
 	import ViewTransition from '../components/navigation.svelte';
 	import { setGlobalOptions } from 'svelte-scrolling';
 
-// Set global offset for all svelte-scrolling actions
-setGlobalOptions({ offset: -64 });
+	// Set global offset for all svelte-scrolling actions
+	setGlobalOptions({ offset: -64 });
 
-// 	import { Spring } from 'svelte/motion';
+	// 	import { Spring } from 'svelte/motion';
 
-// 	let coords = new Spring({ x: 50, y: 50 }, {
-// 	stiffness: 0.1,
-// 	damping: 0.25
-// });
-// 	let size = new Spring(10);
+	// 	let coords = new Spring({ x: 50, y: 50 }, {
+	// 	stiffness: 0.1,
+	// 	damping: 0.25
+	// });
+	// 	let size = new Spring(10);
 </script>
 
 <svelte:head>
@@ -28,7 +28,7 @@ setGlobalOptions({ offset: -64 });
 	<!-- <meta name="" content={''} /> This is for SEO -->
 </svelte:head>
 
-<div class="cursor-custom overflow-x-clip">
+<div class="cursor-custom overflow-clip">
 	<ViewTransition />
 
 	{#if $page.url.pathname !== '/'}
@@ -39,13 +39,12 @@ setGlobalOptions({ offset: -64 });
 
 	{@render children()}
 	<!-- {#if $page.url.pathname !== '/' && $page.url.pathname !== '/full-menu' && $page.url.pathname !== '/home'} -->
-	{#if $page.url.pathname !== '/' && $page.url.pathname !== '/full-menu' && $page.url.pathname !== '/home' && $page.url.pathname !== '/identity' && $page.url.pathname !== '/contact' }
+	{#if $page.url.pathname !== '/' && $page.url.pathname !== '/full-menu' && $page.url.pathname !== '/home' && $page.url.pathname !== '/identity' && $page.url.pathname !== '/contact'}
 		<div class="bottom-0 z-50">
 			<Footer />
 		</div>
 	{/if}
 </div>
-
 
 <!-- <svg
 	onmousemove={(e) => {
@@ -115,4 +114,3 @@ setGlobalOptions({ offset: -64 });
 		width: 100%;
 	}
 </style> -->
-

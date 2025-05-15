@@ -149,9 +149,11 @@
 
 						<div class="font-DMSans mt-8 mb-4 flex {groupIndex === 0 ? 'mt-4' : ''}">
 							<!-- {#if group.subheader !== title} -->
-								<p class="text-darkText w-4/5 flex-grow  text-xl md:text-3xl font-semibold whitespace-pre-line">
-									{group.subheader}
-								</p>
+							<p
+								class="text-darkText w-4/5 flex-grow text-xl font-semibold whitespace-pre-line md:text-3xl"
+							>
+								{group.subheader}
+							</p>
 							<!-- {/if} -->
 
 							{#if pCol1 || pCol2 || pCol3}
@@ -184,7 +186,7 @@
 
 					<!-- Menu Items -->
 					{#each group.items as item, i}
-						<div class="mb-4 text-md md:text-xl sm:text-xl ">
+						<div class="text-md mb-4 sm:text-xl md:text-xl">
 							<div class="flex justify-between">
 								<div class="text-darkText font-medium">
 									{#if item.name}
@@ -242,22 +244,22 @@
 							{/if}
 							{#if hasMultiplePrices(item)}
 								<div class="flex space-x-2">
-									{#if (group.groupPrice1 !== undefined) && item.p1 !== ""}
+									{#if group.groupPrice1 !== undefined && item.p1 !== ''}
 										<div class="text-darkText text-center">
 											<span class="font-bold">{group.groupPrice1}</span>
-											 - <span class="">{item.p1}</span>
+											- <span class="">{item.p1}</span>
 										</div>
 									{/if}
-									{#if (group.groupPrice2 !== undefined) && item.p2 !== ""}
+									{#if group.groupPrice2 !== undefined && item.p2 !== ''}
 										<div class="text-darkText text-center">
 											<span class="font-bold">{group.groupPrice2}</span>
-											 - <span class="">{item.p2}</span>
+											- <span class="">{item.p2}</span>
 										</div>
 									{/if}
-									{#if (group.groupPrice3 !== undefined) && item.p3 !== ""}
+									{#if group.groupPrice3 !== undefined && item.p3 !== ''}
 										<div class="text-darkText text-center">
 											<span class="font-bold">{group.groupPrice3}</span>
-											 - <span class="y">{item.p3}</span>
+											- <span class="y">{item.p3}</span>
 										</div>
 									{/if}
 								</div>
@@ -371,7 +373,9 @@
 										{#if item.tag}<span class="font-semibold text-[#D08111]">{item.tag}</span>{/if}
 									</p>
 									{#if item.description}
-										<p class="text-lightText text-sm whitespace-pre-line w-4/5">{item.description}</p>
+										<p class="text-lightText w-4/5 text-sm whitespace-pre-line">
+											{item.description}
+										</p>
 									{/if}
 									{#if item.region}
 										<p class="text-lightText text-sm whitespace-pre-line">{item.region}</p>

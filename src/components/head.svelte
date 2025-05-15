@@ -28,13 +28,12 @@
 		};
 	}
 
-
 	function handleClickOutside(event) {
 		alert('Click outside!');
 	}
 </script>
 
-<section class="overflow-x-hidden" use:clickOutside onclick_outside={handleClickOutside}>
+<section class="overflow-hidden" use:clickOutside onclick_outside={handleClickOutside}>
 	<div class="bg-primary h-16 w-full p-4 px-8 sm:p-4 sm:px-16">
 		<div class="z-30 flex justify-between">
 			<a href="/home">
@@ -44,7 +43,6 @@
 				<button onclick={toggleMenu} class:active={showMenu}>
 					<img src="closeMenu.svg" class="h-8 hover:cursor-pointer" alt="Close Website Directory" />
 				</button>
-				
 			{:else}
 				<button onclick={toggleMenu}>
 					<img src="menuBars.svg" class="h-8 hover:cursor-pointer" alt="Open Website Directory" />
@@ -65,17 +63,60 @@
 				}}
 				class="bg-tertiary text-darkText fixed top-16 right-0 z-20 flex h-screen w-full flex-col p-12 sm:w-1/2 md:w-1/4"
 			>
-				<div
-					class=" font-instrument flex flex-col justify-between text-right text-4xl sm:text-2xl lg:text-4xl"
+				<nav
+					class="font-instrument group flex flex-col justify-between text-right text-4xl sm:text-2xl lg:text-4xl"
 				>
-					<a href="/home" onclick={toggleMenu}>Home</a>
-					<a href="/menus" class="mt-2" onclick={toggleMenu}>Menus</a>
-					<a href="/order" class="mt-2" onclick={toggleMenu}>Order Online</a>
-					<a href="/identity" class="mt-2" onclick={toggleMenu}>The Basil Identity</a>
-					<a href="/careers" class="mt-2" onclick={toggleMenu}>Careers</a>
-					<a href="/reservations" class="mt-2" onclick={toggleMenu}>Reservations</a>
-					<a href="/contact" class="mt-2" onclick={toggleMenu}>Contact Us</a>
-				</div>
+					<a
+						href="/home"
+						onclick={toggleMenu}
+						class="transition-opacity duration-200 group-hover:opacity-50 hover:!opacity-100"
+					>
+						Home
+					</a>
+					<a
+						href="/menus"
+						onclick={toggleMenu}
+						class="mt-2 transition-opacity duration-200 group-hover:opacity-50 hover:!opacity-100"
+					>
+						Menus
+					</a>
+					<a
+						href="/order"
+						onclick={toggleMenu}
+						class="mt-2 transition-opacity duration-200 group-hover:opacity-50 hover:!opacity-100"
+					>
+						Order Online
+					</a>
+					<a
+						href="/identity"
+						onclick={toggleMenu}
+						class="mt-2 transition-opacity duration-200 group-hover:opacity-50 hover:!opacity-100"
+					>
+						The Basil Identity
+					</a>
+					<a
+						href="/careers"
+						onclick={toggleMenu}
+						class="mt-2 transition-opacity duration-200 group-hover:opacity-50 hover:!opacity-100"
+					>
+						Careers
+					</a>
+					<a
+						href="/reservations"
+						onclick={toggleMenu}
+						class="mt-2 transition-opacity duration-200 group-hover:opacity-50 hover:!opacity-100"
+					>
+						Reservations
+					</a>
+					<a
+						href="/contact"
+						onclick={toggleMenu}
+						class="mt-2 transition-opacity duration-200 group-hover:opacity-50 hover:!opacity-100"
+					>
+						Contact Us
+					</a>
+				</nav>
+
 				<div
 					class="font-DMSans mt-4 grid grid-cols-2 text-xs sm:mt-12 md:grid-cols-1 lg:grid-cols-2"
 				>

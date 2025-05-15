@@ -12,13 +12,13 @@
 	}
 </script>
 
-<section class="relative flex flex-col sm:flex-row h-fit">
+<section class="relative flex h-fit flex-col sm:flex-row">
 	<div class="flex sm:hidden">
-		<img src='/webp/orderOnlineMobile.webp' class="w-screen object-cover" alt="" />
+		<img src="/webp/orderOnlineMobile.webp" class="w-screen object-cover" alt="" />
 	</div>
-	<div class="bg-tertiary text-darkText flex sm:w-1/2 justify-center flex-col font-instrument">
-		<div class=" mx-8 sm:mx-16 md:mx-24 xl:mx-54 mt-16 mb-16 flex flex-col">
-			<h1 class="text-darkText text-6xl mb-4">{title}</h1>
+	<div class="bg-tertiary text-darkText font-instrument flex flex-col justify-center sm:w-1/2">
+		<div class=" mx-8 mt-16 mb-16 flex flex-col sm:mx-16 md:mx-24 xl:mx-54">
+			<h1 class="text-darkText mb-4 text-6xl">{title}</h1>
 			<h1 class="text-lightText mb-12 text-4xl">{thaiTitle}</h1>
 
 			<p class="font-DMSans">
@@ -27,7 +27,7 @@
 				> for exceptional and fast delivery service. We offer free in-house delivery for any order above
 				$25 within a 5 km radius.
 			</p>
-			<p class="mt-8 font-DMSans">
+			<p class="font-DMSans mt-8">
 				We also deliver through <span class=" font-[1000]">Doordash</span> and
 				<span class="font-[1000]">Uber Eats</span>, which can be accessed with the affiliate links
 				below.
@@ -65,7 +65,7 @@
 		</div>
 	</div>
 
-	<div class="w-1/2 flex-auto sm:flex hidden">
-		<img src='/webp/orderOnline1.webp' class="h-full object-cover w-full" alt="" />
+	<div class="hidden w-1/2 flex-auto sm:flex">
+		<img src="/webp/orderOnline1.webp" class="h-full w-full object-cover" alt="" />
 	</div>
 </section>
