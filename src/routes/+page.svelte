@@ -26,7 +26,7 @@
 		class="landing pointer-events-none absolute inset-0 z-[10] flex flex-col items-center justify-center"
 	>
 		<img src="landingLogo.svg" class="relative w-fit p-8 sm:-left-6" alt="Green Basil Thai Logo" />
-		<p class="text-secondary mt-24">Click to Enter</p>
+		<p class="text-secondary mt-24 font-DMSans">Click to Enter</p>
 	</div>
 
 	<div class="embla min-h-screen bg-black" use:emblaCarouselSvelte={{ options, plugins }}>

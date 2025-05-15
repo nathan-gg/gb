@@ -68,7 +68,11 @@
 	class=" bg-tertiary snap-align-start relative flex min-h-screen flex-col sm:flex-row {className}"
 >
 	<div class="flex sm:hidden">
-		<img src="/webp/careersKitchenHelperMobile.webp" class="w-screen object-cover" alt="" />
+		{#if ifPage1}
+			<img src="/webp/m-contact1.webp" class="w-screen object-cover" alt="" />
+		{:else}
+			<img src="/webp/m-contact2.webp" class="w-screen object-cover" alt="" />
+		{/if}
 	</div>
 	<div class=" text-darkText font-instrument flex flex-col items-center justify-center sm:w-1/2">
 		{#if prevArrow}
@@ -89,7 +93,7 @@
 				<h1 class="text-darkText mb-4 text-6xl">{title}</h1>
 				<h1 class="text-lightText mb-12 text-4xl">{thaiTitle}</h1>
 
-				<p class="text-darkText font-sans">
+				<p class="text-darkText font-DMSans">
 					{@html body}
 				</p>
 
@@ -218,6 +222,10 @@
 	</div>
 
 	<div class="hidden w-1/2 flex-auto sm:flex">
-		<img src={image} class="h-full w-full object-cover" alt="" />
+		{#if ifPage1}
+			<img src="/webp/contact1.webp" class="h-full w-full object-cover" alt="" />
+		{:else}
+			<img src="/webp/contact2.webp" class="h-full w-full object-cover" alt="" />
+		{/if}
 	</div>
 </section>

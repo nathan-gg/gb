@@ -6,7 +6,7 @@
 
 <section class="flex h-fit w-screen flex-col sm:flex-row">
 	<div class="flex sm:hidden">
-		<img src="/webp/orderOnlineMobile.webp" class="w-screen object-cover" alt="" />
+		<img src="/webp/m-reservations.webp" class="w-screen object-cover" alt="" />
 	</div>
 	<div class="bg-tertiary text-darkText font-instrument flex flex-col items-center sm:w-1/2">
 		<div class=" mx-8 mt-16 mb-16 flex flex-col sm:mx-16 md:mx-24 xl:mx-54">
