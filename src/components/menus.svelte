@@ -13,14 +13,15 @@
 			links: [
 				{ text: 'Soups', href: '/full-menu#soups' },
 				{ text: 'Appetizers', href: '/full-menu#appetizers' },
-				{ text: 'Salad', href: '/full-menu#salad' },
+				{ text: 'Salads', href: '/full-menu#salad' },
 				{ text: 'Curry', href: '/full-menu#curry' },
 				{ text: 'Stir Fried', href: '/full-menu#stir-fried' },
 				{ text: 'Noodles', href: '/full-menu#noodles' },
 				{ text: 'Vegetables', href: '/full-menu#vegetables' },
 				{ text: 'Rice', href: '/full-menu#rice' },
+				{ text: 'Specialties', href: '/full-menu#specialties' },
 				{ text: 'Desserts', href: '/full-menu#desserts' },
-				{ text: 'Specialties', href: '/full-menu#specialties' }
+				{ text: 'Combinations', href: '/full-menu#combinations' }
 			]
 		},
 		{

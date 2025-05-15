@@ -78,6 +78,10 @@
 	display: none;
 }
 
+.desktop-toc::-webkit-scrollbar {
+	display: none;
+}
+
 /* Rules for sizing the icon. */
 .material-icons.md-18 {
 	font-size: 18px;
@@ -264,4 +268,12 @@ html {
 }
 .embla__slide {
 	flex: 0 0 100%; /* Slide covers 80% of the viewport */
+}
+
+a {
+	cursor: pointer;
+}
+
+button {
+	cursor: pointer;
 }

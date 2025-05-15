@@ -44,7 +44,7 @@
 					</div>
 					<a
 						href="order"
-						class="md:4 hover:bg-secondary hover:text-primary mt-2 h-fit w-fit rounded-xl border-1 border-[#E0B87A] p-2 text-sm sm:border-2 md:text-lg"
+						class="md:4 hover:bg-secondary hover:text-primary font-DMSans mt-2 h-fit w-fit rounded-xl border-1 border-[#E0B87A] p-2 text-sm sm:border-2 md:text-lg"
 						>Make Reservation</a
 					>
 				</div>

@@ -33,7 +33,7 @@
 			if (targetElement && container) {
 				// Manual scroll within container
 				container.scrollTo({
-					top: targetElement.offsetTop -64,
+					top: targetElement.offsetTop - 64,
 					behavior: 'smooth'
 				});
 			} else {
@@ -52,7 +52,7 @@
 			if (targetElement && container) {
 				// Manual scroll within container
 				container.scrollTo({
-					top: targetElement.offsetTop -64,
+					top: targetElement.offsetTop - 64,
 					behavior: 'smooth'
 				});
 			} else {
@@ -67,7 +67,7 @@
 	use:scrollRef={thisRef}
 	id={thisRef}
 	data-scroll-ref={thisRef}
-	class=" bg-tertiary snap-start relative flex min-h-screen flex-col sm:flex-row {className}"
+	class=" bg-tertiary relative flex min-h-screen snap-start flex-col sm:flex-row {className}"
 >
 	<div class="flex sm:hidden">
 		<img src={imageMobile} class="w-screen object-cover" alt="" />
@@ -89,7 +89,7 @@
 			<h1 class="text-darkText mb-4 text-6xl">{title}</h1>
 			<h1 class="text-lightText mb-12 text-4xl">{thaiTitle}</h1>
 
-			<p class="text-darkText font-sans">
+			<p class="text-darkText font-DMSans">
 				{@html body}
 			</p>
 		</div>

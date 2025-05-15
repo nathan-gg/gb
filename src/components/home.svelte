@@ -69,33 +69,11 @@
 	<img src={image} class="absolute inset-0 h-full w-screen object-cover brightness-30" alt="" />
 
 	{#if firstSection}
-		{#if prevArrow}
-			<button
-				class="absolute top-1/8 w-screen text-center hover:cursor-pointer"
-				onclick={scrollPrev}
-			>
-				<span
-					class="material-icons md-48 top-1/4 mt-0 mb-12 sm:top-1/3 sm:mt-16 md:mt-8 md:mb-24 lg:mt-0 lg:mb-36 xl:mb-48"
-				>
-					keyboard_arrow_up
-				</span>
-			</button>
-		{/if}
-
 		<div class="relative flex w-screen flex-col items-center text-center">
 			<h1 class="px-4 text-6xl xl:text-8xl">{title}</h1>
 			<p class="font-DMSans mb-8 w-1/2 text-xl font-extralight md:w-2/3 md:text-4xl xl:w-1/3">
 				{pText}
 			</p>
-
-			<!-- {#if button}
-				<a
-					href={link}
-					class="border-secondary font-DMSans w-fit self-center rounded-md border-2 p-2 text-lg hover:font-bold sm:px-16 sm:text-2xl"
-				>
-					{btnText}
-				</a>
-			{/if} -->
 		</div>
 
 		{#if arrow}
@@ -103,11 +81,7 @@
 				class="absolute bottom-1/8 w-screen text-center hover:cursor-pointer"
 				onclick={scrollNext}
 			>
-				<span
-					class="material-icons md-48 bottom-1/4 mt-12 sm:bottom-1/3 md:mt-24 lg:mt-36 xl:mt-48"
-				>
-					keyboard_arrow_down
-				</span>
+				<span class="material-icons md-48"> keyboard_arrow_down </span>
 			</button>
 		{/if}
 	{:else}

@@ -97,19 +97,6 @@
 		}
 	}
 
-	// // Reference to the mobile TOC container for scrolling
-	// let mobileTocContainer;
-
-	// // Function to scroll to top of TOC when needed
-	// function scrollToTop() {
-	// 	if (mobileTocContainer) {
-	// 		mobileTocContainer.scrollTo({
-	// 			top: 0,
-	// 			behavior: 'smooth'
-	// 		});
-	// 	}
-	// }
-
 	let showSpice = $state(false);
 	let menuElement = $state();
 
@@ -146,14 +133,15 @@
 			links: [
 				{ text: 'Soups', href: '/full-menu#soups' },
 				{ text: 'Appetizers', href: '/full-menu#appetizers' },
-				{ text: 'Salad', href: '/full-menu#salad' },
+				{ text: 'Salads', href: '/full-menu#salad' },
 				{ text: 'Curry', href: '/full-menu#curry' },
 				{ text: 'Stir Fried', href: '/full-menu#stir-fried' },
 				{ text: 'Noodles', href: '/full-menu#noodles' },
 				{ text: 'Vegetables', href: '/full-menu#vegetables' },
 				{ text: 'Rice', href: '/full-menu#rice' },
+				{ text: 'Specialties', href: '/full-menu#specialties' },
 				{ text: 'Desserts', href: '/full-menu#desserts' },
-				{ text: 'Specialties', href: '/full-menu#specialties' }
+				{ text: 'Combinations', href: '/full-menu#combinations' }
 			]
 		},
 		{
@@ -348,10 +336,10 @@
 				duration: 250,
 				axis: 'x'
 			}}
-			class="font-DMSans text-darkText left-0 hidden h-[calc(100vh-16px)] w-1/4 items-center pl-6 text-3xl lg:flex"
+			class=" desktop-toc font-DMSans text-darkText order-r left-0 my-auto hidden h-[80vh] w-1/2 items-center overflow-y-auto border-r-[#9B9893] pl-6 text-3xl lg:flex"
 		>
 			<div
-				class="group text-darkText flex h-fit min-w-fit flex-col border-r border-r-[#9B9893] pr-4"
+				class="group text-darkText flex h-full max-h-full min-w-fit flex-col overflow-y-auto pr-4"
 			>
 				{#each menuCategories as section (section.id)}
 					<button
@@ -428,7 +416,7 @@
 				</button>
 			{/if} -->
 
-			<div class="flex h-full w-full flex-col items-center justify-center">
+			<div class="flex w-full flex-col items-center justify-center">
 				<div
 					class="scroll-toc group text-darkText flex max-h-[100vh] w-3/4 flex-col overflow-y-auto"
 				>
