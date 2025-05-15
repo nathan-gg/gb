@@ -11,6 +11,7 @@
 		btnText,
 		link,
 		image,
+		mobileImage,
 		button = true,
 		arrow = true,
 		prevArrow = false,
@@ -66,7 +67,20 @@
 	data-scroll-ref={thisRef}
 	class="font-instrument text-secondary snap-align-start relative flex h-[calc(100vh-4rem)] w-full items-center {className}"
 >
-	<img src={image} class="absolute inset-0 h-full w-screen object-cover brightness-30" alt="" />
+	{#if mobileImage}
+		<img
+			src={mobileImage}
+			class="absolute inset-0 h-full w-screen object-cover brightness-30 lg:hidden"
+			alt=""
+		/>
+		<img
+			src={image}
+			class="absolute inset-0 hidden h-full w-screen object-cover brightness-30 lg:flex"
+			alt=""
+		/>
+	{:else}
+		<img src={image} class="absolute inset-0 h-full w-screen object-cover brightness-30" alt="" />
+	{/if}
 
 	{#if firstSection}
 		<div class="relative flex w-screen flex-col items-center text-center">

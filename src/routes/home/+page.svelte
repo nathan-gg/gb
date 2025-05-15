@@ -117,11 +117,11 @@
 		goTo: 'Reservations',
 		goBack: 'Contact',
 		title: 'The Basil Identity',
-		pText:
-			'Authentic Thai flavors with a modern twist — our journey is rooted in tradition and driven by passion.',
+		pText: 'Authentic Thai flavors with a modern twist — our journey is driven by passion.',
 		btnText: 'Learn About Us',
 		link: 'identity',
-		image: '/webp/homeIdentity.webp'
+		image: '/webp/homeIdentity.webp',
+		mobileImage: '/webp/m-homeIdentity.webp'
 	};
 
 	const reservations = {
@@ -240,6 +240,7 @@
 		btnText={about.btnText}
 		link={about.link}
 		image={about.image}
+		mobileImage={about.mobileImage}
 		prevArrow={true}
 		{isScrolling}
 		{container}

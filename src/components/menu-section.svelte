@@ -463,10 +463,10 @@
 				</div>
 			{/if}
 		</div>
-		<div class="hidden w-1/2 object-cover lg:flex">
+		<div class="hidden w-1/2 lg:flex">
 			<img
 				src="/webp/{imagePath}.webp"
-				class=" h-full w-full object-cover"
+				class=" h-full w-full overflow-hidden object-cover"
 				alt="The {title} Section."
 			/>
 		</div>
