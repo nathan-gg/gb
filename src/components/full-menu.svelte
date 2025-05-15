@@ -136,6 +136,68 @@
 	function handleClickOutside(event) {
 		alert('Click outside!');
 	}
+
+	let openSection = $state('');
+
+	const menuCategories = [
+		{
+			id: 'dinner',
+			name: 'Dinner',
+			links: [
+				{ text: 'Soups', href: '/full-menu#soups' },
+				{ text: 'Appetizers', href: '/full-menu#appetizers' },
+				{ text: 'Salad', href: '/full-menu#salad' },
+				{ text: 'Curry', href: '/full-menu#curry' },
+				{ text: 'Stir Fried', href: '/full-menu#stir-fried' },
+				{ text: 'Noodles', href: '/full-menu#noodles' },
+				{ text: 'Vegetables', href: '/full-menu#vegetables' },
+				{ text: 'Rice', href: '/full-menu#rice' },
+				{ text: 'Desserts', href: '/full-menu#desserts' },
+				{ text: 'Specialties', href: '/full-menu#specialties' }
+			]
+		},
+		{
+			id: 'hh',
+			name: 'Happy Hour',
+			links: [{ text: 'Happy Hour Menu', href: '/full-menu#happy-hour' }]
+		},
+		{
+			id: 'bar',
+			name: 'Bar',
+			links: [
+				{ text: 'Coffee, Tea & Soft Drinks', href: '/full-menu#ctsd' },
+				{ text: 'Non-Spirited', href: '/full-menu#non-spirited' },
+				{ text: 'Signature Cocktails', href: '/full-menu#signature-cocktails' },
+				{ text: 'Classic Cocktails', href: '/full-menu#classic-cocktails' },
+				{ text: 'Beer', href: '/full-menu#beer' },
+				{ text: 'Cider', href: '/full-menu#cider' },
+				{ text: 'Vodka', href: '/full-menu#vodka' },
+				{ text: 'Gin', href: '/full-menu#gin' },
+				{ text: 'Rum', href: '/full-menu#rum' },
+				{ text: 'Tequila', href: '/full-menu#tequila' },
+				{ text: 'Whisky', href: '/full-menu#whisky' },
+				{ text: 'Scotch', href: '/full-menu#scotch' },
+				{ text: 'Brandy', href: '/full-menu#brandy' },
+				{ text: 'Aperitif & Digestif', href: '/full-menu#aperitif-digestif' },
+				{ text: 'Vermouth & Liqueurs', href: '/full-menu#vermouth-liqueurs' },
+				{ text: 'Specialty Coffee & Tea', href: '/full-menu#sct' }
+			]
+		},
+		{
+			id: 'wine',
+			name: 'Wine',
+			links: [
+				{ text: 'Featured Wine', href: '/full-menu#featured-wine' },
+				{ text: 'White Wines', href: '/full-menu#white-wines' },
+				{ text: 'Rosé', href: '/full-menu#rose' },
+				{ text: 'Red Wines', href: '/full-menu#red-wines' }
+			]
+		}
+	];
+
+	function toggle(sectionId) {
+		openSection = openSection === sectionId ? '' : sectionId;
+	}
 </script>
 
 <section class="bg-tertiary flex">
@@ -284,257 +346,33 @@
 			<div
 				class="group text-darkText flex h-fit min-w-fit flex-col border-r border-r-[#9B9893] pr-4"
 			>
-				{#if showDinner}
+				{#each menuCategories as section (section.id)}
 					<button
-						class=" group text-left {showDinner === true
-							? 'opacity-100'
-							: 'group-hover:opacity-50 hover:!opacity-100'}"
-						onclick={toggleDinner}>Dinner</button
+						class="mt-4 text-left transition-opacity duration-200 group-hover:opacity-50 hover:!opacity-100 {openSection ===
+						section.id
+							? '!opacity-100'
+							: ''}"
+						onclick={() => toggle(section.id)}
 					>
-					<div
-						transition:slide={{
-							duration: 250,
-							easing: quintInOut
-						}}
-						class="group flex flex-col text-lg"
-					>
-						<a
-							href="/full-menu#soups"
-							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
-							>Soups</a
-						>
-						<a
-							href="/full-menu#appetizers"
-							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
-							>Appetizers</a
-						>
-						<a
-							href="/full-menu#salad"
-							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
-							>Salad</a
-						>
-						<a
-							href="/full-menu#curry"
-							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
-							>Curry</a
-						>
-						<a
-							href="/full-menu#stir-fried"
-							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
-							>Stir Fried</a
-						>
-						<a
-							href="/full-menu#noodles"
-							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
-							>Noodles</a
-						>
-						<a
-							href="/full-menu#vegetables"
-							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
-							>Vegetables</a
-						>
+						{section.name}
+					</button>
 
-						<a
-							href="/full-menu#rice"
-							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
-							>Rice</a
+					{#if openSection === section.id}
+						<div
+							transition:slide={{ duration: 250, easing: quintInOut }}
+							class="flex flex-col text-xl"
 						>
-						<a
-							href="/full-menu#specialties"
-							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
-							>Specialties</a
-						>
-						<a
-							href="/full-menu#desserts"
-							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
-							>Desserts</a
-						>
-						<a
-							href="/full-menu#combinations"
-							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
-							>Combinations</a
-						>
-					</div>
-				{:else}
-					<button
-						class="text-darkText text-left group-hover:opacity-50 hover:!opacity-100"
-						onclick={toggleDinner}>Dinner</button
-					>
-				{/if}
-
-				{#if showHH}
-					<button
-						class="text-darkText group mt-4 text-left {showHH === true
-							? 'opacity-100'
-							: 'group-hover:opacity-50 hover:!opacity-100'}"
-						onclick={toggleHH}>Happy Hour</button
-					>
-					<div
-						transition:slide={{
-							duration: 250,
-							easing: quintInOut
-						}}
-						class="group flex flex-col text-xl"
-					>
-						<a
-							href="/full-menu#happy-hour"
-							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
-							>Happy Hour Menu</a
-						>
-					</div>
-				{:else}
-					<button
-						class="text-darkText mt-4 text-left group-hover:opacity-50 hover:!opacity-100"
-						onclick={toggleHH}>Happy Hour</button
-					>
-				{/if}
-
-				{#if showBar}
-					<button
-						class="text-darkText group mt-4 text-left {showBar === true
-							? 'opacity-100'
-							: 'group-hover:opacity-50 hover:!opacity-100'}"
-						onclick={toggleBar}>Bar</button
-					>
-					<div
-						transition:slide={{
-							duration: 250,
-							easing: quintInOut
-						}}
-						class="group flex flex-col text-xl"
-					>
-						<a
-							href="/full-menu#ctsd"
-							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
-							>Coffee, Tea & Soft Drinks</a
-						>
-
-						<a
-							href="/full-menu#non-spirited"
-							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
-							>Non-Spirited</a
-						>
-						<a
-							href="/full-menu#signature-cocktails"
-							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
-							>Signature Cocktails</a
-						>
-						<a
-							href="/full-menu#classic-cocktails"
-							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
-							>Classic Cocktails</a
-						>
-
-						<a
-							href="/full-menu#beer"
-							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
-							>Beer</a
-						>
-
-						<a
-							href="/full-menu#cider"
-							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
-							>Cider</a
-						>
-						<a
-							href="/full-menu#vodka"
-							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
-							>Vodka</a
-						>
-						<a
-							href="/full-menu#gin"
-							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
-							>Gin</a
-						>
-						<a
-							href="/full-menu#rum"
-							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
-							>Rum</a
-						>
-						<a
-							href="/full-menu#tequila"
-							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
-							>Tequila</a
-						>
-						<a
-							href="/full-menu#whisky"
-							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
-							>Whisky</a
-						>
-						<a
-							href="/full-menu#scotch"
-							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
-							>Scotch</a
-						>
-						<a
-							href="/full-menu#brandy"
-							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
-							>Brandy</a
-						>
-						<a
-							href="/full-menu#aperitif-digestif"
-							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
-							>Aperitif & Digestif</a
-						>
-						<a
-							href="/full-menu#vermouth-liqueurs"
-							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
-							>Vermouth & Liquers</a
-						>
-						<a
-							href="/full-menu#sct"
-							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
-							>Specialty Coffee & Tea</a
-						>
-					</div>
-				{:else}
-					<button
-						class="text-darkText mt-4 text-left group-hover:opacity-50 hover:!opacity-100"
-						onclick={toggleBar}>Bar</button
-					>
-				{/if}
-
-				{#if showWine}
-					<button
-						class="text-darkText group mt-4 text-left {showWine === true
-							? 'opacity-100'
-							: 'group-hover:opacity-50 hover:!opacity-100'}"
-						onclick={toggleWine}>Wine</button
-					>
-					<div
-						transition:slide={{
-							duration: 250,
-							easing: quintInOut
-						}}
-						class="group flex flex-col text-xl"
-					>
-						<a
-							href="/full-menu#featured-wine"
-							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
-							>Featured Wine</a
-						>
-						<a
-							href="/full-menu#white-wines"
-							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
-							>White Wines</a
-						>
-						<a
-							href="/full-menu#rose"
-							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
-							>Rosé</a
-						>
-						<a
-							href="/full-menu#red-wines"
-							class="text-darkText mb-2 inline-block group-hover:opacity-50 hover:!opacity-100"
-							>Red Wines</a
-						>
-					</div>
-				{:else}
-					<button
-						class=" text-darkText mt-4 text-left group-hover:opacity-50 hover:!opacity-100"
-						onclick={toggleWine}>Wine</button
-					>
-				{/if}
+							{#each section.links as link}
+								<a
+									href={link.href}
+									class="mb-2 inline-block transition-opacity duration-200 group-hover:opacity-50 hover:!opacity-100"
+								>
+									{link.text}
+								</a>
+							{/each}
+						</div>
+					{/if}
+				{/each}
 			</div>
 
 			<button

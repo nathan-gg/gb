@@ -6,7 +6,7 @@
 
 	let openSection = $state('');
 
-	const menuSections = [
+	const menuCategories = [
 		{
 			id: 'dinner',
 			name: 'Dinner',
@@ -78,7 +78,7 @@
 			<h1 class="text-lightText mb-12 text-4xl">{thaiTitle}</h1>
 
 			<div class="font-DMSans text-darkText group flex flex-col text-3xl">
-				{#each menuSections as section (section.id)}
+				{#each menuCategories as section (section.id)}
 					<button
 						class="mt-4 text-left transition-opacity duration-200 group-hover:opacity-50 hover:!opacity-100 {openSection ===
 						section.id
