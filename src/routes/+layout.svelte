@@ -20,7 +20,21 @@
 </script>
 
 <svelte:head>
-	<link rel="icon" href="iconLogo.svg" type="image/svg" />
+	<!-- <link rel="icon" href="iconLogo.svg" type="image/svg" /> -->
+
+	<!-- Standard favicon (use .ico format for best compatibility) -->
+    <link rel="icon" href="iconLogo.ico" sizes="any">
+    
+    <!-- SVG favicon (for modern browsers) -->
+    <link rel="icon" href="iconLogo.svg" type="image/svg+xml">
+    
+    <!-- Apple Touch Icon (for Safari) -->
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+
+
+
+
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
 	<title>Green Basil Thai</title>
