@@ -1,4 +1,36 @@
 <script>
+	// At the top of your script section
+	import { createEventDispatcher } from 'svelte';
+	const dispatch = createEventDispatcher();
+
+	// Add a reactive effect that fires when this is the last section and becomes visible
+	$effect(() => {
+		// Check if this is the last section (no nextSection)
+		if (!nextSection) {
+			// Add intersection observer to detect when this section is visible
+			const observer = new IntersectionObserver(
+				(entries) => {
+					if (entries[0].isIntersecting) {
+						// Dispatch an event to notify parent that last section is visible
+						dispatch('lastSectionVisible', true);
+					}
+				},
+				{ threshold: 0 }
+			); // Trigger when 50% of the element is visible
+
+			// Get the section element
+			const sectionElement = document.getElementById(id);
+			if (sectionElement) {
+				observer.observe(sectionElement);
+			}
+
+			return () => {
+				// Clean up observer
+				if (sectionElement) observer.unobserve(sectionElement);
+			};
+		}
+	});
+
 	let {
 		id = '',
 		title = '',
