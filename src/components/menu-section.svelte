@@ -146,7 +146,7 @@
 	}
 </script>
 
-<section {id} class="bg-tertiary relative flex h-fit snap-start snap-normal flex-col lg:flex-row">
+<section {id} class="bg-blue relative flex h-fit snap-start snap-normal flex-col lg:flex-row">
 	{#if isFooter}
 		<div class="bottom-0 z-50 snap-end snap-normal">
 			<Footer />
@@ -463,10 +463,10 @@
 				</div>
 			{/if}
 		</div>
-		<div class="hidden w-1/2 flex-auto lg:flex">
+		<div class="hidden w-1/2 object-cover lg:flex">
 			<img
 				src="/webp/{imagePath}.webp"
-				class="h-full w-full object-cover"
+				class=" h-full w-full object-cover"
 				alt="The {title} Section."
 			/>
 		</div>

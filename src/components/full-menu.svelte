@@ -89,12 +89,6 @@
 
 	function toggleTOC() {
 		showTOC = !showTOC;
-		if (showTOC === false) {
-			showBar = false;
-			showWine = false;
-			showHH = false;
-			showDinner = false;
-		}
 	}
 
 	let showSpice = $state(false);
@@ -323,7 +317,13 @@
 				<span class="material-icons md-36">keyboard_arrow_left</span>
 			</button> -->
 		{:else}
-			<button onclick={toggleTOC} class="text-lightText hover:text-darkText mt-[46vh]">
+			<button
+				onclick={() => {
+					toggleTOC();
+					toggle(openSection);
+				}}
+				class="text-lightText hover:text-darkText mt-[46vh]"
+			>
 				<span class="material-icons md-60">keyboard_arrow_right</span>
 			</button>
 		{/if}
@@ -343,7 +343,7 @@
 			>
 				{#each menuCategories as section (section.id)}
 					<button
-						class="mt-4 text-left transition-opacity duration-200 group-hover:opacity-50 hover:!opacity-100 {openSection ===
+						class="mt-4 text-left text-2xl transition-opacity duration-200 group-hover:opacity-50 hover:!opacity-100 2xl:text-3xl {openSection ===
 						section.id
 							? '!opacity-100'
 							: ''}"
@@ -355,7 +355,7 @@
 					{#if openSection === section.id}
 						<div
 							transition:slide={{ duration: 250, easing: quintInOut }}
-							class="flex flex-col text-xl"
+							class="flex flex-col text-base 2xl:text-xl"
 						>
 							{#each section.links as link}
 								<a
@@ -371,7 +371,10 @@
 			</div>
 
 			<button
-				onclick={toggleTOC}
+				onclick={() => {
+					toggleTOC();
+					toggle(openSection);
+				}}
 				class:active={showTOC}
 				class="text-lightText hover:text-darkText z-10 mt-[-2vh] w-fit"
 			>
@@ -383,14 +386,23 @@
 	<div class="fixed z-30 mt-[46vh] w-fit justify-between lg:hidden">
 		{#if showTOC}
 			<button
-				onclick={toggleTOC}
+				onclick={() => {
+					toggleTOC();
+					toggle(openSection);
+				}}
 				class:active={showTOC}
 				class="text-lightText hover:text-darkText fixed"
 			>
 				<span class="material-icons md-24">keyboard_arrow_left</span>
 			</button>
 		{:else}
-			<button onclick={toggleTOC} class="text-lightText hover:text-darkText fixed">
+			<button
+				onclick={() => {
+					toggleTOC();
+					toggle(openSection);
+				}}
+				class="text-lightText hover:text-darkText fixed"
+			>
 				<span class="material-icons md-24">keyboard_arrow_right</span>
 			</button>
 		{/if}
