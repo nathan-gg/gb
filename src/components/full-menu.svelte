@@ -336,10 +336,11 @@
 				duration: 250,
 				axis: 'x'
 			}}
-			class="font-DMSans text-darkText left-0 hidden h-[calc(100vh-16px)] w-1/4 items-center pl-6 text-3xl lg:flex"
+			class=" font-DMSans text-darkText left-0 hidden h-[calc(100vh)] w-3/5 items-center justify-center pl-6 text-3xl lg:flex"
 		>
+			<!-- class="font-DMSans text-darkText left-0 hidden h-[calc(100vh-16px)] w-1/4 items-center pl-6 text-3xl lg:flex" -->
 			<div
-				class="group text-darkText flex h-fit min-w-fit flex-col border-r border-r-[#9B9893] pr-4"
+				class=" desktop-toc group text-darkText flex max-h-3/5 w-full flex-col overflow-y-scroll pr-4"
 			>
 				{#each menuCategories as section (section.id)}
 					<button
