@@ -50,7 +50,7 @@
 			if (targetElement && container) {
 				// Manual scroll within container with 64px offset
 				container.scrollTo({
-					top: targetElement.offsetTop + 64, // Add 64px offset
+					top: targetElement.offsetTop - 64, // Add 64px offset
 					behavior: 'smooth'
 				});
 			} else {
@@ -128,8 +128,8 @@
 							></textarea>
 						</div>
 						<div>
-							<button type="submit" class="bg-darkText text-tertiary rounded border-0 p-2"
-								>Submit</button
+							<button type="submit" class="bg-darkText text-tertiary rounded border-0 p-2">
+								<a href="mailto:info@greenbasilthai.com">Submit</a></button
 							>
 						</div>
 					</form>
