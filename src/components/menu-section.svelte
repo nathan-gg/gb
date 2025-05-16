@@ -104,9 +104,7 @@
 		return numCols > 0 ? `w-${numCols * 10}` : '';
 	}
 
-	// Add an offset variable that you can adjust
-	const scrollOffset = 64; // Negative value moves up, positive value moves down
-
+	// Helper functions for programmatic scrolling that use the parent container
 	function scrollPrev() {
 		if (previousSection) {
 			// Use the element's ID or a ref
@@ -115,14 +113,13 @@
 				document.querySelector(`[data-scroll-ref="${previousSection}"]`);
 
 			if (targetElement && container) {
-				// Manual scroll within container with offset
+				// Manual scroll within container
 				container.scrollTo({
-					top: targetElement.offsetTop + scrollOffset, // Apply the offset here
+					top: targetElement.offsetTop - 64,
 					behavior: 'smooth'
 				});
 			} else {
 				// Fallback to svelte-scrolling's method
-				// Note: svelte-scrolling may not support offsets directly
 				scrollElement(previousSection);
 			}
 		}
@@ -136,9 +133,9 @@
 				document.querySelector(`[data-scroll-ref="${nextSection}"]`);
 
 			if (targetElement && container) {
-				// Manual scroll within container with offset
+				// Manual scroll within container
 				container.scrollTo({
-					top: targetElement.offsetTop + scrollOffset, // Apply the offset here
+					top: targetElement.offsetTop + 64,
 					behavior: 'smooth'
 				});
 			} else {
@@ -149,7 +146,10 @@
 	}
 </script>
 
-<section {id} class="bg-blue relative flex h-fit snap-start snap-normal flex-col lg:flex-row">
+<section
+	{id}
+	class="bg-blue relative flex h-fit min-h-screen snap-start snap-normal flex-col lg:flex-row"
+>
 	{#if isFooter}
 		<div class="bottom-0 z-50 snap-end snap-normal">
 			<Footer />
