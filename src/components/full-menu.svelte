@@ -431,7 +431,7 @@
 
 			<div class="flex w-full flex-col items-center justify-center">
 				<div
-					class="scroll-toc desktop-toc group text-darkText flex max-h-[100vh] w-3/4 flex-col overflow-y-scroll"
+					class="desktop-toc group text-darkText flex max-h-[80vh] w-3/4 flex-col overflow-y-scroll"
 				>
 					<!-- "Back to top" anchor for scrolling to top -->
 					<!-- <div id="toc-top"></div> -->
