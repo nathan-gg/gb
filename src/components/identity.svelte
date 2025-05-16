@@ -23,41 +23,46 @@
 		class: className = '' // Accept additional classes from parent
 	} = $props();
 
-	// Helper functions for programmatic scrolling that use the parent container
+	// Add an offset variable that you can adjust
+	const scrollOffset = 64; // Negative value moves up, positive value moves down
+
 	function scrollPrev() {
-		if (goBack) {
+		if (previousSection) {
 			// Use the element's ID or a ref
 			const targetElement =
-				document.getElementById(goBack) || document.querySelector(`[data-scroll-ref="${goBack}"]`);
+				document.getElementById(previousSection) ||
+				document.querySelector(`[data-scroll-ref="${previousSection}"]`);
 
 			if (targetElement && container) {
-				// Manual scroll within container
+				// Manual scroll within container with offset
 				container.scrollTo({
-					top: targetElement.offsetTop - 64,
+					top: targetElement.offsetTop + scrollOffset, // Apply the offset here
 					behavior: 'smooth'
 				});
 			} else {
 				// Fallback to svelte-scrolling's method
-				scrollElement(goBack);
+				// Note: svelte-scrolling may not support offsets directly
+				scrollElement(previousSection);
 			}
 		}
 	}
 
 	function scrollNext() {
-		if (goTo) {
+		if (nextSection) {
 			// Use the element's ID or a ref
 			const targetElement =
-				document.getElementById(goTo) || document.querySelector(`[data-scroll-ref="${goTo}"]`);
+				document.getElementById(nextSection) ||
+				document.querySelector(`[data-scroll-ref="${nextSection}"]`);
 
 			if (targetElement && container) {
-				// Manual scroll within container
+				// Manual scroll within container with offset
 				container.scrollTo({
-					top: targetElement.offsetTop - 64,
+					top: targetElement.offsetTop + scrollOffset, // Apply the offset here
 					behavior: 'smooth'
 				});
 			} else {
 				// Fallback to svelte-scrolling's method
-				scrollElement(goTo);
+				scrollElement(nextSection);
 			}
 		}
 	}

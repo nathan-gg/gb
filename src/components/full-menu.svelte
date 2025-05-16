@@ -14,7 +14,7 @@
 	// Configure global scroll options with a custom scrollIntoView function
 	setGlobalOptions({
 		duration: 800,
-		offset: -64,
+		offset: 64,
 		onStart: () => {
 			isScrolling = true;
 			// Temporarily disable scroll snapping during programmatic scrolling

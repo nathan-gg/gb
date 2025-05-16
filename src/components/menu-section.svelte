@@ -104,7 +104,9 @@
 		return numCols > 0 ? `w-${numCols * 10}` : '';
 	}
 
-	// Helper functions for programmatic scrolling that use the parent container
+	// Add an offset variable that you can adjust
+	const scrollOffset = 64; // Negative value moves up, positive value moves down
+
 	function scrollPrev() {
 		if (previousSection) {
 			// Use the element's ID or a ref
@@ -113,13 +115,14 @@
 				document.querySelector(`[data-scroll-ref="${previousSection}"]`);
 
 			if (targetElement && container) {
-				// Manual scroll within container
+				// Manual scroll within container with offset
 				container.scrollTo({
-					top: targetElement.offsetTop,
+					top: targetElement.offsetTop + scrollOffset, // Apply the offset here
 					behavior: 'smooth'
 				});
 			} else {
 				// Fallback to svelte-scrolling's method
+				// Note: svelte-scrolling may not support offsets directly
 				scrollElement(previousSection);
 			}
 		}
@@ -133,9 +136,9 @@
 				document.querySelector(`[data-scroll-ref="${nextSection}"]`);
 
 			if (targetElement && container) {
-				// Manual scroll within container
+				// Manual scroll within container with offset
 				container.scrollTo({
-					top: targetElement.offsetTop,
+					top: targetElement.offsetTop + scrollOffset, // Apply the offset here
 					behavior: 'smooth'
 				});
 			} else {

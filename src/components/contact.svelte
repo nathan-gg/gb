@@ -21,41 +21,46 @@
 		class: className = '' // Accept additional classes from parent
 	} = $props();
 
-	// Helper functions for programmatic scrolling that use the parent container
+	// Add an offset variable that you can adjust
+	const scrollOffset = 64; // Negative value moves up, positive value moves down
+
 	function scrollPrev() {
-		if (goBack) {
+		if (previousSection) {
 			// Use the element's ID or a ref
 			const targetElement =
-				document.getElementById(goBack) || document.querySelector(`[data-scroll-ref="${goBack}"]`);
+				document.getElementById(previousSection) ||
+				document.querySelector(`[data-scroll-ref="${previousSection}"]`);
 
 			if (targetElement && container) {
-				// Manual scroll within container with 64px offset
+				// Manual scroll within container with offset
 				container.scrollTo({
-					top: targetElement.offsetTop, // Add 64px offset
+					top: targetElement.offsetTop + scrollOffset, // Apply the offset here
 					behavior: 'smooth'
 				});
 			} else {
 				// Fallback to svelte-scrolling's method
-				scrollElement(goBack);
+				// Note: svelte-scrolling may not support offsets directly
+				scrollElement(previousSection);
 			}
 		}
 	}
 
 	function scrollNext() {
-		if (goTo) {
+		if (nextSection) {
 			// Use the element's ID or a ref
 			const targetElement =
-				document.getElementById(goTo) || document.querySelector(`[data-scroll-ref="${goTo}"]`);
+				document.getElementById(nextSection) ||
+				document.querySelector(`[data-scroll-ref="${nextSection}"]`);
 
 			if (targetElement && container) {
-				// Manual scroll within container with 64px offset
+				// Manual scroll within container with offset
 				container.scrollTo({
-					top: targetElement.offsetTop + 64, // Add 64px offset
+					top: targetElement.offsetTop + scrollOffset, // Apply the offset here
 					behavior: 'smooth'
 				});
 			} else {
 				// Fallback to svelte-scrolling's method
-				scrollElement(goTo);
+				scrollElement(nextSection);
 			}
 		}
 	}
@@ -137,7 +142,7 @@
 				{#if ifPage2}
 					<div class="font-DMSans flex w-full flex-col font-black">
 						<h3 class="text-2xl">Hours</h3>
-						<div class="flex justify-between text-sm">
+						<div class="text-md flex justify-between sm:text-sm">
 							<div class="text-darkText hidden flex-col font-medium sm:flex">
 								<p>Monday</p>
 								<p>Tuesday</p>
@@ -183,7 +188,7 @@
 				{/if}
 			</div>
 			{#if ifPage2}
-				<div class="w-4/5 xl:w-3/5">
+				<div class="mb-16 w-4/5 sm:mb-0 xl:w-3/5">
 					<iframe
 						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2605.489428938644!2d-123.00370722343598!3d49.229209274539144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54867658ed9537d5%3A0x9e538cb3bbfb2f7f!2sGreen%20Basil!5e0!3m2!1sen!2sca!4v1745227762274!5m2!1sen!2sca"
 						title="The location of Green Basil Thai Restaurant is 4623 Kingsway, Burnaby, BC V5H 2B3"

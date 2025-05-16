@@ -1277,7 +1277,7 @@ export const menuData = {
 	beer: {
 		title: 'Beer',
 		thaiTitle: 'เบียร์',
-		imagePath: 'beer',
+		imagePath: 'beer2',
 		mobilePath: 'm-beer',
 		items: [
 			{
