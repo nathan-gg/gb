@@ -146,10 +146,7 @@
 	}
 </script>
 
-<section
-	{id}
-	class="bg-blue relative flex h-fit min-h-screen snap-start snap-normal flex-col lg:flex-row"
->
+<section {id} class="bg-blue relative flex h-fit snap-start snap-normal flex-col lg:flex-row">
 	{#if isFooter}
 		<div class="bottom-0 z-50 snap-end snap-normal">
 			<Footer />
