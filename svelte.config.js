@@ -45,6 +45,27 @@
 // 	export default config;
 	
 
+// import adapter from '@sveltejs/adapter-cloudflare';
+// import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+
+// /** @type {import('@sveltejs/kit').Config} */
+// const config = {
+//   preprocess: vitePreprocess(),
+
+//   kit: {
+//     adapter: adapter({
+//       pages: 'build',
+//       assets: 'build',
+//       fallback: null
+//     }),
+//     prerender: {
+//       handleHttpError: 'warn' // optional: ignore missing assets during build
+//     }
+//   }
+// };
+
+// export default config;
+
 import adapter from '@sveltejs/adapter-cloudflare';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
@@ -53,13 +74,9 @@ const config = {
   preprocess: vitePreprocess(),
 
   kit: {
-    adapter: adapter({
-      pages: 'build',
-      assets: 'build',
-      fallback: null
-    }),
+    adapter: adapter(),
     prerender: {
-      handleHttpError: 'warn' // optional: ignore missing assets during build
+      handleHttpError: 'warn'
     }
   }
 };
