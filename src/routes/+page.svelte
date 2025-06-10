@@ -25,7 +25,7 @@
 	<div
 		class="landing pointer-events-none absolute inset-0 z-[10] flex flex-col items-center justify-center"
 	>
-		<img src="landingLogo.svg" class="relative w-fit p-8" alt="Green Basil Thai Logo" />
+		<img src="landingLogo.svg" class="w-4/5 relative p-8 sm:w-fit" alt="Green Basil Thai Logo" />
 
 		<p class="text-secondary font-DMSans mt-24">Click to Enter</p>
 	</div>
