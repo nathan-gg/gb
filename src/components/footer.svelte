@@ -64,7 +64,7 @@
 				<div class="col-span-2 sm:hidden">
 					<img
 						src="finalLogo.svg"
-						class="w-screen self-end justify-self-start sm:h-24"
+						class="w-1/2 self-end justify-self-start sm:h-24"
 						alt="Green Basil Logo"
 					/>
 				</div>
