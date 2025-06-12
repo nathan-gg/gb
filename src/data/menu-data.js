@@ -756,7 +756,7 @@ export const menuData = {
 	},
 	combinations: {
 		title: 'Combinations',
-		thaiTitle: '_____',
+		thaiTitle: 'ชุดคอมโบ',
 		imagePath: 'combinations',
 		mobilePath: 'm-combinations',
 		items: [
@@ -795,6 +795,7 @@ export const menuData = {
 	'happy-hour': {
 		title: 'Happy Hour',
 		thaiTitle: 'สลัด',
+		sectionDetails: 'Every day from 3pm – 6pm & 9pm – close (dine in only)',
 		imagePath: 'happy-hour',
 		mobilePath: 'm-happy-hour',
 		items: [

@@ -189,7 +189,7 @@
 	}
 </script>
 
-<section class="bg-tertiary flex">
+<section class="bg-tertiary flex h-[calc(100vh-4rem)]">
 	<!-- mobile spice index -->
 	{#if showSpice}
 		<div
@@ -304,6 +304,7 @@
 		</div>
 	{:else}
 		<button
+			title="Spice Index"
 			class="fixed bottom-2 left-2 z-20 hidden md:flex xl:bottom-4 xl:left-4"
 			onclick={toggleSpice}
 		>
@@ -479,6 +480,7 @@
 				id={section}
 				title={data.title}
 				thaiTitle={data.thaiTitle}
+				sectionDetails={data.sectionDetails}
 				pCol1={data.pCol1}
 				pCol2={data.pCol2}
 				pCol3={data.pCol3}

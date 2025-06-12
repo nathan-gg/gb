@@ -35,6 +35,7 @@
 		id = '',
 		title = '',
 		thaiTitle = '',
+		sectionDetails = '',
 		pCol1 = '',
 		pCol2 = '',
 		pCol3 = '',
@@ -168,6 +169,9 @@
 			<div class="w-full px-12 pt-8 pb-2">
 				<h1 class="text-darkText font-instrument mb-0 text-3xl sm:text-5xl md:text-7xl">{title}</h1>
 				<h2 class="text-lightText font-instrument text-xl sm:text-3xl md:text-5xl">{thaiTitle}</h2>
+				{#if sectionDetails}
+				<p class="text-lightText font-instrument text-xl sm:text-3xl md:text-5xl">{sectionDetails}</p>
+				{/if}
 			</div>
 
 			<!-- Menu Content for Mobile -->
@@ -337,7 +341,12 @@
 
 			<div class="mx-8 mt-12 mb-12 flex flex-col sm:mx-36 sm:my-16 lg:my-24 xl:my-36">
 				<h1 class="text-darkText mb-4 text-6xl">{title}</h1>
+				{#if sectionDetails}
+				<h1 class="text-lightText text-4xl mb-4">{thaiTitle}</h1>
+				<p class="text-lightText font-DMSans text-md mb-12">{sectionDetails}</p>
+				{:else}
 				<h1 class="text-lightText mb-12 text-4xl">{thaiTitle}</h1>
+				{/if}
 
 				<!-- Menu Categories and Items -->
 				{#each groupedMenuItems as group, groupIndex}

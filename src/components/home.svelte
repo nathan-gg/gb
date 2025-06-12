@@ -65,7 +65,7 @@
 	use:scrollRef={thisRef}
 	id={thisRef}
 	data-scroll-ref={thisRef}
-	class="font-instrument text-secondary snap-align-start relative flex h-[calc(100vh-4rem)] w-full items-center {className}"
+	class="scroll-container font-instrument text-secondary snap-align-start relative flex h-[calc(100vh-4rem)] w-full items-center {className}"
 >
 	{#if mobileImage}
 		<img

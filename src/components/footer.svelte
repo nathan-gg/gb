@@ -2,7 +2,9 @@
 </script>
 
 <div>
-	<section class=" bg-primary text-secondary grid h-fit w-screen p-4 sm:grid-cols-2 sm:grid-rows-1">
+	<section
+		class=" bg-primary text-secondary grid h-fit w-screen overflow-hidden p-4 sm:grid-cols-2 sm:grid-rows-1"
+	>
 		<div class="m-8 hidden sm:flex">
 			<img
 				src="finalLogo.svg"

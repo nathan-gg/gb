@@ -139,7 +139,7 @@
 <section
 	id="container"
 	bind:this={container}
-	class="scroll-container h-screen overflow-x-hidden overflow-y-auto"
+	class="scroll-container h-[calc(100vh-4rem)] overflow-x-hidden"
 >
 	<Home
 		thisRef={start.thisRef}
@@ -267,15 +267,3 @@
 		<Footer />
 	</div>
 </section>
-
-<!-- <style>
-  .scroll-container {
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-  }
-
-  /* Hide the scrollbar for better UX */
-.scroll-container::-webkit-scrollbar {
-  display: none;
-}
-</style> -->
