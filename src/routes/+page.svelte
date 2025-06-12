@@ -20,52 +20,32 @@
 
 <ViewTransition />
 
-<a href="/home">
+<a href="/home" class="no-scrollbar overflow-hidden">
 	<!-- <div class="landing pointer-events-none absolute inset-0 z-[10] flex flex-col items-center justify-center"> -->
 	<div
 		class="landing pointer-events-none absolute inset-0 z-[10] flex flex-col items-center justify-center"
 	>
-		<img src="landingLogo.svg" class="w-4/5 relative p-8 sm:w-fit" alt="Green Basil Thai Logo" />
+		<img src="landingLogo.svg" class="relative w-4/5 p-8 sm:w-fit" alt="Green Basil Thai Logo" />
 
 		<p class="text-secondary font-DMSans mt-24">Click to Enter</p>
 	</div>
 
-	<div class="embla min-h-screen bg-black" use:emblaCarouselSvelte={{ options, plugins }}>
+	<div class="embla h-screen bg-black" use:emblaCarouselSvelte={{ options, plugins }}>
 		<div class="embla__container">
 			<div class="embla__slide">
-				<img
-					src="/webp/landing5.webp"
-					class="min-h-screen object-cover"
-					alt=" Landing Background 5"
-				/>
+				<img src="/webp/landing5.webp" class="h-screen object-cover" alt=" Landing Background 5" />
 			</div>
 			<div class="embla__slide">
-				<img
-					src="/webp/landing2.webp"
-					class="min-h-screen object-cover"
-					alt=" Landing Background 2"
-				/>
+				<img src="/webp/landing2.webp" class="h-screen object-cover" alt=" Landing Background 2" />
 			</div>
 			<div class="embla__slide">
-				<img
-					src="/webp/landing3.webp"
-					class="min-h-screen object-cover"
-					alt=" Landing Background 3"
-				/>
+				<img src="/webp/landing3.webp" class="h-screen object-cover" alt=" Landing Background 3" />
 			</div>
 			<div class="embla__slide">
-				<img
-					src="/webp/landing4.webp"
-					class="min-h-screen object-cover"
-					alt=" Landing Background 4"
-				/>
+				<img src="/webp/landing4.webp" class="h-screen object-cover" alt=" Landing Background 4" />
 			</div>
 			<div class="embla__slide">
-				<img
-					src="/webp/landing1.webp"
-					class="min-h-screen object-cover"
-					alt=" Landing Background 1"
-				/>
+				<img src="/webp/landing1.webp" class="h-screen object-cover" alt=" Landing Background 1" />
 			</div>
 		</div>
 	</div>
