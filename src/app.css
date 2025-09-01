@@ -12,6 +12,25 @@
 
 	--font-DMSans: 'DM Sans', sans-serif;
 	--font-instrument: 'Instrument Serif', serif;
+
+	--fontSize-header: 96px;
+	--fontSize-subheader: 64px;
+	--fontSize-body: 16px;
+}
+
+.text-header {
+	font-size: var(--fontSize-header);
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.text-subheader {
+	font-size: var(--fontSize-subheader);
+	font-weight: 600;
+}
+
+.text-body {
+	font-size: var(--fontSize-body);
 }
 
 /* .instrument-serif-regular {

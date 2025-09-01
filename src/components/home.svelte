@@ -74,13 +74,18 @@
 			class="absolute inset-0 h-full w-screen object-cover brightness-30 lg:hidden"
 			alt=""
 		/>
-		<img
-			src={image}
-			class="absolute inset-0 hidden h-full w-screen object-cover brightness-30 lg:flex"
-			alt=""
-		/>
+		<div class="absolute inset-0 h-full w-screen">
+			<img src={image} class="absolute inset-0 h-full w-screen object-cover lg:flex" alt="" />
+		</div>
 	{:else}
-		<img src={image} class="absolute inset-0 h-full w-screen object-cover brightness-30" alt="" />
+		<div class="absolute inset-0 h-full w-screen">
+			<div class=" absolute inset-0 h-full w-screen bg-gradient-to-r from-[rgba(0,0,0,.8)] to-transparent"></div>
+			<img
+				src={image}
+				class="absolute inset-0 h-full w-screen object-cover z-[-10]"
+				alt=""
+			/>
+		</div>
 	{/if}
 
 	{#if firstSection}
@@ -136,7 +141,7 @@
 
 		{#if backToTop}
 			<button
-				class="absolute bottom-1/8 h-fit w-screen text-center hover:cursor-pointer flex flex-col font-DMSans"
+				class="font-DMSans absolute bottom-1/8 flex h-fit w-screen flex-col text-center hover:cursor-pointer"
 				onclick={scrollNext}
 			>
 				<span class="material-icons md-48"> keyboard_arrow_up </span>
