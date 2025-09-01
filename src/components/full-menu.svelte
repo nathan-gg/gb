@@ -1,6 +1,6 @@
 <script>
 	import MenuSection from './menu-section.svelte';
-	import { menuData } from '../data/menu-data.js';
+	import { menuData } from '../lib/utils/data/menu-data.js';
 	import Footer from '/src/components/footer.svelte';
 	import { setGlobalOptions } from 'svelte-scrolling';
 	import IntersectionObserver from 'svelte-intersection-observer';

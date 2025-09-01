@@ -3,7 +3,7 @@
 	import Reservations from '/src/components/reservations.svelte';
 
 	const reservations = {
-		title: 'Confirm Your Reservation',
+		title: 'Reservations',
 		thaiTitle: 'ยืนยันการจอง',
 		image: '/webp/reservations.webp'
 	};

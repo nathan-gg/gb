@@ -25,7 +25,7 @@
 				{/each}
 			</nav>
 
-			<div class=" mt-4 mb-6 grid grid-cols-2 border-b-2 pb-6 sm:mt-12">
+			<div class=" mt-4 mb-6 grid grid-cols-1 md:grid-cols-2 border-b-2 pb-6 sm:mt-12">
 				<div class="mb-8 flex flex-col justify-end sm:mb-0">
 					<div class="flex flex-wrap">
 						<a href="https://www.instagram.com/greenbasilthai.yvr/" target="_blank">
@@ -44,14 +44,14 @@
 							/>
 						</a>
 					</div>
-					<a
+					<!-- <a
 						href="order"
 						class="md:4 hover:bg-secondary hover:text-primary font-DMSans mt-2 h-fit w-fit rounded-xl border-1 border-[#E0B87A] p-2 text-sm sm:border-2 md:text-lg"
 						>Make Reservation</a
-					>
+					> -->
 				</div>
 				<div
-					class="font-DMSans text-secondary mx-4 mb-8 flex-col flex-nowrap text-xs font-extralight tracking-wide sm:mb-0 sm:ml-4 md:ml-8"
+					class="font-DMSans text-secondary md:text-xl mx-4 mb-8 flex-col flex-nowrap text-xs font-extralight tracking-wide sm:mb-0 sm:ml-4 md:ml-8"
 				>
 					<a
 						class=" underline"

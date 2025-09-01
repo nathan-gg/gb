@@ -33,19 +33,19 @@
 	<div class="embla h-screen bg-black" use:emblaCarouselSvelte={{ options, plugins }}>
 		<div class="embla__container">
 			<div class="embla__slide">
-				<img src="/webp/landing5.webp" class="h-screen object-cover" alt=" Landing Background 5" />
+				<img src="/webp/landing5.webp" class="h-screen w-screen object-cover" alt=" Landing Background 5" />
 			</div>
 			<div class="embla__slide">
-				<img src="/webp/landing2.webp" class="h-screen object-cover" alt=" Landing Background 2" />
+				<img src="/webp/landing2.webp" class="h-screen w-screen object-cover" alt=" Landing Background 2" />
 			</div>
 			<div class="embla__slide">
-				<img src="/webp/landing3.webp" class="h-screen object-cover" alt=" Landing Background 3" />
+				<img src="/webp/landing3.webp" class="h-screen w-screen object-cover" alt=" Landing Background 3" />
 			</div>
 			<div class="embla__slide">
-				<img src="/webp/landing4.webp" class="h-screen object-cover" alt=" Landing Background 4" />
+				<img src="/webp/landing4.webp" class="h-screen w-screen object-cover" alt=" Landing Background 4" />
 			</div>
 			<div class="embla__slide">
-				<img src="/webp/landing1.webp" class="h-screen object-cover" alt=" Landing Background 1" />
+				<img src="/webp/landing1.webp" class="h-screen w-screen object-cover" alt=" Landing Background 1" />
 			</div>
 		</div>
 	</div>

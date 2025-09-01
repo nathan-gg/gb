@@ -39,12 +39,12 @@
 					</li>
 				</ul>
 				<p>We appreciate your understanding and look forward to welcoming you soon!</p>
-				<div>
+				<!-- <div>
 					<button
 						class="text-darkText border-darkText hover:text-tertiary hover:bg-darkText mt-4 rounded border-2 p-2 hover:border-transparent"
 						>Make Reservation</button
 					>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>

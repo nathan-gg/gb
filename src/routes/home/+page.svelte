@@ -255,6 +255,7 @@
 		pText={reservations.pText}
 		btnText={reservations.btnText}
 		arrow={false}
+		backToTop={true}
 		link={reservations.link}
 		image={reservations.image}
 		prevArrow={true}

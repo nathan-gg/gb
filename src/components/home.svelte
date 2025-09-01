@@ -15,6 +15,7 @@
 		button = true,
 		arrow = true,
 		prevArrow = false,
+		backToTop = false,
 		firstSection = false,
 		isScrolling = false, // Accept the shared scrolling state
 		container = null, // Accept container reference from parent
@@ -130,6 +131,16 @@
 				onclick={scrollNext}
 			>
 				<span class="material-icons md-48"> keyboard_arrow_down </span>
+			</button>
+		{/if}
+
+		{#if backToTop}
+			<button
+				class="absolute bottom-1/8 h-fit w-screen text-center hover:cursor-pointer flex flex-col font-DMSans"
+				onclick={scrollNext}
+			>
+				<span class="material-icons md-48"> keyboard_arrow_up </span>
+				Back To Top
 			</button>
 		{/if}
 	{/if}
