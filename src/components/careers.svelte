@@ -42,7 +42,9 @@
 	</div>
 
 	<div class=" text-darkText font-instrument flex flex-col items-center justify-center sm:w-1/2">
-		<div class="mx-8 mt-12 mb-12 flex flex-col sm:mx-16 sm:my-16 md:my-24 xl:mx-54 xl:my-36">
+		<div
+			class="mx-8 mt-12 mb-12 flex flex-col items-start sm:mx-16 sm:my-16 md:my-24 xl:mx-54 xl:my-36"
+		>
 			{#if curTab === 0}
 				<h1 class=" text-darkText mb-4 text-6xl">Careers</h1>
 				<h2 class="text-lightText mb-12 text-4xl">อาชีพ</h2>
@@ -64,35 +66,35 @@
 			>
 				<button onclick={() => (curTab = 0)} class=" group-hover:opacity-50 hover:!opacity-100">
 					{#if curTab === 0}
-						<p class=" mr-4 mb-8">Careers</p>
+						<p class=" mr-4 mb-8 underline underline-offset-8">Careers</p>
 					{:else if curTab != 0}
 						<p class=" mr-4 mb-8">Careers</p>
 					{/if}
 				</button>
 				<button onclick={() => (curTab = 1)} class="group-hover:opacity-50 hover:!opacity-100">
 					{#if curTab === 1}
-						<p class=" mx-4 mb-8">Server</p>
+						<p class=" mx-4 mb-8 underline underline-offset-8">Server</p>
 					{:else if curTab != 1}
 						<p class=" mx-4 mb-8">Server</p>
 					{/if}
 				</button>
 				<button onclick={() => (curTab = 2)} class="group-hover:opacity-50 hover:!opacity-100">
 					{#if curTab === 2}
-						<p class=" mx-4 mb-8">Expeditor</p>
+						<p class=" mx-4 mb-8 underline underline-offset-8">Expeditor</p>
 					{:else if curTab != 2}
 						<p class=" mx-4 mb-8">Expeditor</p>
 					{/if}
 				</button>
 				<button onclick={() => (curTab = 3)} class="group-hover:opacity-50 hover:!opacity-100">
 					{#if curTab === 3}
-						<p class=" mx-4 mb-8">Driver</p>
+						<p class=" mx-4 mb-8 underline underline-offset-8">Driver</p>
 					{:else if curTab != 3}
 						<p class=" mx-4 mb-8">Driver</p>
 					{/if}
 				</button>
 				<button onclick={() => (curTab = 4)} class="group-hover:opacity-50 hover:!opacity-100">
 					{#if curTab === 4}
-						<p class=" mx-4 mb-8">Chef</p>
+						<p class=" mx-4 mb-8 underline underline-offset-8">Chef</p>
 					{:else if curTab != 4}
 						<p class=" mx-4 mb-8">Chef</p>
 					{/if}
@@ -102,16 +104,16 @@
 			<div class="font-DMSans">
 				{#if curTab === 0}
 					<p class="">
-						Green Basil Thai Restaurant (GBTR) promotes a fun, respectful and encouraging work
-						environment. We acknowledge the importance of quality staff because this will become our
-						primary success factor. Thus, we welcome energetic, responsible and positive team
-						players to join us.
+						Green Basil Thai Restaurant promotes a fun, respectful and encouraging work environment.
+						We acknowledge the importance of quality staff because this will become our primary
+						success factor. Thus, we welcome energetic, responsible and positive team players to
+						join us.
 					</p>
 					<p class="  mt-4">
 						Join the team and send your resume to <a
-							href="mailto:textinfo@greenbasilthai.com"
+							href="mailto:info@greenbasilthai.com"
 							target="_blank"
-							class="focus: font-bold underline focus:underline">textinfogreenbasilthai.com</a
+							class="focus: font-bold underline focus:underline">info@greenbasilthai.com</a
 						>.
 					</p>
 				{:else if curTab === 1}

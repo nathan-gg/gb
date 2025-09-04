@@ -2,6 +2,26 @@
 	import { scrollTo, scrollRef, scrollElement, setGlobalOptions } from 'svelte-scrolling';
 	import { cubicInOut } from 'svelte/easing';
 
+	let activeTab: 'general' | 'application' = 'general';
+
+	let generalForm = {
+		firstName: '',
+		lastName: '',
+		email: '',
+		phone: '',
+		message: ''
+	};
+
+	let applicationForm = {
+		firstName: '',
+		lastName: '',
+		email: '',
+		phone: '',
+		position: [],
+		resume: null as FileList | null,
+		message: ''
+	};
+
 	let {
 		thisRef,
 		goTo,
@@ -59,6 +79,68 @@
 			}
 		}
 	}
+
+	async function sendEmail(formData: any, formType: string) {
+		try {
+			const response = await fetch('https://api.web3forms.com/submit', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+					Accept: 'application/json'
+				},
+				body: JSON.stringify({
+					...createEmailTemplate(formType, formData),
+					access_key: 'fde62125-4609-4617-98ce-76bf3ef7159e'
+				})
+			});
+
+			if (response.ok) {
+				alert('Message sent successfully!');
+				resetForm(formType);
+			} else {
+				alert('Failed to send message. Please try again.');
+			}
+		} catch (error) {
+			console.error('Error sending email:', error);
+			alert('Failed to send message. Please try again.');
+		}
+	}
+
+	function resetForm(formType: string) {
+		if (formType === 'general') {
+			generalForm = {
+				firstName: '',
+				lastName: '',
+				email: '',
+				phone: '',
+				message: ''
+			};
+		} else {
+			applicationForm = {
+				firstName: '',
+				lastName: '',
+				email: '',
+				phone: '',
+				position: [],
+				resume: null as FileList | null,
+				message: ''
+			};
+		}
+	}
+
+	function handleGeneralSubmit(event: Event) {
+		event.preventDefault();
+		sendEmail(generalForm, 'general');
+	}
+
+	function handleApplicationSubmit(event: Event) {
+		event.preventDefault();
+		sendEmail(applicationForm, 'application');
+	}
+
+	function setActiveTab(tab: 'general' | 'application') {
+		activeTab = tab;
+	}
 </script>
 
 <section
@@ -98,7 +180,11 @@
 				</p>
 
 				{#if ifPage1}
-					<form class="font-DMSans font-lightText flex flex-col">
+					<form
+						action="https://api.web3forms.com/submit"
+						method="POST"
+						class="font-DMSans font-lightText flex flex-col"
+					>
 						<div class="mt-8 grid grid-cols-2 grid-rows-2">
 							<input
 								type="text"

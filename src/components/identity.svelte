@@ -79,9 +79,7 @@
 					onclick={scrollPrev}
 					class=" font-DMSans text-lightText hover:text-darkText hover:cursor-pointer"
 				>
-					<p>
-						{prevArrowText}
-					</p>
+					<span class="material-icons md-48"> keyboard_arrow_up </span>
 				</button>
 			</div>
 		{/if}
@@ -99,9 +97,7 @@
 					onclick={scrollNext}
 					class=" font-DMSans text-lightText hover:text-darkText hover:cursor-pointer"
 				>
-					<p>
-						{arrowText}
-					</p>
+					<span class="material-icons md-48"> keyboard_arrow_down </span>
 				</button>
 			</div>
 		{/if}
@@ -122,6 +118,8 @@
 					onclick={scrollNext}
 					class=" font-DMSans text-lightText hover:text-darkText hover:cursor-pointer"
 				>
+					
+					<span class="material-icons md-48"> keyboard_arrow_up </span>
 					<p>
 						{topArrowText}
 					</p>
