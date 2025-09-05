@@ -135,7 +135,7 @@ backdrop-filter: blur(8px);"
 
 			{#if arrow}
 				<button
-					class=" relative col-span-1 col-start-2 row-span-1 row-start-3 w-fit place-self-center self-end pb-16 text-center opacity-75 transition duration-100 hover:scale-105 hover:cursor-pointer hover:opacity-100"
+					class=" relative col-span-1 col-start-2 row-span-1 row-start-3 w-fit place-self-center self-end pb-16 text-center opacity-75 transition   duration-300   hover:cursor-pointer hover:opacity-100"
 					onclick={scrollNext}
 				>
 					<span class="material-icons md-48"> keyboard_arrow_down </span>
@@ -146,7 +146,7 @@ backdrop-filter: blur(8px);"
 		<section class="grid h-[calc(100vh-4rem)] z-10 w-screen grid-cols-3 grid-rows-3">
 			{#if prevArrow}
 				<button
-					class=" relative col-span-1 col-start-2 row-span-1 row-start-1 w-fit place-self-center self-start pt-16 text-center opacity-75 transition duration-100 hover:scale-105 hover:cursor-pointer hover:opacity-100"
+					class=" relative col-span-1 col-start-2 row-span-1 row-start-1 w-fit place-self-center self-start pt-16 text-center opacity-75 transition   duration-300   hover:cursor-pointer hover:opacity-100"
 					onclick={scrollPrev}
 				>
 					<span class="material-icons md-48"> keyboard_arrow_up </span>
@@ -165,7 +165,7 @@ backdrop-filter: blur(8px);"
 				{#if button}
 					<a
 						href={link}
-						class="border-secondary font-MonaSans hover:bg-secondary hover:text-primary self-start rounded-[5px] border-2 px-4 text-lg font-medium text-nowrap transition duration-100 hover:scale-105 sm:px-2 sm:text-[1.5rem]"
+						class="border-secondary font-MonaSans hover:bg-secondary hover:text-primary self-start rounded-[5px] border-2 px-4 text-lg font-medium text-nowrap transition duration-300 text-[1rem] sm:px-5.5 sm:py-2 sm:text-[1.5rem]"
 					>
 						{btnText}
 					</a>
@@ -174,7 +174,7 @@ backdrop-filter: blur(8px);"
 
 			{#if arrow}
 				<button
-					class=" relative col-span-1 col-start-2 row-span-1 row-start-3 w-fit place-self-center self-end pb-16 text-center opacity-75 transition duration-100 hover:scale-105 hover:cursor-pointer hover:opacity-100"
+					class=" relative col-span-1 col-start-2 row-span-1 row-start-3 w-fit place-self-center self-end pb-16 text-center opacity-75 transition duration-300 hover:cursor-pointer hover:opacity-100"
 					onclick={scrollNext}
 				>
 					<span class="material-icons md-48"> keyboard_arrow_down </span>
@@ -183,7 +183,7 @@ backdrop-filter: blur(8px);"
 
 			{#if backToTop}
 				<button
-					class=" relative col-span-1 col-start-2 row-span-1 row-start-3 w-fit place-self-center self-end pb-16 text-center opacity-75 transition duration-100 hover:scale-105 hover:cursor-pointer hover:opacity-100"
+					class=" relative col-span-1 col-start-2 row-span-1 row-start-3 w-fit place-self-center self-end pb-16 text-center opacity-75 transition   duration-300   hover:cursor-pointer hover:opacity-100"
 					onclick={scrollNext}
 				>
 					<span class="material-icons md-48"> keyboard_arrow_up </span>

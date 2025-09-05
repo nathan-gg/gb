@@ -46,16 +46,17 @@
 		}
 	});
 
-	import Contact from '/src/components/contact.svelte';
+	import Hours from '/src/components/hours.svelte';
 
-	const message = {
-		thisRef: 'Message',
-		goTo: 'Info',
-		title: 'Contact Us',
-		thaiTitle: 'ติดต่อเรา',
-		body: 'Fill out this contact form below to get in touch with us, or contact us through our email <a href="mailto:info@greenbasilthai.com" class="underline">info@greenbasilthai.com</a> or call our phone number at <a href="tel:+1 6045007542" class="underline" >+1 (604) 439-1919</a>.',
-		arrowText: 'Hours & Location',
-		image: '/webp/identityHead.webp'
+
+	const info = {
+		thisRef: 'Info',
+		goBack: 'Message',
+		title: 'Hours & Location',
+		thaiTitle: 'เวลาเปิดทำการเเละที่อยู่',
+		body: '',
+		prevArrowText: 'Contact Us',
+		image: '/webp/identityMission.webp'
 	};
 </script>
 
@@ -64,16 +65,19 @@
 	bind:this={container}
 	class="scroll-container h-screen overflow-x-hidden overflow-y-auto"
 >
-	<Contact
-		thisRef={message.thisRef}
-		goTo={message.goTo}
-		title={message.title}
-		thaiTitle={message.thaiTitle}
-		body={message.body}
-		arrowText={message.arrowText}
-		image={message.image}
-		ifPage1={true}
-		ifPage2={false}
+
+	<Hours
+		thisRef={info.thisRef}
+		goBack={info.goBack}
+		title={info.title}
+		thaiTitle={info.thaiTitle}
+		body={info.body}
+		arrow={false}
+		prevArrow={true}
+		prevArrowText={info.prevArrowText}
+		image={info.image}
+		ifPage1={false}
+		ifPage2={true}
 		{isScrolling}
 		{container}
 		class="snap-start snap-normal"

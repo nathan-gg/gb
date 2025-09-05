@@ -15,7 +15,7 @@
 
 		<div class="m-2 flex-col sm:m-8">
 			<nav class="font-instrument group flex flex-col text-4xl">
-				{#each [{ href: 'home', text: 'Home' }, { href: 'menus', text: 'Menus' }, { href: 'order', text: 'Order Online' }, { href: 'identity', text: 'The Basil Identity' }, { href: 'careers', text: 'Careers' }, { href: 'reservations', text: 'Reservations' }, { href: 'contact', text: 'Contact Us' }] as link}
+				{#each [{ href: 'home', text: 'Home' }, { href: 'menus', text: 'Menus' }, { href: 'order', text: 'Order Online' }, { href: 'identity', text: 'The Basil Identity' }, { href: 'careers', text: 'Careers' }, { href: 'reservations', text: 'Reservations' }, { href: 'contact', text: 'Contact Us' }, { href: 'hours-location', text: 'Hours & Location' }] as link}
 					<a
 						href={link.href}
 						class="pr-4 transition-opacity duration-200 group-hover:opacity-50 hover:!opacity-100"

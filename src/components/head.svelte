@@ -115,6 +115,13 @@
 					>
 						Contact Us
 					</a>
+					<a
+						href="/hours-location"
+						onclick={toggleMenu}
+						class="mt-2 transition-opacity duration-200 group-hover:opacity-50 hover:!opacity-100"
+					>
+						Hours & Location
+					</a>
 				</nav>
 
 				<div
