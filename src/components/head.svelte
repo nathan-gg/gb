@@ -64,7 +64,7 @@
 				class="bg-tertiary text-darkText fixed top-16 right-0 z-20 flex h-screen w-full flex-col p-12 sm:w-1/2 md:w-1/4"
 			>
 				<nav
-					class="font-instrument group flex flex-col justify-between text-right text-4xl sm:text-2xl lg:text-4xl"
+					class="font-instrument group flex flex-col justify-between text-left text-4xl sm:text-2xl lg:text-4xl"
 				>
 					<a
 						href="/home"

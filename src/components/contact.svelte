@@ -189,32 +189,32 @@
 							<input
 								type="text"
 								placeholder="First Name"
-								class="border-darkText mt-1 mr-1 mb-1 rounded-md border-1 p-1"
+								class="border-darkText mt-1 mr-1 mb-1 rounded-[5px] border-1 p-1"
 							/>
 							<input
 								type="text"
 								placeholder="Last Name"
-								class="border-darkText mt-1 mb-1 ml-1 rounded-md border-1 p-1"
+								class="border-darkText mt-1 mb-1 ml-1 rounded-[5px] border-1 p-1"
 							/>
 							<input
 								type="text"
 								placeholder="Email"
-								class="border-darkText mt-1 mr-1 mb-1 rounded-md border-1 p-1"
+								class="border-darkText mt-1 mr-1 mb-1 rounded-[5px] border-1 p-1"
 							/>
 							<input
 								type="text"
 								placeholder="Phone Number"
-								class="border-darkText mt-1 mb-1 ml-1 rounded-md border-1 p-1"
+								class="border-darkText mt-1 mb-1 ml-1 rounded-[5px] border-1 p-1"
 							/>
 						</div>
 						<div class="">
 							<textarea
 								placeholder="Message"
-								class=" border-darkText my-1 h-48 w-full rounded-md border-1 p-1"
+								class=" border-darkText my-1 h-48 w-full rounded-[5px] border-1 p-1"
 							></textarea>
 						</div>
 						<div>
-							<button type="submit" class="bg-darkText text-tertiary rounded border-0 p-2">
+							<button type="submit" class="bg-darkText text-tertiary rounded border-0 p-2 transition hover:scale-105 duration-100">
 								<a href="mailto:info@greenbasilthai.com">Submit</a></button
 							>
 						</div>

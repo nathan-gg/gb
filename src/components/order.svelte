@@ -36,7 +36,7 @@
 			<div class="mt-8 mb-12 sm:mb-0">
 				<a
 					href="https://www.doordash.com/store/green-basil-thai-restaurant-burnaby-58614/?srsltid=AfmBOoou1HkBW-Q12dcFiteG44mF3P0Gls_6HFlLqFnofOfltMakDq-v"
-					class="border-darkText group hover:border-darkText hover:bg-darkText mb-4 flex place-content-center rounded-xl border-2 bg-transparent p-4 duration-100 group-hover:transition"
+					class="border-darkText group hover:border-darkText hover:bg-darkText mb-4 flex place-content-center rounded-[5px] border-2 bg-transparent p-4 duration-100 group-hover:transition hover:scale-105"
 					target="_blank"
 				>
 					<svg
@@ -82,17 +82,11 @@
 							/>
 						</defs>
 					</svg>
-
-					<!-- {#if ddHover}
-						<img src="../doordashLogo.svg" class="" alt="Doordash Logo" />
-					{:else}
-						<img src="../greenDoordashLogo.svg" class="" alt="Doordash Logo" />
-					{/if} -->
 				</a>
 
 				<a
 					href="https://www.ubereats.com/ca/store/green-basil-thai-restaurant/6GoYWudYTTOVt7vlqeq6lA?srsltid=AfmBOooHHudVtUcDEbOKDV21TsulpJrJloqXuDdf2yK1pqjne35NN0ZH"
-					class=" border-darkText hover:border-darkText hover:bg-darkText group flex place-content-center rounded-xl border-2 bg-transparent p-4 text-white"
+					class=" border-darkText hover:border-darkText hover:bg-darkText group flex place-content-center rounded-[5px] border-2 bg-transparent p-4 text-white duration-100 group-hover:transition hover:scale-105"
 					target="_blank"
 				>
 					<svg
@@ -138,12 +132,6 @@
 							/>
 						</defs>
 					</svg>
-
-					<!-- {#if ueHover}
-						<img src="../uberEatsLogo.svg" class="" alt="Uber Eats Logo" />
-					{:else}
-						<img src="../greenUberEatsLogo.svg" class="" alt="Uber Eats Logo" />
-					{/if} -->
 				</a>
 			</div>
 		</div>
