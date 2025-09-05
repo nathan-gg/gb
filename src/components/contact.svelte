@@ -161,7 +161,7 @@
 			<div class="mt-6 md:mt-12">
 				<button
 					onclick={scrollPrev}
-					class=" font-DMSans text-lightText hover:text-darkText hover:cursor-pointer"
+					class=" font-MonaSans text-lightText hover:text-darkText hover:cursor-pointer"
 				>
 					<p>
 						{prevArrowText}
@@ -175,7 +175,7 @@
 				<h1 class="text-darkText mb-4 text-6xl">{title}</h1>
 				<h1 class="text-lightText mb-12 text-4xl">{thaiTitle}</h1>
 
-				<p class="text-darkText font-DMSans">
+				<p class="text-darkText font-MonaSans">
 					{@html body}
 				</p>
 
@@ -183,7 +183,7 @@
 					<form
 						action="https://api.web3forms.com/submit"
 						method="POST"
-						class="font-DMSans font-lightText flex flex-col"
+						class="font-MonaSans font-lightText flex flex-col"
 					>
 						<div class="mt-8 grid grid-cols-2 grid-rows-2">
 							<input
@@ -221,7 +221,7 @@
 					</form>
 				{/if}
 				{#if ifPage2}
-					<div class="font-DMSans flex w-full flex-col font-black">
+					<div class="font-MonaSans flex w-full flex-col font-black">
 						<h3 class="text-2xl">Hours</h3>
 						<div class="text-md flex justify-between sm:text-sm">
 							<div class="text-darkText hidden flex-col font-medium sm:flex">
@@ -285,7 +285,7 @@
 			<div class="mb-6 md:mb-12">
 				<button
 					onclick={scrollNext}
-					class=" font-DMSans text-lightText hover:text-darkText hover:cursor-pointer"
+					class=" font-MonaSans text-lightText hover:text-darkText hover:cursor-pointer"
 				>
 					<p>
 						{arrowText}
@@ -298,7 +298,7 @@
 			<div
 				class="mb-6 md:mb-12"
 			>
-				<div use:scrollTo={{ ref: (goTo), offset:-64 }} class="font-DMSans text-lightText hover:text-darkText">
+				<div use:scrollTo={{ ref: (goTo), offset:-64 }} class="font-MonaSans text-lightText hover:text-darkText">
 					<p >
 						{topArrowText}
 					</p>

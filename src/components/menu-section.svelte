@@ -175,7 +175,7 @@
 			</div>
 
 			<!-- Menu Content for Mobile -->
-			<div class="font-DMSans px-12 py-4 text-sm sm:text-xl md:text-3xl">
+			<div class="font-MonaSans px-12 py-4 text-sm sm:text-xl md:text-3xl">
 				{#each groupedMenuItems as group, groupIndex}
 					<!-- Category Header -->
 					{#if group.subheader}
@@ -183,7 +183,7 @@
 							{group.subheader}
 						</div> -->
 
-						<div class="font-DMSans mt-8 mb-4 flex {groupIndex === 0 ? 'mt-4' : ''}">
+						<div class="font-MonaSans mt-8 mb-4 flex {groupIndex === 0 ? 'mt-4' : ''}">
 							<!-- {#if group.subheader !== title} -->
 							<p
 								class="text-darkText w-4/5 flex-grow text-xl font-semibold whitespace-pre-line md:text-3xl"
@@ -330,7 +330,7 @@
 				<div class="mt-6 lg:mt-12">
 					<button
 						onclick={scrollPrev}
-						class="font-DMSans text-lightText hover:text-darkText hover:cursor-pointer"
+						class="font-MonaSans text-lightText hover:text-darkText hover:cursor-pointer"
 					>
 						<p>
 							{prevTitle}
@@ -343,7 +343,7 @@
 				<h1 class="text-darkText mb-4 text-6xl">{title}</h1>
 				{#if sectionDetails}
 				<h1 class="text-lightText text-4xl mb-4">{thaiTitle}</h1>
-				<p class="text-lightText font-DMSans text-md mb-12">{sectionDetails}</p>
+				<p class="text-lightText font-MonaSans text-md mb-12">{sectionDetails}</p>
 				{:else}
 				<h1 class="text-lightText mb-12 text-4xl">{thaiTitle}</h1>
 				{/if}
@@ -352,7 +352,7 @@
 				{#each groupedMenuItems as group, groupIndex}
 					<!-- Subheader -->
 					{#if group.subheader}
-						<div class="font-DMSans mt-8 mb-4 flex {groupIndex === 0 ? 'mt-4' : ''}">
+						<div class="font-MonaSans mt-8 mb-4 flex {groupIndex === 0 ? 'mt-4' : ''}">
 							<div class="text-darkText flex-grow text-xl font-semibold">{group.subheader}</div>
 
 							{#if pCol1 || pCol2 || pCol3}
@@ -385,7 +385,7 @@
 
 					<!-- Items in this group -->
 					{#each group.items as item, i}
-						<div class="font-DMSans mb-6 flex">
+						<div class="font-MonaSans mb-6 flex">
 							<div class="flex w-full flex-col sm:flex-row sm:justify-between">
 								<!-- Left side: Item name, description, extras -->
 								<div class="pr-4 sm:flex-grow sm:pr-8">
@@ -463,7 +463,7 @@
 				<div class="mb-6 lg:mb-12">
 					<button
 						onclick={scrollNext}
-						class="font-DMSans text-lightText hover:text-darkText hover:cursor-pointer"
+						class="font-MonaSans text-lightText hover:text-darkText hover:cursor-pointer"
 					>
 						<p>
 							{nextTitle}

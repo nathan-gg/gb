@@ -46,12 +46,12 @@
 					</div>
 					<!-- <a
 						href="order"
-						class="md:4 hover:bg-secondary hover:text-primary font-DMSans mt-2 h-fit w-fit rounded-xl border-1 border-[#E0B87A] p-2 text-sm sm:border-2 md:text-lg"
+						class="md:4 hover:bg-secondary hover:text-primary font-MonaSans mt-2 h-fit w-fit rounded-xl border-1 border-[#E0B87A] p-2 text-sm sm:border-2 md:text-lg"
 						>Make Reservation</a
 					> -->
 				</div>
 				<div
-					class="font-DMSans text-secondary md:text-xl mx-4 mb-8 flex-col flex-nowrap text-xs font-extralight tracking-wide sm:mb-0 sm:ml-4 md:ml-8"
+					class="font-MonaSans text-secondary md:text-xl mx-4 mb-8 flex-col flex-nowrap text-xs font-extralight tracking-wide sm:mb-0 sm:ml-4 md:ml-8"
 				>
 					<a
 						class=" underline"
@@ -71,7 +71,7 @@
 					/>
 				</div>
 			</div>
-			<p class="font-DMSans font-thin sm:font-extralight">
+			<p class="font-MonaSans font-thin sm:font-extralight">
 				© 2025 All Rights Reserved. Green Basil Thai Cuisine
 			</p>
 		</div>

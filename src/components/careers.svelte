@@ -62,7 +62,7 @@
 				<h2 class="text-lightText mb-12 text-4xl">พ่อครัว</h2>
 			{/if}
 			<div
-				class="font-DMSans text-darkText group lg:justify-star flex flex-wrap justify-center leading-4 sm:inline-flex lg:flex-nowrap"
+				class="font-MonaSans text-darkText group lg:justify-star flex flex-wrap justify-center leading-4 sm:inline-flex lg:flex-nowrap"
 			>
 				<button onclick={() => (curTab = 0)} class=" group-hover:opacity-50 hover:!opacity-100">
 					{#if curTab === 0}
@@ -101,7 +101,7 @@
 				</button>
 			</div>
 
-			<div class="font-DMSans">
+			<div class="font-MonaSans">
 				{#if curTab === 0}
 					<p class="">
 						Green Basil Thai Restaurant promotes a fun, respectful and encouraging work environment.

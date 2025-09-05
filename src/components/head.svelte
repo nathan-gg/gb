@@ -118,7 +118,7 @@
 				</nav>
 
 				<div
-					class="font-DMSans mt-4 grid grid-cols-2 text-xs sm:mt-12 md:grid-cols-1 lg:grid-cols-2"
+					class="font-MonaSans mt-4 grid grid-cols-2 text-xs sm:mt-12 md:grid-cols-1 lg:grid-cols-2"
 				>
 					<div class="col-span-1 flex flex-col md:mb-4">
 						<a

@@ -21,13 +21,13 @@
 			<h1 class="text-darkText mb-4 text-6xl">{title}</h1>
 			<h1 class="text-lightText mb-12 text-4xl">{thaiTitle}</h1>
 
-			<p class="font-DMSans">
+			<p class="font-MonaSans">
 				Order through our phone number <a href="tel:+1 6045007542" class="underline"
 					>+1 (604) 439-1919</a
 				> for exceptional and fast delivery service. We offer free in-house delivery for any order above
 				$25 within a 5 km radius.
 			</p>
-			<p class="font-DMSans mt-8">
+			<p class="font-MonaSans mt-8">
 				We also deliver through <span class=" font-[1000]">Doordash</span> and
 				<span class="font-[1000]">Uber Eats</span>, which can be accessed with the affiliate links
 				below.

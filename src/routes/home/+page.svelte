@@ -101,17 +101,6 @@
 		image: '/webp/homeContact.webp'
 	};
 
-	// const partnerships = {
-	//   thisRef: 'Partnerships',
-	//   goTo: 'About',
-	//   goBack: 'Contact',
-	//   title: 'Our Partnerships',
-	//   pText: '[SUBTITLE TEXT HERE]',
-	//   btnText: 'Discover Partnerships',
-	//   link: 'partnerships',
-	//   image: '/webp/homePartnerships.webp'
-	// };
-
 	const about = {
 		thisRef: 'About',
 		goTo: 'Reservations',

@@ -78,7 +78,7 @@
 			<h1 class="text-darkText mb-4 text-6xl">{title}</h1>
 			<h1 class="text-lightText mb-12 text-4xl">{thaiTitle}</h1>
 
-			<div class="font-DMSans text-darkText group flex flex-col text-3xl">
+			<div class="font-MonaSans text-darkText group flex flex-col text-3xl">
 				{#each menuCategories as section (section.id)}
 					<button
 						class="mt-4 text-left transition-opacity duration-200 group-hover:opacity-50 hover:!opacity-100 {openSection ===

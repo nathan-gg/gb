@@ -74,79 +74,91 @@
 			class="absolute inset-0 h-full w-screen object-cover brightness-30 lg:hidden"
 			alt=""
 		/>
-		<div class="absolute inset-0 h-full w-screen">
-			<img src={image} class="absolute inset-0 h-full w-screen object-cover lg:flex" alt="" />
+		<div class="absolute inset-0 h-full w-screen lg:flex">
+			<div
+				class=" absolute inset-0 h-full w-screen bg-gradient-to-r from-[rgba(0,0,0,.8)] to-transparent"
+			></div>
+			<img src={image} class="absolute inset-0 z-[-10] h-full w-screen object-cover" alt="" />
 		</div>
 	{:else}
 		<div class="absolute inset-0 h-full w-screen">
-			<div class=" absolute inset-0 h-full w-screen bg-gradient-to-r from-[rgba(0,0,0,.8)] to-transparent"></div>
-			<img
-				src={image}
-				class="absolute inset-0 h-full w-screen object-cover z-[-10]"
-				alt=""
-			/>
+			<div
+				class=" absolute inset-0 h-full w-screen bg-gradient-to-r from-[rgba(0,0,0,.8)] to-transparent"
+			></div>
+			<img src={image} class="absolute inset-0 z-[-10] h-full w-screen object-cover" alt="" />
 		</div>
 	{/if}
 
 	{#if firstSection}
-		<div class="relative flex w-screen flex-col items-center text-center">
-			<h1 class="px-4 text-6xl xl:text-8xl">{title}</h1>
-			<p class="font-DMSans mb-8 w-1/2 text-xl font-extralight md:w-2/3 md:text-4xl xl:w-1/3">
-				{pText}
-			</p>
-		</div>
-
-		{#if arrow}
-			<button
-				class="absolute bottom-1/8 w-screen text-center hover:cursor-pointer"
-				onclick={scrollNext}
+		<section class="grid h-[calc(100vh-4rem)] w-screen grid-cols-3 grid-rows-3">
+			<div
+				class="relative col-span-2 col-start-1 row-span-1 row-start-3 ml-24 flex flex-col items-start self-end pb-20 text-left"
 			>
-				<span class="material-icons md-48"> keyboard_arrow_down </span>
-			</button>
-		{/if}
-	{:else}
-		{#if prevArrow}
-			<button
-				class="absolute top-1/8 w-screen text-center hover:cursor-pointer"
-				onclick={scrollPrev}
-			>
-				<span class="material-icons md-48"> keyboard_arrow_up </span>
-			</button>
-		{/if}
-
-		<div class="relative flex w-screen flex-col items-center text-center">
-			<h1 class="px-4 text-6xl md:text-8xl">{title}</h1>
-			<p class="font-DMSans mb-8 w-1/2 text-xl font-extralight md:w-2/3 md:text-4xl xl:w-1/3">
-				{pText}
-			</p>
-
-			{#if button}
-				<a
-					href={link}
-					class="border-secondary font-DMSans hover:bg-secondary hover:text-primary w-fit self-center rounded-md border-2 p-2 text-lg sm:px-16 sm:text-2xl"
+				<h1 class="mb-4 text-6xl xl:text-[96px] xl:leading-[96px]">{title}</h1>
+				<p
+					class="font-MonaSans w-1/2 text-xl font-medium font-medium text-white md:text-2xl md:leading-[32px]"
 				>
-					{btnText}
-				</a>
+					{pText}
+				</p>
+			</div>
+
+			{#if arrow}
+				<button
+					class=" relative col-span-1 col-start-2 row-span-1 row-start-3 w-fit place-self-center self-end pb-16 text-center opacity-50 transition-opacity duration-100 hover:cursor-pointer hover:opacity-100"
+					onclick={scrollNext}
+				>
+					<span class="material-icons md-48"> keyboard_arrow_down </span>
+				</button>
 			{/if}
-		</div>
+		</section>
+	{:else}
+		<section class="grid h-[calc(100vh-4rem)] w-screen grid-cols-3 grid-rows-3">
+			{#if prevArrow}
+				<button
+					class=" relative col-span-1 col-start-2 row-span-1 row-start-1 w-fit place-self-center self-end pt-16 text-center opacity-50 transition-opacity duration-100 hover:cursor-pointer hover:opacity-100"
+					onclick={scrollPrev}
+				>
+					<span class="material-icons md-48"> keyboard_arrow_up </span>
+				</button>
+			{/if}
 
-		{#if arrow}
-			<button
-				class="absolute bottom-1/8 h-fit w-screen text-center hover:cursor-pointer"
-				onclick={scrollNext}
+			<div
+				class="relative col-span-2 col-start-1 row-span-1 row-start-3 ml-24 flex flex-col items-start self-end pb-20 text-left"
 			>
-				<span class="material-icons md-48"> keyboard_arrow_down </span>
-			</button>
-		{/if}
+				<h1 class="mb-2 text-6xl xl:text-[96px] xl:leading-[96px]">{title}</h1>
+				<p
+					class="font-MonaSans mb-6 w-1/2 text-xl font-medium text-white md:text-2xl md:leading-[32px]"
+				>
+					{pText}
+				</p>
+				{#if button}
+					<a
+						href={link}
+						class="border-secondary font-MonaSans hover:bg-secondary hover:text-primary w-fit self-start rounded-md border-2 p-2 text-lg font-medium transition-colors duration-100 sm:px-16 sm:text-2xl"
+					>
+						{btnText}
+					</a>
+				{/if}
+			</div>
 
-		{#if backToTop}
-			<button
-				class="font-DMSans absolute bottom-1/8 flex h-fit w-screen flex-col text-center hover:cursor-pointer"
-				onclick={scrollNext}
-			>
-				<span class="material-icons md-48"> keyboard_arrow_up </span>
-				Back To Top
-			</button>
-		{/if}
+			{#if arrow}
+				<button
+					class=" relative col-span-1 col-start-2 row-span-1 row-start-3 w-fit place-self-center self-end pb-16 text-center opacity-50 transition-opacity duration-100 hover:cursor-pointer hover:opacity-100"
+					onclick={scrollNext}
+				>
+					<span class="material-icons md-48"> keyboard_arrow_down </span>
+				</button>
+			{/if}
+
+			{#if backToTop}
+				<button
+					class=" relative col-span-1 col-start-2 row-span-1 row-start-3 w-fit place-self-center self-end pb-16 text-center opacity-50 transition-opacity duration-100 hover:cursor-pointer hover:opacity-100"
+					onclick={scrollNext}
+				>
+					<span class="material-icons md-48"> keyboard_arrow_up </span>
+					Back To Top
+				</button>
+			{/if}
+		</section>
 	{/if}
 </section>

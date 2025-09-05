@@ -13,7 +13,7 @@
 			<h1 class="text-darkText mb-4 text-6xl">{title}</h1>
 			<h1 class="text-lightText mb-12 text-4xl">{thaiTitle}</h1>
 
-			<div class="font-DMSans text-darkText mb-12">
+			<div class="font-MonaSans text-darkText mb-12">
 				<p class="mb-4">
 					We understand that plans can change. If you need to cancel or modify your reservation,
 					please review our policy below:

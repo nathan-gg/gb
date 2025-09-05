@@ -209,24 +209,24 @@
 
 				<div class="my-4 inline-flex items-center">
 					<span class="mr-2 ml-1 text-3xl font-semibold text-[#D08111]">GF</span>
-					<p class="font-DMSans text-darkText text-xl">- Gluten Free</p>
+					<p class="font-MonaSans text-darkText text-xl">- Gluten Free</p>
 				</div>
 				<div class="my-4 inline-flex items-center">
 					<img src="/spiceMild.svg" alt="Mild Spice" class="inline-block h-12 w-12" />
-					<p class="font-DMSans text-darkText text-xl">- Very Mild</p>
+					<p class="font-MonaSans text-darkText text-xl">- Very Mild</p>
 				</div>
 
 				<div class="my-4 inline-flex items-center">
 					<img src="/spiceMedium.svg" alt="Mild Spice" class="inline-block h-12 w-12" />
-					<p class="font-DMSans text-darkText text-xl">- Mild</p>
+					<p class="font-MonaSans text-darkText text-xl">- Mild</p>
 				</div>
 				<div class="my-4 inline-flex items-center">
 					<img src="/spiceHot.svg" alt="Mild Spice" class="inline-block h-12 w-12" />
-					<p class="font-DMSans text-darkText text-xl">- Hot</p>
+					<p class="font-MonaSans text-darkText text-xl">- Hot</p>
 				</div>
 				<div class="my-4 inline-flex items-center">
 					<img src="/spiceVeryHot.svg" alt="Mild Spice" class="inline-block h-12 w-12" />
-					<p class="font-DMSans text-darkText text-xl">- Very Hot</p>
+					<p class="font-MonaSans text-darkText text-xl">- Very Hot</p>
 				</div>
 			</div>
 		</div>
@@ -259,7 +259,7 @@
 
 				<div class="my-4 inline-flex items-center">
 					<span class="mr-2 ml-1 text-3xl font-semibold text-[#D08111] xl:text-5xl">GF</span>
-					<p class="font-DMSans text-darkText whitespace-nowrap lg:text-xl xl:text-2xl">
+					<p class="font-MonaSans text-darkText whitespace-nowrap lg:text-xl xl:text-2xl">
 						- Gluten Free
 					</p>
 				</div>
@@ -269,7 +269,7 @@
 						alt="Mild Spice"
 						class="inline-block h-12 w-12 xl:h-16 xl:w-16"
 					/>
-					<p class="font-DMSans text-darkText whitespace-nowrap lg:text-xl xl:text-2xl">
+					<p class="font-MonaSans text-darkText whitespace-nowrap lg:text-xl xl:text-2xl">
 						- Very Mild
 					</p>
 				</div>
@@ -280,7 +280,7 @@
 						alt="Mild Spice"
 						class="inline-block h-12 w-12 xl:h-16 xl:w-16"
 					/>
-					<p class="font-DMSans text-darkText lg:text-xl xl:text-2xl">- Mild</p>
+					<p class="font-MonaSans text-darkText lg:text-xl xl:text-2xl">- Mild</p>
 				</div>
 				<div class="my-4 inline-flex items-center">
 					<img
@@ -288,7 +288,7 @@
 						alt="Mild Spice"
 						class="inline-block h-12 w-12 xl:h-16 xl:w-16"
 					/>
-					<p class="font-DMSans text-darkText lg:text-xl xl:text-2xl">- Hot</p>
+					<p class="font-MonaSans text-darkText lg:text-xl xl:text-2xl">- Hot</p>
 				</div>
 				<div class="my-4 inline-flex items-center">
 					<img
@@ -296,7 +296,7 @@
 						alt="Mild Spice"
 						class="inline-block h-12 w-12 xl:h-16 xl:w-16"
 					/>
-					<p class="font-DMSans text-darkText whitespace-nowrap lg:text-xl xl:text-2xl">
+					<p class="font-MonaSans text-darkText whitespace-nowrap lg:text-xl xl:text-2xl">
 						- Very Hot
 					</p>
 				</div>
@@ -337,9 +337,9 @@
 				duration: 250,
 				axis: 'x'
 			}}
-			class=" font-DMSans text-darkText left-0 hidden h-[calc(100vh)] w-3/5 items-center justify-center pl-6 text-3xl lg:flex"
+			class=" font-MonaSans text-darkText left-0 hidden h-[calc(100vh)] w-3/5 items-center justify-center pl-6 text-3xl lg:flex"
 		>
-			<!-- class="font-DMSans text-darkText left-0 hidden h-[calc(100vh-16px)] w-1/4 items-center pl-6 text-3xl lg:flex" -->
+			<!-- class="font-MonaSans text-darkText left-0 hidden h-[calc(100vh-16px)] w-1/4 items-center pl-6 text-3xl lg:flex" -->
 			<div
 				class=" desktop-toc group text-darkText flex max-h-3/5 w-full flex-col overflow-y-scroll pr-4"
 			>
@@ -417,7 +417,7 @@
 				duration: 250,
 				axis: 'x'
 			}}
-			class="font-DMSans text-lightText bg-tertiary fixed z-20 flex h-[calc(100vh-16px)] w-full
+			class="font-MonaSans text-lightText bg-tertiary fixed z-20 flex h-[calc(100vh-16px)] w-full
 			flex-auto flex-col items-center justify-center text-3xl lg:hidden"
 		>
 			<!-- Back to top button

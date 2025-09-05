@@ -77,7 +77,7 @@
 			<div class="mt-6 md:mt-12">
 				<button
 					onclick={scrollPrev}
-					class=" font-DMSans text-lightText hover:text-darkText hover:cursor-pointer"
+					class=" font-MonaSans text-lightText hover:text-darkText hover:cursor-pointer"
 				>
 					<span class="material-icons md-48"> keyboard_arrow_up </span>
 				</button>
@@ -95,7 +95,7 @@
 			<div class="mb-6 md:mb-12">
 				<button
 					onclick={scrollNext}
-					class=" font-DMSans text-lightText hover:text-darkText hover:cursor-pointer"
+					class=" font-MonaSans text-lightText hover:text-darkText hover:cursor-pointer"
 				>
 					<span class="material-icons md-48"> keyboard_arrow_down </span>
 				</button>
@@ -106,7 +106,7 @@
 			<!-- <div class="mb-6 md:mb-12">
 				<div
 					use:scrollTo={{ ref: goTo, offset: -64 }}
-					class=" font-DMSans text-lightText hover:text-darkText hover:cursor-pointer"
+					class=" font-MonaSans text-lightText hover:text-darkText hover:cursor-pointer"
 				>
 					<p>
 						{topArrowText}
@@ -116,7 +116,7 @@
 			<div class="mb-6 md:mb-12">
 				<button
 					onclick={scrollNext}
-					class=" font-DMSans text-lightText hover:text-darkText hover:cursor-pointer"
+					class=" font-MonaSans text-lightText hover:text-darkText hover:cursor-pointer"
 				>
 					
 					<span class="material-icons md-48"> keyboard_arrow_up </span>

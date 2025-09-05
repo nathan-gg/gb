@@ -11,6 +11,7 @@
 	--color-darkText: #355128;
 
 	--font-DMSans: 'DM Sans', sans-serif;
+	--font-MonaSans: 'Mona', sans-serif;
 	--font-instrument: 'Instrument Serif', serif;
 
 	--fontSize-header: 96px;
@@ -155,6 +156,14 @@
 	src: url('/fonts/DMSans-VariableFont_opsz,wght.ttf') format('opentype');
 	font-weight: 400;
 	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Mona';
+	src: url('/fonts/DMSans-VariableFont_opsz,wght.ttf') format('truetype');
+	font-weight: 100 900; /* Support full weight range */
+	font-style: normal;
+	font-display: swap; /* Optional: improves loading performance */
 }
 
 @font-face {
@@ -331,3 +340,7 @@ button {
 /* body .scroll-container{
 	display: none;
 } */
+
+* {
+  text-wrap: balance;
+}
