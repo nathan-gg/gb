@@ -193,7 +193,7 @@
 	<!-- mobile spice index -->
 	{#if showSpice}
 		<button
-			class="font-MonaSans bg-darkText border-darkText text-tertiary fixed bottom-2 left-[25vw] z-20 w-1/2 rounded-[5px] border px-4 text-lg text-[1rem] font-medium text-nowrap transition duration-300 xl:left-16 xl:w-44 xl:px-5.5 xl:py-2 xl:text-[1rem]"
+			class="font-MonaSans bg-darkText border-darkText text-tertiary fixed bottom-2 left-[25vw] z-20 w-1/2 rounded-[5px] border px-4 text-lg text-[1rem] font-medium text-nowrap transition duration-300 lg:left-16 lg:w-44 lg:px-5.5 lg:py-2 lg:text-[1rem]"
 			onclick={toggleSpice}
 		>
 			Spice Index
@@ -206,7 +206,7 @@
 				x: 0,
 				y: 10
 			}}
-			class="border-darkText bg-tertiary fixed bottom-8 left-[25vw] z-10 flex h-fit w-1/2 flex-col items-start justify-start rounded-t-[5px] border py-2 pb-10.5 pl-4 xl:bottom-4 xl:left-[4rem] xl:w-44"
+			class="border-darkText bg-tertiary fixed bottom-8 left-[25vw] z-10 flex h-fit w-1/2 flex-col items-start justify-start rounded-t-[5px] border py-2 pb-4 lg:pb-10.5 pl-4 lg:bottom-4 lg:left-[4rem] lg:w-44"
 		>
 			<div class="bg-tertiary flex flex-col gap-y-1 xl:gap-y-4">
 				<div class=" flex items-center justify-start gap-x-4">
@@ -235,7 +235,7 @@
 		</div>
 	{:else}
 		<button
-			class="font-MonaSans bg-tertiary border-darkText text-darkText fixed bottom-2 left-[25vw] z-20 w-1/2 rounded-[5px] border px-4 text-lg text-[1rem] font-medium text-nowrap transition duration-300 xl:left-16 xl:w-44 xl:px-5.5 xl:py-2 xl:text-[1rem]"
+			class="font-MonaSans bg-tertiary border-darkText text-darkText fixed bottom-2 left-[25vw] z-20 w-1/2 rounded-[5px] border px-4 text-lg text-[1rem] font-medium text-nowrap transition duration-300 lg:left-16 lg:w-44 lg:px-5.5 lg:py-2 lg:text-[1rem]"
 			onclick={toggleSpice}
 		>
 			Spice Index
