@@ -36,7 +36,7 @@
 			<div class="mt-8 mb-12 sm:mb-0">
 				<a
 					href="https://www.doordash.com/store/green-basil-thai-restaurant-burnaby-58614/?srsltid=AfmBOoou1HkBW-Q12dcFiteG44mF3P0Gls_6HFlLqFnofOfltMakDq-v"
-					class="border-darkText group hover:border-darkText hover:bg-darkText mb-4 flex place-content-center rounded-[5px] border-2 bg-transparent p-4 duration-100 group-hover:transition  "
+					class="border-darkText group hover:border-darkText hover:bg-darkText mb-4 flex place-content-center rounded-[5px] border-2 bg-transparent p-4 sm:px-5.5 sm:py-2 duration-300 group-hover:transition  "
 					target="_blank"
 				>
 					<svg
@@ -86,7 +86,7 @@
 
 				<a
 					href="https://www.ubereats.com/ca/store/green-basil-thai-restaurant/6GoYWudYTTOVt7vlqeq6lA?srsltid=AfmBOooHHudVtUcDEbOKDV21TsulpJrJloqXuDdf2yK1pqjne35NN0ZH"
-					class=" border-darkText hover:border-darkText hover:bg-darkText group flex place-content-center rounded-[5px] border-2 bg-transparent p-4 text-white duration-100 group-hover:transition  "
+					class=" border-darkText hover:border-darkText hover:bg-darkText group flex place-content-center rounded-[5px] border-2 bg-transparent p-4 sm:px-5.5 sm:py-2 text-white  duration-300 group-hover:transition  "
 					target="_blank"
 				>
 					<svg
@@ -96,7 +96,7 @@
 						fill="none"
 						xmlns="http://www.w3.org/2000/svg"
 						xmlns:xlink="http://www.w3.org/1999/xlink"
-						class="duration-100 group-hover:[filter:brightness(0)_saturate(100%)_invert(93%)_sepia(8%)_saturate(352%)_hue-rotate(346deg)_brightness(97%)_contrast(92%)] group-hover:transition"
+						class="duration-300 group-hover:[filter:brightness(0)_saturate(100%)_invert(93%)_sepia(8%)_saturate(352%)_hue-rotate(346deg)_brightness(97%)_contrast(92%)] group-hover:transition"
 					>
 						<rect width="61" height="21" fill="url(#pattern0_1249_25)" />
 						<rect x="64" width="62" height="21" fill="url(#pattern1_1249_25)" />

@@ -87,7 +87,7 @@
 			<h1 class="text-darkText mb-4 text-6xl">{title}</h1>
 			<h1 class="text-lightText mb-12 text-4xl">{thaiTitle}</h1>
 
-			<p class="text-darkText font-sans">
+			<p class="text-darkText font-MonaSans">
 				{@html body}
 			</p>
 		</div>

@@ -23,17 +23,13 @@
 	<!-- <link rel="icon" href="iconLogo.svg" type="image/svg" /> -->
 
 	<!-- Standard favicon (use .ico format for best compatibility) -->
-    <link rel="icon" href="iconLogo.ico" sizes="any">
-    
-    <!-- SVG favicon (for modern browsers) -->
-    <link rel="icon" href="iconLogo.svg" type="image/svg+xml">
-    
-    <!-- Apple Touch Icon (for Safari) -->
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<link rel="icon" href="iconLogo.ico" sizes="any" />
 
+	<!-- SVG favicon (for modern browsers) -->
+	<link rel="icon" href="iconLogo.svg" type="image/svg+xml" />
 
-
-
+	<!-- Apple Touch Icon (for Safari) -->
+	<link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
@@ -46,12 +42,13 @@
 	<ViewTransition />
 
 	{#if $page.url.pathname !== '/'}
-		<div class="sticky top-0 z-50">
+		<div class=" transla">
 			<Header />
 		</div>
 	{/if}
 
 	{@render children()}
+
 	<!-- {#if $page.url.pathname !== '/' && $page.url.pathname !== '/full-menu' && $page.url.pathname !== '/home'} -->
 	{#if $page.url.pathname !== '/' && $page.url.pathname !== '/full-menu' && $page.url.pathname !== '/home' && $page.url.pathname !== '/identity' && $page.url.pathname !== '/contact'}
 		<div class="bottom-0 z-50">

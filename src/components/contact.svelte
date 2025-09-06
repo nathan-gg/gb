@@ -147,7 +147,7 @@
 	use:scrollRef={thisRef}
 	id={thisRef}
 	data-scroll-ref={thisRef}
-	class=" bg-tertiary snap-align-start relative flex min-h-screen flex-col sm:flex-row {className}"
+	class=" bg-tertiary snap-align-start relative flex min-h-screen flex-col sm:flex-row {className} "
 >
 	<div class="flex sm:hidden">
 		<img src="/webp/m-contact1.webp" class="w-screen object-cover" alt="" />
@@ -198,14 +198,12 @@
 					<div>
 						<button
 							type="submit"
-							class="bg-darkText text-tertiary rounded border-0 p-2 transition duration-100 hover:scale-105"
+							class="border-darkText hover:bg-darkText text-darkText hover:text-tertiary rounded-[5px] border-2 p-2 transition duration-300 sm:px-5.5 sm:py-2"
 						>
 							<a href="mailto:info@greenbasilthai.com">Submit</a></button
 						>
 					</div>
 				</form>
-
-				
 			</div>
 		</div>
 	</div>
