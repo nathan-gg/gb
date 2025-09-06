@@ -193,7 +193,7 @@
 	<!-- mobile spice index -->
 	{#if showSpice}
 		<button
-			class="font-MonaSans bg-darkText border-darkText text-tertiary fixed bottom-2 left-[25vw] z-20 w-1/2 rounded-[5px] border px-4 text-lg text-[1rem] font-medium text-nowrap transition duration-300 xl:px-5.5 xl:py-2 xl:text-[1rem] xl:left-16 xl:w-44"
+			class="font-MonaSans bg-darkText border-darkText text-tertiary fixed bottom-2 left-[25vw] z-20 w-1/2 rounded-[5px] border px-4 text-lg text-[1rem] font-medium text-nowrap transition duration-300 xl:left-16 xl:w-44 xl:px-5.5 xl:py-2 xl:text-[1rem]"
 			onclick={toggleSpice}
 		>
 			Spice Index
@@ -206,35 +206,36 @@
 				x: 0,
 				y: 10
 			}}
-			class="border-darkText bg-tertiary fixed bottom-8 left-[25vw] z-10 flex h-fit w-1/2 flex-col items-center justify-center border xl:bottom-4 xl:left-[4rem] xl:w-44 py-2 rounded-t-[5px] pb-10.5"
+			class="border-darkText bg-tertiary fixed bottom-8 left-[25vw] z-10 flex h-fit w-1/2 flex-col items-start justify-start rounded-t-[5px] border py-2 pb-10.5 pl-4 xl:bottom-4 xl:left-[4rem] xl:w-44"
 		>
 			<div class="bg-tertiary flex flex-col gap-y-1 xl:gap-y-4">
-				<div class="inline-flex items-center">
-					<span class="text-2xl font-semibold inline-block text-[#D08111]">GF</span>
-					<p class="font-MonaSans text-darkText text-[1rem]">- Gluten Free</p>
+				<div class=" flex items-center justify-start gap-x-4">
+					<span class="font-MonaSans inline-block text-[20px] font-semibold text-[#D08111]">GF</span
+					>
+					<p class="font-MonaSans text-darkText text-[1rem]">Gluten Free</p>
 				</div>
-				<div class="inline-flex items-center">
-					<img src="/spiceMild.svg" alt="Mild Spice" class="inline-block h-8 w-12" />
-					<p class="font-MonaSans text-darkText text-[1rem]">- Very Mild</p>
+				<div class="inline-flex items-center justify-start gap-x-4">
+					<img src="/spiceMild.svg" alt="Mild Spice" class="inline-block h-9 w-6" />
+					<p class="font-MonaSans text-darkText text-[1rem]">Very Mild</p>
 				</div>
 
-				<div class="inline-flex items-center">
-					<img src="/spiceMedium.svg" alt="Mild Spice" class="inline-block h-8 w-12" />
-					<p class="font-MonaSans text-darkText text-[1rem]">- Mild</p>
+				<div class="inline-flex items-center justify-start gap-x-4">
+					<img src="/spiceMedium.svg" alt="Mild Spice" class="inline-block h-9 w-6" />
+					<p class="font-MonaSans text-darkText text-[1rem]">Mild</p>
 				</div>
-				<div class="inline-flex items-center">
-					<img src="/spiceHot.svg" alt="Mild Spice" class="inline-block h-8 w-12" />
-					<p class="font-MonaSans text-darkText text-[1rem]">- Hot</p>
+				<div class="inline-flex items-center justify-start gap-x-4">
+					<img src="/spiceHot.svg" alt="Mild Spice" class="inline-block h-9 w-6" />
+					<p class="font-MonaSans text-darkText text-[1rem]">Hot</p>
 				</div>
-				<div class="inline-flex items-center">
-					<img src="/spiceVeryHot.svg" alt="Mild Spice" class="inline-block h-8 w-12" />
-					<p class="font-MonaSans text-darkText text-[1rem]">- Very Hot</p>
+				<div class="inline-flex items-center justify-start gap-x-4">
+					<img src="/spiceVeryHot.svg" alt="Mild Spice" class="inline-block h-9 w-6" />
+					<p class="font-MonaSans text-darkText text-[1rem]">Very Hot</p>
 				</div>
 			</div>
 		</div>
 	{:else}
 		<button
-			class="font-MonaSans bg-tertiary border-darkText text-darkText fixed bottom-2 left-[25vw] z-20 w-1/2 rounded-[5px] border px-4 text-lg text-[1rem] font-medium text-nowrap transition duration-300 xl:px-5.5 xl:py-2 xl:text-[1rem] xl:left-16 xl:w-44"
+			class="font-MonaSans bg-tertiary border-darkText text-darkText fixed bottom-2 left-[25vw] z-20 w-1/2 rounded-[5px] border px-4 text-lg text-[1rem] font-medium text-nowrap transition duration-300 xl:left-16 xl:w-44 xl:px-5.5 xl:py-2 xl:text-[1rem]"
 			onclick={toggleSpice}
 		>
 			Spice Index
