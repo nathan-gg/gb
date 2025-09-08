@@ -21,7 +21,7 @@
 				{ text: 'Rice', href: '/full-menu#rice' },
 				{ text: 'Specialties', href: '/full-menu#specialties' },
 				{ text: 'Desserts', href: '/full-menu#desserts' },
-				{ text: 'Combinations', href: '/full-menu#combinations' }
+				{ text: 'Combos', href: '/full-menu#combos' }
 			]
 		},
 		{
@@ -68,15 +68,15 @@
 	}
 </script>
 
-<section class="flex min-h-[calc(100vh-4rem)] w-screen flex-col sm:flex-row">
-	<div class="flex sm:hidden">
-		<img src="/webp/orderOnlineMobile.webp" class="w-screen object-cover" alt="" />
+<section class=" bg-tertiary relative flex min-h-[calc(100vh-4rem)] flex-col xl:flex-row">
+	<div class="flex xl:hidden">
+		<img src="/webp/m-contact2.webp" class="w-screen object-cover" alt="" />
 	</div>
 
-	<div class="bg-tertiary text-darkText font-instrument flex flex-col items-center sm:w-1/2">
-		<div class="mx-8 my-24 flex w-2/3 flex-col sm:w-1/4">
-			<h1 class="text-darkText mb-4 text-6xl">{title}</h1>
-			<h1 class="text-lightText mb-12 text-4xl">{thaiTitle}</h1>
+	<div class="text-darkText font-instrument flex flex-col items-start justify-start xl:w-1/2">
+		<div class="mx-8 my-12 flex w-full flex-col items-start sm:ml-16 xl:my-24">
+			<h1 class="text-darkText mb-1 w-4/5 text-6xl sm:w-full">{title}</h1>
+			<h1 class="text-lightText mb-12 text-2xl">{thaiTitle}</h1>
 
 			<div class="font-MonaSans text-darkText group flex flex-col text-3xl">
 				{#each menuCategories as section (section.id)}
@@ -110,7 +110,7 @@
 		</div>
 	</div>
 
-	<div class="hidden w-1/2 flex-auto sm:flex">
+	<div class="hidden w-1/2 flex-auto xl:flex">
 		<img src="/webp/menuMain.webp" class="h-full w-full object-cover" alt="" />
 	</div>
 </section>

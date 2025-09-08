@@ -754,8 +754,8 @@ export const menuData = {
 			}
 		]
 	},
-	combinations: {
-		title: 'Combinations',
+	combos: {
+		title: 'Combos',
 		thaiTitle: 'ชุดคอมโบ',
 		imagePath: 'combinations',
 		mobilePath: 'm-combinations',

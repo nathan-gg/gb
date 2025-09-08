@@ -1,7 +1,7 @@
 <script>
-	import MenuSection from './menu-section.svelte';
-	import { menuData } from '../lib/utils/data/menu-data.js';
-	import Footer from '/src/components/footer.svelte';
+	import MenuSection from '$lib/components/menu-section.svelte';
+	import { menuData } from '$lib/utils/data/menu-data.js';
+	import Footer from '$lib/components/footer.svelte';
 	import { setGlobalOptions } from 'svelte-scrolling';
 	import IntersectionObserver from 'svelte-intersection-observer';
 
@@ -135,7 +135,7 @@
 				{ text: 'Rice', href: '/full-menu#rice' },
 				{ text: 'Specialties', href: '/full-menu#specialties' },
 				{ text: 'Desserts', href: '/full-menu#desserts' },
-				{ text: 'Combinations', href: '/full-menu#combinations' }
+				{ text: 'Combos', href: '/full-menu#combos' }
 			]
 		},
 		{
@@ -189,11 +189,11 @@
 	}
 </script>
 
-<section class="bg-tertiary flex h-[calc(100vh-4rem)]">
+<section class="bg-tertiary relative flex min-h-[calc(100vh-4rem)] flex-col xl:flex-row">
 	<!-- mobile spice index -->
 	{#if showSpice}
 		<button
-			class="font-MonaSans bg-darkText border-darkText text-tertiary fixed bottom-2 left-[25vw] z-20 w-1/2 rounded-[5px] border px-4 text-lg text-[1rem] font-medium text-nowrap transition duration-300 lg:left-16 lg:w-44 lg:px-5.5 lg:py-2 lg:text-[1rem]"
+			class="font-MonaSans bg-darkText border-darkText text-tertiary fixed bottom-2 left-8 z-20 w-44 w-44 rounded-[5px] border px-4 text-lg text-[1rem] font-medium text-nowrap transition duration-300 xl:left-16 xl:px-5.5 xl:py-2 xl:text-[1rem]"
 			onclick={toggleSpice}
 		>
 			Spice Index
@@ -206,7 +206,7 @@
 				x: 0,
 				y: 10
 			}}
-			class="border-darkText bg-tertiary fixed bottom-8 left-[25vw] z-10 flex h-fit w-1/2 flex-col items-start justify-start rounded-t-[5px] border py-2 pb-4 lg:pb-10.5 pl-4 lg:bottom-4 lg:left-[4rem] lg:w-44"
+			class="border-darkText bg-tertiary fixed bottom-8 left-8 z-10 flex h-fit w-44 flex-col items-start justify-start rounded-t-[5px] border px-4 py-2 pb-4 pl-4 xl:bottom-4 xl:left-[4rem] xl:pb-10.5"
 		>
 			<div class="bg-tertiary flex flex-col gap-y-1 xl:gap-y-4">
 				<div class=" flex items-center justify-start gap-x-4">
@@ -235,7 +235,7 @@
 		</div>
 	{:else}
 		<button
-			class="font-MonaSans bg-tertiary border-darkText text-darkText fixed bottom-2 left-[25vw] z-20 w-1/2 rounded-[5px] border px-4 text-lg text-[1rem] font-medium text-nowrap transition duration-300 lg:left-16 lg:w-44 lg:px-5.5 lg:py-2 lg:text-[1rem]"
+			class="font-MonaSans bg-tertiary border-darkText hover:bg-darkText hover:text-tertiary transition duration-300 text-darkText fixed bottom-2 left-8 z-20 w-44 rounded-[5px] border px-4 text-lg text-[1rem] font-medium text-nowrap xl:left-16 xl:px-5.5 xl:py-2 xl:text-[1rem]"
 			onclick={toggleSpice}
 		>
 			Spice Index
@@ -329,7 +329,7 @@
 					toggleTOC();
 					toggle(openSection);
 				}}
-				class="text-lightText hover:text-darkText mt-[46vh]"
+				class="text-lightText hover:text-darkText transition duration-300 mt-[46vh]"
 			>
 				<span class="material-icons md-60">keyboard_arrow_right</span>
 			</button>
@@ -351,7 +351,7 @@
 			>
 				{#each menuCategories as section (section.id)}
 					<button
-						class="mt-4 text-left text-2xl transition-opacity duration-200 group-hover:opacity-50 hover:!opacity-100 2xl:text-3xl {openSection ===
+						class="mt-4 text-left text-2xl transition-opacity duration-200 group-hover:opacity-50 hover:!opacity-100 xl:text-3xl {openSection ===
 						section.id
 							? '!opacity-100'
 							: ''}"
@@ -363,7 +363,7 @@
 					{#if openSection === section.id}
 						<div
 							transition:slide={{ duration: 250, easing: quintInOut }}
-							class="flex flex-col text-base 2xl:text-xl"
+							class="flex flex-col text-base xl:text-xl"
 						>
 							{#each section.links as link}
 								<a

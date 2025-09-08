@@ -34,7 +34,7 @@
 	<div class="text-darkText font-instrument flex flex-col items-start justify-start xl:w-1/2">
 		<div class="mx-8 my-12 flex w-full flex-col items-start sm:ml-16 xl:my-24">
 			<div class=" mb-4 flex flex-col">
-				<h1 class="text-darkText mb-1 text-6xl w-4/5 sm:w-full">{title}</h1>
+				<h1 class="text-darkText mb-1 w-4/5 text-6xl sm:w-full">{title}</h1>
 				<h1 class="text-lightText mb-12 text-2xl">{thaiTitle}</h1>
 
 				<div class="font-MonaSans flex w-full flex-col font-medium">
