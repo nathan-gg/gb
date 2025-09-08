@@ -1,7 +1,7 @@
 <script>
-	import FullMenu from '/src/components/full-menu.svelte';
-	import Header from '/src/components/head.svelte';
-	import Footer from '/src/components/footer.svelte';
+	import FullMenu from '$lib/components/full-menu.svelte';
+	import Header from '$lib/components/head.svelte';
+	import Footer from '$lib/components/footer.svelte';
 </script>
 
 <FullMenu />

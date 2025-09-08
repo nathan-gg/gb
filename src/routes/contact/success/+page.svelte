@@ -46,7 +46,7 @@
 		}
 	});
 
-	import Contact from '$lib/components/contact.svelte';
+	import Success from '$lib/components/success.svelte';
 
 	const message = {
 		thisRef: 'Message',
@@ -64,7 +64,7 @@
 	bind:this={container}
 	class="scroll-container h-screen overflow-x-hidden overflow-y-auto"
 >
-	<Contact
+	<Success
 		thisRef={message.thisRef}
 		goTo={message.goTo}
 		title={message.title}

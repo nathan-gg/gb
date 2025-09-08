@@ -1,9 +1,9 @@
 <script>
 	import { onMount } from 'svelte';
 	import { setGlobalOptions } from 'svelte-scrolling';
-	import Home from '/src/components/home.svelte';
-	import Header from '/src/components/head.svelte';
-	import Footer from '/src/components/footer.svelte';
+	import Home from '$lib/components/home.svelte';
+	import Header from '$lib/components/head.svelte';
+	import Footer from '$lib/components/footer.svelte';
 
 	// Shared state for tracking scrolling across components
 	let isScrolling = $state(false);
@@ -46,7 +46,7 @@
 		}
 	});
 
-	import Hours from '/src/components/hours.svelte';
+	import Hours from '$lib/components/hours.svelte';
 
 
 	const info = {

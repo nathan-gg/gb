@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Careers from '/src/components/careers.svelte';
+	import Careers from '$lib/components/careers.svelte';
 
 	const careers = {
 		thisRef: 'Careers',

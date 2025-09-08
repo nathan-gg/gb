@@ -200,7 +200,7 @@ backdrop-filter: blur(8px);"
 		z-index: 5;
 		inset: auto 0 0 0;
 		height: 100%;
-		width: 66%;
+		width: 50%;
 		pointer-events: none;
 	}
 	.gradient-blur > div,

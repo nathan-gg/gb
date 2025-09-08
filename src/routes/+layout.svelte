@@ -1,10 +1,10 @@
 <script>
 	import '../app.css';
-	import Header from '../components/head.svelte';
-	import Footer from '../components/footer.svelte';
+	import Header from '$lib/components/head.svelte';
+	import Footer from '$lib/components/footer.svelte';
 	let { children } = $props();
 	import { page } from '$app/stores';
-	import ViewTransition from '../components/navigation.svelte';
+	import ViewTransition from '$lib/components/navigation.svelte';
 	import { setGlobalOptions } from 'svelte-scrolling';
 
 	// Set global offset for all svelte-scrolling actions
@@ -42,7 +42,7 @@
 	<ViewTransition />
 
 	{#if $page.url.pathname !== '/'}
-		<div class=" transla">
+		<div class="">
 			<Header />
 		</div>
 	{/if}

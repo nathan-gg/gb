@@ -1,6 +1,6 @@
 <script>
 
-	import Reservations from '/src/components/order.svelte';
+	import Reservations from '$lib/components/order.svelte';
 
 	const reservations = {
 		title: 'Order Online',

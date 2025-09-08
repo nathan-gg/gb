@@ -37,15 +37,15 @@
 	<div class="bg-primary h-16 w-full p-4 px-8 sm:p-4 sm:px-16">
 		<div class="z-30 flex justify-between">
 			<a href="/home">
-				<img src="finalLogo.svg" class="h-8 justify-start" alt="Green Basil Logo" />
+				<img src="/finalLogo.svg" class="h-8 justify-start" alt="Green Basil Logo" />
 			</a>
 			{#if showMenu}
 				<button onclick={toggleMenu} class:active={showMenu}>
-					<img src="closeMenu.svg" class="h-8 hover:cursor-pointer" alt="Close Website Directory" />
+					<img src="/closeMenu.svg" class="h-8 hover:cursor-pointer" alt="Close Website Directory" />
 				</button>
 			{:else}
 				<button onclick={toggleMenu}>
-					<img src="menuBars.svg" class="h-8 hover:cursor-pointer" alt="Open Website Directory" />
+					<img src="/menuBars.svg" class="h-8 hover:cursor-pointer" alt="Open Website Directory" />
 				</button>
 			{/if}
 		</div>

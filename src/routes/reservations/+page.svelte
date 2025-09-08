@@ -1,6 +1,6 @@
 <script>
 
-	import Reservations from '/src/components/reservations.svelte';
+	import Reservations from '$lib/components/reservations.svelte';
 
 	const reservations = {
 		title: 'Reservations',

@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
   import { setGlobalOptions } from 'svelte-scrolling';
-  import Header from '/src/components/head.svelte';
-  import Footer from '/src/components/footer.svelte';
+  import Header from '$lib/components/head.svelte';
+  import Footer from '$lib/components/footer.svelte';
   
   // Shared state for tracking scrolling across components
   let isScrolling = $state(false);
@@ -47,7 +47,7 @@
 
   
 
-	import Identity from '/src/components/identity.svelte';
+	import Identity from '$lib/components/identity.svelte';
 
 	const identity = {
 		thisRef: 'Identity',

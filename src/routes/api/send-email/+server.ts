@@ -1,7 +1,6 @@
 import { env } from '$env/dynamic/private';
 import { json, type RequestHandler } from '@sveltejs/kit';
 
-
 const createEmailTemplate = (formType: string, data: any) => {
 	const baseStyle = `
 		<style>
@@ -157,7 +156,7 @@ export const POST: RequestHandler = async ({ request }) => {
 				'Content-Type': 'application/json',
 				Accept: 'application/json'
 			},
-			body: JSON.stringify({...emailTemplate, access_key: env.W3_EMAIL_ACCESS_KEY})
+			body: JSON.stringify({ ...emailTemplate, access_key: env.W3_EMAIL_ACCESS_KEY })
 		});
 
 		// if (error) {

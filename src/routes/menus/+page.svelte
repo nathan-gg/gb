@@ -1,5 +1,5 @@
 <script>
-    import Menus from '/src/components/menus.svelte';
+    import Menus from '$lib/components/menus.svelte';
 
     const main = {
         title: 'Menu',
