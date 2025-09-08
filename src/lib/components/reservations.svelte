@@ -4,14 +4,15 @@
 	let curTab = $state(0);
 </script>
 
-<section class="flex h-fit w-screen flex-col sm:flex-row">
-	<div class="flex sm:hidden">
+<section class="bg-tertiary relative flex min-h-[calc(100vh-4rem)] flex-col xl:flex-row">
+	<div class="flex xl:hidden">
 		<img src="/webp/m-reservations.webp" class="w-screen object-cover" alt="" />
 	</div>
-	<div class="bg-tertiary text-darkText font-instrument flex flex-col items-center sm:w-1/2">
-		<div class=" mx-8 mt-16 mb-16 flex flex-col sm:mx-16 md:mx-24 xl:mx-54">
-			<h1 class="text-darkText mb-4 text-6xl">{title}</h1>
-			<h1 class="text-lightText mb-12 text-4xl">{thaiTitle}</h1>
+	<div class="text-darkText font-instrument flex flex-col items-start justify-start xl:w-1/2">
+		<div class="mx-8 my-12 flex  flex-col items-start sm:ml-16 xl:my-24 w-3/4">
+		
+				<h1 class="text-darkText mb-1 w-4/5 text-6xl sm:w-full">{title}</h1>
+				<h1 class="text-lightText mb-12 text-2xl">{thaiTitle}</h1>
 
 			<div class="font-MonaSans text-darkText mb-12">
 				<p class="mb-4">
@@ -48,7 +49,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="hidden w-1/2 flex-auto sm:flex">
+	<div class="hidden w-1/2 flex-auto xl:flex">
 		<img src="/webp/reservations.webp" class="h-full w-full object-cover" alt="" />
 	</div>
 </section>

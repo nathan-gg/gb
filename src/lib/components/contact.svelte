@@ -171,16 +171,16 @@
 	use:scrollRef={thisRef}
 	id={thisRef}
 	data-scroll-ref={thisRef}
-	class=" bg-tertiary snap-align-start relative flex min-h-[calc(100vh-4rem)] flex-col sm:flex-row {className} "
+	class="  bg-tertiary relative flex min-h-[calc(100vh-4rem)] flex-col xl:flex-row {className} "
 >
-	<div class="flex sm:hidden">
+	<div class="flex xl:hidden">
 		<img src="/webp/m-contact1.webp" class="w-screen object-cover" alt="" />
 	</div>
-	<div class=" text-darkText font-instrument mt-24 flex flex-col items-center justify-center sm:w-1/2">
-		<div class="mx-16 my-16  flex w-full flex-col items-center ">
-			<div class="mx-8 mb-4 flex flex-col sm:mx-16 xl:mx-48">
-				<h1 class="text-darkText mb-4 text-6xl">{title}</h1>
-				<h1 class="text-lightText mb-12 text-4xl">{thaiTitle}</h1>
+	<div class="text-darkText font-instrument flex flex-col items-start justify-start xl:w-1/2">
+		<div class="mx-8 my-12 flex w-full flex-col items-start xl:ml-16 xl:my-24">
+			<div class=" mb-4 flex flex-col mr-16 xl:mr-48 ">
+				<h1 class="text-darkText mb-1 w-4/5 text-6xl sm:w-full">{title}</h1>
+				<h1 class="text-lightText mb-12 text-2xl">{thaiTitle}</h1>
 
 				<p class="text-darkText font-MonaSans">
 					{@html body}
@@ -291,7 +291,7 @@
 						<input type="hidden" name="redirect" value="https://web3forms.com/success" />
 						<button
 							type="submit"
-							class="border-darkText hover:bg-darkText text-darkText hover:text-tertiary rounded-[5px] border-2 p-2 transition duration-300 sm:px-5.5 sm:py-2"
+							class="border-darkText hover:bg-darkText text-darkText hover:text-tertiary rounded-[5px] border-2 p-2 transition duration-300 xl:px-5.5 xl:py-2"
 							>Submit
 						</button>
 					</form>
@@ -372,10 +372,7 @@
 												onclick={() => setActivePosition('server')}
 												type="checkbox"
 											/>
-											<span
-												class="text-[1rem] text-darkText"
-												>Server</span
-											>
+											<span class="text-darkText text-[1rem]">Server</span>
 										</li>
 										<li>
 											<input
@@ -386,10 +383,7 @@
 												onclick={() => setActivePosition('foodRunner')}
 												type="checkbox"
 											/>
-											<span
-												class="text-[1rem] text-darkText"
-												>foodRunner</span
-											>
+											<span class="text-darkText text-[1rem]">foodRunner</span>
 										</li>
 									</ul>
 								</div>
@@ -413,7 +407,7 @@
 						<input type="hidden" name="redirect" value="https://web3forms.com/success" />
 						<button
 							type="submit"
-							class="border-darkText hover:bg-darkText text-darkText hover:text-tertiary rounded-[5px] border-2 p-2 transition duration-300 sm:px-5.5 sm:py-2"
+							class="border-darkText hover:bg-darkText text-darkText hover:text-tertiary rounded-[5px] border-2 p-2 transition duration-300 xl:px-5.5 xl:py-2"
 							>Submit Application
 						</button>
 					</form>
@@ -422,7 +416,7 @@
 		</div>
 	</div>
 
-	<div class="hidden w-1/2 flex-auto sm:flex">
+	<div class="hidden w-1/2 flex-auto xl:flex">
 		<img src="/webp/contact1.webp" class="h-full w-full object-cover" alt="" />
 	</div>
 </section>
