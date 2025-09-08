@@ -177,8 +177,8 @@
 		<img src="/webp/m-contact1.webp" class="w-screen object-cover" alt="" />
 	</div>
 	<div class="text-darkText font-instrument flex flex-col items-start justify-start xl:w-1/2">
-		<div class="mx-8 my-12 flex w-full flex-col items-start xl:ml-16 xl:my-24">
-			<div class=" mb-4 flex flex-col mr-16 xl:mr-48 ">
+		<div class="mx-8 my-12 flex w-full flex-col items-start xl:my-24 xl:ml-16">
+			<div class=" mr-16 mb-4 flex flex-col xl:mr-48">
 				<h1 class="text-darkText mb-1 w-4/5 text-6xl sm:w-full">{title}</h1>
 				<h1 class="text-lightText mb-12 text-2xl">{thaiTitle}</h1>
 

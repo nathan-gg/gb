@@ -20,13 +20,13 @@ export const careersData = {
 			{
 				perk: ''
 			}
-		], 
+		],
 		mobileImage: '/webp/m-server.webp',
 		image: '/webp/server.webp',
 		mobileAltText: 'A hand holding atray of drinks',
 		altText: 'A hand holding atray of drinks'
 	},
-    Expeditor: {
+	Expeditor: {
 		title: 'Expeditor',
 		thaiText: 'พนักงานเดินอาหาร',
 		shift: 'Full-Time',
@@ -47,18 +47,18 @@ export const careersData = {
 			{
 				perk: ''
 			}
-		], 
+		],
 		mobileImage: '/webp/m-expeditor.web',
 		image: '/webp/expeditor.webp',
 		mobileAltText: 'A hand taking order papers',
 		altText: 'A hand taking order papers'
 	},
-    Driver: {
+	Driver: {
 		title: 'Driver',
 		thaiText: 'คนขับ',
 		shift: 'Full-Time',
 		description:
-			"A driver at Green Basil ensures that orders reach our customers in a timely and professional manner. This role involves carefully handling food orders, planning efficient delivery routes, and maintaining excellent communication with both the restaurant team and customers. Drivers are responsible for ensuring orders are accurate and delivered promptly while presenting a friendly demeanor. They are a testament to the restaurant’s commitment to quality service and customer satisfaction, bringing the flavours of Green Basil directly to customers’ doors.",
+			'A driver at Green Basil ensures that orders reach our customers in a timely and professional manner. This role involves carefully handling food orders, planning efficient delivery routes, and maintaining excellent communication with both the restaurant team and customers. Drivers are responsible for ensuring orders are accurate and delivered promptly while presenting a friendly demeanor. They are a testament to the restaurant’s commitment to quality service and customer satisfaction, bringing the flavours of Green Basil directly to customers’ doors.',
 		pay: '$XX.XX',
 		responsibilities: [
 			{
@@ -74,13 +74,13 @@ export const careersData = {
 			{
 				perk: ''
 			}
-		], 
+		],
 		mobileImage: '/webp/m-careersDriver.webp',
 		image: '/webp/careersDriver.webp',
 		mobileAltText: 'A driver delivering food',
 		altText: 'A driver delivering food'
 	},
-    Chef: {
+	Chef: {
 		title: 'Chef',
 		thaiText: 'พ่อครัว',
 		shift: 'Full-Time',
@@ -101,10 +101,10 @@ export const careersData = {
 			{
 				perk: ''
 			}
-		], 
+		],
 		mobileImage: '/webp/m-chef.webp',
 		image: '/webp/chef.webp',
 		mobileAltText: 'A chef cooking in a pan with a large flame coming upwards',
 		altText: 'A chef cooking in a pan with a large flame coming upwards'
-	},
+	}
 };

@@ -21,5 +21,3 @@
 	arrowText={careers.arrowText}
 	image={careers.image}
 />
-
-

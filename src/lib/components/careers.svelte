@@ -55,7 +55,7 @@
 		<div class="mx-8 my-12 flex w-full flex-col items-start sm:ml-16 xl:my-24">
 			<h1 class="text-darkText mb-1 w-4/5 text-6xl sm:w-full">Careers</h1>
 			<h1 class="text-lightText mb-14 text-2xl">อาชีพ</h1>
-			<p class="font-MonaSans text-darkText mb-14 text-[1rem] w-3/4">
+			<p class="font-MonaSans text-darkText mb-14 w-3/4 text-[1rem]">
 				Green Basil Thai Restaurant (GBTR) promotes a fun, respectful and encouraging work
 				environment. We acknowledge the importance of quality staff because this will become our
 				primary success factor. Thus, we welcome energetic, responsible and positive team players to
@@ -66,7 +66,7 @@
 				>. Click each job posting below to learn more.
 			</p>
 			<div
-				class="font-MonaSans text-darkText group mb-14 flex flex-wrap items-start justify-start gap-2 gap-x-4 text-[1.5rem] leading-4 font-medium hover:cursor-pointer xl:inline-flex xl:flex-nowrap xl:justify-start max-w-3/4"
+				class="font-MonaSans text-darkText group mb-14 flex max-w-3/4 flex-wrap items-start justify-start gap-2 gap-x-4 text-[1.5rem] leading-4 font-medium hover:cursor-pointer xl:inline-flex xl:flex-nowrap xl:justify-start"
 				role="tablist"
 			>
 				<button
