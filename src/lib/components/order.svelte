@@ -12,31 +12,30 @@
 	// }
 </script>
 
-<section class="relative flex h-fit flex-col sm:flex-row">
-	<div class="flex sm:hidden">
+<section class="bg-tertiary relative flex min-h-[calc(100vh-4rem)] flex-col xl:flex-row">
+	<div class="flex xl:hidden">
 		<img src="/webp/orderOnlineMobile.webp" class="w-screen object-cover" alt="" />
 	</div>
-	<div class="bg-tertiary text-darkText font-instrument flex flex-col justify-center sm:w-1/2">
-		<div class=" mx-8 mt-16 mb-16 flex flex-col sm:mx-16 md:mx-24 xl:mx-54">
-			<h1 class="text-darkText mb-4 text-6xl">{title}</h1>
-			<h1 class="text-lightText mb-12 text-4xl">{thaiTitle}</h1>
-
-			<p class="font-MonaSans">
+	<div class="text-darkText font-instrument flex flex-col items-start justify-start xl:w-1/2">
+		<div class="mx-8 my-12 flex w-full flex-col items-start xl:ml-16 xl:my-24">
+			<h1 class="text-darkText mb-1 w-4/5 text-6xl sm:w-full">{title}</h1>
+				<h1 class="text-lightText mb-12 text-2xl">{thaiTitle}</h1>
+			<p class="font-MonaSans w-3/4">
 				Order through our phone number <a href="tel:+1 6045007542" class="underline"
 					>+1 (604) 439-1919</a
 				> for exceptional and fast delivery service. We offer free in-house delivery for any order above
 				$25 within a 5 km radius.
 			</p>
-			<p class="font-MonaSans mt-8">
+			<p class="font-MonaSans mt-8 w-3/4">
 				We also deliver through <span class=" font-[1000]">Doordash</span> and
 				<span class="font-[1000]">Uber Eats</span>, which can be accessed with the affiliate links
 				below.
 			</p>
 
-			<div class="mt-8 mb-12 sm:mb-0">
+			<div class="mt-8 mb-12 xl:mb-0 w-60 xl:w-82">
 				<a
 					href="https://www.doordash.com/store/green-basil-thai-restaurant-burnaby-58614/?srsltid=AfmBOoou1HkBW-Q12dcFiteG44mF3P0Gls_6HFlLqFnofOfltMakDq-v"
-					class="border-darkText group hover:border-darkText hover:bg-darkText mb-4 flex place-content-center rounded-[5px] border-2 bg-transparent p-4 sm:px-5.5 sm:py-2 duration-300 group-hover:transition  "
+					class="border-darkText group hover:border-darkText hover:bg-darkText mb-4 flex place-content-center rounded-[5px] border-2 bg-transparent p-4 xl:px-5.5 xl:py-2 duration-300 group-hover:transition"
 					target="_blank"
 				>
 					<svg
@@ -86,7 +85,7 @@
 
 				<a
 					href="https://www.ubereats.com/ca/store/green-basil-thai-restaurant/6GoYWudYTTOVt7vlqeq6lA?srsltid=AfmBOooHHudVtUcDEbOKDV21TsulpJrJloqXuDdf2yK1pqjne35NN0ZH"
-					class=" border-darkText hover:border-darkText hover:bg-darkText group flex place-content-center rounded-[5px] border-2 bg-transparent p-4 sm:px-5.5 sm:py-2 text-white  duration-300 group-hover:transition  "
+					class=" border-darkText hover:border-darkText hover:bg-darkText group flex place-content-center rounded-[5px] border-2 bg-transparent p-4 xl:px-5.5 xl:py-2 text-white  duration-300 group-hover:transition  "
 					target="_blank"
 				>
 					<svg
@@ -137,7 +136,7 @@
 		</div>
 	</div>
 
-	<div class="hidden w-1/2 flex-auto sm:flex">
+	<div class="hidden w-1/2 flex-auto xl:flex">
 		<img src="/webp/orderOnline1.webp" class="h-full w-full object-cover" alt="" />
 	</div>
 </section>

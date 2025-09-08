@@ -317,7 +317,7 @@
 			<!-- Navigation for mobile -->
 			<div class="flex flex-col items-center py-4">
 				{#if nextSection}
-					<button onclick={scrollNext} class="text-lightText hover:text-darkText  transition duration-300">
+					<button onclick={scrollNext} class="text-lightText hover:text-darkText mb-12 xl:mb-0 transition duration-300">
 						{nextTitle}
 					</button>
 				{/if}
