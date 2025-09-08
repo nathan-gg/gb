@@ -31,15 +31,15 @@
 	<div class="flex xl:hidden">
 		<img src="/webp/m-contact2.webp" class="w-screen object-cover" alt="" />
 	</div>
-	<div class=" text-darkText font-instrument flex flex-col items-start justify-start xl:w-1/2">
-		<div class="m-4 xl:ml-16 my-16 mt-24 flex w-full flex-col items-start ">
-			<div class=" mb-4 flex flex-col ">
-				<h1 class="text-darkText mb-4 text-6xl">{title}</h1>
-				<h1 class="text-lightText mb-12 text-4xl">{thaiTitle}</h1>
+	<div class="text-darkText font-instrument flex flex-col items-start justify-start xl:w-1/2">
+		<div class="mx-8 my-12 flex w-full flex-col items-start sm:ml-16 xl:my-24">
+			<div class=" mb-4 flex flex-col">
+				<h1 class="text-darkText mb-1 text-6xl w-4/5 sm:w-full">{title}</h1>
+				<h1 class="text-lightText mb-12 text-2xl">{thaiTitle}</h1>
 
 				<div class="font-MonaSans flex w-full flex-col font-medium">
 					<h3 class="text-2xl">Hours</h3>
-					<div class="text-[1rem] flex xl:justify-between gap-x-4 xl:gap-x-0">
+					<div class="flex gap-x-4 text-[1rem] xl:justify-between xl:gap-x-0">
 						<div class="text-darkText hidden flex-col font-medium xl:flex">
 							<p>Monday</p>
 							<p>Tuesday</p>

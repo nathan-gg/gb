@@ -68,7 +68,7 @@
 	}
 </script>
 
-<section class="flex min-h-screen w-screen flex-col sm:flex-row">
+<section class="flex min-h-[calc(100vh-4rem)] w-screen flex-col sm:flex-row">
 	<div class="flex sm:hidden">
 		<img src="/webp/orderOnlineMobile.webp" class="w-screen object-cover" alt="" />
 	</div>
