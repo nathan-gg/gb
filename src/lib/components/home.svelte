@@ -71,10 +71,10 @@
 	{#if mobileImage}
 		<img
 			src={mobileImage}
-			class="absolute inset-0 h-full w-screen object-cover brightness-30 lg:hidden"
+			class="absolute inset-0 h-full w-screen object-cover brightness-30 xl:hidden"
 			alt=""
 		/>
-		<div class="gradient-blur bg-gradient-to-r from-[rgba(0,0,0,.9)] to-transparent">
+		<div class="gradient-blur bg-gradient-to-t from-[rgba(0,0,0,.9)] to-transparent">
 			<div></div>
 			<div></div>
 			<div></div>
@@ -104,7 +104,7 @@
 				class="  inset-0 col-span-1 col-start-5 h-full w-full bg-gradient-to-r from-[rgba(0,0,0,.6)] to-transparent"
 			></div>
 		</div> -->
-		<div class="gradient-blur bg-gradient-to-r from-[rgba(0,0,0,.9)] to-transparent">
+		<div class="gradient-blur bg-gradient-to-t from-[rgba(0,0,0,.9)] to-transparent">
 			<div></div>
 			<div></div>
 			<div></div>
@@ -125,17 +125,19 @@ backdrop-filter: blur(8px);"
 	{#if firstSection}
 		<section class="z-10 grid h-[calc(100vh-4rem)] w-screen grid-cols-3 grid-rows-3">
 			<div
-				class="relative col-span-2 col-start-1 row-span-1 row-start-3 ml-24 flex flex-col items-start self-end pb-20 text-left"
+				class="relative col-span-3 col-start-1 row-span-1 row-start-3 ml-8 flex flex-col items-start self-end pb-20 text-left xl:ml-16"
 			>
 				<h1 class="mb-4 text-6xl xl:text-[96px] xl:leading-[96px]">{title}</h1>
-				<p class="font-MonaSans w-1/2 text-xl font-medium text-white md:text-2xl md:leading-[32px]">
+				<p
+					class="font-MonaSans text-[1rem] font-medium text-white xl:w-1/2 xl:text-2xl xl:leading-[32px]"
+				>
 					{pText}
 				</p>
 			</div>
 
 			{#if arrow}
 				<button
-					class=" relative col-span-1 col-start-2 row-span-1 row-start-3 w-fit place-self-center self-end pb-16 text-center opacity-75 transition duration-300 hover:translate-y-4 hover:cursor-pointer hover:opacity-100"
+					class=" relative col-span-1 col-start-2 row-span-1 row-start-3 w-fit place-self-center self-end text-center opacity-75 transition duration-300 hover:translate-y-4 hover:cursor-pointer hover:opacity-100 xl:pb-16"
 					onclick={scrollNext}
 				>
 					<span class="material-icons md-48"> keyboard_arrow_down </span>
@@ -146,7 +148,7 @@ backdrop-filter: blur(8px);"
 		<section class="z-10 grid h-[calc(100vh-4rem)] w-screen grid-cols-3 grid-rows-3">
 			{#if prevArrow}
 				<button
-					class=" relative col-span-1 col-start-2 row-span-1 row-start-1 w-fit place-self-center self-start pt-16 text-center opacity-75 transition duration-300 hover:translate-y-[-16px] hover:cursor-pointer hover:opacity-100"
+					class=" relative col-span-1 col-start-2 row-span-1 row-start-1 w-fit place-self-center self-start text-center opacity-75 transition duration-300 hover:translate-y-[-16px] hover:cursor-pointer hover:opacity-100 xl:pt-16"
 					onclick={scrollPrev}
 				>
 					<span class="material-icons md-48"> keyboard_arrow_up </span>
@@ -154,18 +156,18 @@ backdrop-filter: blur(8px);"
 			{/if}
 
 			<div
-				class="relative col-span-2 col-start-1 row-span-1 row-start-3 ml-24 flex flex-col items-start self-end pb-20 text-left"
+				class="relative col-span-3 col-start-1 row-span-1 row-start-3 ml-8 flex w-3/4 flex-col items-start gap-y-4 self-end pb-20 text-left xl:ml-16"
 			>
-				<h1 class="mb-2 text-6xl xl:text-[96px] xl:leading-[96px]">{title}</h1>
+				<h1 class="text-6xl xl:text-[96px] xl:leading-[96px]">{title}</h1>
 				<p
-					class="font-MonaSans mb-6 w-1/2 text-xl font-medium text-white md:text-2xl md:leading-[32px]"
+					class="font-MonaSans text-[1rem] font-medium text-white xl:w-1/2 xl:text-2xl xl:leading-[32px]"
 				>
 					{pText}
 				</p>
 				{#if button}
 					<a
 						href={link}
-						class="border-secondary font-MonaSans hover:bg-secondary hover:text-primary self-start rounded-[5px] border-2 px-4 text-lg text-[1rem] font-medium text-nowrap transition duration-300 sm:px-5.5 sm:py-2 sm:text-[1.5rem]"
+						class="border-secondary font-MonaSans hover:bg-secondary hover:text-primary self-start rounded-[5px] border-2 px-6 text-lg text-[1.25rem] font-medium text-nowrap transition duration-300 xl:px-5.5 xl:py-2 xl:text-[1.5rem]"
 					>
 						{btnText}
 					</a>
@@ -174,7 +176,7 @@ backdrop-filter: blur(8px);"
 
 			{#if arrow}
 				<button
-					class=" relative col-span-1 col-start-2 row-span-1 row-start-3 w-fit place-self-center self-end pb-16 text-center opacity-75 transition duration-300 hover:translate-y-4 hover:cursor-pointer hover:opacity-100"
+					class=" relative col-span-1 col-start-2 row-span-1 row-start-3 w-fit place-self-center self-end text-center opacity-75 transition duration-300 hover:translate-y-4 hover:cursor-pointer hover:opacity-100 xl:pb-16"
 					onclick={scrollNext}
 				>
 					<span class="material-icons md-48"> keyboard_arrow_down </span>
@@ -183,11 +185,11 @@ backdrop-filter: blur(8px);"
 
 			{#if backToTop}
 				<button
-					class=" relative col-span-1 col-start-2 row-span-1 row-start-3 w-fit place-self-center self-end pb-16 text-center opacity-75 transition duration-300 hover:translate-y-4 hover:cursor-pointer hover:opacity-100"
+					class=" font-MonaSans relative col-span-1 col-start-2 row-span-1 row-start-3 flex w-fit flex-col place-self-center self-end text-center opacity-75 transition duration-300 hover:translate-y-4 hover:cursor-pointer hover:opacity-100 xl:pb-16"
 					onclick={scrollNext}
 				>
 					<span class="material-icons md-48"> keyboard_arrow_up </span>
-					Back To Top
+					<span class="hidden xl:block">Back To Top</span>
 				</button>
 			{/if}
 		</section>
@@ -200,9 +202,10 @@ backdrop-filter: blur(8px);"
 		z-index: 5;
 		inset: auto 0 0 0;
 		height: 100%;
-		width: 50%;
+		width: 100%;
 		pointer-events: none;
 	}
+
 	.gradient-blur > div,
 	.gradient-blur::before,
 	.gradient-blur::after {
@@ -212,9 +215,9 @@ backdrop-filter: blur(8px);"
 	.gradient-blur::before {
 		content: '';
 		z-index: 1;
-		backdrop-filter: blur(0.5px);
+		backdrop-filter: blur(0.125px);
 		mask: linear-gradient(
-			to left,
+			to bottom,
 			rgba(0, 0, 0, 0) 0%,
 			rgba(0, 0, 0, 1) 12.5%,
 			rgba(0, 0, 0, 1) 25%,
@@ -223,9 +226,9 @@ backdrop-filter: blur(8px);"
 	}
 	.gradient-blur > div:nth-of-type(1) {
 		z-index: 2;
-		backdrop-filter: blur(1px);
+		backdrop-filter: blur(0.25px);
 		mask: linear-gradient(
-			to left,
+			to bottom,
 			rgba(0, 0, 0, 0) 12.5%,
 			rgba(0, 0, 0, 1) 25%,
 			rgba(0, 0, 0, 1) 37.5%,
@@ -234,9 +237,9 @@ backdrop-filter: blur(8px);"
 	}
 	.gradient-blur > div:nth-of-type(2) {
 		z-index: 3;
-		backdrop-filter: blur(2px);
+		backdrop-filter: blur(0.5px);
 		mask: linear-gradient(
-			to left,
+			to bottom,
 			rgba(0, 0, 0, 0) 25%,
 			rgba(0, 0, 0, 1) 37.5%,
 			rgba(0, 0, 0, 1) 50%,
@@ -245,9 +248,9 @@ backdrop-filter: blur(8px);"
 	}
 	.gradient-blur > div:nth-of-type(3) {
 		z-index: 4;
-		backdrop-filter: blur(4px);
+		backdrop-filter: blur(1px);
 		mask: linear-gradient(
-			to left,
+			to bottom,
 			rgba(0, 0, 0, 0) 37.5%,
 			rgba(0, 0, 0, 1) 50%,
 			rgba(0, 0, 0, 1) 62.5%,
@@ -256,9 +259,9 @@ backdrop-filter: blur(8px);"
 	}
 	.gradient-blur > div:nth-of-type(4) {
 		z-index: 5;
-		backdrop-filter: blur(8px);
+		backdrop-filter: blur(2px);
 		mask: linear-gradient(
-			to left,
+			to bottom,
 			rgba(0, 0, 0, 0) 50%,
 			rgba(0, 0, 0, 1) 62.5%,
 			rgba(0, 0, 0, 1) 75%,
@@ -267,9 +270,9 @@ backdrop-filter: blur(8px);"
 	}
 	.gradient-blur > div:nth-of-type(5) {
 		z-index: 6;
-		backdrop-filter: blur(16px);
+		backdrop-filter: blur(4px);
 		mask: linear-gradient(
-			to left,
+			to bottom,
 			rgba(0, 0, 0, 0) 62.5%,
 			rgba(0, 0, 0, 1) 75%,
 			rgba(0, 0, 0, 1) 87.5%,
@@ -278,9 +281,9 @@ backdrop-filter: blur(8px);"
 	}
 	.gradient-blur > div:nth-of-type(6) {
 		z-index: 7;
-		backdrop-filter: blur(32px);
+		backdrop-filter: blur(8px);
 		mask: linear-gradient(
-			to left,
+			to bottom,
 			rgba(0, 0, 0, 0) 75%,
 			rgba(0, 0, 0, 1) 87.5%,
 			rgba(0, 0, 0, 1) 100%
@@ -289,7 +292,108 @@ backdrop-filter: blur(8px);"
 	.gradient-blur::after {
 		content: '';
 		z-index: 8;
-		backdrop-filter: blur(64px);
-		mask: linear-gradient(to left, rgba(0, 0, 0, 0) 87.5%, rgba(0, 0, 0, 1) 100%);
+		backdrop-filter: blur(16px);
+		mask: linear-gradient(to bottom, rgba(0, 0, 0, 0) 87.5%, rgba(0, 0, 0, 1) 100%);
+	}
+
+	@media (width >= 1024px) {
+		.gradient-blur {
+			position: absolute;
+			z-index: 5;
+			inset: auto 0 0 0;
+			height: 100%;
+			width: 100%;
+			pointer-events: none;
+		}
+
+		.gradient-blur > div,
+		.gradient-blur::before,
+		.gradient-blur::after {
+			position: absolute;
+			inset: 0;
+		}
+		.gradient-blur::before {
+			content: '';
+			z-index: 1;
+			backdrop-filter: blur(0.125px);
+			mask: linear-gradient(
+				to left,
+				rgba(0, 0, 0, 0) 0%,
+				rgba(0, 0, 0, 1) 12.5%,
+				rgba(0, 0, 0, 1) 25%,
+				rgba(0, 0, 0, 0) 37.5%
+			);
+		}
+		.gradient-blur > div:nth-of-type(1) {
+			z-index: 2;
+			backdrop-filter: blur(0.25px);
+			mask: linear-gradient(
+				to left,
+				rgba(0, 0, 0, 0) 12.5%,
+				rgba(0, 0, 0, 1) 25%,
+				rgba(0, 0, 0, 1) 37.5%,
+				rgba(0, 0, 0, 0) 50%
+			);
+		}
+		.gradient-blur > div:nth-of-type(2) {
+			z-index: 3;
+			backdrop-filter: blur(0.5px);
+			mask: linear-gradient(
+				to left,
+				rgba(0, 0, 0, 0) 25%,
+				rgba(0, 0, 0, 1) 37.5%,
+				rgba(0, 0, 0, 1) 50%,
+				rgba(0, 0, 0, 0) 62.5%
+			);
+		}
+		.gradient-blur > div:nth-of-type(3) {
+			z-index: 4;
+			backdrop-filter: blur(1px);
+			mask: linear-gradient(
+				to left,
+				rgba(0, 0, 0, 0) 37.5%,
+				rgba(0, 0, 0, 1) 50%,
+				rgba(0, 0, 0, 1) 62.5%,
+				rgba(0, 0, 0, 0) 75%
+			);
+		}
+		.gradient-blur > div:nth-of-type(4) {
+			z-index: 5;
+			backdrop-filter: blur(2px);
+			mask: linear-gradient(
+				to left,
+				rgba(0, 0, 0, 0) 50%,
+				rgba(0, 0, 0, 1) 62.5%,
+				rgba(0, 0, 0, 1) 75%,
+				rgba(0, 0, 0, 0) 87.5%
+			);
+		}
+		.gradient-blur > div:nth-of-type(5) {
+			z-index: 6;
+			backdrop-filter: blur(4px);
+			mask: linear-gradient(
+				to left,
+				rgba(0, 0, 0, 0) 62.5%,
+				rgba(0, 0, 0, 1) 75%,
+				rgba(0, 0, 0, 1) 87.5%,
+				rgba(0, 0, 0, 0) 100%
+			);
+		}
+		.gradient-blur > div:nth-of-type(6) {
+			z-index: 7;
+			backdrop-filter: blur(8px);
+			mask: linear-gradient(
+				to left,
+				rgba(0, 0, 0, 0) 75%,
+				rgba(0, 0, 0, 1) 87.5%,
+				rgba(0, 0, 0, 1) 100%
+			);
+		}
+		.gradient-blur::after {
+			content: '';
+			z-index: 8;
+			backdrop-filter: blur(16px);
+			mask: linear-gradient(to left, rgba(0, 0, 0, 0) 87.5%, rgba(0, 0, 0, 1) 100%);
+		}
 	}
 </style>
