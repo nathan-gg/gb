@@ -991,12 +991,12 @@ export const menuData = {
 			{
 				name: 'San Pellegrino Carbonated Natural Mineral Water',
 				description: '– Bergamo, Italy',
-				price: '4¾'
+				price: '4.75'
 			},
 			{
 				name: 'Fiji Spring Water',
 				description: '– Yaqara, Fiji',
-				price: '3¼'
+				price: '3.25'
 			}
 		]
 	},
@@ -1082,7 +1082,7 @@ export const menuData = {
 				name: 'Pattaya Delight (3 oz)',
 				description:
 					'Havana Club Añejo Reserva, Havana Club 3 year, Malibu coconut rum, blue Curaçao, mango, crème de coco',
-				price: '12¾'
+				price: '12.75'
 			},
 			{
 				name: 'Broken Skull Margarita (5 oz)',
@@ -1097,22 +1097,22 @@ export const menuData = {
 				price: '14'
 			},
 			{
-				name: 'Cloud Nine (2¼oz)',
+				name: 'Cloud Nine (2.25oz)',
 				description:
 					'Grey Goose l’orange, Stolichnaya crushed mango, Alizé gold passion, mango, grenadine',
 				price: '14'
 			},
 			{
-				name: 'Green Basil (2¼oz)',
+				name: 'Green Basil (2.25oz)',
 				description:
 					'Belvedere vodka, St-Germain elderflower, melon liqueur, lime cordial, lime juice, holy basil',
-				price: '13¾'
+				price: '13.75'
 			},
 			{
 				name: 'Marina Bay Street Circuit (2 oz)',
 				description:
 					'Grey Goose cherry noir, Alizé red passion, cranberry, mango, lime juice, grenadine',
-				price: '13½'
+				price: '13.50'
 			},
 			{
 				name: 'Cosmopolitan de l’Orange (2 oz)',
@@ -1128,18 +1128,18 @@ export const menuData = {
 				name: 'In the Night (3 oz)',
 				description:
 					'Cîroc pineapple, Stolichnaya crushed mango, Malibu coconut rum, Blue Curaçao, pineapple, mango, crème de coco',
-				price: '14½'
+				price: '14.50'
 			},
 			{
 				name: 'Blue Hawaii (3 oz)',
 				description:
 					'Malibu coconut rum, Havana Club 3 Year, Alizé blue passion, Blue Curaçao, pineapple, crème de coco',
-				price: '13½'
+				price: '13.50'
 			},
 			{
-				name: 'Lychee Paradise (2¼oz)',
+				name: 'Lychee Paradise (2.25oz)',
 				description: 'Grey Goose, St.Germain elderflower, Soho lychee, lychee juice',
-				price: '13¾'
+				price: '13.75'
 			},
 			{
 				name: 'El Clássico (2 oz)',
@@ -1149,16 +1149,16 @@ export const menuData = {
 			{
 				name: 'Chao Phraya Daiquiri (2 oz)',
 				description: 'Alizé gold passion, Havana Club Añejo Reserva, lime juice, honey',
-				price: '12½'
+				price: '12.50'
 			},
 			{
-				name: 'Pattaya Long Island (3½ oz)',
+				name: 'Pattaya Long Island (3.50 oz)',
 				description:
 					'Havana Club 3 year, Malibu coconut rum, Absolut Vodka, Tanqueray dry gin, Jose Cuervo Tradicional Resposado, Cointreau, lime juice, Coca Cola™',
-				price: '14¾'
+				price: '14.75'
 			},
 			{
-				name: 'Singapore Sling (2½ oz)',
+				name: 'Singapore Sling (2.50 oz)',
 				description:
 					'Tanqueray dry gin, cherry brandy, Benedictine – D.O.M., Cointreau, fresh pineapple, lime, grenadine, cherry syrup, maraschino cherry, angostura bitters',
 				price: ''
@@ -1193,14 +1193,14 @@ export const menuData = {
 				price: '11'
 			},
 			{
-				name: 'Manhattan, NY (2½ oz)',
+				name: 'Manhattan, NY (2.50 oz)',
 				description: 'Crown Royal rye, Cinzano Rosso, angostura bitters',
-				price: '11½'
+				price: '11.50'
 			},
 			{
-				name: 'Bronx, NY (2½ oz)',
+				name: 'Bronx, NY (2.50 oz)',
 				description: 'Tanqueray dry gin, Cinzano Rosso, Noilly Prat dry,',
-				price: '12½'
+				price: '12.50'
 			},
 			{
 				name: 'Boulevardier (3 oz)',
@@ -1208,14 +1208,14 @@ export const menuData = {
 				price: '14'
 			},
 			{
-				name: 'Godfather (2½ oz)',
+				name: 'Godfather (2.50 oz)',
 				description: 'Johnnie Walker Black Label, Disaronno Amaretto,',
 				price: '14'
 			},
 			{
-				name: 'Old Pal (2¼oz)',
+				name: 'Old Pal (2.25oz)',
 				description: 'Crown Royal Rye, Noilly Prat dry, Campari',
-				price: '12½'
+				price: '12.50'
 			},
 			{
 				name: 'Jungle Bird (2 oz)',
@@ -1225,48 +1225,48 @@ export const menuData = {
 			{
 				name: 'Blood & Sand (2 oz)',
 				description: 'John Barr reserve blended scotch, cherry brandy, Cinzano Rosso, orange juice',
-				price: '12¾'
+				price: '12.75'
 			},
 			{
-				name: 'Bobby Burns (2½ oz)',
+				name: 'Bobby Burns (2.50 oz)',
 				description: 'Glenlivet 12 yrs, Cinzano Rosso, french brandy, Benedictine – D.O.M.',
 				price: '14'
 			},
 			{
 				name: 'Moscow Mule (1 oz)',
 				description: 'Absolut Vodka, fever tree ginger beer, fresh lemon',
-				price: '9½'
+				price: '9.50'
 			},
 			{
 				name: 'Whisky Sour (2 oz)',
 				description:
 					'Jack Daniel’s Old no°7, fresh lemon, Chilliwack River Valley honey, angostura bitters',
-				price: '11¾'
+				price: '11.75'
 			},
 			{
-				name: 'Amaretto Sour (2½ oz)',
+				name: 'Amaretto Sour (2.50 oz)',
 				description: 'Disaronno Amaretto, Jim Beam bourbon, fresh lemon, demerara sugar',
-				price: '12½'
+				price: '12.50'
 			},
 			{
-				name: 'New York Sour (2½ oz)',
+				name: 'New York Sour (2.50 oz)',
 				description: 'Crown Royal Rye, Yellow Tail Shiraz, fresh lemon, demerara sugar',
-				price: '13¼'
+				price: '13.25'
 			},
 			{
-				name: 'Black/White Russian (1½ oz)',
+				name: 'Black/White Russian (1.50 oz)',
 				description: 'Absolut Vodka, Kahlua, half & half',
-				price: '9½'
+				price: '9.50'
 			},
 			{
-				name: 'Espresso Martini (2½ oz)',
+				name: 'Espresso Martini (2.50 oz)',
 				description: 'Grey goose, Kahlua, Bailey’s Irish Cream, Espresso',
 				price: '14'
 			},
 			{
-				name: 'Tom Collins (1½ oz)',
+				name: 'Tom Collins (1.50 oz)',
 				description: 'Tanqueray dry gin, fresh lemon juice, simple syrup, club soda',
-				price: '9½'
+				price: '9.50'
 			},
 			{
 				name: 'Sangria (5 oz)',
@@ -1296,7 +1296,7 @@ export const menuData = {
 			{
 				name: 'Granville Island Northwest Pale Ale',
 				description: 'Pale ale, Big Citrus, floral aroma, crisp',
-				p1: '6½',
+				p1: '6.50',
 				p2: '20'
 			},
 			{
@@ -1308,12 +1308,12 @@ export const menuData = {
 			{
 				name: 'Coors Original (355 ml)',
 				description: 'Vancouver, BC / Lager / 5.0% ABV',
-				price: '6¼'
+				price: '6.25'
 			},
 			{
 				name: 'Kokanee (341 ml)',
 				description: 'Creston, BC / Lager / 5.0% ABV',
-				price: '6¼'
+				price: '6.25'
 			},
 			{
 				name: '33 Acres of Darkness (330 ml)',
@@ -1323,7 +1323,7 @@ export const menuData = {
 			{
 				name: 'Four Winds (330 ml)',
 				description: 'Delta, BC / IPA / 7.0% ABV',
-				price: '7¼'
+				price: '7.25'
 			},
 			{
 				name: 'Imported Beer',
@@ -1334,7 +1334,7 @@ export const menuData = {
 			{
 				name: 'Singha (330 mL)',
 				description: 'Thailand / Lager / 5.0% ABV',
-				price: '7¼'
+				price: '7.25'
 			},
 			{
 				name: 'Singha – Large Format (630 mL)',
@@ -1344,27 +1344,27 @@ export const menuData = {
 			{
 				name: 'Chang (320 mL)',
 				description: 'Thailand / Lager / 5.0% ABV',
-				price: '7¼'
+				price: '7.25'
 			},
 			{
 				name: 'Tiger (330 mL)',
 				description: 'Singapore / Lager / 5.0% ABV',
-				price: '7¼'
+				price: '7.25'
 			},
 			{
 				name: 'Tsingtao (330 mL)',
 				description: 'China / Lager / 4.5% ABV',
-				price: '7¼'
+				price: '7.25'
 			},
 			{
 				name: 'Stella Artois (330 mL)',
 				description: 'Belgium / Lager / 5.2% ABV',
-				price: '7¼'
+				price: '7.25'
 			},
 			{
 				name: 'Heineken (330 ml)',
 				description: 'Holland / Lager / 5.0% ABV',
-				price: '7¼'
+				price: '7.25'
 			},
 			{
 				name: 'Peroni Nastro Azzurro (330 ml)',
@@ -1374,7 +1374,7 @@ export const menuData = {
 			{
 				name: 'Sapporo (355 mL)',
 				description: 'Japan / Pilsner / 5.0% ABV',
-				price: '7½'
+				price: '7.50'
 			},
 			{
 				name: 'Pilsner Urquell (330 mL)',
@@ -1394,7 +1394,7 @@ export const menuData = {
 			{
 				name: 'Corona (330 mL)',
 				description: 'Mexico / Lager / 4.6% ABV',
-				price: '7¼'
+				price: '7.25'
 			}
 		]
 	},
@@ -1768,30 +1768,30 @@ export const menuData = {
 		mobilePath: 'm-sct',
 		items: [
 			{
-				name: 'B52 Bomber (1½ oz)',
+				name: 'B52 Bomber (1.50 oz)',
 				description: 'Grand Marnier Cordon Rouge, Kahlua, Bailey’s Irish Cream, whipped cream',
 				price: '9'
 			},
 			{
-				name: 'Café du Montecristo (1½ oz)',
+				name: 'Café du Montecristo (1.50 oz)',
 				description:
 					'Kahlua, Bailey’s Irish Cream, Grand Marnier Cordon Rouge, fresh coffee, whipped cream',
 				price: '10'
 			},
 			{
-				name: 'Café Español (1½ oz)',
+				name: 'Café Español (1.50 oz)',
 				description:
 					'Marquis de Villard V.S.O.P., Grand Marnier Cordon Rouge, Kahlua, fresh coffee, whipped cream',
 				price: '10'
 			},
 			{
-				name: 'Café l’Orange (1½ oz)',
+				name: 'Café l’Orange (1.50 oz)',
 				description:
 					'Marquis de Villard V.S.O.P., Cointreau, Grand Marnier Cordon Rouge, fresh coffee',
 				price: '10'
 			},
 			{
-				name: 'Blueberry Tea (1½ oz)',
+				name: 'Blueberry Tea (1.50 oz)',
 				description: 'Disaronno Amaretto, Grand Marnier Cordon Rouge, orange pekoe',
 				price: '10'
 			}
@@ -1869,7 +1869,7 @@ export const menuData = {
 			{
 				name: 'Spring Rock | Chardonnay',
 				description: 'South Australia',
-				p1: '9½',
+				p1: '9.50',
 				p2: '22',
 				p3: '36'
 			},
@@ -1883,14 +1883,14 @@ export const menuData = {
 			{
 				name: 'Viña Maipo | Sauvignon Blanc',
 				description: 'Central Valley, Chile',
-				p1: '10¼',
+				p1: '10.25',
 				p2: '25',
 				p3: '40'
 			},
 			{
 				name: 'Pasqua Colori D’italia | Pinot Grigio',
 				description: 'Veneto, Italy',
-				p1: '10¾',
+				p1: '10.75',
 				p2: '27',
 				p3: '45'
 			},
@@ -1911,7 +1911,7 @@ export const menuData = {
 			{
 				name: 'Mt. Dawson | Cabernet Sauvignon',
 				description: 'Okanagan Valley, BC',
-				p1: '9½',
+				p1: '9.50',
 				p2: '23',
 				p3: '41'
 			},
@@ -1925,7 +1925,7 @@ export const menuData = {
 			{
 				name: 'Sur Andino 1969 | Merlot',
 				description: 'Buin, Chile',
-				p1: '10½',
+				p1: '10.50',
 				p2: '28',
 				p3: '47'
 			},
@@ -1933,7 +1933,7 @@ export const menuData = {
 				name: 'Cameleon Domaine Bousquet Organic | Malbec',
 				description: 'Tupungato, Argentina',
 				p1: '12',
-				p2: '28½',
+				p2: '28.50',
 				p3: '49'
 			}
 		]
@@ -1968,7 +1968,7 @@ export const menuData = {
 			{
 				name: 'Oxford Landing | Chardonnay',
 				description: 'South Australia',
-				p1: '11½',
+				p1: '11.50',
 				p2: '33',
 				p3: '47'
 			},
@@ -2026,7 +2026,7 @@ export const menuData = {
 				name: 'Domaine de Pellehaut',
 				description: 'Côtes de Gascogne, France',
 				p1: '10',
-				p2: '24½',
+				p2: '24.50',
 				p3: '35'
 			}
 		]
@@ -2054,7 +2054,7 @@ export const menuData = {
 			{
 				name: 'George Wyndham Bin 444 | Cabernet Sauvignon',
 				description: 'South East Australia',
-				p1: '11½',
+				p1: '11.50',
 				p2: '32',
 				p3: '43'
 			},

@@ -33,9 +33,9 @@
 	}
 </script>
 
-<section class="overflow-hidden" use:clickOutside onclick_outside={handleClickOutside}>
-	<div class="bg-primary h-16 w-full p-4 px-8 sm:p-4 sm:px-16">
-		<div class="z-30 flex justify-between">
+<section class="overflow-hidden relative" use:clickOutside onclick_outside={handleClickOutside}>
+	<div class="bg-primary h-16 w-full p-4 px-8 sm:p-4 sm:px-16 fixed">
+		<div class="z-50 flex justify-between" >
 			<a href="/home">
 				<img src="/finalLogo.svg" class="h-8 justify-start" alt="Green Basil Logo" />
 			</a>

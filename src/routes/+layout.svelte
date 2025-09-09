@@ -42,7 +42,7 @@
 	<ViewTransition />
 
 	{#if $page.url.pathname !== '/'}
-		<div class="sticky z-50">
+		<div class="sticky z-50 mb-[4rem]">
 			<Header />
 		</div>
 	{/if}
