@@ -90,7 +90,7 @@
 	});
 
 	// Use $state() for reactive variables in Svelte 5
-	let activeTab = $state<'general' | 'application'>('application');
+	let activeTab = $state<'general' | 'application'>('general');
 
 	let generalForm = $state({
 		firstName: '',
