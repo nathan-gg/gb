@@ -131,7 +131,7 @@
 	});
 
 	// Use $state() for reactive variables in Svelte 5
-	let activeTab = $state<'general' | 'application'>('application');
+	let activeTab = $state<'general' | 'application'>('general');
 
 	let generalForm = $state({
 		firstName: '',
@@ -287,7 +287,7 @@
 				</p>
 
 				<!-- Wrap the dropdown in a relative container -->
-				<div class="relative">
+				<!-- <div class="relative">
 					<button
 						id="dropdownButton"
 						data-dropdown-toggle="dropdownMenu"
@@ -312,7 +312,6 @@
 						</svg>
 					</button>
 
-					<!-- Dropdown menu - now positioned absolutely within the relative container -->
 					<div
 						id="dropdownMenu"
 						class="bg-tertiary text-darkText border-darkText font-MonaSans absolute right-0 left-0 z-10 hidden w-full rounded-[5px] border"
@@ -342,7 +341,7 @@
 							</li>
 						</ul>
 					</div>
-				</div>
+				</div> -->
 
 				{#if activeTab === 'general'}
 					<form
