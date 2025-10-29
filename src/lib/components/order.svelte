@@ -17,11 +17,11 @@
 		<img src="/webp/orderOnlineMobile.webp" class="w-screen object-cover" alt="" />
 	</div>
 	<div class="text-darkText font-instrument flex flex-col items-start justify-start xl:w-1/2">
-		<div class="mx-8 my-12 flex w-full flex-col items-start xl:ml-16 xl:my-24">
+		<div class="mx-8 my-12 flex w-full flex-col items-start xl:my-24 xl:ml-16">
 			<h1 class="text-darkText mb-1 w-4/5 text-6xl sm:w-full">{title}</h1>
-				<h1 class="text-lightText mb-12 text-2xl">{thaiTitle}</h1>
+			<h1 class="text-lightText mb-12 text-2xl">{thaiTitle}</h1>
 			<p class="font-MonaSans w-3/4">
-				Order through our phone number <a href="tel:+1 6045007542" class="underline"
+				Order through our phone number <a href="tel:+1 6044391919" class="underline"
 					>+1 (604) 439-1919</a
 				> for exceptional and fast delivery service. We offer free in-house delivery for any order above
 				$25 within a 5 km radius.
@@ -32,10 +32,10 @@
 				below.
 			</p>
 
-			<div class="mt-8 mb-12 xl:mb-0 w-60 xl:w-82">
+			<div class="mt-8 mb-12 w-60 xl:mb-0 xl:w-82">
 				<a
 					href="https://www.doordash.com/store/green-basil-thai-restaurant-burnaby-58614/?srsltid=AfmBOoou1HkBW-Q12dcFiteG44mF3P0Gls_6HFlLqFnofOfltMakDq-v"
-					class="border-darkText group hover:border-darkText hover:bg-darkText mb-4 flex place-content-center rounded-[5px] border-2 bg-transparent p-4 xl:px-5.5 xl:py-2 duration-300 group-hover:transition"
+					class="border-darkText group hover:border-darkText hover:bg-darkText mb-4 flex place-content-center rounded-[5px] border-2 bg-transparent p-4 duration-300 group-hover:transition xl:px-5.5 xl:py-2"
 					target="_blank"
 				>
 					<svg
@@ -85,7 +85,7 @@
 
 				<a
 					href="https://www.ubereats.com/ca/store/green-basil-thai-restaurant/6GoYWudYTTOVt7vlqeq6lA?srsltid=AfmBOooHHudVtUcDEbOKDV21TsulpJrJloqXuDdf2yK1pqjne35NN0ZH"
-					class=" border-darkText hover:border-darkText hover:bg-darkText group flex place-content-center rounded-[5px] border-2 bg-transparent p-4 xl:px-5.5 xl:py-2 text-white  duration-300 group-hover:transition  "
+					class=" border-darkText hover:border-darkText hover:bg-darkText group flex place-content-center rounded-[5px] border-2 bg-transparent p-4 text-white duration-300 group-hover:transition xl:px-5.5 xl:py-2"
 					target="_blank"
 				>
 					<svg

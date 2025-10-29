@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { scrollTo, scrollRef, scrollElement, setGlobalOptions } from 'svelte-scrolling';
 	import { cubicInOut } from 'svelte/easing';
+	import { browser } from '$app/environment';
 
 	import { Dropdown } from 'flowbite';
 	import type { DropdownOptions, DropdownInterface } from 'flowbite';
@@ -87,10 +88,50 @@
 				positionDropdown.hide();
 			}
 		};
+
+		const form = document.getElementById('application');
+
+		form.addEventListener('submit', function (e) {
+			e.preventDefault();
+
+			const formData = new FormData(form);
+
+			formData.append('access_key', 'fde62125-4609-4617-98ce-76bf3ef7159e');
+			formData.append('subject', 'New Submission from Web3Forms');
+
+			const file = document.getElementById('attachment');
+			const filesize = file.files[0].size / 1024;
+
+			if (filesize > 1000) {
+				alert('Please upload file less than 1 MB');
+				return;
+			}
+
+			// Don't add `headers` or `content-type` in this fetch call
+			// Since it contains attachments, the browser auto-adds them.
+			fetch('https://api.web3forms.com/submit', {
+				method: 'POST',
+				body: formData
+			})
+				.then(async (response) => {
+					let json = await response.json();
+					if (response.status == 200) {
+						console.log(json.message);
+					} else {
+						console.log(response);
+					}
+				})
+				.catch((error) => {
+					console.log(error);
+				})
+				.then(function () {
+					form.reset();
+				});
+		});
 	});
 
 	// Use $state() for reactive variables in Svelte 5
-	let activeTab = $state<'general' | 'application'>('general');
+	let activeTab = $state<'general' | 'application'>('application');
 
 	let generalForm = $state({
 		firstName: '',
@@ -309,6 +350,7 @@
 						method="POST"
 						class="font-MonaSans font-lightText flex flex-col"
 						id="general"
+						enctype="multipart/form-data"
 					>
 						<input type="hidden" name="access_key" value="fde62125-4609-4617-98ce-76bf3ef7159e" />
 						<div class="mt-8 grid grid-cols-2 grid-rows-2">
@@ -349,7 +391,7 @@
 								class="border-darkText text-darkText bg-tertiary my-1 h-48 w-full rounded-[5px] border-1"
 							></textarea>
 						</div>
-						<input type="hidden" name="redirect" value="https://web3forms.com/success" />
+						<input type="hidden" name="redirect" value="/contact/success" />
 						<button
 							type="submit"
 							class="border-darkText hover:bg-darkText text-darkText hover:text-tertiary rounded-[5px] border-2 p-2 transition duration-300 xl:px-5.5 xl:py-2"
@@ -395,7 +437,7 @@
 							/>
 
 							<!-- Position Dropdown - Fixed -->
-							<div class="relative w-full mt-1 mb-1 mr-1 bg-tertiary">
+							<div class="bg-tertiary relative mt-1 mr-1 mb-1 w-full">
 								<button
 									id="dropdownButtonPositions"
 									data-dropdown-toggle="dropdownMenuPositions"
@@ -483,9 +525,10 @@
 							<input
 								type="file"
 								name="resume"
+								id="attachment"
 								accept=".pdf,.doc,.docx"
 								bind:files={applicationForm.resume}
-								class="border-darkText bg-tertiary file:bg-tertiary file:text-darkText w-full my-1 rounded-[5px] border-1 p-1 pl-5 file:rounded-[5px] file:border file:p-1 ml-1 file:text-[1rem] file:font-normal"
+								class="border-darkText bg-tertiary file:bg-tertiary file:text-darkText my-1 ml-1 w-full rounded-[5px] border-1 p-1 pl-5 file:rounded-[5px] file:border file:p-1 file:text-[1rem] file:font-normal"
 							/>
 						</div>
 						<div class="">
@@ -496,7 +539,7 @@
 								class="border-darkText text-darkText bg-tertiary my-1 h-48 w-full rounded-[5px] border-1 p-1"
 							></textarea>
 						</div>
-						<input type="hidden" name="redirect" value="https://web3forms.com/success" />
+						<input type="hidden" name="redirect" value="/contact/success" />
 						<button
 							type="submit"
 							class="border-darkText hover:bg-darkText text-darkText hover:text-tertiary rounded-[5px] border-2 p-2 transition duration-300 xl:px-5.5 xl:py-2"

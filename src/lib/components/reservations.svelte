@@ -9,10 +9,9 @@
 		<img src="/webp/m-reservations.webp" class="w-screen object-cover" alt="" />
 	</div>
 	<div class="text-darkText font-instrument flex flex-col items-start justify-start xl:w-1/2">
-		<div class="mx-8 my-12 flex  flex-col items-start sm:ml-16 xl:my-24 w-3/4">
-		
-				<h1 class="text-darkText mb-1 w-4/5 text-6xl sm:w-full">{title}</h1>
-				<h1 class="text-lightText mb-12 text-2xl">{thaiTitle}</h1>
+		<div class="mx-8 my-12 flex w-3/4 flex-col items-start sm:ml-16 xl:my-24">
+			<h1 class="text-darkText mb-1 w-4/5 text-6xl sm:w-full">{title}</h1>
+			<h1 class="text-lightText mb-12 text-2xl">{thaiTitle}</h1>
 
 			<div class="font-MonaSans text-darkText mb-12">
 				<p class="mb-4">
@@ -32,7 +31,7 @@
 					</li>
 					<li class="mb-4">
 						To cancel or modify your reservation, please call us at <a
-							href="tel:+1 6045007542"
+							href="tel:+1 6044391919"
 							class="underline">+1 (604) 439-1919</a
 						>
 						or email us at
